@@ -1,0 +1,169 @@
+Name,NPC Name,Size,Type,Tags/Lair,Alignment,Challenge,XP,Source,Page,Reference
+Commoner,,Medium,Humanoid,,Any,0,10,MM,345,MM345
+Scholar,,Medium,Humanoid,,Any,0,10,AA,25,AA25
+Wizard's Apprentice,,Medium,Humanoid,,Any,0,10,AA,33,AA33
+Advisor,,Medium,Humanoid,,Any,0.125,25,AA,2,AA2
+Aristocrat,,Medium,Humanoid,,Any,0.125,25,AA,3,AA3
+Aritisan,,Medium,Humanoid,,Any,0.125,25,AA,21,AA21
+Bandit/Pirate,,Medium,Humanoid,,Any non-lawful,0.125,25,MM,343,MM343
+Bardic Entertainer,,Medium,Humanoid,,Any,0.125,25,AA,12,AA12
+Cultist,,Medium,Humanoid,,Any non-good,0.125,25,MM,345,MM345
+Entertainer,,Medium,Humanoid,,Any,0.125,25,AA,12,AA12
+Expert,,Medium,Humanoid,,Any,0.125,25,AA,13,AA13
+Fortune Teller,,Medium,Humanoid,,Any,0.125,25,AA,15,AA15
+Governor,,Medium,Humanoid,,Any,0.125,25,AA,16,AA16
+Guard,,Medium,Humanoid,,Any,0.125,25,MM,348,MM348
+Healer,,Medium,Humanoid,,Any non-evil,0.125,25,AA,16,AA16
+Howling Hatred Initiate (AKA Air Cult Initiate),,Medium,Humanoid,,Neutral Evil,0.125,25,POTA,190,POTA190
+Merchant,,Medium,Humanoid,,Any,0.125,25,AA,21,AA21
+Noble,,Medium,Humanoid,,Any,0.125,25,MM,348,MM348
+Tribal Warrior,,Medium,Humanoid,,Any,0.125,25,MM,350,MM350
+Acolyte,,Medium,Humanoid,,Any,0.25,50,MM,342,MM342
+Apprentice Wizard,,Medium,Humanoid,,Any,0.25,50,VGM,209,VGM209
+City Watch,,Medium,Humanoid,,Any,0.25,50,AA,6,AA6
+"City Watch, Variant: Halberd, Man-Catcher, or Net",,Medium,Humanoid,,Any,0.25,50,AA,6,AA6
+Clockwork Jester,reference Pidlwick II,Small,Construct,,Neutral Evil,0.25,50,COS,235,COS235
+Friar,,Medium,Humanoid,,Any,0.25,50,AA,15,AA15
+Inquisitor,,Medium,Humanoid,,Any non-chaotic,0.25,50,AA,17,AA17
+Investigator,,Medium,Humanoid,,Any,0.25,50,AA,18,AA18
+Barovian Witch,,Medium,Humanoid,human,Chaotic Evil,0.5,100,COS,229,COS229
+Charlatan,,Medium,Humanoid,,Any non-good,0.5,100,AA,5,AA5
+Crushing Wave Reaver (AKA Water Cult Reaver),,Medium,Humanoid,,Neutral Evil,0.5,100,POTA,205,POTA205
+Sacred Stone Monk (AKA Earth Cult Monk),,Medium,Humanoid,,Lawful Evil,0.5,100,POTA,196,POTA196
+Sailor,,Medium,Humanoid,,Any,0.5,100,AA,25,AA25
+Scorpion Cultist,,Medium,Humanoid,,Neutral,0.5,100,TOB,425,TOB425
+Scout,,Medium,Humanoid,,Any,0.5,100,MM,349,MM349
+Street Urchin,,Medium,Humanoid,,Any,0.5,100,AA,27,AA27
+Thug,,Medium,Humanoid,,Any,0.5,100,MM,350,MM350
+Arcane Student,,Medium,Humanoid,,Any,1,200,AA,3,AA3
+Bard,,Medium,Humanoid,,Any,1,200,AA,4,AA4
+Bardic Jester,,Medium,Humanoid,,Any,1,200,AA,4,AA4
+Dragonclaw (AKA Dragon Cult Soldier),,Medium,Humanoid,,Neutral Evil,1,200,HDQ,89,HDQ89
+Feathergale Knight (AKA Air Cult Knight),,Medium,Humanoid,,Lawful Evil,1,200,POTA,189,POTA189
+Gnomish Spellsword,reference Jamna Gleamsilver,Small,Humanoid,gnome,Neutral,1,200,HDQ,91,HDQ91
+Smith,,Medium,Humanoid,,Any,1,200,AA,26,AA26
+Spy,,Medium,Humanoid,,Any,1,200,MM,349,MM349
+Adept,,Medium,Humanoid,,Any,2,450,AA,2,AA2
+Bandit/Pirate Captain,,Medium,Humanoid,,Any non-lawful,2,450,MM,344,MM344
+Bard,,Medium,Humanoid,,Any,2,450,VGM,211,VGM211
+Berserker,,Medium,Humanoid,,Any chaotic,2,450,MM,344,MM344
+Black Earth Guard (AKA Earth Cult Guard),,Medium,Humanoid,,Neutral Evil,2,450,POTA,195,POTA195
+"City Watch, Armored",,Medium,Humanoid,,Any,2,450,AA,6,AA6
+Cleric,,Medium,Humanoid,,Any,2,450,AA,7,AA7
+Cleric of Slaughter,reference Grisha,Medium,Humanoid,,Chaotic Evil,2,450,OOTA,232,OOTA232
+Cleric of War,reference Frulam Mondath,Medium,Humanoid,human,Lawful Evil,2,450,HDQ,90,HDQ90
+Crushing Wave Priest (AKA Water Cult Priest),,Medium,Humanoid,,Neutral Evil,2,450,POTA,205,POTA205
+Cult Fanatic,,Medium,Humanoid,,Any non-good,2,450,MM,345,MM345
+Death Priest,,Medium,Humanoid,,Any non-good,2,450,AA,7,AA7
+Diabolist,,Medium,Humanoid,,Any non-good,2,450,AA,8,AA8
+Dragonwing (AKA Dragon Cult Warrior),,Medium,Humanoid,,Neutral Evil,2,450,ROT,90,ROT90
+Druid,,Medium,Humanoid,,Any,2,450,MM,346,MM346
+Eldritch Adept,,Medium,Humanoid,,Any,2,450,AA,10,AA10
+Enchanter,,Medium,Humanoid,,Any,2,450,AA,12,AA12
+Eternal Flame Guardian (AKA Fire Cult Guardian),,Medium,Humanoid,,Chaotic Evil,2,450,POTA,200,POTA200
+Faerie Disciple,,Medium,Humanoid,,Any,2,450,AA,8,AA8
+Fathomer (AKA Water Cult Warlock),,Medium,Humanoid,shapechanger,Neutral Evil,2,450,POTA,207,POTA207
+Fey Witch,,Medium,Humanoid,,Any,2,450,AA,14,AA14
+Halfling Cult Patriarch,reference Wiggan Nettlebee,Small,Humanoid,halfling,Neutral Evil,2,450,POTA,211,POTA211
+Howling Hatred Priest (AKA Air Cult Priest),,Medium,Humanoid,,Neutral Evil,2,450,POTA,190,POTA190
+Hurrican (AKA Air Cult Arcane Monk),,Medium,Humanoid,,Lawful Evil,2,450,POTA,191,POTA191
+Outlaw Necromancer,reference Oreioth,Medium,Humanoid,,Chaotic Evil,2,450,POTA,211,POTA211
+Priest,,Medium,Humanoid,,Any,2,450,MM,348,MM348
+Ranger,,Medium,Humanoid,,Any,2,450,AA,23,AA23
+Ruler,,Medium,Humanoid,,Any,2,450,AA,24,AA24
+Thief,,Medium,Humanoid,,Any non-lawful,2,450,AA,28,AA28
+Watch Captain,,Medium,Humanoid,,Any,2,450,AA,31,AA31
+Wise One,,Medium,Humanoid,,Any,2,450,AA,32,AA32
+Air Cult Bard,reference Windharrow,Medium,Humanoid,half-elf,Neutral Evil,3,700,POTA,192,POTA192
+Air Cult Griffonrider,reference Thurl Merosska,Medium,Humanoid,human,Lawful Evil,3,700,POTA,192,POTA192
+Archer,,Medium,Humanoid,,Any,3,700,VGM,210,VGM210
+Black Earth Priest (AKA Earth Cult Priest),,Medium,Humanoid,,Neutral Evil,3,700,POTA,195,POTA195
+Dark Tide Knight (AKA Water Cult Searider),,Medium,Humanoid,,Lawful Evil,3,700,POTA,205,POTA205
+Eldritch Cult Leader,,Medium,Humanoid,,Any non-good,3,700,AA,11,AA11
+Elven Bladecaster,reference Dralmorrer Borngray,Medium,Humanoid,high elf,Neutral Evil,3,700,HDQ,90,HDQ90
+Elvish Veteran Archer,,Medium,Humanoid,elf,CG or CN,3,700,TOB,422,TOB422
+Eternal Flame Priest (AKA Fire Cult Priest),,Medium,Humanoid,,Neutral Evil,3,700,POTA,200,POTA200
+Illusionist,,Medium,Humanoid,,Any,3,700,AA,17,AA17
+Illusionist,,Medium,Humanoid,,Any,3,700,VGM,214,VGM214
+Knight,,Medium,Humanoid,,Any,3,700,MM,347,MM347
+Mage Hunter,,Medium,Humanoid,,Any,3,700,AA,20,AA20
+Martial Arts Adept,,Medium,Humanoid,,Any,3,700,VGM,216,VGM216
+Monk,,Medium,Humanoid,,Any non-chaotic,3,700,AA,21,AA21
+One-Eyed Shiver (AKA Water Cult Sorcerer),,Medium,Humanoid,,Chaotic Evil,3,700,POTA,207,POTA207
+Rogue,,Medium,Humanoid,,Any non-lawful,3,700,AA,24,AA24
+Skyweaver (AKA Air Cult Sorcerer),,Medium,Humanoid,,Chaotic Evil,3,700,POTA,191,POTA191
+Swashbuckler,,Medium,Humanoid,,Any non-lawful,3,700,VGM,217,VGM217
+Veteran,,Medium,Humanoid,,Any,3,700,MM,350,MM350
+Wolf Reaver Dwarf,,Medium,Humanoid,dwarf,Any chaotic,3,700,TOB,426,TOB426
+Bandit Lord,,Medium,Humanoid,,Any non-lawful,4,1100,TOB,418,TOB418
+Burrowshark (AKA Earth Cult Bulette Rider),,Medium,Humanoid,,Neutral Evil,4,1100,POTA,196,POTA196
+City Watch Captain,,Medium,Humanoid,,Lawful Neutral,4,450,TOB,419,TOB419
+Loremaster,,Medium,Humanoid,,Any,4,1100,AA,19,AA19
+Mastermind,,Medium,Humanoid,,Any,4,1100,AA,20,AA20
+Ooze Master,reference The Pudding King,Small,Humanoid,"gnome, shapechanger",Chaotic Evil,4,1100,OOTA,233,OOTA233
+Oracle,,Medium,Humanoid,,Any,4,1100,AA,22,AA22
+Skald,,Medium,Humanoid,,Any,4,1100,AA,26,AA26
+Stonemelder (AKA Earth Cult Sorcerer),,Medium,Humanoid,,Neutral Evil,4,1100,POTA,197,POTA197
+Summoner,,Medium,Humanoid,,Any,4,1100,AA,27,AA27
+Swashbuckler,,Medium,Humanoid,,Any,4,1100,AA,28,AA28
+War Mage,reference Azbara Jos,Medium,Humanoid,human,Lawful Evil,4,1100,HDQ,88,HDQ88
+Warlock,,Medium,Humanoid,,Any non-good,4,1100,AA,29,AA29
+Warlock of the Archfey,,Medium,Humanoid,,Any,4,1100,VGM,219,VGM219
+Warrior,,Medium,Humanoid,,Any,4,1100,AA,30,AA30
+Water Genasi Sorcerer,reference Shoalar Quanderil,Medium,Humanoid,water genasi,Lawful Evil,4,1100,POTA,208,POTA208
+Witch,,Medium,Humanoid,,Any,4,1100,AA,33,AA33
+Black Knight Commander,,Medium,Humanoid,,Lawful Evil,5,1800,TOB,418,TOB418
+Dragon Knight,reference Captain Othelstan,Medium,Humanoid,human,Lawful Evil,5,1800,HDQ,89,HDQ89
+Dragon Sorcerer,,Medium,Humanoid,,Any,5,1800,AA,9,AA9
+Dragonfang (AKA Dragon Cult Lieutenant),,Medium,Humanoid,,Neutral Evil,5,1800,ROT,89,ROT89
+Earth Cult Monk Master,reference Hellenrae,Medium,Humanoid,human,Lawful Evil,5,1800,POTA,198,POTA198
+Enchanter,,Medium,Humanoid,,Any,5,1800,VGM,213,VGM213
+Fiendblessed Bodyguard,reference Izek Strazni,Medium,Humanoid,human,Neutral Evil,5,1800,COS,231,COS231
+Fire Cult Druid,reference Elizar Dryflagon,Medium,Humanoid,human,Neutral Evil,5,1800,POTA,202,POTA202
+Frost Cleric,reference Talis the White,Medium,Humanoid,half-elf,Lawful Evil,5,1800,HDQ,93,HDQ93
+Gladiator,,Medium,Humanoid,,Any,5,1800,MM,346,MM346
+Kraken Priest,,Medium,Humanoid,,Any evil,5,1800,VGM,215,VGM215
+Master Thief,,Medium,Humanoid,,Any,5,1800,VGM,216,VGM216
+Monster Hunter,reference Rudolph Van Richten,Medium,Humanoid,human,Lawful Good,5,1800,COS,238,COS238
+Necromancer,,Medium,Humanoid,,Any non-good,5,1800,AA,22,AA22
+Razerblast (AKA Fire-infused Warrior),,Medium,Humanoid,,Chaotic Evil,5,1800,POTA,201,POTA201
+Transmuter,,Medium,Humanoid,,Any,5,1800,VGM,218,VGM218
+Wild Mage,,Medium,Humanoid,,Any non-lawful,5,1800,AA,31,AA31
+Battle Mage,,Medium,Humanoid,,Any,6,2300,AA,5,AA5
+Conjurer,,Medium,Humanoid,,Any,6,2300,VGM,212,VGM212
+Earth Cult Mud Sorcerer,reference Miraj Vizann,Medium,Humanoid,earth genasi,Neutral Evil,6,2300,POTA,198,POTA198
+Flamewrath (AKA Fire Cult Sorcerer),,Medium,Humanoid,,Chaotic Evil,6,2300,POTA,201,POTA201
+Mage,,Medium,Humanoid,,Any non-good,6,2300,MM,347,MM347
+Phantasmist,reference Rath Modar,Medium,Humanoid,human,Lawful Evil,6,2300,HDQ,92,HDQ92
+Warlock of the Great Old One,,Medium,Humanoid,,Any,6,2300,VGM,220,VGM220
+Air Prophet Wizard,reference Aerisi Kalinoth,Medium,Humanoid,"elf, lair 9 (5000)",Neutral Evil,7,2900,POTA,193,POTA193
+Dragonsoul (AKA Dragon Cult Commander),,Medium,Humanoid,,Neutral Evil,7,2900,ROT,89,ROT89
+Dwarven Ringmage,,Medium,Humanoid,dwarf,Any,7,2900,TOB,420,TOB420
+Dwarven Tomb Robber,reference Drannin Splithelm,Medium,Humanoid,shield dwarf,Neutral Evil,7,2900,POTA,209,POTA209
+Warlock of the Fiend,,Medium,Humanoid,,Any,7,2900,VGM,219,VGM219
+Assassin,,Medium,Humanoid,,Any non-good,8,3900,MM,343,MM343
+Blackguard,,Medium,Humanoid,,Any non-good,8,3900,VGM,211,VGM211
+Diviner,,Medium,Humanoid,,Any,8,3900,VGM,213,VGM213
+Emerald Order Cult Leader,,Medium,Humanoid,,Lawful Neutral or Evil,8,3900,TOB,421,TOB421
+Fire Genasi Sorcerer,reference Bastian Thermandar,Medium,Humanoid,fire genasi,Neutral Evil,8,3900,POTA,201,POTA201
+Vampire Hunter,reference Ezmerelda d'Avenir,Medium,Humanoid,human,Chaotic Good,8,3900,COS,230,COS230
+Abjurer,,Medium,Humanoid,,Any,9,5000,VGM,209,VGM209
+Air Prophet Wizard (in lair),reference Aerisi Kalinoth,Medium,Humanoid,"elf, non-lair 7 (2900)",Neutral Evil,9,5000,POTA,193,POTA193
+Champion,,Medium,Humanoid,,Any,9,5000,VGM,212,VGM212
+Devilbound Gnomish Prince,,Small,Humanoid,gnome,Any evil,9,5000,TOB,420,TOB420
+Druid Water Prophet,reference Gar Shatterkeel,Medium,Humanoid,"human, lair 13 (10000)",Neutral Evil,9,5000,POTA,208,POTA208
+Evoker,,Medium,Humanoid,,Any,9,5000,VGM,214,VGM214
+Green Wyrmspeaker,reference Neronvain,Medium,Humanoid,elf,Neutral Evil,9,5000,ROT,91,ROT91
+Necromancer,,Medium,Humanoid,,Any,9,5000,VGM,217,VGM217
+Tiefling Fire Sorcereress,reference Vanifer,Medium,Humanoid,"tiefling, lair 12 (8400)",Neutral Evil,9,5000,POTA,203,POTA203
+War Priest,,Medium,Humanoid,,Any,9,5000,VGM,218,VGM218
+Dusk Elf Chamberlain,reference Rahadin,Medium,Humanoid,elf,Lawful Evil,10,5900,COS,236,COS236
+Vistana Fortune-teller,reference Madam Eva,Medium,Humanoid,human,Chaotic Neutral,10,5900,COS,233,COS233
+Warlord,,Medium,Humanoid,,Any,10,5900,AA,30,AA30
+Red Wyrmspeaker,reference Severin Silrajin,Medium,Humanoid,human,Neutral Evil,11,7200,ROT,92,ROT92
+Witch Mother,reference Baba Lysaga,Medium,Humanoid,"human, shapechanger",Chaotic Evil,11,7200,COS,228,COS228
+Archdruid,,Medium,Humanoid,,Any,12,8400,VGM,210,VGM210
+Archmage,,Medium,Humanoid,,Any,12,8400,MM,342,MM342
+Tiefling Fire Sorcereress (in lair),reference Vanifer,Medium,Humanoid,"tiefling, non-lair 9 (5000)",Neutral Evil,12,8400,POTA,203,POTA203
+Warlord,,Medium,Humanoid,,Any,12,8400,VGM,220,VGM220
+Druid Water Prophet (in lair),reference Gar Shatterkeel,Medium,Humanoid,"human, non-lair 9 (5000)",Neutral Evil,13,10000,POTA,208,POTA208

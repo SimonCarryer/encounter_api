@@ -1,0 +1,1063 @@
+Name,NPC Name,Size,Type,Tags/Lair,Alignment,Environment,Challenge,XP,Source,Page,Reference,SRD,Description
+Awakened Shrub,,Small,Plant,,Unaligned,Forest,0,10,MM,317,MM317,,An ordinary shrub given sentience and mobility.
+Baboon,,Small,Beast,,Unaligned,"Forest, Hills",0,10,MM,318,MM318,,Two and a half foot tall monkeys.
+Badger,,Tiny,Beast,,Unaligned,Forest,0,10,MM,318,MM318,,Short-legged omnivore.
+Bat,,Tiny,Beast,,Unaligned,"Hills, Mountain, Underdark, Urban",0,10,MM,318,MM318,,Flying rodents.
+Cat,,Tiny,Beast,,Unaligned,"Desert, Forest, Grassland, Urban",0,10,MM,320,MM320,,Small felines that are often jerks.
+Crab,,Tiny,Beast,,Unaligned,Coastal,0,10,MM,320,MM320,,Pincer-clawed crustaceans.
+Cranium Rat,,Tiny,Beast,,Lawful Evil,"Underdark, Urban",0,10,VGM,133,VGM133,,Rats with partially-exposed brains and psychic powers.
+Crawling Claw,,Tiny,Undead,,Neutral Evil,Any,0,10,MM,44,MM44,,"The undead, animated severed hand of a killer."
+Deer,,Medium,Beast,,Unaligned,"Forest, Grassland",0,10,MM,321,MM321,,"Cute-looking, often antlered forest dwellers"
+Eagle,,Small,Beast,,Unaligned,"Coastal, Grassland, Hills, Mountain",0,10,MM,322,MM322,,Large bird of prey.
+Frog,,Tiny,Beast,,Unaligned,"Forest, Swamp",0,0,MM,322,MM322,,Hoppy amphibians.
+Giant Fire Beetle,,Small,Beast,,Unaligned,Underdark,0,10,MM,325,MM325,,Nocturnal vermin with glowing glands.
+Goat,,Medium,Beast,,Unaligned,"Forest, Hills, Mountain, Urban",0,10,MM,330,MM330,,"Bearded, domesticated herd animals."
+Hawk,,Tiny,Beast,,Unaligned,Any,0,10,MM,330,MM330,,Bird of prey.
+Homunculus,,Tiny,Construct,,Neutral,Urban,0,10,MM,188,MM188,Y,"Toothy, winged little devil constructs that serve mages."
+Hyena,,Medium,Beast,,Unaligned,"Desert, Forest, Grassland, Hills",0,10,MM,331,MM331,,Cat-dog scavengers known for their laughing bark.
+Jackal,,Small,Beast,,Unaligned,"Desert, Grassland",0,10,MM,331,MM331,,"Small, omnivorous wolf-dog."
+Lemure,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),0,10,MM,76,MM76,Y,"Fat, wriggly little demons."
+Lizard,,Tiny,Beast,,Unaligned,"Coastal, Desert, Forest, Swamp, Underdark",0,10,MM,332,MM332,,Crawly reptiles.
+Myconid Sprout,,Small,Plant,,Lawful Neutral,Underdark,0,10,MM,230,MM230,,Little fungus-folk.
+Octopus,,Small,Beast,,Unaligned,Underwater,0,10,MM,333,MM333,,"Multi-tentacled, ink-spraying sea creature."
+Owl,,Tiny,Beast,,Unaligned,"Arctic, Forest",0,10,MM,333,MM333,,"Fluffy, hooty birds."
+Quipper,,Tiny,Beast,,Unaligned,Underwater,0,10,MM,335,MM335,,"Carnivorous, razor-toothed fish."
+Rat,,Tiny,Beast,,Unaligned,"Swamp, Urban",0,10,MM,335,MM335,,"Long-tailed rodent, often filthy and disease-spreading."
+Raven,,Tiny,Beast,,Unaligned,"Hills, Swamp, Urban",0,10,MM,335,MM335,,"Large, black birds known for their intelligence."
+Scorpion,,Tiny,Beast,,Unaligned,Desert,0,10,MM,337,MM337,,Poison-tailed crustacean-like spider thingy.
+Sea Horse,,Tiny,Beast,,Unaligned,Underwater,0,0,MM,337,MM337,,"Curve-tailed, horse-looking fish."
+Shrieker,,Medium,Plant,,Unaligned,Underdark,0,10,MM,138,MM138,Y,Purple toadstool that emits a piercing scream.
+Spider,,Tiny,Beast,,Unaligned,"Desert, Forest, Swamp, Underdark, Urban",0,10,MM,337,MM337,,Eight legged crawly freak.
+Tressym,,Tiny,Beast,,Chaotic Neutral,,0,10,SKT,242,SKT242,,"Smart, winged cats."
+Vulture,,Medium,Beast,,Unaligned,"Desert, Grassland, Hills",0,10,MM,339,MM339,,Big carrion bird.
+Weasel,,Tiny,Beast,,Unaligned,"Forest, Grassland, Hills",0,10,MM,340,MM340,,"Long-bodied, squirmy rodent."
+Astral Moth,,Large,Monstrosity,,Varies,Any,0.125,25,FEF,18,FEF18,,
+Blood Hawk,,Small,Beast,,Unaligned,"Arctic, Coastal, Forest, Grassland, Hills, Mountain",0.125,25,MM,319,MM319,,"Dagger-beaked, red-feathered aggressive bird of prey."
+Boggle,,Small,Fey,,Chaotic Neutral,"Forest, Hills, Underdark, Urban",0.125,25,VGM,128,VGM128,,
+Bridesmaid of Zuggtmoy,,Medium,Plant,,Chaotic Evil,Underdark,0.125,25,OOTA,230,OOTA230,,
+Camel,,Large,Beast,,Unaligned,Desert,0.125,25,MM,320,MM320,,"Hump-backed, ornery desert horse."
+Cikavak,,Tiny,Beast,,Neutral,Any,0.125,25,TOB,58,TOB58,Y,
+Dolphin,,Medium,Beast,,Unaligned,"Coastal, Underwater",0.125,25,VGM,208,VGM208,,
+Drow Spore Servant,,Medium,Plant,,Unaligned,Underdark,0.125,25,OOTA,229,OOTA229,,
+Flumph,,Small,Aberration,,Lawful Good,Underdark,0.125,25,MM,135,MM135,,Psychic symbiotes that look like floating jellyfish.
+Flying Snake,,Tiny,Beast,,Unaligned,"Desert, Forest, Grassland, Urban",0.125,25,MM,322,MM322,,"Brightly colored, winged serpent."
+Giant Crab,,Medium,Beast,,Unaligned,Coastal,0.125,25,MM,324,MM324,,Giant version of a crab.
+Giant Rat,,Small,Beast,,Unaligned,"Forest, Swamp, Underdark, Urban",0.125,25,MM,327,MM327,,Giant version of a rat.
+Giant Weasel,,Medium,Beast,,Unaligned,"Forest, Grassland, Hills",0.125,25,MM,329,MM329,,Giant version of a weasel.
+Kobold,,Small,Humanoid,kobold,Lawful Evil,"Arctic, Coastal, Desert, Forest, Hills, Mountain, Swamp, Underdark, Urban",0.125,25,MM,195,MM195,Y,"Short, cunning reptile folk that revere dragons."
+Manes,,Small,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),0.125,25,MM,60,MM60,,Three foot tall bloated demon.
+Mastiff,,Medium,Beast,,Unaligned,"Forest, Hills, Urban",0.125,25,MM,332,MM332,,"Large, loyal hounds trained for guarding, hunting, and even as mounts for halflings."
+Merfolk,,Medium,Humanoid,merfolk,Neutral,"Coastal, Underwater",0.125,25,MM,218,MM218,Y,Aquatic humans with a fish tail in place of their legs.
+Monodrone,,Medium,Construct,,Lawful Neutral,Extraplanar (Mechanus),0.125,25,MM,224,MM224,,"Metal ball with a single eye, spindly legs and flightless wings."
+Mule,,Medium,Beast,,Unaligned,"Desert, Hills, Urban",0.125,25,MM,333,MM333,,Cross between a horse and a donkey.
+Neogi Hatchling,,Tiny,Aberration,,Lawful Evil,"Hills, Underdark",0.125,25,VGM,179,VGM179,,
+Poisonous Snake,,Tiny,Beast,,Unaligned,"Coastal, Desert, Forest, Grassland, Hills, Swamp",0.125,25,MM,334,MM334,,Slithery reptile with a poisoned bite.
+Pony,,Medium,Beast,,Unaligned,Urban,0.125,25,MM,335,MM335,,Small horse.
+Shroud,,Medium,Undead,,Neutral Evil,Any,0.125,25,TOB,348,TOB348,Y,
+Slaad Tadpole,,Tiny,Aberration,,Chaotic Neutral,Extraplanar (Limbo),0.125,25,MM,276,MM276,,Larval slaad resembling a fanged frog's head on a finned tail.
+Sluagh,,Tiny,Fey,,Chaotic Evil,Any,0.125,25,TOB,375,TOB375,Y,
+Stirge,,Tiny,Beast,,Unaligned,"Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark, Urban",0.125,25,MM,284,MM284,Y,"Insectoid, bat-winged bloodsuckers."
+Stryx,,Tiny,Monstrosity,,Neutral,"Forest, Urban",0.125,25,TOB,369,TOB369,Y,
+Twig Blight,,Small,Plant,,Neutral Evil,Forest,0.125,25,MM,32,MM32,,A shrub tainted by foul magic.
+Wharfling,,Tiny,Beast,,Unaligned,Underwater,0.125,25,TOB,407,TOB407,Y,
+Xvart,,Small,Humanoid,xvart,Chaotic Evil,"Hills, Underdark",0.125,25,VGM,200,VGM200,,
+Aarakocra,,Medium,Humanoid,aarakocra,Neutral Good,Mountain,0.25,50,MM,12,MM12,,Bird people.
+Axe Beak,,Large,Beast,,Unaligned,"Grassland, Hills",0.25,50,MM,317,MM317,,"Stout, flightless bird with a powerful beak."
+Azza Gremlin,,Small,Fey,,Neutral,Any,0.25,50,TOB,28,TOB28,Y,
+Blink Dog,,Medium,Fey,,Lawful Good,Forest,0.25,50,MM,318,MM318,,Teleporting elf-dog.
+Boar,,Medium,Beast,,Unaligned,"Forest, Grassland, Hills",0.25,50,MM,319,MM319,,"Big, wooly pig with tusks."
+Broom of Animated Attack,,Small,Construct,,Unaligned,Urban,0.25,50,COS,226,COS226,,
+Bullywug,,Medium,Humanoid,bullywug,Neutral Evil,Swamp,0.25,50,MM,35,MM35,,Frog-headed amphibious humanoids.
+Clurichaun,,Tiny,Fey,,Chaotic Neutral,Urban,0.25,50,TOB,67,TOB67,Y,
+Constrictor Snake,,Large,Beast,,Unaligned,"Desert, Forest, Swamp, Underwater",0.25,50,MM,320,MM320,,Snake that entangles and crushes stuff.
+Cow,,Large,Beast,,Unaligned,"Grassland, Urban",0.25,50,VGM,207,VGM207,,
+Derro,,Small,Humanoid,derro,Chaotic Evil,Underdark,0.25,50,OOTA,224,OOTA224,,
+Dimetrodon (Finback),,Medium,Beast,dinosaur/behemoth,Unaligned,"Coastal, Swamp",0.25,50,VGM,139,VGM139,,
+Dipsa,,Tiny,Ooze,,Unaligned,Swamp,0.25,50,TOB,118,TOB118,Y,
+Draft Horse,,Large,Beast,,Unaligned,Urban,0.25,50,MM,321,MM321,,Stout horses bred for carrying and dragging stuff.
+Dretch,,Small,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),0.25,50,MM,57,MM57,Y,Four-foot tall gangly demons.
+Drow,,Medium,Humanoid,elf,Neutral Evil,Underdark,0.25,50,MM,128,MM128,Y,Ebon-skinned elves of the Underdark.
+Duodrone,,Medium,Construct,,Lawful Neutral,Extraplanar (Mechanus),0.25,50,MM,225,MM225,,Modrons that appear as two stacked boxes with facial features and spindly limbs.
+Dust Goblin,,Small,Humanoid,goblin,Neutral Evil,"Desert, Underdark",0.25,50,TOB,232,TOB232,Y,
+Elk,,Large,Beast,,Unaligned,"Forest, Grassland, Hills",0.25,50,MM,322,MM322,,"Big, antlered deer."
+Erina Scrounger,,Small,Humanoid,erina,Neutral,"Forest, Grassland, Hills",0.25,50,TOB,178,TOB178,Y,
+Flying Sword,,Small,Construct,,Unaligned,Any,0.25,50,MM,20,MM20,Y,A sword that dances through the air of its own accord.
+Garroter Crab,,Tiny,Beast,,Unaligned,Underwater,0.25,50,TOB,208,TOB208,Y,
+Giant Badger,,Medium,Beast,,Unaligned,Forest,0.25,50,MM,323,MM323,,Giant version of a badger.
+Giant Bat,,Large,Beast,,Unaligned,"Forest, Underdark",0.25,50,MM,323,MM323,,Giant version of a bat.
+Giant Centipede,,Small,Beast,,Unaligned,"Underdark, Urban",0.25,50,MM,323,MM323,,Giant version of a centipede.
+Giant Frog,,Medium,Beast,,Unaligned,"Forest, Swamp",0.25,50,MM,325,MM325,,Giant version of a frog.
+Giant Lizard,,Large,Beast,,Unaligned,"Coastal, Desert, Forest, Swamp, Underdark",0.25,50,MM,326,MM326,,Giant version of a lizard.
+Giant Owl,,Large,Beast,,Neutral,"Arctic, Forest, Hills",0.25,50,MM,327,MM327,,Giant version of an owl.
+Giant Poisonous Snake,,Medium,Beast,,Unaligned,"Desert, Forest, Grassland, Swamp, Underdark, Urban",0.25,50,MM,327,MM327,,Giant version of a poisonous snake.
+Giant Wolf Spider,,Medium,Beast,,Unaligned,"Coastal, Desert, Forest, Grassland, Hills",0.25,50,MM,330,MM330,,"Enormous, poisonous ambush spiders."
+Gnoll Witherling,,Medium,Undead,,Chaotic Evil,"Arctic, Forest, Grassland, Hills",0.25,50,VGM,155,VGM155,,
+Goblin,,Small,Humanoid,goblinoid,Neutral Evil,"Forest, Grassland, Hills, Underdark",0.25,50,MM,166,MM166,Y,"Cowardly, runty little disgusting humanoids."
+Grimlock,,Medium,Humanoid,grimlock,Neutral Evil,Underdark,0.25,50,MM,175,MM175,Y,"Savage, blind humanoids that live in the Underdark."
+Grung,,Small,Humanoid,grung,Lawful Evil,Forest,0.25,50,VGM,156,VGM156,,
+Hadrosaurus (Maulhead),,Large,Beast,dinosaur/behemoth,Unaligned,"Grassland, Swamp",0.25,50,VGM,140,VGM140,,
+Ixitxachitl,,Small,Aberration,,Chaotic Evil,Underdark,0.25,50,OOTA,225,OOTA225,,
+Ixitxachitl Cleric,,Small,Aberration,,Chaotic Evil,Underdark,0.25,50,OOTA,226,OOTA226,,
+Kalke,,Small,Fiend,,Neutral Evil,Extraplanar (Lower Planes),0.25,50,TOB,259,TOB259,Y,
+Kenku,,Medium,Humanoid,kenku,Chaotic Neutral,"Forest, Urban",0.25,50,MM,194,MM194,,Mischievous little bird-folk that speak through mimicry.
+Kobold Inventor,,Small,Humanoid,kobold,Lawful Evil,"Forest, Hills, Mountain, Underdark, Urban",0.25,50,VGM,166,VGM166,,
+Kuo-toa,,Medium,Humanoid,kuo-toa,Neutral Evil,Underdark,0.25,50,MM,199,MM199,,Fish-like humanoids common to the Underdark.
+Lemurfolk (Kaguani),,Small,Humanoid,lemurfolk,Neutral,Forest,0.25,50,TOB,271,TOB271,Y,
+Living Wick,,Small,Construct,,Unaligned,"Underdark, Urban",0.25,50,TOB,278,TOB278,Y,
+Male Steeder,,Medium,Beast,,Unaligned,Underdark,0.25,50,OOTA,231,OOTA231,,
+Map Mimic,,Tiny,Aberration,shapechanger,Neutral,Underdark,0.25,50,TOB,289,TOB289,Y,
+Mongrelfolk,,Medium,Humanoid,mongrelfolk,Any,"Underdark, Urban",0.25,50,COS,234,COS234,,
+Mud Mephit,,Small,Elemental,,Neutral Evil,Swamp,0.25,50,MM,216,MM216,,Elemental imp-like creatures made out of mud and ooze.
+Needle Blight,,Medium,Plant,,Neutral Evil,Forest,0.25,50,MM,32,MM32,,Humanoid plants tainted with foul magic and bristling with thorns.
+Ox,,Large,Beast,,Unaligned,Urban,0.25,50,VGM,208,VGM208,,
+Panther,,Medium,Beast,,Unaligned,"Forest, Grassland, Hills",0.25,50,MM,333,MM333,,"Dark-furred, lithe giant felines."
+Pixie,,Tiny,Fey,,Neutral Good,Forest,0.25,50,MM,253,MM253,,"Small, winged sylvan fey."
+Pseudodragon,,Tiny,Dragon,,Neutral Good,"Coastal, Desert, Forest, Hills, Mountain, Urban",0.25,50,MM,254,MM254,Y,Miniature dragons that often act as familiars and guardians for mages.
+Pteranodon (Skinwing),,Medium,Beast,dinosaur/behemoth,Unaligned,"Coastal, Grassland, Mountain",0.25,50,MM,80,MM80,,"Large, winged behemoths."
+Ramag,,Medium,Humanoid,ramag,Neutral,"Grassland, Urban",0.25,50,TOB,317,TOB317,Y,
+Ratfolk,,Small,Humanoid,ratfolk,Neutral,"Underdark, Urban",0.25,50,TOB,320,TOB320,Y,
+Red-Banded Line Spider,,Tiny,Beast,,Unaligned,Any,0.25,50,TOB,363,TOB363,Y,
+Riding Horse,,Large,Beast,,Unaligned,"Grassland, Urban",0.25,50,MM,336,MM336,,Horses bred for riding.
+Roachling Skirmisher,,Small,Humanoid,roachling,Chaotic Neutral,"Underdark, Urban",0.25,50,TOB,329,TOB329,Y,
+Rothe,,Large,Beast,,Unaligned,"Grassland, Underdark",0.25,50,VGM,208,VGM208,,
+Shadow Fey Elf,,Medium,Humanoid,elf,Lawful Evil,Any,0.25,50,TOB,171,TOB171,Y,
+Skeleton,,Medium,Undead,,Lawful Evil,Urban,0.25,50,MM,272,MM272,Y,Humanoid skeletons animated via necromantic magic to serve as guardians.
+Smoke Mephit,,Small,Elemental,,Neutral Evil,Urban,0.25,50,MM,217,MM217,,Imp-like elementals made of solidified smoke.
+Sprite,,Tiny,Fey,,Neutral Good,Forest,0.25,50,MM,283,MM283,Y,"Tiny, winged fey."
+Steam Mephit,,Small,Elemental,,Neutral Evil,Underwater,0.25,50,MM,217,MM217,Y,Elemental imp-like creatures made of steam.
+Stench Kow,,Large,Beast,,Unaligned,Extraplanar (Lower Planes),0.25,50,VGM,208,VGM208,,
+Suturefly,,Tiny,Beast,,Unaligned,"Forest, Swamp",0.25,50,TOB,372,TOB372,Y,
+Swamp Adder Snake,,Small,Beast,,Unaligned,Swamp,0.25,50,TOB,354,TOB354,Y,
+Swarm of Bats,,Medium,Beast,,Unaligned,"Hills, Mountain, Underdark, Urban",0.25,50,MM,337,MM337,,Aggressive swarm of flying rodents.
+Swarm of Rats,,Medium,Beast,,Unaligned,"Swamp, Urban",0.25,50,MM,339,MM339,,"Wave of aggressive, biting rodents."
+Swarm of Ravens,,Medium,Beast,,Unaligned,"Forest, Hills, Swamp, Urban",0.25,50,MM,339,MM339,,"An aggressive, giant flock of black-birds."
+Treacle,,Tiny,Ooze,,Unaligned,"Forest, Grassland, Urban",0.25,50,TOB,387,TOB387,Y,
+Troglodyte,,Medium,Humanoid,troglodyte,Chaotic Evil,Underdark,0.25,50,MM,290,MM290,,Musk-emitting savage lizardy fish-folk.
+Vegepygmy,,Small,Plant,,Neutral,"Forest, Swamp",0.25,50,VGM,196,VGM196,,
+Velociraptor (Swarm Drake),,Tiny,Beast,dinosaur/behemoth,Unaligned,"Forest, Grassland",0.25,50,VGM,140,VGM140,,
+Violet Fungus,,Medium,Plant,,Unaligned,Underdark,0.25,50,MM,138,MM138,Y,Mobile fungus whose tentacles cause rotting.
+Winged Kobold,,Small,Humanoid,kobold,Lawful Evil,"Arctic, Coastal, Desert, Forest, Hills, Mountain, Swamp, Underdark, Urban",0.25,50,MM,195,MM195,,"Called urds, these kobolds have dragon-like wings."
+Witchlight,,Tiny,Construct,,Neutral,Any,0.25,50,TOB,409,TOB409,Y,
+Wolf,,Medium,Beast,,Unaligned,"Forest, Grassland, Hills",0.25,50,MM,341,MM341,,"Wild, fluffy canines."
+Xanka,,Small,Construct,,Unaligned,Any,0.25,50,TOB,411,TOB411,Y,
+Zombie,,Medium,Undead,,Neutral Evil,Urban,0.25,50,MM,316,MM316,Y,Rotting corpses reanimated with necromantic magic.
+Alehouse Drake,,Tiny,Dragon,,Chaotic Neutral,Urban,0.5,100,TOB,148,TOB148,Y,
+Alseid,,Medium,Monstrosity,,Chaotic Neutral,Forest,0.5,100,TOB,15,TOB15,Y,
+Ambush Drake,,Medium,Dragon,,Unaligned,,0.5,100,HDQ,88,HDQ88,,
+Ape,,Medium,Beast,,Unaligned,Forest,0.5,100,MM,317,MM317,,Hairy humanoid mammals that have rudimentary tool-using skills.
+Beggar Ghoul,,Medium,Undead,,Chaotic Evil,"Underdark, Urban",0.5,100,TOB,213,TOB213,Y,
+Black Bear,,Medium,Beast,,Unaligned,Forest,0.5,100,MM,318,MM318,,Smaller member of the cute-looking but dangerous bear family.
+Bone Crab,,Small,Beast,,Neutral,Underwater,0.5,100,TOB,40,TOB40,Y,
+Bucca,,Tiny,Fey,,Neutral Evil,Any,0.5,100,TOB,46,TOB46,Y,
+Burrowling,,Small,Humanoid,burrowling,Lawful Neutral,Grassland,0.5,100,TOB,49,TOB49,Y,
+Chitine,,Small,Monstrosity,,Chaotic Evil,Underdark,0.5,100,VGM,131,VGM131,,
+Clockwork Beetle,,Tiny,Construct,,Unaligned,Any,0.5,100,TOB,60,TOB60,Y,
+Clockwork Watchman,,Medium,Construct,,Unaligned,Urban,0.5,100,TOB,65,TOB65,Y,
+Cockatrice,,Small,Monstrosity,,Unaligned,Grassland,0.5,100,MM,42,MM42,Y,A lizard-bird-bat ostrich with a petrifying gaze.
+Crocodile,,Large,Beast,,Unaligned,"Swamp, Urban",0.5,100,MM,320,MM320,,A waddling log of reptily scariness with about a billion teeth and very strong jaws.
+Darkling,,Small,Fey,,Chaotic Neutral,"Forest, Swamp, Underdark, Urban",0.5,100,VGM,134,VGM134,,
+Darkmantle,,Small,Monstrosity,,Unaligned,Underdark,0.5,100,MM,46,MM46,Y,"Creepy, ceiling-dwelling Underdark squids that drop on people."
+Duergar Spore Servant,,Medium,Plant,,Unaligned,Underdark,0.5,100,OOTA,229,OOTA229,,
+Dust Mephit,,Small,Elemental,,Neutral Evil,Desert,0.5,100,MM,215,MM215,Y,Imp-like elemental creature formed of dust and grime.
+Empty Cloak,,Medium,Construct,,Unaligned,Any,0.5,100,TOB,176,TOB176,Y,
+Firenewt Warrior,,Medium,Humanoid,firenewt,Neutral Evil,"Desert, Hills, Mountain, Underdark",0.5,100,VGM,142,VGM142,,
+Fraughashar,,Small,Fey,,Neutral Evil,Any,0.5,100,TOB,206,TOB206,Y,
+Gas Spore,,Large,Plant,,Unaligned,Underdark,0.5,100,MM,138,MM138,,Hovering gas-filled plant matter that looks like a beholder from afar.
+Gazer,,Tiny,Aberration,beholder,Neutral Evil,Underdark,0.5,100,VGM,126,VGM126,,
+Giant Goat,,Large,Beast,,Unaligned,"Grassland, Hills, Mountain",0.5,100,MM,326,MM326,,Giant version of a goat.
+Giant Sea Horse,,Large,Beast,,Unaligned,Underwater,0.5,100,MM,328,MM328,,Giant version of a sea horse.
+Giant Wasp,,Medium,Beast,,Unaligned,"Forest, Grassland, Urban",0.5,100,MM,329,MM329,,Giant version of a wasp.
+Gnoll,,Medium,Humanoid,gnoll,Chaotic Evil,"Desert, Forest, Grassland, Hills",0.5,100,MM,163,MM163,Y,Demon-worshipping hyena-people.
+Gnoll Hunter,,Medium,Humanoid,gnoll,Chaotic Evil,"Arctic, Forest, Grassland, Hills",0.5,100,VGM,154,VGM154,,
+Gray Ooze,,Medium,Ooze,,Unaligned,Underdark,0.5,100,MM,243,MM243,Y,A corrosive pool of oily grossness.
+Hobgoblin,,Medium,Humanoid,goblinoid,Lawful Evil,"Desert, Forest, Grassland, Hills, Underdark",0.5,100,MM,186,MM186,Y,"Highly militarized, human-sized goblinoids."
+Ice Mephit,,Small,Elemental,,Neutral Evil,Arctic,0.5,100,MM,215,MM215,Y,Elemental imp-like creature made of ice.
+Jackalwere,,Medium,Humanoid,shapechanger,Chaotic Evil,"Desert, Grassland",0.5,100,MM,193,MM193,,Shapechanging human-jackal hybrid with a sleep-inducing gaze.
+Lantern Dragonette,,Tiny,Dragon,,Lawful Neutral,Forest,0.5,100,TOB,270,TOB270,Y,
+Library Automaton,,Small,Construct,,Lawful Neutral,Urban,0.5,100,TOB,273,TOB273,Y,
+Lizardfolk,,Medium,Humanoid,lizardfolk,Neutral,"Forest, Swamp",0.5,100,MM,204,MM204,Y,Primitive humanoids with reptilian features.
+Magma Mephit,,Small,Elemental,,Neutral Evil,Underdark,0.5,100,MM,216,MM216,Y,Elemental imp-like creature made of magma.
+Magmin,,Small,Elemental,,Chaotic Neutral,Extraplanar (Elemental),0.5,100,MM,212,MM212,Y,Short humanoid-looking elementals wreathed in flames.
+Miremal,,Small,Fey,,Chaotic Evil,Swamp,0.5,100,TOB,292,TOB292,Y,
+Morphoi,,Medium,Plant,,Chaotic Evil,Underwater,0.5,100,TOB,297,TOB297,Y,
+Myconid Adult,,Medium,Plant,,Lawful Neutral,Underdark,0.5,100,MM,232,MM232,,Fungus-folk that communicate and trip out via spores.
+Nkosi,,Medium,Humanoid,"shapechanger, nkosi",Lawful Neutral,Grassland,0.5,100,TOB,306,TOB306,Y,
+Orc,,Medium,Humanoid,orc,Chaotic Evil,"Arctic, Forest, Grassland, Hills, Mountain, Swamp, Underdark",0.5,100,MM,246,MM246,Y,Bloodthirsty tribal humanoids with stooped features and piggish faces.
+Orc Nurtured One of Yurtrus,,Medium,Humanoid,orc,Chaotic Evil,"Forest, Grassland, Hills, Mountain, Underdark",0.5,100,VGM,184,VGM184,,
+Piercer,,Medium,Monstrosity,,Unaligned,Underdark,0.5,100,MM,252,MM252,,"Looks like a stalactite, impales like a spear."
+Ravenfolk Scout,,Medium,Humanoid,kenku,Neutral,"Forest, Hills, Urban",0.5,100,TOB,322,TOB322,Y,
+Reef Shark,,Medium,Beast,,Unaligned,Underwater,0.5,100,MM,336,MM336,,Shallow-water shark.
+Rum Gremlin,,Tiny,Fey,,Chaotic Evil,Underwater,0.5,100,TOB,239,TOB239,Y,
+Rust Monster,,Medium,Monstrosity,,Unaligned,Underdark,0.5,100,MM,262,MM262,Y,Big bug whose prehensile antennae cause metal to rust.
+Sahuagin,,Medium,Humanoid,sahuagin,Lawful Evil,"Coastal, Underwater",0.5,100,MM,263,MM263,Y,Well-organized yet savage fish-people that hate aquatic elves and lizardfolk.
+Satyr,,Medium,Fey,,Chaotic Neutral,Forest,0.5,100,MM,267,MM267,Y,Goat-legged humanoids with fey ancestry.
+Shadow,,Medium,Undead,,Chaotic Evil,"Underdark, Urban",0.5,100,MM,269,MM269,Y,Strength-draining undead spirits made of shadow.
+Skin Bat,,Small,Undead,,Neutral Evil,Any,0.5,100,TOB,87,TOB87,Y,
+Svirfneblin,,Small,Humanoid,gnome,Neutral Good,Underdark,0.5,100,MM,164,MM164,Y,Deep gnomes reside in the Underdark.
+Swarm of Insects,,Medium,Beast,,Unaligned,"Desert, Forest, Grassland, Hills, Swamp, Underdark, Urban",0.5,100,MM,338,MM338,,Aggressive swarm of flesh-eating or stinging bugs.
+Swarm of Rot Grubs,,Medium,Beast,,Unaligned,"Swamp, Underdark",0.5,100,VGM,208,VGM208,,
+Tosculi Drone,,Small,Monstrosity,,Lawful Evil,"Desert, Grassland, Hills",0.5,100,TOB,386,TOB386,Y,
+Tridrone,,Medium,Construct,,Lawful Neutral,Extraplanar (Mechanus),0.5,100,MM,225,MM225,,Pyramid-shaped modrons with gangly limbs.
+Vine Blight,,Medium,Plant,,Neutral Evil,Forest,0.5,100,MM,32,MM32,,A mass of vines and creepers given evil life through foul magic.
+War Ostrich,,Large,Beast,,Unaligned,"Desert, Grassland",0.5,100,TOB,307,TOB307,Y,
+Warhorse,,Large,Beast,,Unaligned,Urban,0.5,100,MM,340,MM340,,Stout horses bred and trained for battle.
+Warhorse Skeleton,,Large,Undead,,Lawful Evil,Any,0.5,100,MM,273,MM273,Y,The reanimated skeleton of a warhorse.
+Worg,,Large,Monstrosity,,Neutral Evil,"Forest, Grassland, Hills",0.5,100,MM,341,MM341,,"An intelligent, wolf-like predator that delights in hunting and eating the weak."
+Worker Amphoron of Yothri,,Small,Construct,,Neutral,Any,0.5,100,FEF,9,FEF9,,
+Animated Armor,,Medium,Construct,,Unaligned,Any,1,200,MM,19,MM19,Y,A suit of armor with a life of its own.
+Bastet Temple Cat,,Small,Beast,,Chaotic Neutral,Urban,1,200,TOB,32,TOB32,Y,
+Boloti,,Tiny,Fey,,Neutral Evil,Swamp,1,200,TOB,38,TOB38,Y,
+Brass Dragon Wyrmling,,Medium,Dragon,,Chaotic Good,Desert,1,200,MM,106,MM106,Y,Urbane and talkative dragons of good alignment.
+Broodiken,,Tiny,Construct,,Neutral,Any,1,200,TOB,45,TOB45,Y,
+Brown Bear,,Large,Beast,,Unaligned,"Arctic, Forest, Hills",1,200,MM,319,MM319,,"Big, territorial, strong-as-all-get-out grizzly bear."
+Bugbear,,Medium,Humanoid,goblinoid,Chaotic Evil,"Forest, Grassland, Underdark",1,200,MM,33,MM33,Y,"The big bullies of goblinkind, born for battle and mayhem."
+Chernomoi,,Tiny,Fey,,Neutral,Urban,1,200,TOB,55,TOB55,Y,
+Child of the Briar,,Tiny,Plant,,Neutral Evil,Forest,1,200,TOB,56,TOB56,Y,
+Clockwork Weaving Spider,,Tiny,Construct,,Unaligned,Urban,1,200,TOB,66,TOB66,Y,
+Copper Dragon Wyrmling,,Medium,Dragon,,Chaotic Good,Hills,1,200,MM,112,MM112,Y,Cunning tricksters and riddlers of the metallic dragons
+Crag Cat,,Large,Beast,,Unaligned,,1,200,SKT,240,SKT240,,
+Crimson Drake,,Tiny,Dragon,,Chaotic Evil,Forest,1,200,TOB,151,TOB151,Y,
+Death Dog,,Medium,Monstrosity,,Neutral Evil,Desert,1,200,MM,321,MM321,,Disease-ridden two-headed dog.
+Deinonychus (Deathclaw),,Medium,Beast,dinosaur/behemoth,Unaligned,"Forest, Grassland, Hills",1,200,VGM,139,VGM139,,
+Dire Wolf,,Large,Beast,,Unaligned,"Forest, Hills",1,200,MM,321,MM321,,"Larger, more primitive and more aggressive version of a gray wolf."
+Dogmole,,Medium,Beast,,Neutral,"Forest, Hills, Mountain",1,200,TOB,120,TOB120,Y,
+Dryad,,Medium,Fey,,Neutral,Forest,1,200,MM,121,MM121,Y,Fey protectors of wooded realms.
+Duergar,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,1,200,MM,122,MM122,Y,"Deep dwarves, ebon skinned and with a trace of diabolic ancestry."
+Duergar Soulblade,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,1,200,OOTA,227,OOTA227,,
+Emerald Eye,,Tiny,Construct,,Chaotic Evil,Any,1,200,TOB,175,TOB175,Y,
+Eonic Drifter,,Medium,Humanoid,human,Chaotic Neutral,Any,1,200,TOB,177,TOB177,Y,
+Erina Defender,,Small,Humanoid,erina,Neutral,"Forest, Grassland, Hills",1,200,TOB,178,TOB178,Y,
+Female Steeder,,Large,Beast,,Unaligned,Underdark,1,200,OOTA,231,OOTA231,,
+Fire Snake,,Medium,Elemental,,Neutral Evil,Underdark,1,200,MM,265,MM265,,Fire elemental in the form of a snake-like creature.
+Firenewt Warlock of Imix,,Medium,Humanoid,firenewt,Neutral Evil,"Desert, Hills, Mountain, Underdark",1,200,VGM,143,VGM143,,
+Gerridae,,Large,Fey,,Neutral,Underwater,1,200,TOB,212,TOB212,Y,
+Ghoul,,Medium,Undead,,Chaotic Evil,"Swamp, Underdark, Urban",1,200,MM,148,MM148,Y,"Monstrous, undead humanoids that eat flesh and have a paralytic touch."
+Giant Eagle,,Large,Beast,,Neutral Good,"Coastal, Grassland, Hills, Mountain",1,200,MM,324,MM324,,Giant version of an eagle.
+Giant Hyena,,Large,Beast,,Unaligned,"Desert, Forest, Grassland, Hills",1,200,MM,326,MM326,,Giant version of a hyena.
+Giant Octopus,,Large,Beast,,Unaligned,Underwater,1,200,MM,326,MM326,,Giant version of an octopus.
+Giant Spider,,Large,Beast,,Unaligned,"Desert, Forest, Swamp, Underdark, Urban",1,200,MM,328,MM328,,Giant version of a web-slinging spider.
+Giant Strider,,Large,Monstrosity,,Neutral Evil,"Hills, Mountain, Underdark",1,200,VGM,143,VGM143,,
+Giant Toad,,Large,Beast,,Unaligned,"Coastal, Desert, Forest, Underdark",1,200,MM,329,MM329,,Giant version of a toad.
+Giant Vulture,,Large,Beast,,Neutral Evil,"Desert, Grassland",1,200,MM,329,MM329,,Giant version of a vulture.
+Glass Gator,,Large,Beast,,Unaligned,"Swamp, Underwater",1,200,TOB,228,TOB228,Y,
+Gnoll Flesh Gnawer,,Medium,Humanoid,gnoll,Chaotic Evil,"Arctic, Forest, Grassland, Hills",1,200,VGM,154,VGM154,,
+Goblin Boss,,Small,Humanoid,goblinoid,Neutral Evil,"Forest, Grassland, Hills, Underdark",1,200,MM,166,MM166,,Tribal or familial leader of a goblin gang.
+Grung Wildling,,Small,Humanoid,grung,Lawful Evil,Forest,1,200,VGM,157,VGM157,,
+Guardian Portrait,,Medium,Construct,,Unaligned,Urban,1,200,COS,227,COS227,,
+Half-ogre (Ogrillon),,Large,Giant,,Any chaotic,"Arctic, Desert, Forest, Hills, Mountain, Underdark, Urban",1,200,MM,238,MM238,,"Offspring of an ogre that breeds with an orc, human or rarely bugbears or gnolls."
+Harpy,,Medium,Monstrosity,,Chaotic Evil,"Coastal, Forest, Hills, Mountain",1,200,MM,181,MM181,Y,Vulture-winged humanoids with an alluring song.
+Hippogriff,,Large,Monstrosity,,Unaligned,"Grassland, Hills, Mountain",1,200,MM,184,MM184,Y,"Voracious and aggressive eagle-headed, winged horses."
+Ice Toad,,Medium,Monstrosity,,Neutral,,1,200,ROT,90,ROT90,,
+Imp,,Tiny,Fiend,"devil, shapechanger",Lawful Evil,Extraplanar (Lower Planes),1,200,MM,76,MM76,Y,Stinger-tailed fiends that often act as familiars to evil mages.
+Kobold Dragonshield,,Small,Humanoid,kobold,Lawful Evil,"Forest, Hills, Mountain, Underdark",1,200,VGM,165,VGM165,,
+Kobold Scale Sorcerer,,Small,Humanoid,kobold,Lawful Evil,"Forest, Hills, Mountain, Underdark, Urban",1,200,VGM,167,VGM167,,
+Kobold Trapsmith,,Small,Humanoid,kobold,Lawful Neutral,"Underdark, Urban",1,200,TOB,264,TOB264,Y,
+Kuo-toa Whip,,Medium,Humanoid,kuo-toa,Neutral Evil,Underdark,1,200,MM,200,MM200,,Divine spellcasters of the kuo-toa tribes.
+Leshy,,Medium,Monstrosity,,Chaotic Neutral,Forest,1,200,TOB,272,TOB272,Y,
+Lion,,Large,Beast,,Unaligned,"Desert, Grassland, Hills, Mountain",1,200,MM,331,MM331,,"Big, hunting felines."
+Maw Demon,,Medium,Fiend,demon,Chaotic Evil,Underdark,1,200,VGM,137,VGM137,,
+Moss Lurker,,Small,Humanoid,,Chaotic Neutral,"Forest, Swamp, Underdark",1,200,TOB,298,TOB298,Y,
+Nihilethic Zombie,,Medium,Undead,,Neutral Evil,"Underdark, Underwater",1,200,TOB,9,TOB9,Y,
+Nilbog,,Small,Humanoid,goblinoid,Chaotic Evil,"Forest, Underdark",1,200,VGM,182,VGM182,,
+Quadrone,,Medium,Construct,,Lawful Neutral,Extraplanar (Mechanus),1,200,MM,226,MM226,,Cube-shaped modrons with mechanical limbs and flightless wings.
+Quaggoth Spore Servant,,Medium,Plant,,Unaligned,Underdark,1,200,MM,230,MM230,,Dead quaggoth reanimated by myconid spores to serve those fungus-people.
+Quasit,,Tiny,Fiend,"demon, shapechanger",Chaotic Evil,Extraplanar (Lower Planes),1,200,MM,63,MM63,Y,"Tiny fiendish familiars, the demon counterpart to the devilish imp."
+Quickling,,Tiny,Fey,,Chaotic Evil,Forest,1,200,VGM,187,VGM187,,
+Ratfolk Rogue,,Small,Humanoid,ratfolk,Neutral,"Underdark, Urban",1,200,TOB,320,TOB320,Y,
+Rime Worm Grub,,Medium,Elemental,,Neutral,Extraplanar (Elemental),1,200,TOB,327,TOB327,Y,
+Scarecrow,,Medium,Construct,,Chaotic Evil,Grassland,1,200,MM,268,MM268,,Magically animated constructs meant to guard locations of import.
+Sea Spawn,,Medium,Humanoid,,Neutral Evil,"Coastal, Underwater",1,200,VGM,189,VGM189,,
+Sharkjaw Skeleton,,Large,Undead,,Lawful Evil,Any,1,200,TOB,350,TOB350,Y,
+Specter,,Medium,Undead,,Chaotic Evil,"Underdark, Urban",1,200,MM,279,MM279,Y,Spirit unable to pass to the afterlife and consumed by anger.
+Strahd Zombie,,Medium,Undead,,Unaligned,Urban,1,200,COS,241,COS241,,
+Swarm of Quippers,,Medium,Beast,,Unaligned,Underwater,1,200,MM,338,MM338,,"Swarm of vicious, pirahna-like fish."
+Thorny,,Medium,Plant,,Neutral,"Forest, Swamp",1,200,VGM,197,VGM197,,
+Thri-kreen,,Medium,Humanoid,thri-kreen,Chaotic Neutral,"Desert, Grassland",1,200,MM,288,MM288,,"Intelligent, multi-armed insect folk."
+Tiger,,Large,Beast,,Unaligned,"Forest, Grassland",1,200,MM,339,MM339,,Big hunter cat with orange fur sporting black stripes.
+Vargouille,,Tiny,Fiend,,Chaotic Evil,"Desert, Swamp, Underdark",1,200,VGM,195,VGM195,,
+Wampus Cat,,Medium,Monstrosity,,Chaotic Neutral,"Forest, Hills",1,200,TOB,405,TOB405,Y,
+Wind Dragon Wyrmling,,Medium,Dragon,,Chaotic Neutral,"Grassland, Hills, Mountain",1,200,TOB,145,TOB145,Y,
+Xvart Warlock of Raxivort,,Small,Humanoid,xvart,Chaotic Evil,"Hills, Underdark",1,200,VGM,200,VGM200,,
+Young Faerie Dragon,,Tiny,Dragon,,Chaotic Good,Forest,1,200,MM,133,MM133,,"Tiny, butterfly-winged dragons allied with fey races."
+Yuan-ti Pureblood,,Medium,Humanoid,yuan-ti,Neutral Evil,"Desert, Forest, Swamp, Urban",1,200,MM,310,MM310,,Lowest-caste yuan-ti that appear as humans with a minor snake-like trait.
+Zanskaran Viper,,Large,Beast,,Unaligned,Swamp,1,200,TOB,354,TOB354,Y,
+Adherer,,Medium,Aberration,,Lawful Evil,"Forest, Underdark",2,450,FEF,6,FEF6,,
+Adult Faerie Dragon,,Tiny,Dragon,,Chaotic Good,Forest,2,450,MM,133,MM133,,"Tiny, butterfly-winged dragons allied with fey races."
+Allosaurus (Bloodmaw),,Large,Beast,dinosaur/behemoth,Unaligned,Grassland,2,450,MM,79,MM79,,Large hunter dinosaur known for chasing down and pouncing on prey.
+Ankheg,,Large,Monstrosity,,Unaligned,"Forest, Grassland",2,450,MM,21,MM21,Y,Burrowing insectoid monstrosities.
+Anubian,,Medium,Elemental,,Chaotic Evil,Any,2,450,TOB,24,TOB24,Y,
+Aurochs,,Large,Beast,,Unaligned,"Grassland, Hills, Mountain",2,450,VGM,207,VGM207,,
+Awakened Tree,,Huge,Plant,,Unaligned,Forest,2,450,MM,317,MM317,,Tree that has gained sentience through magical enchantment.
+Awakened Zurkhwood,,Huge,Plant,,Unaligned,Underdark,2,450,OOTA,230,OOTA230,,
+Azer,,Medium,Elemental,,Lawful Neutral,Extraplanar (Elemental),2,450,MM,22,MM22,Y,Elemental forgers and gem-crafters.
+Behtu,,Small,Humanoid,,Chaotic Evil,Forest,2,450,TOB,34,TOB34,Y,
+Beli,,Small,Fey,,Neutral Evil,Any,2,450,TOB,35,TOB35,Y,
+Black Dragon Wyrmling,,Medium,Dragon,,Chaotic Evil,Swamp,2,450,MM,88,MM88,Y,Chromatic dragons that breathe acid.
+Bronze Dragon Wyrmling,,Medium,Dragon,,Lawful Good,Coastal,2,450,MM,109,MM109,Y,"Highly social, noble metallic dragons."
+Carrion Crawler,,Large,Monstrosity,,Unaligned,Underdark,2,450,MM,37,MM37,,Centipede-like wall-crawlers that hunt out carrion and flesh.
+Cave Bear,,Large,Beast,,Unaligned,Underdark,2,450,MM,334,MM334,,Big bears that live in caves.
+Cave Dragon Wyrmling,,Medium,Dragon,,Neutral Evil,Underdark,2,450,TOB,127,TOB127,Y,
+Centaur,,Large,Monstrosity,,Neutral Good,"Forest, Grassland",2,450,MM,38,MM38,Y,"Half-man, half-horse, they wander the wilderness and protect it."
+Chamberlain of Zuggtmoy,,Large,Plant,,Chaotic Evil,Underdark,2,450,OOTA,230,OOTA230,,
+Clockwork Hound,,Medium,Construct,,Unaligned,"Forest, Urban",2,450,TOB,62,TOB62,Y,
+Cobbleswarm,,Medium,Monstrosity,,Unaligned,"Underdark, Urban",2,450,TOB,68,TOB68,Y,
+Darkling Elder,,Medium,Fey,,Chaotic Neutral,"Forest, Swamp, Underdark, Urban",2,450,VGM,134,VGM134,,
+Deep One,,Medium,Humanoid,deep one,Chaotic Evil,Underwater,2,450,TOB,73,TOB73,Y,
+Derro Rogue,reference Droki,Small,Humanoid,derro,Chaotic Evil,Underdark,2,450,OOTA,231,OOTA231,,
+Derro Warlock,reference Narrak,Small,Humanoid,derro,Chaotic Evil,Underdark,2,450,OOTA,232,OOTA232,,
+Doppelrat,,Tiny,Monstrosity,,Unaligned,"Underdark, Urban",2,450,TOB,123,TOB123,Y,
+Duergar Darkhaft,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,2,450,OOTA,226,OOTA226,,
+Duergar Kavalrachni,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,2,450,OOTA,226,OOTA226,,
+Duergar Keeper of the Flame,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,2,450,OOTA,226,OOTA226,,
+Duergar Stone Guard,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,2,450,OOTA,227,OOTA227,,
+Duergar Xarrorn,,Medium,Humanoid,dwarf,Lawful Evil,Underdark,2,450,OOTA,228,OOTA228,,
+Eala,,Small,Monstrosity,,Unaligned,Any,2,450,TOB,163,TOB163,Y,
+Eel Hound,,Medium,Fey,,Neutral,Underwater,2,450,TOB,166,TOB166,Y,
+Ettercap,,Medium,Monstrosity,,Neutral Evil,Forest,2,450,MM,131,MM131,Y,"Bestial, spider-like humanoids."
+Firegeist,,Small,Elemental,,Neutral Evil,Any,2,450,TOB,202,TOB202,Y,
+Flying Ape,,Large,Monstrosity,,Chaotic Neutral,Forest,2,450,FEF,12,FEF12,,
+Folk of Leng,,Medium,Humanoid,,Neutral Evil,Any,2,450,TOB,204,TOB204,Y,
+Gargoyle,,Medium,Elemental,,Chaotic Evil,"Underdark, Urban",2,450,MM,140,MM140,Y,"Winged, statue-like elemental guardians."
+Gelatinous Cube,,Large,Ooze,,Unaligned,Underdark,2,450,MM,242,MM242,Y,"Cube-shaped oozes that slide along corridors, eating everything."
+Ghast,,Medium,Undead,,Chaotic Evil,"Swamp, Underdark, Urban",2,450,MM,148,MM148,Y,"Advanced, more cunning version of ghouls."
+Giant Ant,,Large,Beast,,Unaligned,Any,2,450,TOB,23,TOB23,Y,
+Giant Boar,,Large,Beast,,Unaligned,"Forest, Grassland, Hills",2,450,MM,323,MM323,,"Giant version of a wild, tusked pig."
+Giant Constrictor Snake,,Huge,Beast,,Unaligned,"Desert, Forest, Swamp, Underdark, Underwater",2,450,MM,324,MM324,,Giant version of a snake that likes to entangle and crush its prey.
+Giant Elk,,Huge,Beast,,Unaligned,"Forest, Grassland, Hills, Mountain",2,450,MM,325,MM325,,"An elk, but humongously sized."
+Gibbering Mouther,,Medium,Aberration,,Neutral,Underdark,2,450,MM,157,MM157,Y,An amorphous blob of eyes and babbling mouths that feasts on flesh.
+Githzerai Monk,,Medium,Humanoid,gith,Lawful Neutral,Extraplanar (Limbo),2,450,MM,161,MM161,,Disciplined aesthetic of the gith.
+Gnoll Pack Lord,,Medium,Humanoid,gnoll,Chaotic Evil,"Desert, Forest, Grassland, Hills",2,450,MM,163,MM163,,Chieftain or sub-chief of the gnolls.
+Gray Thirster,,Medium,Undead,,Neutral Evil,Desert,2,450,TOB,238,TOB238,Y,
+Green Dragon Wyrmling,,Medium,Dragon,,Lawful Evil,Forest,2,450,MM,95,MM95,Y,Chromatic dragon with green scales and noxious gas breath.
+Grick,,Medium,Monstrosity,,Neutral,"Forest, Underdark",2,450,MM,173,MM173,Y,"Tentacle-faced, beak-mouthed snake like creature."
+Griffon,,Large,Monstrosity,,Unaligned,"Arctic, Coastal, Grassland, Hills, Mountain",2,450,MM,174,MM174,Y,Flying eagle-lion hybrid.
+Grung Elite Warrior,,Small,Humanoid,grung,Lawful Evil,Forest,2,450,VGM,157,VGM157,,
+Guard Drake,,Medium,Dragon,,Unaligned,,2,450,HDQ,91,HDQ91,,
+Guard Drake,,Medium,Dragon,,Unaligned,Urban,2,450,VGM,158,VGM158,,
+"Guard drake, black",,Medium,Dragon,,Unaligned,"Swamp, Urban",2,450,VGM,158,VGM158,,
+"Guard drake, blue",,Medium,Dragon,,Unaligned,"Desert, Urban",2,450,VGM,158,VGM158,,
+"Guard drake, green",,Medium,Dragon,,Unaligned,"Forest, Urban",2,450,VGM,158,VGM158,,
+"Guard drake, red",,Medium,Dragon,,Unaligned,"Mountain, Underdark, Urban",2,450,VGM,158,VGM158,,
+"Guard drake, white",,Medium,Dragon,,Unaligned,"Arctic, Urban",2,450,VGM,158,VGM158,,
+Hobgoblin Iron Shadow,,Medium,Humanoid,goblinoid,Lawful Evil,"Forest, Grassland, Hills",2,450,VGM,162,VGM162,,
+Hunter Shark,,Large,Beast,,Unaligned,Underwater,2,450,MM,330,MM330,,"Solitary, 15 foot long shark."
+Ink Devil,,Small,Fiend,devil,Lawful Evil,Extraplanar (Baator),2,450,TOB,107,TOB107,Y,
+Intellect Devourer,,Tiny,Aberration,,Lawful Evil,Underdark,2,450,MM,191,MM191,,Mind flayer-bred brains with bestial claws that feed on sentience.
+Kobold Alchemist,,Small,Humanoid,kobold,Lawful Neutral,"Underdark, Urban",2,450,TOB,261,TOB261,Y,
+Kot Bayun,,Medium,Monstrosity,,Neutral,"Hills, Mountain, Underdark",2,450,TOB,268,TOB268,Y,
+Lizardfolk Shaman,,Medium,Humanoid,lizardfolk,Neutral,"Forest, Swamp",2,450,MM,205,MM205,,Swamp-dwelling lizardy humanoid tribal spellcasters.
+Meenlock,,Small,Fey,,Neutral Evil,"Forest, Swamp, Urban",2,450,VGM,170,VGM170,,
+Merrow,,Large,Monstrosity,,Chaotic Evil,"Coastal, Underwater",2,450,MM,219,MM219,Y,"Ogre-descended, Demogorgon-tainted aquatic humanoids with fishtails."
+Mimic,,Medium,Monstrosity,shapechanger,Neutral,"Underdark, Urban",2,450,MM,220,MM220,Y,"Hungry monsters that can appear as normal dungeon dressing, like treasure chests."
+Minotaur Skeleton,,Large,Undead,,Lawful Evil,Underdark,2,450,MM,273,MM273,Y,The reanimated skeleton of a bull-headed humanoid.
+Myconid Sovereign,,Large,Plant,,Lawful Neutral,Underdark,2,450,MM,232,MM232,,Fungi people that can reanimate bodies with spores to create zombie-like servants.
+Myling,,Small,Undead,,Chaotic Evil,Any,2,450,TOB,301,TOB301,Y,
+Noctiny,,Medium,Humanoid,noctiny,Neutral Evil,Any,2,450,TOB,308,TOB308,Y,
+Nothic,,Medium,Aberration,,Neutral Evil,Underdark,2,450,MM,236,MM236,,Cyclopean humanoid beasts who can see fear and inflict rotting with their gaze.
+Ochre Jelly,,Large,Ooze,,Unaligned,Underdark,2,450,MM,243,MM243,Y,"Yellowish ooze that forms tentacle-like pseudopods to attack, and can split into more."
+Ogre,,Large,Giant,,Chaotic Evil,"Arctic, Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark",2,450,MM,237,MM237,Y,
+Ogre Zombie,,Large,Undead,,Neutral Evil,"Arctic, Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark",2,450,MM,316,MM316,Y,
+Orc Claw of Luthic,,Medium,Humanoid,orc,Chaotic Evil,"Mountain, Underdark",2,450,VGM,183,VGM183,,
+Orc Eye of Gruumsh,,Medium,Humanoid,orc,Chaotic Evil,"Arctic, Forest, Grassland, Hills, Mountain, Swamp, Underdark",2,450,MM,247,MM247,,
+Orc Hand of Yurtrus,,Medium,Humanoid,orc,Chaotic Evil,"Forest, Grassland, Hills, Mountain, Underdark",2,450,VGM,184,VGM184,,
+Orog,,Medium,Humanoid,orc,Chaotic Evil,"Arctic, Forest, Grassland, Hills, Mountain, Underdark",2,450,MM,247,MM247,,
+Paper Drake,,Small,Dragon,,Neutral,Urban,2,450,TOB,154,TOB154,Y,
+Pegasus,,Large,Celestial,,Chaotic Good,"Forest, Grassland, Hills",2,450,MM,250,MM250,Y,
+Pentadrone,,Large,Construct,,Lawful Neutral,Extraplanar (Mechanus),2,450,MM,226,MM226,,
+Peryton,,Medium,Monstrosity,,Chaotic Evil,"Hills, Mountain",2,450,MM,251,MM251,,
+Plesiosaurus (Leviathan),,Large,Beast,dinosaur/behemoth,Unaligned,"Coastal, Underwater",2,450,MM,80,MM80,Y,
+Polar Bear,,Large,Beast,,Unaligned,Arctic,2,450,MM,334,MM334,,
+Poltergeist,,Medium,Undead,,Chaotic Evil,"Underdark, Urban",2,450,MM,279,MM279,,
+Purple Wormling,,Large,Monstrosity,,Unaligned,,2,450,SKT,242,SKT242,,
+Putrid Haunt,,Medium,Undead,,Neutral Evil,Swamp,2,450,TOB,315,TOB315,Y,
+Quaggoth,,Medium,Humanoid,quaggoth,Chaotic Neutral,Underdark,2,450,MM,256,MM256,,
+Quetzalcoatlus (Pholux),,Huge,Beast,dinosaur/behemoth,Unaligned,"Coastal, Hills, Mountain",2,450,VGM,140,VGM140,,
+Rhinoceros,,Large,Beast,,Unaligned,Grassland,2,450,MM,336,MM336,,
+Roachling Lord,,Small,Humanoid,roachling,Chaotic Neutral,"Underdark, Urban",2,450,TOB,329,TOB329,Y,
+Rug of Smothering,,Large,Construct,,Unaligned,Urban,2,450,MM,20,MM20,Y,A rug that has been given enough life to strangle interlopers.
+Saber-toothed Tiger,,Large,Beast,,Unaligned,"Arctic, Mountain",2,450,MM,336,MM336,,
+Sahuagin Priestess,,Medium,Humanoid,sahuagin,Lawful Evil,"Coastal, Underwater",2,450,MM,264,MM264,,
+Sea Dragon Wyrmling,,Medium,Dragon,,Neutral Evil,Underwater,2,450,TOB,136,TOB136,Y,
+Sea Hag,,Medium,Fey,,Chaotic Evil,"Coastal, Underwater",2,450,MM,179,MM179,Y,
+Shadhavar,,Large,Monstrosity,,Neutral,Any,2,450,TOB,344,TOB344,Y,
+Shadow Mastiff,,Medium,Monstrosity,,Neutral Evil,"Forest, Hills, Swamp",2,450,VGM,190,VGM190,,
+Shadow Mastiff Alpha,,Medium,Monstrosity,,Neutral Evil,"Forest, Hills, Swamp",2,450,VGM,190,VGM190,,
+Shellycoat,,Medium,Fey,,Neutral Evil,Underdark,2,450,TOB,346,TOB346,Y,
+Siabhra (Vile Barber),,Small,Fey,,Chaotic Evil,Any,2,450,TOB,401,TOB401,Y,
+Silver Dragon Wyrmling,,Medium,Dragon,,Lawful Good,"Mountain, Urban",2,450,MM,118,MM118,Y,
+Spider Thief,,Small,Construct,,Unaligned,,2,450,TOB,366,TOB366,Y,
+Spined Devil,,Small,Fiend,devil,Lawful Evil,Extraplanar (Baator),2,450,MM,78,MM78,,
+Swarm of Poisonous Snakes,,Medium,Beast,,Unaligned,"Forest, Swamp",2,450,MM,338,MM338,,
+Tendril Puppet,,Medium,Plant,,Lawful Neutral,Forest,2,450,TOB,403,TOB403,Y,
+Tosculi Warrior,,Small,Monstrosity,,Lawful Evil,"Desert, Grassland, Hills",2,450,TOB,386,TOB386,Y,
+Uraeus,,Tiny,Celestial,,Lawful Neutral,Extraplanar (Upper Planes),2,450,TOB,392,TOB392,Y,
+Uthgardt Shaman,,Medium,Humanoid,human,Neutral Evil,,2,450,SKT,243,SKT243,,
+Vampiric Ixitxachitl,,Medium,Aberration,,Chaotic Evil,Underdark,2,450,OOTA,226,OOTA226,,
+Vampiric Ixitxachitl Cleric,,Medium,Aberration,,Chaotic Evil,Underdark,2,450,OOTA,226,OOTA226,,
+Vegepygmy Chief,,Small,Plant,,Neutral,"Forest, Swamp",2,450,VGM,197,VGM197,,
+Void Dragon Wyrmling,,Medium,Dragon,,Chaotic Neutral,Mountain,2,450,TOB,140,TOB140,Y,
+Warrior Amphoron of Yothri,,Medium,Construct,,Neutral,Any,2,450,FEF,10,FEF10,,
+Wererat,,Medium,Humanoid,"human, shapechanger",Lawful Evil,"Forest, Urban",2,450,MM,209,MM209,Y,
+Wereraven,,Medium,Humanoid,"human, shapechanger",Lawful Good,,2,450,COS,242,COS242,,
+White Dragon Wyrmling,,Medium,Dragon,,Chaotic Evil,Arctic,2,450,MM,102,MM102,Y,
+Will-o-wisp,,Tiny,Undead,,Chaotic Evil,"Forest, Swamp, Urban",2,450,MM,301,MM301,Y,
+Yuan-ti Broodguard,,Medium,Humanoid,yuan-ti,Neutral Evil,"Desert, Forest, Underdark",2,450,VGM,203,VGM203,,
+Algoid,,Medium,Plant,,Neutral,Swamp,3,700,FEF,8,FEF8,,
+Alseid Grovekeeper,,Medium,Monstrosity,,Chaotic Neutral,,3,700,TOB,15,TOB15,Y,
+Amphiptere,,Medium,Beast,,Unaligned,Forest,3,700,TOB,16,TOB16,Y,
+Ankylosaurus (Macetail),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,3,700,MM,79,MM79,,
+Aranea,,Large,Monstrosity,shapechanger,Chaotic Evil,"Forest, Underdark",3,700,FEF,13,FEF13,,
+Arboreal Grappler,,Medium,Aberration,,Neutral Evil,Forest,3,700,TOB,25,TOB25,Y,
+Ascomoid,,Large,Plant,,Unaligned,Underdark,3,700,FEF,16,FEF16,,
+Bagiennik,,Medium,Aberration,,Chaotic Neutral,"Forest, Swamp",3,700,TOB,31,TOB31,Y,
+Basilisk,,Medium,Monstrosity,,Unaligned,Mountain,3,700,MM,24,MM24,Y,A ponderous lizard monster with a petrifying gaze.
+Bearded Devil,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),3,700,MM,70,MM70,Y,
+Bearfolk,,Medium,Humanoid,bearfolk,Chaotic Good,Forest,3,700,TOB,33,TOB33,Y,
+Blue Dragon Wyrmling,,Medium,Dragon,,Lawful Evil,"Coastal, Desert",3,700,MM,91,MM91,Y,
+Bugbear Chief,,Medium,Humanoid,goblinoid,Chaotic Evil,"Forest, Grassland, Underdark",3,700,MM,33,MM33,,The biggest and baddest bully of a bugbear tribe.
+Bullywug Shaman,reference Pharblex Spattergoo,Medium,Humanoid,bullywug,Chaotic Evil,,3,700,HDQ,91,HDQ91,,
+Cactid,,Large,Plant,,Unaligned,Desert,3,700,TOB,50,TOB50,Y,
+Cave Fisher (Volo's Guide to Monsters version),,Medium,Monstrosity,,Unaligned,Underdark,3,700,VGM,130,VGM130,,
+Choldrith,,Medium,Monstrosity,,Chaotic Evil,Underdark,3,700,VGM,132,VGM132,,
+Clockwork Beetle Swarm,,Large,Construct,,Neutral,Any,3,700,TOB,61,TOB61,Y,
+Clockwork Huntsman,,Medium,Construct,,Unaligned,"Forest, Urban",3,700,TOB,63,TOB63,Y,
+Crimson Basilisk,,Medium,Monstrosity,,Unaligned,Underdark,3,700,FEF,21,FEF21,,
+Darakhul Ghoul,,Medium,Undead,,Neutral Evil,Underdark,3,700,TOB,216,TOB216,Y,
+Deep Scion,,Medium,Humanoid,shapechanger,Neutral Evil,"Coastal, Underwater",3,700,VGM,135,VGM135,,
+Derro Savant,,Small,Humanoid,derro,Chaotic Evil,Underdark,3,700,OOTA,225,OOTA225,,
+Displacer Beast,,Large,Monstrosity,,Lawful Evil,Forest,3,700,MM,81,MM81,,
+Doombat,,Large,Monstrosity,,Unaligned,Underdark,3,700,FEF,23,FEF23,,
+Doppelganger,,Medium,Monstrosity,shapechanger,Neutral,"Underdark, Urban",3,700,MM,82,MM82,Y,
+Duskthorn Dryad,,Medium,Fey,,Chaotic Neutral,Forest,3,700,TOB,160,TOB160,Y,
+Far Darrig,,Small,Fey,,Neutral,"Forest, Grassland",3,700,TOB,179,TOB179,Y,
+Flail Snail,,Large,Elemental,,Unaligned,"Forest, Swamp, Underdark",3,700,VGM,144,VGM144,,
+Flame Dragon Wyrmling,,Medium,Dragon,,Chaotic Evil,"Mountain, Underdark",3,700,TOB,131,TOB131,Y,
+Giant Scorpion,,Large,Beast,,Unaligned,Desert,3,700,MM,327,MM327,,
+Githyanki Warrior,,Medium,Humanoid,gith,Lawful Evil,Extraplanar (Astral),3,700,MM,160,MM160,,
+Gnoll Havoc Runner,,Medium,Humanoid,gnoll,Chaotic Evil,"Desert, Grassland",3,700,TOB,230,TOB230,Y,
+Goat-Man,,Medium,Monstrosity,,Chaotic Evil,"Forest, Hills",3,700,TOB,231,TOB231,Y,
+Gold Dragon Wyrmling,,Medium,Dragon,,Lawful Good,"Forest, Grassland",3,700,MM,115,MM115,Y,
+Green Hag,,Medium,Fey,,Neutral Evil,"Forest, Hills, Swamp",3,700,MM,177,MM177,Y,
+Grell,,Medium,Aberration,,Neutral Evil,Underdark,3,700,MM,172,MM172,,
+Hell Hound,,Medium,Fiend,,Lawful Evil,"Mountain, Underdark",3,700,MM,182,MM182,Y,
+Hobgoblin Captain,,Medium,Humanoid,goblinoid,Lawful Evil,"Desert, Forest, Grassland, Hills, Underdark",3,700,MM,186,MM186,,
+Hook Horror,,Large,Monstrosity,,Neutral,Underdark,3,700,MM,189,MM189,,
+Hook Horror Spore Servant,,Medium,Plant,,Unaligned,Underdark,3,700,OOTA,229,OOTA229,,
+Imy-ut Ushabti,,Medium,Monstrosity,,Neutral,Any,3,700,TOB,256,TOB256,Y,
+J'ba Fofi Spider,,Large,Beast,,Unaligned,Forest,3,700,TOB,362,TOB362,Y,
+Jaculus,,Small,Dragon,,Neutral Evil,Forest,3,700,TOB,258,TOB258,Y,
+Killer Whale,,Huge,Beast,,Unaligned,Underwater,3,700,MM,331,MM331,,
+Kuo-toa Monitor,,Medium,Humanoid,kuo-toa,Neutral Evil,Underdark,3,700,MM,198,MM198,,
+Leucrotta,,Large,Monstrosity,,Chaotic Evil,"Desert, Grassland",3,700,VGM,169,VGM169,,
+Mahoru,,Large,Monstrosity,,Unaligned,Underwater,3,700,TOB,281,TOB281,Y,
+Manticore,,Large,Monstrosity,,Lawful Evil,"Arctic, Coastal, Grassland, Hills, Mountain",3,700,MM,213,MM213,Y,
+Mbielu,,Huge,Beast,dinosaur/behemoth,Unaligned,"Grassland, Swamp, Underwater",3,700,TOB,114,TOB114,Y,
+Millitaur,,Large,Monstrosity,,Neutral,Forest,3,700,TOB,288,TOB288,Y,
+Mindrot Thrall,,Medium,Plant,,Neutral,Any,3,700,TOB,290,TOB290,Y,
+Minotaur,,Large,Monstrosity,,Chaotic Evil,Underdark,3,700,MM,223,MM223,Y,
+Mirager,,Medium,Fey,shapechanger,Neutral Evil,Desert,3,700,TOB,291,TOB291,Y,
+Monolith Footman,,Large,Construct,,Unaligned,Any,3,700,TOB,295,TOB295,Y,
+Mummy,,Medium,Undead,,Lawful Evil,Desert,3,700,MM,228,MM228,Y,
+Neogi,,Small,Aberration,,Lawful Evil,"Hills, Underdark",3,700,VGM,180,VGM180,,
+Night Scorpion,,Large,Beast,,Unaligned,"Desert, Forest, Grassland, Underdark",3,700,TOB,340,TOB340,Y,
+Nightmare,,Large,Fiend,,Neutral Evil,Extraplanar (Lower Planes),3,700,MM,235,MM235,Y,
+Orc Red Fang of Shargaas,,Medium,Humanoid,orc,Chaotic Evil,"Forest, Hills, Mountain, Underdark, Urban",3,700,VGM,185,VGM185,,
+Owlbear,,Large,Monstrosity,,Unaligned,Forest,3,700,MM,249,MM249,Y,
+Phantom Warrior,,Medium,Undead,,Any,Any,3,700,COS,235,COS235,,
+Phase Spider,,Large,Monstrosity,,Unaligned,"Desert, Forest, Grassland, Hills, Underdark, Urban",3,700,MM,334,MM334,,
+Pombero,,Medium,Fey,,Chaotic Neutral,Forest,3,700,TOB,313,TOB313,Y,
+Prismatic Beetle Swarm,,Medium,Beast,,Unaligned,Forest,3,700,TOB,375,TOB375,Y,
+Quaggoth Thonot,,Medium,Humanoid,quaggoth,Chaotic Neutral,Underdark,3,700,MM,256,MM256,,
+Ravenfolk Warrior,,Medium,Humanoid,kenku,Neutral,"Forest, Hills, Urban",3,700,TOB,323,TOB323,Y,
+Redcap (VGM version),,Small,Fey,,Chaotic Evil,"Forest, Hills, Swamp",3,700,VGM,188,VGM188,,
+Slithering Tracker,,Medium,Ooze,,Chaotic Evil,"Underdark, Urban",3,700,VGM,191,VGM191,,
+Sluagh Swarm,,Medium,Fey,,Chaotic Evil,Any,3,700,TOB,375,TOB375,Y,
+Spectator,,Medium,Aberration,,Lawful Neutral,Underdark,3,700,MM,30,MM30,,A summoned variant of the beholder used as guardians.
+Spire Walker,,Tiny,Fey,,Chaotic Neutral,Any,3,700,TOB,367,TOB367,Y,
+Stygian Fat-Tailed Scorpion,,Tiny,Beast,,Unaligned,"Desert, Forest, Grassland, Underdark",3,700,TOB,340,TOB340,Y,
+Thursir Giant,,Large,Giant,thursir giant,Neutral Evil or Lawful Evil,Any,3,700,TOB,227,TOB227,Y,
+Trapper,,Large,Monstrosity,,Unaligned,Underdark,3,700,VGM,194,VGM194,,
+Troglodyte Champion of Laogzed,,Medium,Humanoid,troglodyte,Chaotic Evil,Underdark,3,700,OOTA,229,OOTA229,,
+Venomous Mummy,,Medium,Undead,,Lawful Evil,"Desert, Underdark",3,700,TOB,299,TOB299,Y,
+Water Weird,,Large,Elemental,,Neutral,"Underdark, Urban",3,700,MM,299,MM299,,
+Werewolf,,Medium,Humanoid,"human, shapechanger",Chaotic Evil,"Forest, Hills",3,700,MM,211,MM211,Y,
+Wight,,Medium,Undead,,Neutral Evil,"Desert, Swamp, Underdark, Urban",3,700,MM,300,MM300,Y,
+Winter Wolf,,Large,Monstrosity,,Neutral Evil,Arctic,3,700,MM,340,MM340,,
+Yakfolk Warrior,,Large,Monstrosity,,Neutral Evil,,3,700,SKT,244,SKT244,,
+Yeti,,Large,Monstrosity,,Chaotic Evil,Arctic,3,700,MM,305,MM305,,
+Yuan-ti Malison,,Medium,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Swamp",3,700,MM,309,MM309,,
+Aaztar-Ghola,,Medium,Humanoid,,Chaotic Evil,Any,4,1100,FEF,5,FEF5,,
+Accursed Defiler,,Medium,Undead,,Neutral Evil,Desert,4,1100,TOB,12,TOB12,Y,
+Angler Worm,,Huge,Monstrosity,,Unaligned,Underdark,4,1100,TOB,22,TOB22,Y,
+Ant Lion,,Large,Beast,,Unaligned,Desert,4,1100,FEF,11,FEF11,,
+Arcanoplasm,,Large,Monstrosity,,Neutral,Underdark,4,1100,FEF,14,FEF14,,
+Ash Drake,,Small,Dragon,,Neutral Evil,"Mountain, Urban",4,1100,TOB,149,TOB149,Y,
+Babau,,Medium,Fiend,demon,Chaotic Evil,"Underdark, Urban",4,1100,VGM,136,VGM136,,
+Banshee,,Medium,Undead,,Chaotic Evil,"Coastal, Forest",4,1100,MM,23,MM23,,The shrieking spirit of a female elf.
+Barghest,,Large,Fiend,shapechanger,Neutral Evil,"Forest, Grassland, Hills, Mountain, Underdark",4,1100,VGM,123,VGM123,,
+Bereginyas,,Tiny,Fey,,Neutral Evil,Mountain,4,1100,TOB,36,TOB36,Y,
+Black Pudding,,Large,Ooze,,Unaligned,Underdark,4,1100,MM,241,MM241,Y,
+Bone Naga,,Large,Undead,,Lawful Evil,Underdark,4,1100,MM,233,MM233,,
+Carrion Beetle,,Large,Beast,,Neutral,Any,4,1100,TOB,52,TOB52,Y,
+Cavelight Moss,,Large,Plant,,Neutral,Underdark,4,1100,TOB,53,TOB53,Y,
+Chuul,,Large,Aberration,,Chaotic Evil,Underdark,4,1100,MM,40,MM40,Y,Terrifying crustaceans mutated by the aboleths.
+Chuul Spore Servant,,Large,Plant,,Unaligned,Underdark,4,1100,OOTA,228,OOTA228,,
+Couatl,,Medium,Celestial,,Lawful Good,"Desert, Forest, Grassland, Urban",4,1100,MM,43,MM43,Y,Colorful flying serpent summoned to guard ancient tombs.
+Dau,,Small,Fey,,Chaotic Neutral,Desert,4,1100,TOB,70,TOB70,Y,
+Death Butterfly Swarm,,Large,Beast,,Chaotic Evil,"Forest, Grassland",4,1100,TOB,71,TOB71,Y,
+Deathcap Myconid,,Medium,Plant,,Neutral Evil,"Forest, Underdark",4,1100,TOB,300,TOB300,Y,
+Deep One Hybrid Priest,,Medium,Humanoid,deep one,Chaotic Evil,Underwater,4,1100,TOB,73,TOB73,Y,
+Derro Fetal Savant,,Tiny,Humanoid,derro,Chaotic Evil,Underdark,4,1100,TOB,92,TOB92,Y,
+Domovoi,,Medium,Fey,,Chaotic Neutral,"Desert, Forest",4,1100,TOB,122,TOB122,Y,
+Dorreq,,Medium,Aberration,,Neutral Evil,,4,1100,TOB,124,TOB124,Y,
+Edimmu,,Medium,Undead,,Chaotic Evil,Desert,4,1100,TOB,165,TOB165,Y,
+Elephant,,Huge,Beast,,Unaligned,Grassland,4,1100,MM,322,MM322,,
+Ettin,,Large,Giant,,Chaotic Evil,"Hills, Mountain, Underdark",4,1100,MM,132,MM132,Y,
+Firebird,,Small,Celestial,,Neutral Good,Any,4,1100,TOB,201,TOB201,Y,
+Flab Giant,,Large,Giant,flab giant,Chaotic Evil,"Hills, Mountain",4,1100,TOB,223,TOB223,Y,
+Flameskull,,Tiny,Undead,,Neutral Evil,Underdark,4,1100,MM,134,MM134,,
+Forest Marauder,,Large,Giant,forest marauder,Chaotic Evil,Forest,4,1100,TOB,205,TOB205,Y,
+Frostveil,,Medium,Plant,,Unaligned,"Grassland, Hills",4,1100,TOB,207,TOB207,Y,
+Ghost,,Medium,Undead,,Any,"Underdark, Urban",4,1100,MM,147,MM147,Y,
+Giant Ant Queen,,Large,Beast,,Unaligned,Any,4,1100,TOB,23,TOB23,Y,
+Girallon,,Large,Monstrosity,,Unaligned,Forest,4,1100,VGM,152,VGM152,,
+Gnoll Fang of Yeenoghu,,Medium,Fiend,gnoll,Chaotic Evil,"Desert, Forest, Grassland, Hills",4,1100,MM,163,MM163,,
+Half-Blue Dragon Sellsword,reference Langdedrosa Cyanwrath,Medium,Humanoid,human,Lawful Evil,,4,1100,HDQ,91,HDQ91,,
+Helmed Horror,,Medium,Construct,,Neutral,Urban,4,1100,MM,183,MM183,,
+Hobgoblin Devastator,,Medium,Humanoid,goblinoid,Lawful Evil,"Forest, Grassland, Hills",4,1100,VGM,161,VGM161,,
+Imperial Ghoul,,Medium,Undead,,Lawful Evil,Underdark,4,1100,TOB,220,TOB220,Y,
+Incubus,,Medium,Fiend,shapechanger,Neutral Evil,Urban,4,1100,MM,285,MM285,Y,
+Kobold Chieftain,,Small,Humanoid,kobold,Lawful Evil,"Underdark, Urban",4,1100,TOB,263,TOB263,Y,
+Lamia,,Large,Monstrosity,,Chaotic Evil,Desert,4,1100,MM,201,MM201,Y,
+Lemurfolk (Greyfur),,Small,Humanoid,lemurfolk,Neutral,Forest,4,1100,TOB,271,TOB271,Y,
+Lich Hound,,Medium,Undead,,Neutral Evil,Any,4,1100,TOB,274,TOB274,Y,
+Lizard King/Queen,,Medium,Humanoid,lizardfolk,Chaotic Evil,"Forest, Swamp",4,1100,MM,205,MM205,,
+Manabane Scarab Swarm,,Medium,Beast,,Unaligned,Desert,4,1100,TOB,374,TOB374,Y,
+Mngwa,,Medium,Aberration,,Neutral Evil,"Forest, Grassland",4,1100,TOB,293,TOB293,Y,
+Neogi Master,,Medium,Aberration,,Lawful Evil,"Hills, Underdark",4,1100,VGM,180,VGM180,,
+Nkosi Pridelord,,Medium,Humanoid,"shapechanger, nkosi",Lawful Neutral,Grassland,4,1100,TOB,306,TOB306,Y,
+Oculo Swarm,,Large,Aberration,,Neutral Evil,Underdark,4,1100,TOB,309,TOB309,Y,
+Orc Blade of Ilneval,,Medium,Humanoid,orc,Chaotic Evil,"Forest, Grassland, Hills, Mountain, Underdark",4,1100,VGM,183,VGM183,,
+Orc War Chief,,Medium,Humanoid,orc,Chaotic Evil,"Arctic, Forest, Grassland, Hills, Mountain, Swamp, Underdark",4,1100,MM,246,MM246,,
+Ostinato,,Medium,Aberration,,Chaotic Neutral,Any,4,1100,TOB,312,TOB312,Y,
+Ratatosk,,Tiny,Celestial,,Chaotic Neutral,Extraplanar (Yggdrassil),4,1100,TOB,319,TOB319,Y,
+Red Dragon Wyrmling,,Medium,Dragon,,Chaotic Evil,"Hills, Mountain",4,1100,MM,98,MM98,Y,
+Sap Demon,,Small,Ooze,,Chaotic Evil,Forest,4,1100,TOB,335,TOB335,Y,
+Selang (Dark Satyr),,Medium,Fey,,Chaotic Evil,,4,1100,TOB,341,TOB341,Y,
+Serpopard,,Large,Beast,,Unaligned,"Grassland, Swamp",4,1100,TOB,342,TOB342,Y,
+Shadow Demon,,Medium,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),4,1100,MM,64,MM64,,
+Shadow Fey Guardian,,Large,Humanoid,elf,Neutral Evil,Any,4,1100,TOB,174,TOB174,Y,
+Skitterhaunt,,Large,Ooze,,Unaligned,"Desert, Underdark",4,1100,TOB,352,TOB352,Y,
+Spore Monster,reference Yestabrod,Large,Monstrosity,,Chaotic Evil,Underdark,4,1100,OOTA,233,OOTA233,,
+Stegosaurus (Bloodspike),,Huge,Beast,dinosaur/behemoth,Unaligned,"Forest, Grassland",4,1100,VGM,140,VGM140,,
+Succubus,,Medium,Fiend,shapechanger,Neutral Evil,Urban,4,1100,MM,285,MM285,Y,
+Trollkin Reaver,,Medium,Humanoid,trollkin,Neutral,Any,4,1100,TOB,390,TOB390,Y,
+Tusked Skyfish,,Large,Aberration,,Lawful Good,"Grassland, Hills",4,1100,TOB,391,TOB391,Y,
+Vaettir,,Medium,Undead,,Lawful Evil,Any,4,1100,TOB,395,TOB395,Y,
+Water Leaper,,Large,Monstrosity,,Unaligned,Underwater,4,1100,TOB,406,TOB406,Y,
+Wereboar,,Medium,Humanoid,"human, shapechanger",Neutral Evil,"Forest, Grassland, Hills",4,1100,MM,209,MM209,Y,
+Weretiger,,Medium,Humanoid,"human, shapechanger",Neutral,"Desert, Forest, Grassland",4,1100,MM,210,MM210,Y,
+Wharfling Swarm,,Large,Beast,,Unaligned,Underwater,4,1100,TOB,407,TOB407,Y,
+Yakfolk Priest,,Large,Monstrosity,,Neutral Evil,,4,1100,SKT,245,SKT245,,
+Yeth Hound,,Large,Fey,,Neutral Evil,"Forest, Grassland, Hills",4,1100,VGM,201,VGM201,,
+Yuan-ti Mind Whisperer,,Medium,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Underdark",4,1100,VGM,204,VGM204,,
+Yuan-ti NIghtmare Speaker,,Medium,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Underdark",4,1100,VGM,205,VGM205,,
+Zimwi,,Medium,Giant,,Chaotic Evil,Any,4,1100,TOB,415,TOB415,Y,
+Air Elemental,,Large,Elemental,,Neutral,"Desert, Mountain",5,1800,MM,124,MM124,Y,
+Aridni,,Small,Fey,,Neutral Evil,Any,5,1800,TOB,26,TOB26,Y,
+Artificer of Yothri,,Medium,Aberration,,Chaotic Evil,Any,5,1800,FEF,15,FEF15,,
+Asanbosam,,Large,Aberration,,Chaotic Evil,Forest,5,1800,TOB,27,TOB27,Y,
+Assassin Bug,,Medium,Beast,,Unaligned,Forest,5,1800,FEF,17,FEF17,,
+Astral Shark,,Large,Fiend,,Neutral,Extraplanar (Astral),5,1800,FEF,19,FEF19,,
+Aurumvorax (Golden Gorger),,Small,Monstrosity,,Unaligned,"Forest, Grassland, Hills",5,1800,FEF,20,FEF20,,
+Banderhobb,,Large,Monstrosity,,Neutral Evil,Urban,5,1800,VGM,122,VGM122,,
+Barbed Devil,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),5,1800,MM,70,MM70,Y,
+Barlgura,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),5,1800,MM,56,MM56,,
+Beholder Zombie,,Large,Undead,beholder,Neutral Evil,Underdark,5,1800,MM,316,MM316,,
+Bouda,,Medium,Fiend,,Neutral Evil,Extraplanar (Lower Planes),5,1800,TOB,44,TOB44,Y,"Shapechanging, gnoll-like gluttons that crave freshly killed meat."
+Brontosaurus (Thunderstep),,Gargantuan,Beast,dinosaur/behemoth,Unaligned,"Forest, Grassland",5,1800,VGM,139,VGM139,,
+Bulette,,Large,Monstrosity,,Unaligned,"Grassland, Hills, Mountain",5,1800,MM,34,MM34,Y,"Massive burrowing predator, nicknamed the ""land shark."""
+Cambion,,Medium,Fiend,,Any evil,Urban,5,1800,MM,36,MM36,,"Half-humanoid, half-fiendish offspring of incubi and succubi."
+Catoblepas (Volo's Guide to Monsters version),,Large,Monstrosity,,Unaligned,Swamp,5,1800,VGM,129,VGM129,,
+Clockwork Abomination,,Large,Fiend,"devil, construct",Lawful Evil,Any,5,1800,TOB,59,TOB59,Y,
+Corrupting Ooze,,Large,Ooze,,Neutral Evil,Any,5,1800,TOB,311,TOB311,Y,
+Derro Shadow Antipaladin,,Small,Humanoid,derro,Chaotic Evil,Underdark,5,1800,TOB,93,TOB93,Y,
+Dogmole Juggernaut,,Large,Monstrosity,,Neutral,"Hills, Mountain, Underdark",5,1800,TOB,121,TOB121,Y,
+Drakon,,Large,Beast,,Unaligned,,5,1800,TOB,157,TOB157,Y,
+Dream Eater,,Medium,Fiend,,Lawful Evil,"Underdark, Urban",5,1800,TOB,158,TOB158,Y,
+Drow Elite Warrior,,Medium,Humanoid,elf,Neutral Evil,Underdark,5,1800,MM,128,MM128,,
+Drowned Maiden,,Medium,Undead,,Neutral Evil,Underwater,5,1800,TOB,159,TOB159,Y,
+Earth Elemental,,Large,Elemental,,Neutral,Underdark,5,1800,MM,124,MM124,Y,
+Eleinomae,,Medium,Fey,,Chaotic Evil,Swamp,5,1800,TOB,168,TOB168,Y,
+Fellforged,,Medium,Construct,undead,Lawful Evil,Any,5,1800,TOB,182,TOB182,Y,
+Fidele Angel,,Medium,Celestial,,Lawful Good,Any,5,1800,TOB,21,TOB21,Y,
+Fire Elemental,,Large,Elemental,,Neutral,Desert,5,1800,MM,125,MM125,Y,
+Flesh Golem,,Medium,Construct,,Neutral,Urban,5,1800,MM,169,MM169,Y,
+Giant Crocodile,,Huge,Beast,,Unaligned,Swamp,5,1800,MM,324,MM324,,
+Giant Shark,,Huge,Beast,,Unaligned,Underwater,5,1800,MM,328,MM328,,
+Gorgon,,Large,Monstrosity,,Unaligned,"Forest, Grassland, Hills",5,1800,MM,171,MM171,Y,
+Greater Basilisk,,Large,Monstrosity,,Neutral Evil,Desert,5,1800,FEF,22,FEF22,,
+Half-Red Dragon Veteran,,Medium,Humanoid,human,Any,Any,5,1800,MM,180,MM180,Y,
+Hill Giant,,Huge,Giant,hill giant,Chaotic Evil,Hills,5,1800,MM,155,MM155,Y,
+Hound of the Night,,Large,Monstrosity,,Unaligned,"Grassland, Hills, Underdark",5,1800,TOB,251,TOB251,Y,
+Hulking Crab,,Huge,Beast,,Unaligned,,5,1800,SKT,240,SKT240,,
+Hulking Whelp,,Small/Huge,Fey,shapechanger,Chaotic Neutral,Any,5,1800,TOB,252,TOB252,Y,
+Iron Ghoul,,Medium,Undead,,Lawful Evil,Underdark,5,1800,TOB,221,TOB221,Y,
+Kikimora,,Medium,Fey,,Chaotic Neutral,Urban,5,1800,TOB,260,TOB260,Y,
+Kongamato,,Large,Beast,,Unaligned,"Grassland, Swamp",5,1800,TOB,265,TOB265,Y,
+Lindwurm,,Large,Dragon,,Neutral Evil,"Forest, Hills",5,1800,TOB,276,TOB276,Y,
+Lorelei,,Medium,Fey,,Chaotic Evil,Underwater,5,1800,TOB,279,TOB279,Y,
+Mezzoloth,,Medium,Fiend,yugoloth,Neutral Evil,Extraplanar (Lower Planes),5,1800,MM,313,MM313,,
+Mi-go,,Medium,Plant,,Neutral Evil,Any,5,1800,TOB,287,TOB287,Y,
+Mindwitness,,Large,Aberration,,Lawful Evil,Underdark,5,1800,VGM,176,VGM176,,
+Ngobou,,Large,Beast,dinosaur/behemoth,Unaligned,Grassland,5,1800,TOB,115,TOB115,Y,
+Night Hag,,Medium,Fiend,,Neutral Evil,Extraplanar (Lower Planes),5,1800,MM,178,MM178,Y,
+Otyugh,,Large,Aberration,,Neutral,Underdark,5,1800,MM,248,MM248,Y,
+Owl Harpy,,Medium,Monstrosity,,Neutral Evil,"Desert, Forest, Urban",5,1800,TOB,246,TOB246,Y,
+Rat King,,Medium,Monstrosity,,Chaotic Evil,"Underdark, Urban",5,1800,TOB,318,TOB318,Y,
+Ravenala,,Large,Plant,,Unaligned,Forest,5,1800,TOB,321,TOB321,Y,
+Ravenfolk Doom Croaker,,Medium,Humanoid,kenku,Neutral,"Forest, Hills, Urban",5,1800,TOB,324,TOB324,Y,
+Red Slaad,,Large,Aberration,,Chaotic Neutral,Extraplanar (Limbo),5,1800,MM,276,MM276,,
+Revenant,,Medium,Undead,,Neutral,"Arctic, Desert, Forest, Hills, Swamp, Urban",5,1800,MM,259,MM259,,
+Rift Swine,,Large,Aberration,,Chaotic Neutral,Any,5,1800,TOB,326,TOB326,Y,
+Roper,,Large,Monstrosity,,Neutral Evil,Underdark,5,1800,MM,261,MM261,Y,
+Sahuagin Baron,,Large,Humanoid,sahuagin,Lawful Evil,"Coastal, Underwater",5,1800,MM,264,MM264,,
+Salamander,,Large,Elemental,,Neutral Evil,Underdark,5,1800,MM,266,MM266,Y,
+Sand Hag,,Medium,Monstrosity,,Chaotic Evil,Desert,5,1800,TOB,245,TOB245,Y,
+Sandman,,Medium,Celestial,,Chaotic Neutral,Extraplanar (Ethereal),5,1800,TOB,333,TOB333,Y,
+Sarcophagus Slime,,Medium,Undead,,Neutral Evil,Underdark,5,1800,TOB,336,TOB336,Y,
+Shadow Fey Forest Hunter,,Medium,Humanoid,elf,Lawful Evil,Any,5,1800,TOB,173,TOB173,Y,
+Shambling Mound,,Large,Plant,,Unaligned,"Forest, Swamp",5,1800,MM,270,MM270,Y,
+Spawn of Akyishigal,,Medium,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),5,1800,TOB,83,TOB83,Y,
+Spawn of Arbeyach,,Medium,Aberration,,Lawful Evil,Any,5,1800,TOB,97,TOB97,Y,
+Spawn of Kyuss,,Medium,Undead,,Chaotic Evil,"Desert, Underdark",5,1800,VGM,192,VGM192,,
+Subek,,Large,Humanoid,subek,Lawful Neutral,Underwater,5,1800,TOB,371,TOB371,Y,
+Swarm of Cranium Rats,,Medium,Beast,,Lawful Evil,"Underdark, Urban",5,1800,VGM,133,VGM133,,
+Tanarukk,,Medium,Fiend,"demon, orc",Chaotic Evil,"Hills, Mountain, Underdark",5,1800,VGM,186,VGM186,,
+Temple Dog,,Medium,Celestial,,Any good,Extraplanar (Upper Planes),5,1800,TOB,378,TOB378,Y,
+Tlincalli (Scorpion Folk),,Large,Monstrosity,,Neutral Evil,Desert,5,1800,VGM,193,VGM193,,
+Tosculi Elite Bow Raider,,Medium,Humanoid,tosculi,Lawful Evil,"Desert, Grassland, Hills",5,1800,TOB,386,TOB386,Y,
+Triceratops (Tri-horn),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,5,1800,MM,80,MM80,Y,
+Troll,,Large,Giant,,Chaotic Evil,"Arctic, Forest, Hills, Mountain, Swamp, Underdark",5,1800,MM,291,MM291,Y,
+Umber Hulk,,Large,Monstrosity,,Chaotic Evil,Underdark,5,1800,MM,292,MM292,,
+Unicorn,,Large,Celestial,,Lawful Good,Forest,5,1800,MM,294,MM294,Y,
+Vampire Spawn,,Medium,Undead,,Neutral Evil,"Underdark, Urban",5,1800,MM,298,MM298,Y,
+Vapor Lynx,,Large,Monstrosity,,Chaotic Neutral,"Grassland, Swamp",5,1800,TOB,398,TOB398,Y,
+Vila,,Medium,Fey,,Lawful Neutral,Forest,5,1800,TOB,400,TOB400,Y,
+Water Elemental,,Large,Elemental,,Neutral,"Coastal, Swamp, Underwater",5,1800,MM,125,MM125,Y,
+Werebear,,Medium,Humanoid,"human, shapechanger",Neutral Good,"Arctic, Forest, Hills",5,1800,MM,208,MM208,Y,
+Wood Woad,,Medium,Plant,,Lawful Neutral,Forest,5,1800,VGM,198,VGM198,,
+Wormhearted Suffragan,,Medium,Undead,,Chaotic Evil,Any,5,1800,TOB,410,TOB410,Y,
+Wraith,,Medium,Undead,,Neutral Evil,Underdark,5,1800,MM,302,MM302,Y,
+Xorn,,Medium,Elemental,,Neutral,Underdark,5,1800,MM,304,MM304,Y,
+Young Remorhaz,,Large,Monstrosity,,Unaligned,Arctic,5,1800,MM,258,MM258,,
+Young Spinosaurus (Fang Titan),,Huge,Beast,dinosaur/behemoth,Unaligned,"Forest, Swamp",5,1800,TOB,117,TOB117,Y,
+Yuan-ti Pit Master,,Medium,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Underdark",5,1800,VGM,206,VGM206,,
+Zmey Headling,,Medium,Dragon,,Chaotic Evil,"Forest, Swamp",5,1800,TOB,417,TOB417,Y,
+Adult Rime Worm,,Large,Elemental,,Neutral,Extraplanar (Elemental),6,2300,TOB,327,TOB327,Y,
+Angatra,,Medium,Undead,,Neutral Evil,Forest,6,2300,TOB,19,TOB19,Y,
+Annis Hag,,Large,Fey,,Chaotic Evil,"Hills, Mountain",6,2300,VGM,159,VGM159,,
+Apau Perape,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),6,2300,TOB,75,TOB75,Y,
+Bodak,,Medium,Undead,,Chaotic Evil,"Swamp, Underdark, Urban",6,2300,VGM,127,VGM127,,
+Chasme,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),6,2300,MM,57,MM57,,
+Chimera,,Large,Monstrosity,,Chaotic Evil,"Grassland, Hills, Mountain, Underdark",6,2300,MM,39,MM39,Y,"A creature combining the worst features of its three heads: lion, goat, and dragon."
+Clockwork Myrmidon,,Large,Construct,,Unaligned,"Forest, Grassland, Urban",6,2300,TOB,64,TOB64,Y,
+Corrupted Ogre Chieftain,,Large,Giant,,Chaotic Evil,"Hills, Underdark",6,2300,TOB,423,TOB423,Y,
+Crystalline Devil,,Medium,Fiend,devil,Lawful Evil,"Extraplanar (Baator), Underdark, Urban",6,2300,TOB,105,TOB105,Y,
+Cyclops,,Huge,Giant,,Chaotic Neutral,"Coastal, Desert, Grassland, Hills, Mountain, Underdark",6,2300,MM,45,MM45,,"Dull-witted, slightly mad isolationist giants with a single eye."
+Drider,,Large,Monstrosity,,Chaotic Evil,Underdark,6,2300,MM,120,MM120,Y,
+Fate Eater,,Medium,Aberration,,Neutral,Any,6,2300,TOB,180,TOB180,Y,
+Fext,,Medium,Undead,,Any,Any,6,2300,TOB,183,TOB183,Y,
+Galeb Duhr,,Medium,Elemental,,Neutral,"Hills, Mountain",6,2300,MM,139,MM139,,
+Gauth,,Medium,Aberration,beholder,Lawful Evil,Underdark,6,2300,VGM,125,VGM125,,
+Gbahali (Postosuchus),,Huge,Beast,,Unaligned,Grassland,6,2300,TOB,209,TOB209,Y,
+Gearforged Templar,,Medium,Humanoid,gearforged,Lawful Neutral,Any,6,2300,TOB,210,TOB210,Y,
+Ghost Knight,,Medium,Undead,,Lawful Evil,Any,6,2300,TOB,423,TOB423,Y,
+Githzerai Zerth,,Medium,Humanoid,gith,Lawful Neutral,Extraplanar (Limbo),6,2300,MM,161,MM161,,
+Gnarljak,,Small,Construct,,Unaligned,"Underdark, Urban",6,2300,TOB,229,TOB229,Y,
+Greater Death Butterfly Swarm,,Huge,Beast,,Chaotic Evil,"Forest, Grassland",6,2300,TOB,71,TOB71,Y,
+Hobgoblin Warlord,,Medium,Humanoid,goblinoid,Lawful Evil,Urban,6,2300,MM,187,MM187,,
+Ice Maiden,,Medium,Fey,,Lawful Evil,Any,6,2300,TOB,254,TOB254,Y,
+Invisible Stalker,,Medium,Elemental,,Neutral,,6,2300,MM,192,MM192,Y,
+Juggernaut Amphoron of Yothri,,Large,Construct,,Neutral,Any,6,2300,FEF,10,FEF10,,
+Kuo-toa Archpriest,,Medium,Humanoid,kuo-toa,Neutral Evil,Underdark,6,2300,MM,200,MM200,,
+Likho,,Medium,Monstrosity,,Chaotic Evil,Forest,6,2300,TOB,275,TOB275,Y,
+Loxoda,,Huge,Monstrosity,,Neutral Evil,"Forest, Grassland",6,2300,TOB,280,TOB280,Y,
+Malphas (Storm Crow),,Medium,Fey,,Neutral Evil,Any,6,2300,TOB,283,TOB283,Y,
+Mammoth,,Huge,Beast,,Unaligned,Arctic,6,2300,MM,332,MM332,,
+Mamura,,Small,Aberration,fey,Neutral Evil,Underdark,6,2300,TOB,284,TOB284,Y,
+Medusa,,Medium,Monstrosity,,Lawful Evil,Desert,6,2300,MM,214,MM214,Y,
+Mirror Hag,,Medium,Fey,,Chaotic Neutral,Any,6,2300,TOB,243,TOB243,Y,
+Mouth of Grolantor,,Huge,Giant,hill giant,Chaotic Evil,"Grassland, Hills",6,2300,VGM,149,VGM149,,
+Nichny (Dolia),,Medium,Fey,,Neutral Evil,Any,6,2300,TOB,303,TOB303,Y,
+Nightgarm,,Large,Monstrosity,,Chaotic Evil,Any,6,2300,TOB,304,TOB304,Y,
+Redcap (TOB version),,Medium,Fey,,Neutral Evil,"Forest, Hills",6,2300,TOB,325,TOB325,Y,
+Rotting Wind,,Large,Undead,,Neutral Evil,Any,6,2300,TOB,330,TOB330,Y,
+Rusalka,,Medium,Undead,,Chaotic Evil,Underwater,6,2300,TOB,331,TOB331,Y,
+Salt Devil,,Medium,Fiend,devil,Lawful Evil,Desert,6,2300,TOB,113,TOB113,Y,
+Sand Silhouette,,Medium,Undead,,Neutral Evil,Desert,6,2300,TOB,332,TOB332,Y,
+Sandwyrm,,Large,Dragon,,Unaligned,Desert,6,2300,TOB,334,TOB334,Y,
+Scheznyki,,Small,Fey,,Chaotic Evil,"Hills, Underdark",6,2300,TOB,339,TOB339,Y,
+Shadow Fey Duelist,,Medium,Humanoid,elf,Lawful Evil,Any,6,2300,TOB,171,TOB171,Y,
+Spectral Guardian,,Medium,Undead,,Neutral Evil,Any,6,2300,TOB,358,TOB358,Y,
+Superior Animated Armor,reference Strahd's Animated Armor,Medium,Construct,,Lawful Evil,Any,6,2300,COS,227,COS227,,A suit of armor with a life of its own.
+Vrock,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),6,2300,MM,64,MM64,Y,
+Weeping Treant,,Huge,Plant,,Neutral,Forest,6,2300,TOB,388,TOB388,Y,
+White Ape,,Large,Monstrosity,,Neutral,Forest,6,2300,TOB,408,TOB408,Y,
+Wolf Spirit Swarm,,Large,Undead,,Neutral Evil,"Forest, Grassland",6,2300,TOB,377,TOB377,Y,
+Wyvern,,Large,Dragon,,Unaligned,"Hills, Mountain",6,2300,MM,303,MM303,Y,
+Young Brass Dragon,,Large,Dragon,,Chaotic Good,Desert,6,2300,MM,105,MM105,Y,Urbane and talkative dragons of good alignment.
+Young Mithral Dragon,,Medium,Dragon,,Neutral,Mountain,6,2300,TOB,134,TOB134,Y,
+Young White Dragon,,Large,Dragon,,Chaotic Evil,Arctic,6,2300,MM,101,MM101,Y,
+Young Wind Dragon,,Large,Dragon,,Chaotic Neutral,"Grassland, Mountain",6,2300,TOB,144,TOB144,Y,
+Air Elemental Myrmidon,,Medium,Elemental,,Neutral,,7,2900,POTA,212,POTA212,,
+Bheur Hag,,Medium,Fey,,Chaotic Evil,Arctic,7,2900,VGM,160,VGM160,,
+Blue Slaad,,Large,Aberration,,Chaotic Neutral,Extraplanar (Limbo),7,2900,MM,276,MM276,,
+Chelicerae,,Large,Aberration,,Neutral Evil,,7,2900,TOB,54,TOB54,Y,
+Coral Drake,,Medium,Dragon,,Neutral Evil,Underwater,7,2900,TOB,150,TOB150,Y,
+Deathwisp,,Medium,Undead,,Neutral Evil,Any,7,2900,TOB,72,TOB72,Y,
+Dissimortuum,,Medium,Undead,,Chaotic Evil,Any,7,2900,TOB,119,TOB119,Y,
+Draegloth,,Large,Fiend,demon,Chaotic Evil,Underdark,7,2900,VGM,141,VGM141,,
+Drow Mage,,Medium,Humanoid,elf,Neutral Evil,Underdark,7,2900,MM,129,MM129,,
+Earth Elemental Myrmidon,,Medium,Elemental,,Neutral,,7,2900,POTA,212,POTA212,,
+Einherjar,,Medium,Humanoid,extraplanar,Chaotic Neutral,Extraplanar (Ysgard),7,2900,TOB,167,TOB167,Y,
+Elder Shadow Drake,,Large,Dragon,,Chaotic Evil,Forest,7,2900,TOB,153,TOB153,Y,
+Fire Dancer Swarm,,Medium,Elemental,,Neutral Evil,Extraplanar (Elemental),7,2900,TOB,373,TOB373,Y,
+Fire Elemental Myrmidon,,Medium,Elemental,,Neutral,,7,2900,POTA,213,POTA213,,
+Giant Ape,,Huge,Beast,,Unaligned,Forest,7,2900,MM,323,MM323,,
+Gilded Devil,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),7,2900,TOB,106,TOB106,Y,
+Grick Alpha,,Large,Monstrosity,,Neutral,"Forest, Underdark",7,2900,MM,173,MM173,,
+Half-Black Dragon Champion,reference Rezmir,Medium,Humanoid,human,Neutral Evil,,7,2900,HDQ,93,HDQ93,,
+Herald of Darkness,,Large,Fiend,,Neutral Evil,Extraplanar (Lower Planes),7,2900,TOB,249,TOB249,Y,
+Korred,,Small,Fey,,Chaotic Neutral,Forest,7,2900,VGM,168,VGM168,,
+Lake Troll,,Large,Giant,,Chaotic Evil,Underwater,7,2900,TOB,389,TOB389,Y,
+Mind Flayer,,Medium,Aberration,,Lawful Evil,Underdark,7,2900,MM,222,MM222,,
+Oni,,Large,Giant,,Lawful Evil,"Forest, Urban",7,2900,MM,239,MM239,Y,
+Possessed Pillar,,Large,Construct,,Unaligned,"Desert, Urban",7,2900,TOB,314,TOB314,Y,
+Psoglav,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),7,2900,TOB,79,TOB79,Y,
+Red Hag,,Medium,Fey,,Neutral Evil,Any,7,2900,TOB,244,TOB244,Y,
+Risen Reaver,,Large,Undead,,Chaotic Evil,Any,7,2900,TOB,328,TOB328,Y,
+Sahuagin Assassin,reference Ghald,Large,Humanoid,sahuagin,Lawful Evil,,7,2900,POTA,209,POTA209,,
+Sand Spider,,Large,Beast,,Unaligned,"Desert, Grassland",7,2900,TOB,364,TOB364,Y,
+Shadow Beast,,Medium,Fey,,Chaotic Evil,"Forest, Underdark",7,2900,TOB,345,TOB345,Y,
+Shadow Fey Enchantress,,Medium,Humanoid,elf,Lawful Evil,Any,7,2900,TOB,172,TOB172,Y,
+Shield Guardian,,Large,Construct,,Unaligned,Urban,7,2900,MM,271,MM271,Y,
+Soul Eater,,Medium,Fiend,,Neutral Evil,Extraplanar,7,2900,TOB,356,TOB356,Y,
+Spark,,Tiny,Elemental,,Chaotic Neutral,Extraplanar (Elemental),7,2900,TOB,357,TOB357,Y,
+Spider of Leng,,Large,Aberration,,Chaotic Evil,"Hills, Mountain",7,2900,TOB,365,TOB365,Y,
+Stone Giant,,Huge,Giant,stone giant,Neutral,"Hills, Mountain, Underdark",7,2900,MM,156,MM156,Y,
+Tree Blight,,Huge,Plant,,Neutral Evil,"Forest, Grassland",7,2900,COS,230,COS230,,
+Umbral Vampire,,Medium,Fiend,,Chaotic Evil,Extraplanar (Shadowfell),7,2900,TOB,397,TOB397,Y,
+Vine Lord,,Medium,Plant,,Lawful Neutral,Forest,7,2900,TOB,402,TOB402,Y,
+Water Elemental Myrmidon,,Medium,Elemental,,Neutral,,7,2900,POTA,213,POTA213,,
+Young Black Dragon,,Large,Dragon,,Chaotic Evil,Swamp,7,2900,MM,88,MM88,Y,
+Young Copper Dragon,,Large,Dragon,,Chaotic Good,Hills,7,2900,MM,111,MM111,Y,Cunning tricksters and riddlers of the metallic dragons
+Yuan-ti Abomination,,Large,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Swamp",7,2900,MM,308,MM308,,
+Ala,,Medium,Fey,,Chaotic Evil,Any,8,3900,TOB,13,TOB13,Y,
+Arcane Guardian,,Medium,Undead,,Neutral Evil,,8,3900,TOB,358,TOB358,Y,
+Blemmyes,,Large,Monstrosity,,Chaotic Evil,"Hills, Mountain",8,3900,TOB,37,TOB37,Y,
+Bone Collective,,Small,Undead,,Chaotic Evil,Any,8,3900,TOB,39,TOB39,Y,
+Chain Devil,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),8,3900,MM,72,MM72,Y,
+Chained Angel,,Medium,Celestial,,Neutral Evil,Any,8,3900,TOB,20,TOB20,Y,
+Chronalmental,,Large,Elemental,,Unaligned,Any,8,3900,TOB,57,TOB57,Y,
+Cloaker,,Large,Aberration,,Chaotic Neutral,Underdark,8,3900,MM,41,MM41,Y,"The Underdark's answer to ""what would a flying manta ray look like?"""
+Deep One Archimandrite,,Large,Humanoid,deep one,Chaotic Evil,Underwater,8,3900,TOB,74,TOB74,Y,
+Degenerate Titan,,Huge,Giant,,Chaotic Evil,"Grassland, Underdark",8,3900,TOB,381,TOB381,Y,
+Dragonleaf Tree,,Large,Plant,,Unaligned,"Forest, Urban",8,3900,TOB,147,TOB147,Y,
+Drow Priestess of Lolth,,Medium,Humanoid,elf,Neutral Evil,Underdark,8,3900,MM,129,MM129,,
+Dune Mimic,,Huge,Monstrosity,shapechanger,Neutral,"Desert, Grassland",8,3900,TOB,162,TOB162,Y,
+Earth Prophet Medusa,reference Marlos Urnrayle,Medium,Monstrosity,non-lair 12 (8400),Neutral Evil,,8,3900,POTA,199,POTA199,,
+Feyward Tree,,Huge,Construct,,Unaligned,Any,8,3900,TOB,200,TOB200,Y,
+Fomorian,,Huge,Giant,,Chaotic Evil,Underdark,8,3900,MM,136,MM136,,
+Frost Giant,,Huge,Giant,frost giant,Neutral Evil,"Arctic, Mountain",8,3900,MM,155,MM155,Y,
+Githyanki Knight,,Medium,Humanoid,gith,Lawful Evil,Extraplanar (Astral),8,3900,MM,160,MM160,,
+Green Slaad,,Large,Aberration,shapechanger,Chaotic Neutral,Extraplanar (Limbo),8,3900,MM,277,MM277,,
+Hezrou,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),8,3900,MM,60,MM60,Y,
+Hydra,,Huge,Monstrosity,,Unaligned,Swamp,8,3900,MM,190,MM190,Y,
+Idolic Deity,,Small,Construct,,Neutral Evil,Underdark,8,3900,TOB,255,TOB255,Y,
+Kishi,,Medium,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),8,3900,TOB,77,TOB77,Y,
+Liosalfar,,Large,Elemental,,Neutral,Extraplanar,8,3900,TOB,277,TOB277,Y,
+Lunar Devil,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),8,3900,TOB,110,TOB110,Y,
+Mallqui,,Medium,Undead,,Lawful Neutral,,8,3900,TOB,282,TOB282,Y,
+Mind Flayer Arcanist,,Medium,Aberration,,Lawful Evil,Underdark,8,3900,MM,222,MM222,,
+Monolith Champion,,Large,Construct,,Unaligned,Any,8,3900,TOB,294,TOB294,Y,
+Qwyllion,,Medium,Aberration,fey,Neutral Evil,Any,8,3900,TOB,316,TOB316,Y,
+Rust Drake,,Medium,Dragon,,Chaotic Evil,"Underdark, Urban",8,3900,TOB,155,TOB155,Y,
+Savager,,Large,Beast,,Neutral Evil,"Forest, Grassland",8,3900,TOB,338,TOB338,Y,
+Shabti,,Medium,Construct,,Unaligned,"Swamp, Underdark",8,3900,TOB,343,TOB343,Y,
+Shoosuva,,Large,Fiend,demon,Chaotic Evil,"Arctic, Forest, Grassland, Hills",8,3900,VGM,137,VGM137,,
+Spirit Naga,,Large,Monstrosity,,Chaotic Evil,Underdark,8,3900,MM,234,MM234,Y,
+Tophet,,Huge,Construct,,Neutral Evil,Any,8,3900,TOB,383,TOB383,Y,
+Tyrannosaurus Rex (Dreadfang),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,8,3900,MM,80,MM80,Y,
+Xhkarsh,,Large,Aberration,,Neutral Evil,Any,8,3900,TOB,412,TOB412,Y,
+Young Bronze Dragon,,Large,Dragon,,Lawful Good,Coastal,8,3900,MM,108,MM108,Y,
+Young Cave Dragon,,Large,Dragon,,Neutral Evil,Underdark,8,3900,TOB,127,TOB127,Y,
+Young Green Dragon,,Large,Dragon,,Lawful Evil,Forest,8,3900,MM,94,MM94,Y,
+Abominable Yeti,,Huge,Monstrosity,,Chaotic Evil,Arctic,9,5000,MM,306,MM306,,
+Aerial Servant,,Medium,Fiend,,Neutral,Any,9,5000,FEF,7,FEF7,,
+al-Aeshma Genie,,Large,Elemental,,Chaotic Evil,Any,9,5000,TOB,211,TOB211,Y,
+Bone Devil,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),9,5000,MM,71,MM71,Y,
+Bukavac,,Large,Monstrosity,,Neutral Evil,"Forest, Swamp",9,5000,TOB,47,TOB47,Y,
+Clay Golem,,Large,Construct,,Unaligned,Urban,9,5000,MM,168,MM168,Y,
+Cloud Giant,,Huge,Giant,cloud giant,Neutral Good or Neutral Evil,Mountain,9,5000,MM,154,MM154,Y,
+Cloud Giant Wizard,,Huge,Giant,cloud giant,Neutral Evil,,9,5000,HDQ,89,HDQ89,,
+Deep Drake,,Large,Dragon,,Chaotic Evil,Underdark,9,5000,TOB,152,TOB152,Y,
+Desert Giant,,Huge,Giant,desert giant,Neutral,Desert,9,5000,TOB,222,TOB222,Y,
+Eater of Dust (Yakat-Shi),,Medium,Aberration,,Neutral Evil,Any,9,5000,TOB,164,TOB164,Y,
+Fire Giant,,Huge,Giant,fire giant,Lawful Evil,"Mountain, Underdark",9,5000,MM,154,MM154,Y,
+Flind,,Medium,Humanoid,gnoll,Chaotic Evil,"Arctic, Forest, Grassland, Hills",9,5000,VGM,153,VGM153,,
+Ghostwalk Spider,,Large,Monstrosity,,Neutral Evil,Forest,9,5000,TOB,361,TOB361,Y,
+Glabrezu,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),9,5000,MM,58,MM58,Y,
+Gray Slaad,,Medium,Aberration,shapechanger,Chaotic Neutral,Urban,9,5000,MM,277,MM277,,
+Horakh,,Medium,Monstrosity,,Neutral,"Desert, Grassland, Underdark",9,5000,TOB,250,TOB250,Y,
+Krake Spawn,,Huge,Monstrosity,,Neutral Evil,Underwater,9,5000,TOB,269,TOB269,Y,
+Malakbel,,Medium,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),9,5000,TOB,78,TOB78,Y,
+Nycaloth,,Large,Fiend,yugoloth,Neutral Evil,Extraplanar (Lower Planes),9,5000,MM,314,MM314,,
+Oozasis,,Gargantuan,Ooze,,Unaligned,"Desert, Swamp",9,5000,TOB,310,TOB310,Y,
+Treant,,Huge,Plant,,Chaotic Good,Forest,9,5000,MM,289,MM289,Y,
+Ulitharid,,Large,Aberration,,Lawful Evil,Underdark,9,5000,VGM,175,VGM175,,
+Ushabti,,Large,Construct,,Unaligned,Underdark,9,5000,TOB,394,TOB394,Y,
+Vine Troll Skeleton,,Large,Plant,,Unaligned,Any,9,5000,TOB,351,TOB351,Y,
+Young Blue Dragon,,Large,Dragon,,Lawful Evil,"Coastal, Desert",9,5000,MM,91,MM91,Y,
+Young Flame Dragon,,Large,Dragon,,Chaotic Evil,"Mountain, Underdark",9,5000,TOB,130,TOB130,Y,
+Young Sea Dragon,,Large,Dragon,,Neutral Evil,"Mountain, Underwater",9,5000,TOB,136,TOB136,Y,
+Young Silver Dragon,,Large,Dragon,,Lawful Good,"Mountain, Urban",9,5000,MM,118,MM118,Y,
+Young Void Dragon,,Large,Dragon,,Chaotic Neutral,Mountain,9,5000,TOB,140,TOB140,Y,
+Aboleth,,Large,Aberration,,Lawful Evil,Underdark,10,5900,MM,13,MM13,Y,Aquatic mind-controllers.
+Algorith,,Medium,Construct,,Lawful Neutral,Any,10,5900,TOB,14,TOB14,Y,
+Alhoon,,Medium,Undead,,Any evil,Underdark,10,5900,VGM,172,VGM172,,
+Automata Devil (Castigas),,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),10,5900,TOB,102,TOB102,Y,
+Bone Swarm,,Large,Undead,,Chaotic Evil,Any,10,5900,TOB,41,TOB41,Y,
+Death Kiss,,Large,Aberration,beholder,Neutral Evil,Underdark,10,5900,VGM,124,VGM124,,
+Death Slaad,,Medium,Aberration,shapechanger,Chaotic Evil,Extraplanar (Limbo),10,5900,MM,278,MM278,,
+Deva,,Medium,Celestial,,Lawful Good,Extraplanar (Upper Planes),10,5900,MM,16,MM16,Y,Angelic messengers and agents that assume mortal forms.
+Fear Smith (Fiarsidhe),,Medium,Fey,,Chaotic Neutral,Any,10,5900,TOB,181,TOB181,Y,
+Froghemoth,,Huge,Monstrosity,,Unaligned,"Swamp, Underdark",10,5900,VGM,145,VGM145,,
+Guardian Naga,,Large,Monstrosity,,Lawful Good,"Desert, Forest",10,5900,MM,234,MM234,Y,
+Hundun,,Large,Celestial,,Chaotic Good,Extraplanar (Limbo),10,5900,TOB,253,TOB253,Y,
+Rubezahl,,Medium,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),10,5900,TOB,80,TOB80,Y,
+Salt Golem,,Large,Construct,,Unaligned,"Desert, Underwater",10,5900,TOB,235,TOB235,Y,
+Sathaq Worm,,Huge,Elemental,,Neutral Evil,"Desert, Swamp, Underdark",10,5900,TOB,337,TOB337,Y,
+Stone Giant Dreamwalker,,Huge,Giant,stone giant,Chaotic Neutral,"Coastal, Hills, Mountain",10,5900,VGM,150,VGM150,,
+Stone Golem,,Large,Construct,,Unaligned,Urban,10,5900,MM,170,MM170,Y,
+Thuellai,,Huge,Elemental,,Chaotic Neutral,Extraplanar (Elemental),10,5900,TOB,379,TOB379,Y,
+Yochlol,,Medium,Fiend,"demon, shapechanger",Chaotic Evil,Extraplanar (Abyss),10,5900,MM,65,MM65,,
+Young Gold Dragon,,Large,Dragon,,Lawful Good,"Forest, Grassland",10,5900,MM,115,MM115,Y,
+Young Red Dragon,,Large,Dragon,,Chaotic Evil,"Hills, Mountain",10,5900,MM,98,MM98,Y,
+Abominable Beauty,,Medium,Fey,,Neutral Evil,Any,11,7200,TOB,11,TOB11,Y,
+Baba Yaga's Horsemen,,Medium,Fey,,Lawful Neutral,Any,11,7200,TOB,29,TOB29,Y,
+Behir,,Huge,Monstrosity,,Neutral Evil,Underdark,11,7200,MM,25,MM25,Y,A multitudinous-legged crocodile monster with lightning breath.
+Berstuc,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),11,7200,TOB,76,TOB76,Y,
+Blood Hag,,Medium,Fey,,Chaotic Evil,Any,11,7200,TOB,242,TOB242,Y,
+Buraq,,Medium,Celestial,,Lawful Good,Extraplanar (Upper Planes),11,7200,TOB,48,TOB48,Y,
+Cloud Giant Smiling One,,Huge,Giant,cloud giant,Chaotic Neutral,Mountain,11,7200,VGM,146,VGM146,,
+Corpse Mound,,Huge,Undead,,Neutral Evil,Any,11,7200,TOB,69,TOB69,Y,
+Creeping Hut,reference Baba Lysaga's Creeping Hut,Gargantuan,Construct,,Unaligned,Any,11,7200,COS,226,COS226,,
+Dao,,Large,Elemental,,Neutral Evil,Underdark,11,7200,MM,143,MM143,,
+Death Knight Bladelord,reference Naergoth Bladelord,Medium,Undead,,Neutral Evil,Any,11,7200,ROT,90,ROT90,,
+Djinni,,Large,Elemental,,Chaotic Good,Coastal,11,7200,MM,144,MM144,Y,
+Dullahan,,Large,Fey,,Lawful Evil,Any,11,7200,TOB,161,TOB161,Y,
+Efreeti,,Large,Elemental,,Lawful Evil,Desert,11,7200,MM,145,MM145,Y,
+Eye Golem,,Large,Construct,,Unaligned,Any,11,7200,TOB,233,TOB233,Y,
+Grim Jester,,Medium,Undead,,Chaotic Evil,Any,11,7200,TOB,240,TOB240,Y,
+Gynosphinx,,Large,Monstrosity,,Lawful Neutral,Desert,11,7200,MM,282,MM282,Y,
+Horned Devil,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),11,7200,MM,74,MM74,Y,
+Koralk (Harvester Devil),,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),11,7200,TOB,108,TOB108,Y,
+Marid,,Large,Elemental,,Chaotic Neutral,"Coastal, Underwater",11,7200,MM,146,MM146,,
+Morkoth,,Medium,Aberration,lair 12 (8400),Chaotic Evil,"Coastal, Underwater",11,7200,VGM,178,VGM178,,
+Naina,,Large,Dragon,fey,Lawful Evil,Any,11,7200,TOB,302,TOB302,Y,
+Remorhaz,,Huge,Monstrosity,,Unaligned,Arctic,11,7200,MM,258,MM258,Y,
+Roc,,Gargantuan,Monstrosity,,Unaligned,"Arctic, Coastal, Desert, Hills, Mountain",11,7200,MM,260,MM260,Y,
+Valkyrie,,Medium,Celestial,,Neutral,Extraplanar (Ysgard),11,7200,TOB,396,TOB396,Y,
+Vesiculosa,,Gargantuan,Plant,,Unaligned,Desert,11,7200,TOB,399,TOB399,Y,
+Voidling,,Large,Aberration,,Chaotic Evil,Any,11,7200,TOB,404,TOB404,Y,
+Ychen Bannog,,Gargantuan,Beast,,Unaligned,"Forest, Hills, Mountain",11,7200,TOB,413,TOB413,Y,
+"Akyishigal, Demon Lord of Cockroaches",,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),12,8400,TOB,82,TOB82,Y,
+Ancient Titan,,Gargantuan,Celestial,titan,Neutral Good,Any,12,8400,TOB,380,TOB380,Y,
+Arcanaloth,,Medium,Fiend,yugoloth,Neutral Evil,Extraplanar (Lower Planes),12,8400,MM,313,MM313,,
+Bear King,,Medium,Fey,"fey lord, shapechanger",Lawful Neutral,"Forest, Hills",12,8400,TOB,186,TOB186,Y,
+Bonepowder Ghoul,,Small,Undead,,Neutral Evil,Underdark,12,8400,TOB,215,TOB215,Y,
+Chort Devil,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),12,8400,TOB,104,TOB104,Y,
+Dragon Eel,,Huge,Dragon,,Neutral,"Underdark, Underwater",12,8400,TOB,146,TOB146,Y,
+Earth Prophet Medusa (in lair),reference Marlos Urnrayle,Medium,Monstrosity,non-lair 8 (3900),Neutral Evil,,12,8400,POTA,199,POTA199,,
+Erinyes,,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),12,8400,MM,73,MM73,Y,
+Flutterflesh,,Large,Undead,,Chaotic Evil,Any,12,8400,TOB,203,TOB203,Y,
+Frost Giant Everlasting One,,Huge,Giant,frost giant,Chaotic Evil,"Arctic, Coastal",12,8400,VGM,148,VGM148,,
+Gug,,Huge,Giant,,Neutral Evil,Underdark,12,8400,TOB,241,TOB241,Y,
+Herald of Blood,,Huge,Fiend,,Neutral Evil,Extraplanar (Lower Planes),12,8400,TOB,248,TOB248,Y,
+Hoard Golem,,Huge,Construct,,Unaligned,Any,12,8400,TOB,234,TOB234,Y,
+Ki-rin,,Huge,Celestial,,Lawful Good,"Coastal, Desert, Grassland, Mountain",12,8400,VGM,163,VGM163,,
+Mavka,,Medium,Undead,fey,Chaotic Evil,Any,12,8400,TOB,286,TOB286,Y,
+Morkoth (in lair),,Medium,Aberration,non-lair 11 (7200,Chaotic Evil,Coastal,12,8400,VGM,178,VGM178,,
+Nihileth,,Large,Undead,aboleth,Chaotic Evil,Any,12,8400,TOB,8,TOB8,Y,
+Skein Witch,,Medium,Celestial,,Neutral,Extraplanar,12,8400,TOB,349,TOB349,Y,
+Son of Fenris,,Huge,Monstrosity,,Chaotic Evil,Any,12,8400,TOB,355,TOB355,Y,
+Titanboa,,Gargantuan,Beast,,Unaligned,Forest,12,8400,TOB,382,TOB382,Y,
+Tosculi Hive-Queen,,Large,Monstrosity,lair 13 (10000),Lawful Evil,"Desert, Grassland, Hills",12,8400,TOB,385,TOB385,Y,
+Yuan-ti Anathema,,Huge,Monstrosity,"shapechanger, yuan-ti",Neutral Evil,"Desert, Forest, Underdark",12,8400,VGM,202,VGM202,,
+Adult Brass Dragon,,Huge,Dragon,,Chaotic Good,Desert,13,10000,MM,105,MM105,Y,Urbane and talkative dragons of good alignment.
+Adult White Dragon,,Huge,Dragon,,Chaotic Evil,Arctic,13,10000,MM,101,MM101,Y,
+Beholder,,Large,Aberration,"beholder, lair 14 (11500)",Lawful Evil,Underdark,13,10000,MM,28,MM28,,Many-eyed floating ball; the eyes have magical powers!
+Devourer,,Large,Fiend,,Chaotic Evil,Underdark,13,10000,VGM,138,VGM138,,
+Haugbui,,Medium,Undead,,Lawful Neutral,Any,13,10000,TOB,247,TOB247,Y,
+Mask Wight,,Medium,Undead,,Neutral Evil,Any,13,10000,TOB,285,TOB285,Y,
+Nalfeshnee,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),13,10000,MM,62,MM62,Y,
+Neothelid,,Gargantuan,Aberration,,Chaotic Evil,Underdark,13,10000,VGM,181,VGM181,,
+Rakshasa,,Medium,Fiend,,Lawful Evil,Urban,13,10000,MM,257,MM257,Y,
+Spinosaurus (Fang Titan),,Gargantuan,Beast,dinosaur/behemoth,Unaligned,"Forest, Swamp",13,10000,TOB,116,TOB116,Y,
+Steam Golem,,Large,Construct,,Unaligned,Any,13,10000,TOB,237,TOB237,Y,
+Storm Giant,,Huge,Giant,storm giant,Chaotic Good,"Coastal, Underwater",13,10000,MM,156,MM156,Y,
+Stuhac,,Medium,Fiend,,Neutral Evil,"Hills, Mountain",13,10000,TOB,370,TOB370,Y,
+Tosculi Hive-Queen (in lair),,Large,Monstrosity,non-lair 12 (8400),Lawful Evil,Desert,13,10000,TOB,385,TOB385,Y,
+Ultroloth,,Medium,Fiend,yugoloth,Neutral Evil,Extraplanar (Lower Planes),13,10000,MM,314,MM314,,
+Vampire,,Medium,Undead,shapechanger,Lawful Evil,Urban,13,10000,MM,297,MM297,Y,
+Vampire Warlock,,Medium,Undead,shapechanger,Lawful Evil,Any,13,10000,TOB,425,TOB425,Y,
+Young Red Shadow Dragon,,Large,Dragon,,Chaotic Evil,Underdark,13,10000,MM,85,MM85,,
+Adult Black Dragon,,Huge,Dragon,,Chaotic Evil,Swamp,14,11500,MM,88,MM88,Y,
+Adult Copper Dragon,,Huge,Dragon,,Chaotic Good,Hills,14,11500,MM,111,MM111,Y,Cunning tricksters and riddlers of the metallic dragons
+Adult Mithral Dragon,,Huge,Dragon,,Neutral,Mountain,14,11500,TOB,133,TOB133,Y,
+Adult Void Dragon,,Huge,Dragon,,Chaotic Neutral,Mountain,14,11500,TOB,139,TOB139,Y,
+Beholder (in lair),,Large,Aberration,"beholder, non-lair 13 (10000)",Lawful Evil,Underdark,14,11500,MM,28,MM28,,
+Cambium,,Large,Fiend,,Neutral Evil,"Underdark, Urban",14,11500,TOB,51,TOB51,Y,
+Death Tyrant,,Large,Undead,lair 15 (13000),Lawful Evil,Underdark,14,11500,MM,29,MM29,,An undead beholder of even greater power.
+Elder Brain,,Large,Aberration,,Lawful Evil,Underdark,14,11500,VGM,174,VGM174,,
+Fire Giant Dreadnought,,Huge,Giant,fire giant,Lawful Evil,"Mountain, Underdark",14,11500,VGM,147,VGM147,,
+Gypsosphinx,,Large,Monstrosity,,Neutral Evil,"Desert, Grassland, Underdark",14,11500,TOB,359,TOB359,Y,
+Ice Devil,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),14,11500,MM,75,MM75,Y,
+Isonade,,Gargantuan,Monstrosity,,Chaotic Neutral,Underwater,14,11500,TOB,257,TOB257,Y,
+Orobas Devil,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),14,11500,TOB,111,TOB111,Y,
+Smaragdine Golem,,Large,Construct,,Unaligned,Any,14,11500,TOB,236,TOB236,Y,
+Zmey,,Huge,Dragon,,Chaotic Evil,Forest,14,11500,TOB,416,TOB416,Y,
+Adult Bronze Dragon,,Huge,Dragon,,Lawful Good,Coastal,15,13000,MM,108,MM108,Y,
+Adult Green Dragon,,Huge,Dragon,,Lawful Evil,Forest,15,13000,MM,94,MM94,Y,
+Andrenjinyi,,Gargantuan,Celestial,,Neutral,Any,15,13000,TOB,17,TOB17,Y,
+Death Tyrant (in lair),,Large,Undead,non-lair 14 (11500),Lawful Evil,Underdark,15,13000,MM,29,MM29,,
+Ia'Affrat the Insatiable (Arch-Devil),,Large,Elemental,,Lawful Evil,Extraplanar (Baator),15,13000,TOB,98,TOB98,Y,
+Mordant Snare,,Gargantuan,Aberration,,Chaotic Evil,Underdark,15,13000,TOB,296,TOB296,Y,
+Mummy Lord,,Medium,Undead,lair 16 (15000),Lawful Evil,Desert,15,13000,MM,229,MM229,Y,
+Purple Worm,,Gargantuan,Monstrosity,,Unaligned,"Desert, Underdark",15,13000,MM,255,MM255,Y,
+Slow Storm,,Huge,Elemental,,Chaotic Neutral,Extraplanar (Elemental),15,13000,TOB,353,TOB353,Y,
+Star Drake,,Large,Dragon,,Neutral,"Hills, Mountain",15,13000,TOB,156,TOB156,Y,
+Star Spawn of Cthulhu,,Large,Fiend,,Chaotic Evil,Extraplanar,15,13000,TOB,368,TOB368,Y,
+Vampire Lord,reference Strahd Von Zarovich,Medium,Undead,shapechanger,Lawful Evil,Urban,15,13000,COS,239,COS239,,
+Vampire Spellcaster,,Medium,Undead,shapechanger,Lawful Evil,Urban,15,13000,MM,297,MM297,,
+Vampire Warrior,,Medium,Undead,shapechanger,Lawful Evil,Urban,15,13000,MM,297,MM297,,
+Adult Blue Dragon,,Huge,Dragon,,Lawful Evil,"Coastal, Desert",16,15000,MM,91,MM91,Y,
+Adult Cave Dragon,,Huge,Dragon,,Neutral Evil,Underdark,16,15000,TOB,125,TOB125,Y,
+Adult Flame Dragon,,Huge,Dragon,,Chaotic Evil,"Mountain, Underdark",16,15000,TOB,129,TOB129,Y,
+Adult Sea Dragon,,Huge,Dragon,,Neutral Evil,Underwater,16,15000,TOB,135,TOB135,Y,
+Adult Silver Dragon,,Huge,Dragon,,Lawful Good,"Mountain, Urban",16,15000,MM,117,MM117,Y,
+Iron Golem,,Large,Construct,,Unaligned,Urban,16,15000,MM,170,MM170,Y,
+Marilith,,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),16,15000,MM,61,MM61,Y,
+Mummy Lord (in lair),,Medium,Undead,non-lair 15 (13000),Lawful Evil,Desert,16,15000,MM,229,MM229,Y,
+Planetar,,Large,Celestial,,Lawful Good,Extraplanar (Upper Planes),16,15000,MM,17,MM17,Y,Angel-warriors.
+River King,,Medium,Fey,fey lord,Chaotic Neutral,Underwater,16,15000,TOB,196,TOB196,Y,
+Snow Queen,,Medium,Fey,fey lord,Neutral Evil,Any,16,15000,TOB,198,TOB198,Y,
+Storm Giant Quintessent,,Huge,Giant,storm giant,Chaotic Good,"Arctic, Coastal, Desert, Mountain, Underwater",16,15000,VGM,151,VGM151,,
+Adult Blue Dracolich,,Huge,Undead,,Lawful Evil,Desert,17,18000,MM,84,MM84,,
+Adult Gold Dragon,,Huge,Dragon,,Lawful Good,"Forest, Grassland",17,18000,MM,114,MM114,Y,
+Adult Red Dragon,,Huge,Dragon,,Chaotic Evil,"Hills, Mountain",17,18000,MM,98,MM98,Y,
+Adult Wind Dragon,,Huge,Dragon,,Chaotic Neutral,"Grassland, Mountain",17,18000,TOB,143,TOB143,Y,
+Androsphinx,,Large,Monstrosity,,Lawful Neutral,Desert,17,18000,MM,281,MM281,Y,
+"Boreas, Avatar of",,Medium,Elemental,,Chaotic Evil,Extraplanar (Elemental),17,18000,TOB,42,TOB42,Y,
+Death Knight,,Medium,Undead,,Chaotic Evil,Any,17,18000,MM,47,MM47,,A fallen paladin that has died and returned to the world with unending hatred.
+Dragon Turtle,,Gargantuan,Dragon,,Neutral,"Coastal, Underwater",17,18000,MM,119,MM119,Y,
+Elemental Locus,,Gargantuan,Elemental,,Neutral,Extraplanar (Elemental),17,18000,TOB,169,TOB169,Y,
+Goristro,,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),17,18000,MM,59,MM59,,
+Koschei,,Medium,Fiend,,Neutral Evil,Any,17,18000,TOB,266,TOB266,Y,
+Moonlit King,,Medium,Fey,fey lord,Neutral Good,Any,17,18000,TOB,190,TOB190,Y,
+Queen of Witches,,Large,Fey,fey lord,Neutral,Any,17,18000,TOB,194,TOB194,Y,
+Urochar (Strangling Watcher),,Huge,Aberration,,Chaotic Evil,Underdark,17,18000,TOB,393,TOB393,Y,
+Ancient Mithral Dragon,,Gargantuan,Dragon,,Neutral,Mountain,18,20000,TOB,132,TOB132,Y,
+Demilich,,Tiny,Undead,lair 20 (24500),Neutral Evil,Any,18,20000,MM,48,MM48,,A lich that has lost some part of its power and has become a floating skull.
+Lord of the Hunt,,Medium,Fey,fey lord,Neutral,Any,18,20000,TOB,188,TOB188,Y,
+"Olhydra, Princess of Evil Water",,Huge,Elemental,,Neutral Evil,,18,20000,POTA,218,POTA218,,
+"Yan-C-Bin, Prince of Evil Air",,Huge,Elemental,,Neutral Evil,,18,20000,POTA,220,POTA220,,
+Balor,,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),19,22000,MM,55,MM55,Y,
+Hraesvelgr the Corpse Swallower,,Huge,Giant,"shapechanger, titan",Neutral,Any,19,22000,TOB,224,TOB224,Y,
+"Imix, Prince of Evil Fire",,Huge,Elemental,,Neutral Evil,,19,22000,POTA,214,POTA214,,
+Shoggoth,,Huge,Aberration,,Chaotic Neutral,Any,19,22000,TOB,347,TOB347,Y,
+Ancient Brass Dragon,,Gargantuan,Dragon,,Chaotic Good,Desert,20,25000,MM,104,MM104,Y,Urbane and talkative dragons of good alignment.
+Ancient White Dragon,,Gargantuan,Dragon,,Chaotic Evil,Arctic,20,25000,MM,100,MM100,Y,
+Demilich (in lair),,Tiny,Undead,non-lair 18 (20000),Neutral Evil,Any,20,24500,MM,48,MM48,,
+Emperor Ghoul,,Medium,Undead,,Neutral Evil,"Underdark, Urban",20,25000,TOB,218,TOB218,Y,
+"Ogremoch, Prince of Evil Earth",,Gargantuan,Elemental,,Neutral Evil,,20,24500,POTA,216,POTA216,,
+Pit Fiend,,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),20,25000,MM,77,MM77,Y,
+"Alquam, Demon Lord of Night",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),21,33000,TOB,84,TOB84,Y,
+Ancient Black Dragon,,Gargantuan,Dragon,,Chaotic Evil,Swamp,21,33000,MM,87,MM87,Y,
+Ancient Copper Dragon,,Gargantuan,Dragon,,Chaotic Good,Hills,21,33000,MM,110,MM110,Y,Cunning tricksters and riddlers of the metallic dragons
+"Arbeyach, Prince of Swarms (Arch-Devil)",,Large,Fiend,devil,Lawful Evil,Extraplanar (Baator),21,33000,TOB,95,TOB95,Y,
+Lich,,Medium,Undead,lair 22 (41000),Any evil,Any,21,33000,MM,202,MM202,Y,
+Queen of Night and Magic,,Medium,Fey,fey lord,Neutral Evil,Any,21,33000,TOB,192,TOB192,Y,
+Solar,,Large,Celestial,,Lawful Good,Extraplanar (Upper Planes),21,33000,MM,18,MM18,Y,The warrior-generals of the angelic armies.
+Ancient Bronze Dragon,,Gargantuan,Dragon,,Lawful Good,Coastal,22,41000,MM,107,MM107,Y,
+Ancient Green Dragon,,Gargantuan,Dragon,,Lawful Evil,Forest,22,41000,MM,93,MM93,Y,
+Ancient Sea Dragon,,Gargantuan,Dragon,,Neutral Evil,Underwater,22,41000,TOB,135,TOB135,Y,
+Ancient Wind Dragon,,Gargantuan,Dragon,,Chaotic Neutral,"Grassland, Mountain",22,41000,TOB,142,TOB142,Y,
+"Camazotz, Demon Lord of Bats and Fire",,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),22,62000,TOB,85,TOB85,Y,
+Jotun,,Gargantuan,Giant,,Chaotic Neutral,"Grassland, Hills, Mountain",22,25000,TOB,226,TOB226,Y,
+Lich (in lair),,Medium,Undead,non-lair 21 (33000),Any evil,Any,22,41000,MM,202,MM202,,
+Mind Flayer Lich (Illithilich),,Medium,Undead,,Any evil,Underdark,22,41000,VGM,172,VGM172,,
+Ancient Blue Dragon,,Gargantuan,Dragon,,Lawful Evil,"Coastal, Desert",23,50000,MM,90,MM90,Y,
+Ancient Blue Dragon Deceiver,Iymrith the Dragon,Gargantuan,Dragon,,Lawful Evil,,23,50000,SKT,241,SKT241,,
+Ancient Silver Dragon,,Gargantuan,Dragon,,Lawful Good,"Mountain, Urban",23,50000,MM,116,MM116,Y,
+"Baphomet, Demon Prince of Beasts",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),23,50000,OOTA,234,OOTA234,,The savage demon lord of minotaurs.
+Empyrean,,Huge,Celestial,titan,Chaotic Good or Neutral Evil,Any,23,50000,MM,130,MM130,,
+"Fraz-Urb'luu, Prince of Deception",,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),23,50000,OOTA,238,OOTA238,,
+"Juiblex, the Faceless Lord",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),23,50000,OOTA,242,OOTA242,,The demon lord of slimes and oozes.
+Kraken,,Gargantuan,Monstrosity,titan,Chaotic Evil,Underwater,23,50000,MM,197,MM197,Y,
+Maegera the Dawn Titan,,Gargantuan,Elemental,,Chaotic Neutral,,23,50000,SKT,241,SKT241,,
+"Qorgeth, Demon Lord of the Devouring Worm",,Gargantuan,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),23,50000,TOB,90,TOB90,Y,
+"Zuggtmoy, Demon Queen of Fungi",,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),23,50000,OOTA,248,OOTA248,,
+Ancient Flame Dragon,,Gargantuan,Dragon,,Chaotic Evil,"Mountain, Underdark",24,62000,TOB,128,TOB128,Y,
+Ancient Gold Dragon,,Gargantuan,Dragon,,Lawful Good,"Forest, Grassland",24,62000,MM,113,MM113,Y,
+Ancient Red Dragon,,Gargantuan,Dragon,,Chaotic Evil,"Hills, Mountain",24,62000,MM,97,MM97,Y,
+Ancient Void Dragon,,Gargantuan,Dragon,,Chaotic Neutral,Mountain,24,62000,TOB,138,TOB138,Y,
+"Graz'zt, the Dark Prince",,Large,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),24,62000,OOTA,240,OOTA240,,A decadent demon lord with a captivating -- but thoroughly evil -- humanoid form.
+"Totivillus, Scribe of Hell (Arch-Devil)",,Medium,Fiend,devil,Lawful Evil,Extraplanar (Baator),24,62000,TOB,101,TOB101,Y,
+"Yeenoghu,Demon Prince of Gnolls",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),24,62000,OOTA,246,OOTA246,,"The Demon Lord of Gnolls, known as the Beast of Butchery."
+"Mammon, Archduke of Greed (Arch-Devil)",,Huge,Fiend,devil,Lawful Evil,Extraplanar (Baator),25,75000,TOB,99,TOB99,Y,
+"Demogorgon, Prince of Demons",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),26,90000,OOTA,236,OOTA236,,"The two-headed Prince of Demons, his arms suckered tentacles and his faces ape-like."
+"Orcus, Demon Prince of Undeath",,Huge,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),26,90000,OOTA,244,OOTA244,,"The Demon Prince of Undeath, a foul and corpulent creature"
+Zaratan,,Gargantuan,Monstrosity,titan,Unaligned,Underwater,26,90000,TOB,414,TOB414,Y,
+"Mechuiti, Demon Lord of Apes",,Gargantuan,Fiend,demon,Chaotic Evil,Extraplanar (Abyss),27,105000,TOB,88,TOB88,Y,
+Tarrasque,,Gargantuan,Monstrosity,titan,Unaligned,Urban,30,155000,MM,286,MM286,Y,
+"Tiamat, Queen of Evil Dragons",,Gargantuan,Fiend,,Chaotic Evil,Extraplanar (Abyss),30,155000,ROT,92,ROT92,,
+Falseman,,Medium,Monstrosity,As base creature,Chaotic Evil,Any,As base creature,As base creature,TOB,305,TOB305,Y,
+Giant Rhinoceros Beetle,,Large,Beast,,Unaligned,Forest,4,1100,FEF,24,,,
+Giant Slicer Beetle,,Large,Beast,,Unaligned,Forest,3,700,FEF,24,,,
+Giant Water Beetle,,Medium,Beast,,Unaligned,"Grassland, Swamp, Underdark, Underwater",0.5,100,FEF,25,,,
+Biclops,,Huge,Giant,,Neutral,Mountain,6,2300,FEF,26,,,
+Blood Hawk (FEF version),,Small,Monstrosity,,Unaligned,"Forest, Grassland, Hills, Mountain",0.25,50,FEF,27,,,
+Blood Orchid,,Large,Aberration,,Chaotic Evil,Underdark,5,1800,FEF,28,,,
+Blood Orchid Savant,,Large,Aberration,,Lawful Evil,Underdark,7,2900,FEF,28,,,
+Blood Orchid Grand Savant,,Huge,Aberration,,Lawful Evil,Underdark,9,5000,FEF,29,,,
+Bloodsuckle,,Large,Plant,,Unaligned,"Forest, Hills, Swamp",3,700,FEF,30,,,
+Bloody Bones,,Medium,Undead,,Chaotic Evil,Underdark,2,450,FEF,31,,,
+Boalisk,,Large,Monstrosity,,Unaligned,"Forest, Swamp, Underwater",1,200,FEF,32,,,
+Bone Cobbler,,Medium,Aberration,,Chaotic Evil,Underdark,2,450,FEF,33,,,
+Greater Boneneedle,,Medium,Beast,,Unaligned,Underdark,1,200,FEF,34,,,
+Lesser Boneneedle,,Small,Beast,,Unaligned,Underdark,0.25,50,FEF,34,,,
+Bonesucker,,Large,Aberration,,Neutral Evil,"Forest, Grassland, Hills, Mountain, Swamp, Underdark",4,1100,FEF,35,,,
+Borsin (Ape Centaur),,Large,Monstrosity,,Chaotic Evil,"Forest, Grassland, Hills",3,700,FEF,36,,,
+Brass Man,,Large,Construct,,Unaligned,Extraplanar (Elemental),6,2300,FEF,37,,,
+Brume,,Large,Aberration,,Neutral Evil,Extraplanar (Lower Planes),6,2300,FEF,38,,,
+Burning Dervish,,Medium,Fiend,,Lawful Evil,Extraplanar (Elemental),3,700,FEF,39,,,
+Cadaver,,Medium,Undead,,Chaotic Evil,"Underdark, Urban",0.5,100,FEF,40,,,
+Cadaver Lord,,Medium,Undead,,Chaotic Evil,"Arctic, Coastal, Forest, Grassland, Hills, Mountain, Underdark, Urban",3,700,FEF,41,,,
+Carbuncle,,Small,Aberration,,Unaligned,"Forest, Swamp",0.125,25,FEF,42,,,
+Caryatid Column,,Medium,Construct,,Unaligned,Any,1,200,FEF,43,,,
+Feral Undead Cat,,Small,Undead,,Chaotic Evil,"Underdark, Urban",0.125,25,FEF,44,,,
+Caterprism,,Large,Monstrosity,,Unaligned,Extraplanar (Elemental),4,1100,FEF,45,,,
+Giant Electric Catfish,,Large,Beast,,Unaligned,"Swamp, Underwater",3,700,FEF,46,,,
+Catoblepas (Fifth Edition Foes version),,Large,Monstrosity,,Unaligned,Swamp,5,1800,FEF,47,,,
+Cave Cricket,,Small,Beast,,Unaligned,Underdark,0.25,50,FEF,48,,,
+Cave Eel,,Medium,Beast,,Unaligned,Underdark,0.25,50,FEF,49,,,
+Cave Fisher (Fifth Edition Foes version),,Large,Monstrosity,,Unaligned,Underdark,2,450,FEF,50,,,
+Cave Leech,,Large,Beast,,Chaotic Evil,Underdark,6,2300,FEF,51,,,
+Centipede Nest,,Medium,Beast,,Unaligned,"Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark, Urban",0.5,100,FEF,52,,,
+Cerebral Stalker,,Medium,Aberration,,Chaotic Evil,"Arctic, Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark",5,1800,FEF,53,,,
+Chain Worm,,Large,Beast,,Unaligned,"Arctic, Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark",12,8400,FEF,54,,,
+Chaos Knight,,Medium,Fiend,,Chaotic Evil,"Coastal, Desert, Forest, Grassland, Hills, Mountain, Swamp, Underdark",3,700,FEF,55,,,
+Chupacabra,,,,,,,,,,,,,
+Psychic Gray Ooze,,Medium,Ooze,,Unaligned,Underdark,0.5,100,MM,243,MM243,Y,A corrosive pool of oily grossness.

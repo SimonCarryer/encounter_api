@@ -1,0 +1,10 @@
+Click==7.0
+coverage==4.5.2
+Flask==1.0.2
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+nose2==0.8.0
+PyYAML==3.13
+six==1.12.0
+Werkzeug==0.14.1

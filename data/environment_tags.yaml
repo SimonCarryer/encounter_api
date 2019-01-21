@@ -1,0 +1,804 @@
+magical guardians:
+  signs:
+    - Sigils inscribed on stone
+    - Crackling energy, hair standing on end
+    - Distant chiming
+  monsters:
+  - Name: Animated Armor    
+    occurrence: common 
+  - Name: Flying Sword    
+    occurrence: common   
+  - Name: Rug of Smothering    
+    occurrence: common 
+  - Name: Flameskull    
+    occurrence: uncommon 
+  - Name: Gargoyle    
+    occurrence: common  
+  - Name: Gibbering Mouther    
+    occurrence: common 
+  - Name: Clay Golem    
+    occurrence: common 
+  - Name: Flesh Golem    
+    occurrence: common 
+  - Name: Iron Golem    
+    occurrence: common
+  - Name: Stone Golem    
+    occurrence: common
+  - Name: Helmed Horror    
+    occurrence: common
+  - Name: Homunculus    
+    occurrence: rare
+    role: environmental hazard
+  - Name: Intellect Devourer    
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Dust Mephit    
+    occurrence: uncommon
+  - Name: Ice Mephit    
+    occurrence: uncommon
+  - Name: Magma Mephit    
+    occurrence: uncommon
+  - Name: Mud Mephit    
+    occurrence: uncommon
+  - Name: Smoke Mephit    
+    occurrence: uncommon
+  - Name: Steam Mephit    
+    occurrence: uncommon
+  - Name: Mimic    
+    occurrence: common
+  - Name: Nothic    
+    role: environmental hazard
+    occurrence: uncommon
+  - Name: Nothic    
+    occurrence: uncommon
+  - Name: Shield Guardian    
+    occurrence: common
+  - Name: Water Weird 
+    occurrence: common
+  - Name: Invisible Stalker
+    occurrence: uncommon
+    role: environmental hazard
+
+  
+bullywugs:
+  signs:
+    - Distant croaking
+    - Muddy, webbed footprints
+    - Crude structures made of vines and sticks
+  monsters:
+  - Name: Swarm of Insects    
+    role: environmental hazard
+    occurrence: uncommon    
+  - Name: Bullywug    
+    role: troops
+    occurrence: common
+  - Name: Giant Frog    
+    role: pet
+    occurrence: common
+  - Name: Giant Toad    
+    role: pet
+    occurrence: common
+
+spiders:
+  signs:
+    - Shrouds of webbing
+    - Dried husks wrapped in silk
+  monsters:
+    - Name: Ettercap      
+      role: leader
+      occurrence: common
+    - Name: Giant Spider      
+      role: troops
+      occurrence: common
+    - Name: Giant Wolf Spider      
+      role: troops
+      occurrence: common
+    - Name: Swarm of Insects      
+      role: environmental hazard
+      occurrence: common
+    - Name: Yochlol      
+      role: leader
+      occurrence: rare
+    - Name: Drider      
+      role: leader
+      occurrence: rare
+    - Name: Phase Spider      
+      role: elite
+      occurrence: uncommon
+
+orcs:
+  signs:
+    - A temporary stockade made of salvaged materials
+    - A rough-hewn wooden idol, one-eyed and grimacing
+  monsters:
+    - Name: Orc      
+      role: troops
+      occurrence: common
+    - Name: Orc War Chief      
+      role: leader
+      occurrence: common
+    - Name: Orc Eye of Gruumsh      
+      role: elite
+      occurrence: uncommon
+    - Name: Orog      
+      role: troops
+      occurrence: common
+    - Name: Troll      
+      role: pet
+      occurrence: common
+    - Name: Half-ogre (Ogrillon)
+      role: elite
+      occurrence: uncommon
+    - Name: Ogre      
+      role: pet
+      occurrence: uncommon
+    - Name: Ettin      
+      role: pet
+      occurrence: uncommon
+    - Name: Hill Giant      
+      role: pet
+      occurrence: uncommon
+
+goblins:
+  signs:
+    - Skulls mounted on poles.
+    - War-drums sounding in the distance.
+    - Crudely-butchered carcasses left to rot.
+    - A crude shrine to a hideous idol.
+  monsters:
+    - Name: Goblin      
+      role: troops
+      occurrence: common
+    - Name: Goblin Boss      
+      role: leader
+      occurrence: common
+    - Name: Wolf      
+      role: pet
+      occurrence: uncommon
+    - Name: Giant Rat      
+      role: pet
+      occurrence: uncommon
+    - Name: Worg      
+      occurrence: rare
+      role: pet
+    - Name: Bugbear      
+      occurrence: uncommon
+      role: elite
+
+hills:
+  signs:
+    - Paw-prints.
+    - Snarling sounds.
+    - A carcass stripped of flesh.
+    - Piles of dung.
+  monsters:
+    - Name: Panther      
+      occurrence: common
+      role: solo
+    - Name: Wolf      
+      occurrence: common
+    - Name: Giant Owl
+      occurrence: rare
+      role: environmental hazard      
+    - Name: Giant Owl
+      occurrence: uncommon 
+      role: solo     
+    - Name: Giant Eagle
+      occurrence: uncommon  
+      role: solo    
+    - Name: Harpy      
+      occurrence: rare
+    - Name: Hippogriff      
+      occurrence: uncommon
+    - Name: Peryton      
+      occurrence: rare
+    - Name: Pegasus      
+      occurrence: rare
+    - Name: Bulette      
+      occurrence: common
+      role: solo
+    - Name: Chimera      
+      occurrence: uncommon
+      role: solo
+    - Name: Wyvern      
+      occurrence: common
+    - Name: Roc      
+      occurrence: common
+      role: solo
+
+forest:
+  signs:
+    - Paw-prints.
+    - Snarling sounds.
+    - A carcass stripped of flesh.
+  monsters:
+    - Name: Wolf      
+      occurrence: common 
+    - Name: Giant Owl
+      occurrence: uncommon
+      role: solo
+    - Name: Brown Bear      
+      occurrence: common
+      role: solo
+    - Name: Black Bear      
+      occurrence: common
+      role: solo
+    - Name: Giant Wolf Spider      
+      occurrence: common
+    - Name: Giant Badger      
+      occurrence: common
+    - Name: Giant Wasp      
+      occurrence: common
+    - Name: Giant Spider      
+      occurrence: common
+    - Name: Giant Boar      
+      occurrence: common
+    - Name: Giant Elk      
+      occurrence: rare
+    - Name: Displacer Beast      
+      occurrence: uncommon
+      role: solo
+    - Name: Dire Wolf      
+      occurrence: common
+    - Name: Basilisk      
+      occurrence: uncommon
+      role: solo
+    - Name: Stirge   
+      occurrence: common
+
+wolves:
+  signs:
+    - Howling at the moon.
+    - Scratch marks on high surfaces.
+    - Scent marking.
+  monsters:
+    - Name: Wolf      
+      occurrence: common
+      role: troops
+    - Name: Worg      
+      occurrence: common
+      role: leader
+    - Name: Worg      
+      occurrence: uncommon
+      role: troops
+    - Name: Dire Wolf      
+      role: troops
+      occurrence: common
+    - Name: Werewolf      
+      role: leader
+      occurrence: rare
+
+haunted:
+  signs:
+    - A chill in the air.
+    - An eerie wailing in the distance.
+    - Disturbing, shifting shadows.
+  monsters:
+    - Name: Banshee      
+      occurrence: uncommon
+    - Name: Ghast      
+      occurrence: common
+    - Name: Ghost      
+      occurrence: common
+    - Name: Flameskull      
+      occurrence: rare
+    - Name: Ghoul      
+      occurrence: common
+    - Name: Skeleton      
+      occurrence: common
+    - Name: Crawling Claw      
+      occurrence: rare
+      role: environmental hazard
+    - Name: Wraith      
+      occurrence: uncommon  
+    - Name: Specter      
+      occurrence: common    
+    - Name: Shadow      
+      occurrence: common
+    - Name: Wight      
+      occurrence: common
+
+bandits:
+  signs:
+    - Muddy boot-prints.
+    - A collection of traps and snares.
+    - A cache of weapons and food.
+    - A campfire and discarded cooking-utensils.
+  monsters:
+    - Name: Bandit/Pirate      
+      role: troops
+      occurrence: common
+    - Name: Thug      
+      role: troops
+      occurrence: common
+    - Name: Bandit/Pirate Captain      
+      role: leader
+      occurrence: common
+    - Name: Spy      
+      role: elite
+      occurrence: uncommon
+    - Name: Half-ogre (Ogrillon)
+      occurrence: uncommon
+      role: elite
+    - Name: Half-Red Dragon Veteran
+      occurrence: rare
+      role: leader
+    - Name: Wereboar
+      occurrence: rare
+      role: leader
+    - Name: Doppelganger
+      occurrence: rare
+      role: environmental hazard
+    - Name: Mastiff
+      occurrence: uncommon
+      role: pet
+    - Name: Death Dog
+      occurrence: rare
+      role: pet
+    - Name: Veteran
+      occurrence: uncommon
+      role: elite
+
+gnolls:
+  monsters:
+  - Name: Gnoll
+    role: troops
+    occurrence: common
+  - Name: Gnoll Pack Lord
+    role: leader
+    occurrence: common
+  - Name: Gnoll Fang of Yeenoghu
+    role: leader
+    occurrence: uncommon
+  - Name: Giant Hyena
+    role: pet
+    occurrence: uncommon
+  - Name: Hyena
+    role: pet
+    occurrence: uncommon
+
+mind flayers:
+  monsters:
+  - Name: Mind Flayer
+    role: leader
+    occurrence: common
+  - Name: Mind Flayer Arcanist
+    role: leader
+    occurrence: rare
+  - Name: Intellect Devourer
+    role: pet
+    occurrence: common
+  - Name: Grimlock
+    role: troops
+    occurrence: common
+  - Name: Psychic Gray Ooze
+    role: environmental hazard
+    occurrence: uncommon
+  - Name: Troglodyte
+    role: troops
+    occurrence: common
+  - Name: Quaggoth
+    role: pet
+    occurrence: uncommon
+  - Name: Ogre
+    role: troops
+    occurrence: common
+
+drow:
+  monsters:
+  - Name: Drow
+    role: troops
+    occurrence: common
+  - Name: Drow Elite Warrior
+    role: elite
+    occurrence: common
+  - Name: Drow Mage
+    role: elite
+    occurrence: uncommon
+  - Name: Drow Priestess of Lolth
+    role: leader
+    occurrence: common
+  - Name: Yochlol
+    role: leader
+    occurrence: rare
+  - Name: Drider
+    role: pet
+    occurrence: uncommon
+  - Name: Quaggoth
+    role: pet
+    occurrence: uncommon
+  - Name: Quaggoth Thonot
+    role: pet
+    occurrence: rare
+
+lizardfolk:
+  monsters:
+  - Name: Lizardfolk
+    role: troops
+    occurrence: common
+  - Name: Lizardfolk Shaman
+    role: leader
+    occurrence: common
+  - Name: Lizard King/Queen
+    role: leader
+    occurrence: rare
+  - Name: Giant Lizard
+    role: pet
+    occurrence: uncommon
+  - Name: Giant Crocodile
+    role: pet
+    occurrence: common
+  - Name: Crocodile
+    role: pet
+    occurrence: common
+
+hobgoblins:
+  monsters:
+  - Name: Hobgoblin
+    role: troops
+    occurrence: common
+  - Name: Hobgoblin Captain
+    role: leader
+    occurrence: common
+  - Name: Hobgoblin Warlord
+    role: leader
+    occurrence: common
+  - Name: Bugbear
+    role: elite
+    occurrence: uncommon
+  - Name: Goblin
+    role: pet
+    occurrence: uncommon
+  - Name: Wolf
+    role: pet
+    occurrence: common
+  - Name: Worg
+    role: pet
+    occurrence: common
+  - Name: Ape
+    role: pet
+    occurrence: rare
+
+sewers:
+    monsters:
+    - Name: Otyugh
+      occurrence: uncommon
+      role: solo
+    - Name: Swarm of Rats
+      occurrence: common
+    - Name: Giant Rat
+      occurrence: common
+    - Name: Carrion Crawler
+      occurrence: uncommon
+    - Name: Wererat
+      occurrence: common
+    - Name: Ghoul
+      occurrence: rare
+    - Name: Black Pudding
+      occurrence: uncommon
+      role: environmental hazard
+    - Name: Gray Ooze
+      occurrence: rare
+      role: environmental hazard
+    - Name: Ochre Jelly
+      occurrence: uncommon
+      role: environmental hazard
+    - Name: Gelatinous Cube
+      occurrence: uncommon
+    - Name: Water Weird
+      occurrence: rare
+
+swamp:
+  monsters:
+  - Name: Young Black Dragon
+    occurrence: rare
+    role: solo
+  - Name: Black Dragon Wyrmling
+    occurrence: rare
+    role: solo
+  - Name: Ettercap
+    occurrence: rare
+    role: solo
+  - Name: Stirge
+    occurrence: common
+  - Name: Cockatrice
+    occurrence: rare
+    role: solo
+  - Name: Otyugh
+    occurrence: uncommon
+    role: solo
+  - Name: Shambling Mound
+    occurrence: uncommon
+  - Name: Will-o-wisp
+    occurrence: rare
+  - Name: Black Pudding
+    occurrence: rare
+    role: environmental hazard
+  - Name: Ochre Jelly
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Constrictor Snake
+    occurrence: common
+    role: solo
+  - Name: Crocodile
+    occurrence: common
+  - Name: Hydra
+    occurrence: common
+  - Name: Giant Constrictor Snake
+    occurrence: common
+    role: solo
+  - Name: Giant Spider
+    occurrence: common
+  - Name: Giant Crocodile
+    occurrence: common
+  - Name: Giant Frog
+    occurrence: common
+  - Name: Giant Toad
+    occurrence: common
+  - Name: Giant Wasp
+    occurrence: common
+  - Name: Poisonous Snake
+    occurrence: common
+  - Name: Swarm of Poisonous Snakes
+    occurrence: common
+  - Name: Stirge
+    occurrence: common
+  - Name: Swarm of Insects
+    occurrence: uncommon
+    role: environmental hazard
+
+mummies:
+  monsters:
+  - Name: Mummy Lord
+    occurrence: common
+    role: leader
+  - Name: Mummy
+    occurrence: common
+    role: elite
+  - Name: Skeleton
+    occurrence: common
+    role: troops
+  - Name: Animated Armor
+    occurrence: uncommon
+    role: troops
+  - Name: Flying Sword
+    occurrence: uncommon
+    role: pet
+  - Name: Crawling Claw
+    occurrence: rare
+    role: environmental hazard
+  - Name: Shield Guardian
+    occurrence: rare
+    role: pet
+  - Name: Shadow
+    occurrence: uncommon
+    role: elite
+  - Name: Carrion Crawler
+    occurrence: rare
+    role: environmental hazard
+  - Name: Invisible Stalker
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Minotaur Skeleton
+    occurrence: uncommon
+    role: elite
+  - Name: Flameskull
+    occurrence: uncommon
+    role: pet
+
+kuo-toa:
+  monsters:
+  - Name: Kuo-toa Monitor
+    occurrence: uncommon
+    role: leader
+  - Name: Kuo-toa
+    occurrence: common
+    role: troops
+  - Name: Kuo-toa Archpriest
+    occurrence: common
+    role: leader
+  - Name: Kuo-toa Whip
+    occurrence: common
+    role: elite
+  - Name: Chuul
+    occurrence: rare
+    role: pet
+
+blights:
+  monsters:
+  - Name: Needle Blight
+    role: pet
+    occurrence: common
+  - Name: Twig Blight
+    role: troops
+    occurrence: common
+  - Name: Vine Blight
+    role: elite
+    occurrence: common
+
+fey:
+  monsters:
+  - Name: Pixie
+    occurrence: common
+  - Name: Displacer Beast
+    occurrence: uncommon
+  - Name: Dryad
+    occurrence: common
+  - Name: Green Hag
+    occurrence: rare
+  - Name: Night Hag
+    occurrence: rare
+  - Name: Satyr
+    occurrence: common
+  - Name: Sprite
+    occurrence: common
+  - Name: Blink Dog
+    occurrence: common
+  - Name: Giant Owl
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Young Faerie Dragon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Adult Faerie Dragon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Unicorn
+    occurrence: rare
+    role: solo
+  - Name: Awakened Tree
+    occurrence: uncommon
+  - Name: Giant Goat
+    occurrence: uncommon
+    role: environmental hazard
+
+civilised folk:
+  monsters:
+  - Name: Mage
+    occurrence: rare
+    role: environmental hazard
+  - Name: Guard
+    occurrence: common
+    role: troops
+  - Name: Knight
+    occurrence: common
+    role: leader
+  - Name: Noble
+    occurrence: common
+    role: leader
+  - Name: Priest
+    occurrence: common
+    role: environmental hazard
+  - Name: Scout
+    occurrence: uncommon
+    role: elite
+  - Name: Spy
+    occurrence: rare
+    role: environmental hazard
+  - Name: Veteran
+    occurrence: uncommon
+    role: elite
+  - Name: Mastiff
+    occurrence: uncommon
+    role: pet
+  - Name: Blood Hawk
+    occurence: rare
+    role: pet
+  - Name: Doppelganger
+    occurrence: rare
+    role: environmental hazard
+  - Name: Pseudodragon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Commoner
+    occurrence: uncommon
+    role: troops
+
+apex predators:
+  monsters:
+  - Name: Basilisk
+    occurrence: common
+    role: solo
+  - Name: Behir
+    occurrence: common
+    role: solo
+  - Name: Bulette
+    occurrence: common
+    role: solo
+  - Name: Chimera
+    occurrence: uncommon
+    role: solo
+  - Name: Cyclops
+    occurrence: uncommon
+    role: solo
+  - Name: Displacer Beast
+    occurrence: common
+    role: solo
+  - Name: Young Red Dragon
+    occurrence: rare
+    role: solo
+  - Name: Young Green Dragon
+    occurrence: rare
+    role: solo
+  - Name: Young Blue Dragon
+    occurrence: rare
+    role: solo
+  - Name: Young Black Dragon
+    occurrence: rare
+    role: solo
+  - Name: Young White Dragon
+    occurrence: rare
+    role: solo
+  - Name: Hill Giant
+    occurrence: common
+    role: solo
+  - Name: Gorgon
+    occurrence: uncommon
+    role: solo
+  - Name: Griffon
+    occurrence: common
+    role: solo
+  - Name: Hydra
+    occurrence: common
+    role: solo
+  - Name: Manticore
+    occurrence: uncommon
+    role: solo
+  - Name: Owlbear
+    occurrence: common
+    role: solo
+  - Name: Peryton
+    occurrence: common
+    role: solo
+  - Name: Wyvern
+    occurrence: common
+    role: solo
+  - Name: Ogre
+    occurrence: common
+    role: solo
+
+cult of jubilex:
+  monsters:
+  - Name: Cult Fanatic
+    occurrence: common
+    role: leader
+  - Name: Cultist
+    occurrence: common
+    role: troops
+  - Name: Otyugh
+    occurrence: rare
+    role: pet
+  - Name: Ochre Jelly
+    occurrence: uncommon
+    role: pet
+  - Name: Black Pudding
+    occurrence: uncommon
+    role: pet
+  - Name: Gray Ooze
+    occurrence: uncommon
+    role: pet
+  - Name: Gelatinous Cube
+    occurrence: uncommon
+    role: pet
+
+
+cult of obox-ob:
+  monsters:
+  - Name: Cult Fanatic
+    occurrence: common
+    role: leader
+  - Name: Cultist
+    occurrence: common
+    role: troops
+  - Name: Swarm of Insects
+    occurrence: uncommon
+    role: pet
+  - Name: Giant Centipede
+    occurrence: uncommon
+    role: pet
+  - Name: Giant Rat
+    occurrence: uncommon
+    role: pet
+  - Name: Swarm of Rats
+    occurrence: uncommon
+    role: pet
