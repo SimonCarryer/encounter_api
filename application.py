@@ -2,7 +2,7 @@ import sys
 from flask import Flask, jsonify, redirect, url_for, request, render_template
 from encounters.encounter_api import EncounterSource
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -35,4 +35,4 @@ def encounter():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    application.run(host='0.0.0.0', debug=True)
