@@ -1,3 +1,4 @@
-app_env/*
-__pycache__/*
+tmp/*
+*.py[cod]
 *.zip
+__pycache__/

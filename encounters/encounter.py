@@ -1,4 +1,3 @@
-import yaml
 import bisect
 from collections import defaultdict
 from copy import deepcopy
@@ -8,36 +7,37 @@ adjustments = [(1, 1), (2, 1.5), (6, 2), (10, 2.5), (14, 3), (1000, 4)]
 
 '''
 Leader: Only ever one leader in an encounter
-Pet: Never encountered alone
+TODO: Pet: Never encountered alone
 Elite: Never more than one kind of elite in an encounter
 Troops: Never more than one kind of troops in an encounter
 Natural Hazard: Only found with their own kind
 Solo: Only encountered alone
 Environmental Hazard: Shows up alongside other kinds
-
-// TODO: What's up with wolves at the moment?
-
 Rare: 10% of encounters should have a rare monster
 Uncommon: 30% of encounters should have an uncommon monster
 
-Boss: Always has a leader
+Styles:
+Leader: Always has a leader
 Elite: Always has an elite
 Basic: No leaders or elites
 '''
 
 class Encounter:
-    def __init__(self, xp_budget, monster_source, random_state=None, respect_roles=True, occurrence=None, style=None):
+    def __init__(self, xp_budget, monster_source, random_state=None, respect_roles=True, occurrence=None, style=None, lower_bound=0.5, upper_bound=1.5):
         if random_state is None:
             self.random_state = Random()
         else:
             self.random_state = random_state
+        self.lower_bound = lower_bound
+        self.upper_bound = upper_bound
         self.xp_budget = xp_budget
-        self.monster_source = [{**monster, **{'idx': idx}} for idx, monster in enumerate(monster_source)]
+        self.monster_source = monster_source
+        for idx, monster in enumerate(self.monster_source):
+            monster['idx'] = idx
         self.monster_lookup = {monster['Name']: monster for monster in monster_source}
         self.monster_lists = []
         self.monsters = []
         self.xp_value = 0
-        self.respect_roles = respect_roles
         if occurrence is None:
             roll = self.random_state.randint(1,11)
             if roll <= 6:
@@ -103,7 +103,7 @@ class Encounter:
             current_average = sum([m['XP'] for m in existing_monster_list])/len(existing_monster_list)
         else:
             current_average = 0
-        threshold = max([current_average, self.xp_budget * 0.05])
+        threshold = max([current_average * 0.1, self.xp_budget * 0.05])
         return [monster for monster in self.monster_source if monster['role'] == 'troops' or monster['XP'] >= threshold]
 
     def right_role(self, existing_monster_list):
@@ -146,13 +146,13 @@ class Encounter:
         current_total = self.adjusted_xp_sum(monsters, adjust=0)
         if len(monsters) > 18:
             return None
-        if current_total > self.xp_budget * 1.2:
+        if current_total > self.xp_budget * self.upper_bound:
             return None
         possible_monsters = self.possible_monsters(monsters)
         if len(possible_monsters) > 0:
             for monster in possible_monsters:
                 self.pick_monsters([monster] + monsters)
-        if current_total > self.xp_budget * 0.8:
+        if current_total > self.xp_budget * self.lower_bound:
             self.monster_lists.append(monsters)
 
     def get_lists_of_correct_occurrence(self):

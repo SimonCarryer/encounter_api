@@ -1,9 +1,4 @@
 magical guardians:
-  signs:
-    - Sigils inscribed on stone
-    - Crackling energy, hair standing on end
-    - Distant chiming
-  monsters:
   - Name: Animated Armor    
     occurrence: common 
   - Name: Flying Sword    
@@ -59,13 +54,7 @@ magical guardians:
     occurrence: uncommon
     role: environmental hazard
 
-  
 bullywugs:
-  signs:
-    - Distant croaking
-    - Muddy, webbed footprints
-    - Crude structures made of vines and sticks
-  monsters:
   - Name: Swarm of Insects    
     role: environmental hazard
     occurrence: uncommon    
@@ -80,267 +69,225 @@ bullywugs:
     occurrence: common
 
 spiders:
-  signs:
-    - Shrouds of webbing
-    - Dried husks wrapped in silk
-  monsters:
-    - Name: Ettercap      
-      role: leader
-      occurrence: common
-    - Name: Giant Spider      
-      role: troops
-      occurrence: common
-    - Name: Giant Wolf Spider      
-      role: troops
-      occurrence: common
-    - Name: Swarm of Insects      
-      role: environmental hazard
-      occurrence: common
-    - Name: Yochlol      
-      role: leader
-      occurrence: rare
-    - Name: Drider      
-      role: leader
-      occurrence: rare
-    - Name: Phase Spider      
-      role: elite
-      occurrence: uncommon
+  - Name: Ettercap      
+    role: leader
+    occurrence: common
+  - Name: Giant Spider      
+    role: troops
+    occurrence: common
+  - Name: Giant Wolf Spider      
+    role: troops
+    occurrence: common
+  - Name: Swarm of Insects      
+    role: environmental hazard
+    occurrence: common
+  - Name: Yochlol      
+    role: leader
+    occurrence: rare
+  - Name: Drider      
+    role: leader
+    occurrence: rare
+  - Name: Phase Spider      
+    role: elite
+    occurrence: uncommon
 
 orcs:
-  signs:
-    - A temporary stockade made of salvaged materials
-    - A rough-hewn wooden idol, one-eyed and grimacing
-  monsters:
-    - Name: Orc      
-      role: troops
-      occurrence: common
-    - Name: Orc War Chief      
-      role: leader
-      occurrence: common
-    - Name: Orc Eye of Gruumsh      
-      role: elite
-      occurrence: uncommon
-    - Name: Orog      
-      role: troops
-      occurrence: common
-    - Name: Troll      
-      role: pet
-      occurrence: common
-    - Name: Half-ogre (Ogrillon)
-      role: elite
-      occurrence: uncommon
-    - Name: Ogre      
-      role: pet
-      occurrence: uncommon
-    - Name: Ettin      
-      role: pet
-      occurrence: uncommon
-    - Name: Hill Giant      
-      role: pet
-      occurrence: uncommon
+  - Name: Orc      
+    role: troops
+    occurrence: common
+  - Name: Orc War Chief      
+    role: leader
+    occurrence: common
+  - Name: Orc Eye of Gruumsh      
+    role: elite
+    occurrence: uncommon
+  - Name: Orog      
+    role: troops
+    occurrence: common
+  - Name: Troll      
+    role: pet
+    occurrence: common
+  - Name: Half-ogre (Ogrillon)
+    role: elite
+    occurrence: uncommon
+  - Name: Ogre      
+    role: pet
+    occurrence: uncommon
+  - Name: Ettin      
+    role: pet
+    occurrence: uncommon
+  - Name: Hill Giant      
+    role: pet
+    occurrence: uncommon
 
 goblins:
-  signs:
-    - Skulls mounted on poles.
-    - War-drums sounding in the distance.
-    - Crudely-butchered carcasses left to rot.
-    - A crude shrine to a hideous idol.
-  monsters:
-    - Name: Goblin      
-      role: troops
-      occurrence: common
-    - Name: Goblin Boss      
-      role: leader
-      occurrence: common
-    - Name: Wolf      
-      role: pet
-      occurrence: uncommon
-    - Name: Giant Rat      
-      role: pet
-      occurrence: uncommon
-    - Name: Worg      
-      occurrence: rare
-      role: pet
-    - Name: Bugbear      
-      occurrence: uncommon
-      role: elite
+  - Name: Goblin      
+    role: troops
+    occurrence: common
+  - Name: Goblin Boss      
+    role: leader
+    occurrence: common
+  - Name: Wolf      
+    role: pet
+    occurrence: uncommon
+  - Name: Giant Rat      
+    role: pet
+    occurrence: uncommon
+  - Name: Worg      
+    occurrence: rare
+    role: pet
+  - Name: Bugbear      
+    occurrence: uncommon
+    role: elite
 
 hills:
-  signs:
-    - Paw-prints.
-    - Snarling sounds.
-    - A carcass stripped of flesh.
-    - Piles of dung.
-  monsters:
-    - Name: Panther      
-      occurrence: common
-      role: solo
-    - Name: Wolf      
-      occurrence: common
-    - Name: Giant Owl
-      occurrence: rare
-      role: environmental hazard      
-    - Name: Giant Owl
-      occurrence: uncommon 
-      role: solo     
-    - Name: Giant Eagle
-      occurrence: uncommon  
-      role: solo    
-    - Name: Harpy      
-      occurrence: rare
-    - Name: Hippogriff      
-      occurrence: uncommon
-    - Name: Peryton      
-      occurrence: rare
-    - Name: Pegasus      
-      occurrence: rare
-    - Name: Bulette      
-      occurrence: common
-      role: solo
-    - Name: Chimera      
-      occurrence: uncommon
-      role: solo
-    - Name: Wyvern      
-      occurrence: common
-    - Name: Roc      
-      occurrence: common
-      role: solo
+  - Name: Panther      
+    occurrence: common
+    role: solo
+  - Name: Wolf      
+    occurrence: common
+  - Name: Giant Owl
+    occurrence: rare
+    role: environmental hazard      
+  - Name: Giant Owl
+    occurrence: uncommon 
+    role: solo     
+  - Name: Giant Eagle
+    occurrence: uncommon  
+    role: solo    
+  - Name: Harpy      
+    occurrence: rare
+  - Name: Hippogriff      
+    occurrence: uncommon
+  - Name: Peryton      
+    occurrence: rare
+  - Name: Pegasus      
+    occurrence: rare
+  - Name: Bulette      
+    occurrence: common
+    role: solo
+  - Name: Chimera      
+    occurrence: uncommon
+    role: solo
+  - Name: Wyvern      
+    occurrence: common
+  - Name: Roc      
+    occurrence: common
+    role: solo
 
 forest:
-  signs:
-    - Paw-prints.
-    - Snarling sounds.
-    - A carcass stripped of flesh.
-  monsters:
-    - Name: Wolf      
-      occurrence: common 
-    - Name: Giant Owl
-      occurrence: uncommon
-      role: solo
-    - Name: Brown Bear      
-      occurrence: common
-      role: solo
-    - Name: Black Bear      
-      occurrence: common
-      role: solo
-    - Name: Giant Wolf Spider      
-      occurrence: common
-    - Name: Giant Badger      
-      occurrence: common
-    - Name: Giant Wasp      
-      occurrence: common
-    - Name: Giant Spider      
-      occurrence: common
-    - Name: Giant Boar      
-      occurrence: common
-    - Name: Giant Elk      
-      occurrence: rare
-    - Name: Displacer Beast      
-      occurrence: uncommon
-      role: solo
-    - Name: Dire Wolf      
-      occurrence: common
-    - Name: Basilisk      
-      occurrence: uncommon
-      role: solo
-    - Name: Stirge   
-      occurrence: common
+  - Name: Wolf      
+    occurrence: common 
+  - Name: Giant Owl
+    occurrence: uncommon
+    role: solo
+  - Name: Brown Bear      
+    occurrence: common
+    role: solo
+  - Name: Black Bear      
+    occurrence: common
+    role: solo
+  - Name: Giant Wolf Spider      
+    occurrence: common
+  - Name: Giant Badger      
+    occurrence: common
+  - Name: Giant Wasp      
+    occurrence: common
+  - Name: Giant Spider      
+    occurrence: common
+  - Name: Giant Boar      
+    occurrence: common
+  - Name: Giant Elk      
+    occurrence: rare
+  - Name: Displacer Beast      
+    occurrence: uncommon
+    role: solo
+  - Name: Dire Wolf      
+    occurrence: common
+  - Name: Basilisk      
+    occurrence: uncommon
+    role: solo
+  - Name: Stirge   
+    occurrence: common
 
 wolves:
-  signs:
-    - Howling at the moon.
-    - Scratch marks on high surfaces.
-    - Scent marking.
-  monsters:
-    - Name: Wolf      
-      occurrence: common
-      role: troops
-    - Name: Worg      
-      occurrence: common
-      role: leader
-    - Name: Worg      
-      occurrence: uncommon
-      role: troops
-    - Name: Dire Wolf      
-      role: troops
-      occurrence: common
-    - Name: Werewolf      
-      role: leader
-      occurrence: rare
+  - Name: Wolf      
+    occurrence: common
+    role: troops
+  - Name: Worg      
+    occurrence: common
+    role: leader
+  - Name: Worg      
+    occurrence: uncommon
+    role: troops
+  - Name: Dire Wolf      
+    role: troops
+    occurrence: common
+  - Name: Werewolf      
+    role: leader
+    occurrence: rare
 
 haunted:
-  signs:
-    - A chill in the air.
-    - An eerie wailing in the distance.
-    - Disturbing, shifting shadows.
-  monsters:
-    - Name: Banshee      
-      occurrence: uncommon
-    - Name: Ghast      
-      occurrence: common
-    - Name: Ghost      
-      occurrence: common
-    - Name: Flameskull      
-      occurrence: rare
-    - Name: Ghoul      
-      occurrence: common
-    - Name: Skeleton      
-      occurrence: common
-    - Name: Crawling Claw      
-      occurrence: rare
-      role: environmental hazard
-    - Name: Wraith      
-      occurrence: uncommon  
-    - Name: Specter      
-      occurrence: common    
-    - Name: Shadow      
-      occurrence: common
-    - Name: Wight      
-      occurrence: common
+  - Name: Banshee      
+    occurrence: uncommon
+  - Name: Ghast      
+    occurrence: common
+  - Name: Ghost      
+    occurrence: common
+  - Name: Flameskull      
+    occurrence: rare
+  - Name: Ghoul      
+    occurrence: common
+  - Name: Skeleton      
+    occurrence: common
+  - Name: Crawling Claw      
+    occurrence: rare
+    role: environmental hazard
+  - Name: Wraith      
+    occurrence: uncommon  
+  - Name: Specter      
+    occurrence: common    
+  - Name: Shadow      
+    occurrence: common
+  - Name: Wight      
+    occurrence: common
 
 bandits:
-  signs:
-    - Muddy boot-prints.
-    - A collection of traps and snares.
-    - A cache of weapons and food.
-    - A campfire and discarded cooking-utensils.
-  monsters:
-    - Name: Bandit/Pirate      
-      role: troops
-      occurrence: common
-    - Name: Thug      
-      role: troops
-      occurrence: common
-    - Name: Bandit/Pirate Captain      
-      role: leader
-      occurrence: common
-    - Name: Spy      
-      role: elite
-      occurrence: uncommon
-    - Name: Half-ogre (Ogrillon)
-      occurrence: uncommon
-      role: elite
-    - Name: Half-Red Dragon Veteran
-      occurrence: rare
-      role: leader
-    - Name: Wereboar
-      occurrence: rare
-      role: leader
-    - Name: Doppelganger
-      occurrence: rare
-      role: environmental hazard
-    - Name: Mastiff
-      occurrence: uncommon
-      role: pet
-    - Name: Death Dog
-      occurrence: rare
-      role: pet
-    - Name: Veteran
-      occurrence: uncommon
-      role: elite
+  - Name: Bandit/Pirate      
+    role: troops
+    occurrence: common
+  - Name: Thug      
+    role: troops
+    occurrence: common
+  - Name: Bandit/Pirate Captain      
+    role: leader
+    occurrence: common
+  - Name: Spy      
+    role: elite
+    occurrence: uncommon
+  - Name: Half-ogre (Ogrillon)
+    occurrence: uncommon
+    role: elite
+  - Name: Half-Red Dragon Veteran
+    occurrence: rare
+    role: leader
+  - Name: Wereboar
+    occurrence: rare
+    role: leader
+  - Name: Doppelganger
+    occurrence: rare
+    role: environmental hazard
+  - Name: Mastiff
+    occurrence: uncommon
+    role: pet
+  - Name: Death Dog
+    occurrence: rare
+    role: pet
+  - Name: Veteran
+    occurrence: uncommon
+    role: elite
 
 gnolls:
-  monsters:
   - Name: Gnoll
     role: troops
     occurrence: common
@@ -358,7 +305,6 @@ gnolls:
     occurrence: uncommon
 
 mind flayers:
-  monsters:
   - Name: Mind Flayer
     role: leader
     occurrence: common
@@ -385,7 +331,6 @@ mind flayers:
     occurrence: common
 
 drow:
-  monsters:
   - Name: Drow
     role: troops
     occurrence: common
@@ -412,7 +357,6 @@ drow:
     occurrence: rare
 
 lizardfolk:
-  monsters:
   - Name: Lizardfolk
     role: troops
     occurrence: common
@@ -433,7 +377,6 @@ lizardfolk:
     occurrence: common
 
 hobgoblins:
-  monsters:
   - Name: Hobgoblin
     role: troops
     occurrence: common
@@ -454,42 +397,40 @@ hobgoblins:
     occurrence: common
   - Name: Worg
     role: pet
-    occurrence: common
+    occurrence: uncommon
   - Name: Ape
     role: pet
     occurrence: rare
 
 sewers:
-    monsters:
-    - Name: Otyugh
-      occurrence: uncommon
-      role: solo
-    - Name: Swarm of Rats
-      occurrence: common
-    - Name: Giant Rat
-      occurrence: common
-    - Name: Carrion Crawler
-      occurrence: uncommon
-    - Name: Wererat
-      occurrence: common
-    - Name: Ghoul
-      occurrence: rare
-    - Name: Black Pudding
-      occurrence: uncommon
-      role: environmental hazard
-    - Name: Gray Ooze
-      occurrence: rare
-      role: environmental hazard
-    - Name: Ochre Jelly
-      occurrence: uncommon
-      role: environmental hazard
-    - Name: Gelatinous Cube
-      occurrence: uncommon
-    - Name: Water Weird
-      occurrence: rare
+  - Name: Otyugh
+    occurrence: uncommon
+    role: solo
+  - Name: Swarm of Rats
+    occurrence: common
+  - Name: Giant Rat
+    occurrence: common
+  - Name: Carrion Crawler
+    occurrence: uncommon
+  - Name: Wererat
+    occurrence: common
+  - Name: Ghoul
+    occurrence: rare
+  - Name: Black Pudding
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Gray Ooze
+    occurrence: rare
+    role: environmental hazard
+  - Name: Ochre Jelly
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Gelatinous Cube
+    occurrence: uncommon
+  - Name: Water Weird
+    occurrence: rare
 
 swamp:
-  monsters:
   - Name: Young Black Dragon
     occurrence: rare
     role: solo
@@ -548,7 +489,6 @@ swamp:
     role: environmental hazard
 
 mummies:
-  monsters:
   - Name: Mummy Lord
     occurrence: common
     role: leader
@@ -587,7 +527,6 @@ mummies:
     role: pet
 
 kuo-toa:
-  monsters:
   - Name: Kuo-toa Monitor
     occurrence: uncommon
     role: leader
@@ -605,7 +544,6 @@ kuo-toa:
     role: pet
 
 blights:
-  monsters:
   - Name: Needle Blight
     role: pet
     occurrence: common
@@ -617,7 +555,6 @@ blights:
     occurrence: common
 
 fey:
-  monsters:
   - Name: Pixie
     occurrence: common
   - Name: Displacer Beast
@@ -653,7 +590,6 @@ fey:
     role: environmental hazard
 
 civilised folk:
-  monsters:
   - Name: Mage
     occurrence: rare
     role: environmental hazard
@@ -682,7 +618,7 @@ civilised folk:
     occurrence: uncommon
     role: pet
   - Name: Blood Hawk
-    occurence: rare
+    occurrence: rare
     role: pet
   - Name: Doppelganger
     occurrence: rare
@@ -695,7 +631,6 @@ civilised folk:
     role: troops
 
 apex predators:
-  monsters:
   - Name: Basilisk
     occurrence: common
     role: solo
@@ -758,7 +693,6 @@ apex predators:
     role: solo
 
 cult of jubilex:
-  monsters:
   - Name: Cult Fanatic
     occurrence: common
     role: leader
@@ -783,7 +717,6 @@ cult of jubilex:
 
 
 cult of obox-ob:
-  monsters:
   - Name: Cult Fanatic
     occurrence: common
     role: leader

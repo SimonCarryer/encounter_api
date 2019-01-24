@@ -48,6 +48,12 @@ class EncounterSource:
             response['success'] = True
             response['monster_set'] = self.monster_source.name
             response['monsters'] = [{'name': k, 'number': v} for k, v in dict(Counter([monster['Name'] for monster in self.encounter.monsters])).items()]
-            response['difficulty'] = round(self.encounter.adjusted_xp() / self.xp_budget, 1)
+            difficulty = self.encounter.adjusted_xp() / self.xp_budget
+            if difficulty <= 0.8:
+                response['difficulty'] = 'easy'
+            elif difficulty > 1.2:
+                response['difficulty'] = 'hard'
+            else:
+                response['difficulty'] = 'medium'
             response['xp_value'] = self.encounter.total_xp()
         return response

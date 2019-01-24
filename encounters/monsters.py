@@ -16,32 +16,32 @@ def load_monster_manual():
             monster_dict[row['Name']] = row
     return monster_dict
 
-def load_environment_tags():
+def load_monster_sets():
     monster_dict = load_monster_manual()
-    with open('data/environment_tags.yaml') as f:
-        environment_tags = yaml.load(f.read())
-    for tag in environment_tags.keys():
+    with open('data/monster_sets.yaml') as f:
+        monster_sets = yaml.load(f.read())
+    for tag in monster_sets.keys():
         amended_monsters = []
-        for monster in environment_tags[tag]['monsters']:
+        for monster in monster_sets[tag]:
             monster_data = monster_dict.get(monster['Name'])
             if monster_data is not None:
-                merged_data = {**monster, **monster_data}
-                merged_data['XP'] = int(merged_data['XP'])
-                if merged_data.get('role') is None:
-                    merged_data['role'] = 'natural hazard'
-                amended_monsters.append(merged_data)
+                monster.update(monster_data)
+                monster['XP'] = int(monster['XP'])
+                if monster.get('role') is None:
+                    monster['role'] = 'natural hazard'
+                amended_monsters.append(monster)
             else:
                 print('uh oh!: %s not loaded' % monster)
-        environment_tags[tag]['monsters'] = amended_monsters
-    return environment_tags
+        monster_sets[tag] = amended_monsters
+    return monster_sets
 
-environment_tags = load_environment_tags()
+monster_sets = load_monster_sets()
     
 class MonsterManual():
     def __init__(self):
         self.name = None
-        self.environment_tags = copy.deepcopy(environment_tags)
-        self.monster_sets = [key for key in self.environment_tags.keys()]
+        self.monster_sets = copy.deepcopy(monster_sets)
+        self.monster_set_names = [key for key in self.monster_sets.keys()]
 
     def monsters(self, monster_set_name, random_state):
         if random_state is None:
@@ -49,7 +49,7 @@ class MonsterManual():
         else:
             self.random_state = random_state
         if monster_set_name is None:
-            monster_set_name = self.random_state.choice(self.monster_sets)
+            monster_set_name = self.random_state.choice(self.monster_set_names)
         self.name = monster_set_name
-        monster_set = self.environment_tags[monster_set_name]['monsters']
+        monster_set = self.monster_sets[monster_set_name]
         return monster_set

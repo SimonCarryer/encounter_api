@@ -23,7 +23,7 @@ def encounter():
         if style == 'all':
             style = None
     source = EncounterSource(xp_budget=xp_budget, style=style, monster_set=monster_set)
-    sets = source.monster_source.monster_sets
+    sets = source.monster_source.monster_set_names
     styles = ['elite', 'leader', 'basic', 'all']
     encounter = source.get_encounter()
     values = {'xp_budget': xp_budget, 'style': style, 'monster_set': monster_set}
