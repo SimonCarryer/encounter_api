@@ -5,11 +5,11 @@ from encounters.encounter_api import EncounterSource
 application = Flask(__name__)
 
 
-@app.route("/", methods=['GET', 'POST'])
+@application.route("/", methods=['GET', 'POST'])
 def home():
     return "ok, it works"
 
-@app.route("/encounter", methods=['GET', 'POST'])
+@application.route("/encounter", methods=['GET', 'POST'])
 def encounter():
     xp_budget = 450
     monster_set = None
