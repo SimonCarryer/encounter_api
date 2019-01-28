@@ -113,7 +113,7 @@ Ox,,Large,Beast,,Unaligned,Urban,0.25,50,VGM,208,VGM208,,
 Panther,,Medium,Beast,,Unaligned,"Forest, Grassland, Hills",0.25,50,MM,333,MM333,,"Dark-furred, lithe giant felines."
 Pixie,,Tiny,Fey,,Neutral Good,Forest,0.25,50,MM,253,MM253,,"Small, winged sylvan fey."
 Pseudodragon,,Tiny,Dragon,,Neutral Good,"Coastal, Desert, Forest, Hills, Mountain, Urban",0.25,50,MM,254,MM254,Y,Miniature dragons that often act as familiars and guardians for mages.
-Pteranodon (Skinwing),,Medium,Beast,dinosaur/behemoth,Unaligned,"Coastal, Grassland, Mountain",0.25,50,MM,80,MM80,,"Large, winged behemoths."
+Pteranodon,,Medium,Beast,dinosaur/behemoth,Unaligned,"Coastal, Grassland, Mountain",0.25,50,MM,80,MM80,,"Large, winged behemoths."
 Ramag,,Medium,Humanoid,ramag,Neutral,"Grassland, Urban",0.25,50,TOB,317,TOB317,Y,
 Ratfolk,,Small,Humanoid,ratfolk,Neutral,"Underdark, Urban",0.25,50,TOB,320,TOB320,Y,
 Red-Banded Line Spider,,Tiny,Beast,,Unaligned,Any,0.25,50,TOB,363,TOB363,Y,
@@ -283,7 +283,7 @@ Yuan-ti Pureblood,,Medium,Humanoid,yuan-ti,Neutral Evil,"Desert, Forest, Swamp, 
 Zanskaran Viper,,Large,Beast,,Unaligned,Swamp,1,200,TOB,354,TOB354,Y,
 Adherer,,Medium,Aberration,,Lawful Evil,"Forest, Underdark",2,450,FEF,6,FEF6,,
 Adult Faerie Dragon,,Tiny,Dragon,,Chaotic Good,Forest,2,450,MM,133,MM133,,"Tiny, butterfly-winged dragons allied with fey races."
-Allosaurus (Bloodmaw),,Large,Beast,dinosaur/behemoth,Unaligned,Grassland,2,450,MM,79,MM79,,Large hunter dinosaur known for chasing down and pouncing on prey.
+Allosaurus,,Large,Beast,dinosaur/behemoth,Unaligned,Grassland,2,450,MM,79,MM79,,Large hunter dinosaur known for chasing down and pouncing on prey.
 Ankheg,,Large,Monstrosity,,Unaligned,"Forest, Grassland",2,450,MM,21,MM21,Y,Burrowing insectoid monstrosities.
 Anubian,,Medium,Elemental,,Chaotic Evil,Any,2,450,TOB,24,TOB24,Y,
 Aurochs,,Large,Beast,,Unaligned,"Grassland, Hills, Mountain",2,450,VGM,207,VGM207,,
@@ -375,7 +375,7 @@ Quetzalcoatlus (Pholux),,Huge,Beast,dinosaur/behemoth,Unaligned,"Coastal, Hills,
 Rhinoceros,,Large,Beast,,Unaligned,Grassland,2,450,MM,336,MM336,,
 Roachling Lord,,Small,Humanoid,roachling,Chaotic Neutral,"Underdark, Urban",2,450,TOB,329,TOB329,Y,
 Rug of Smothering,,Large,Construct,,Unaligned,Urban,2,450,MM,20,MM20,Y,A rug that has been given enough life to strangle interlopers.
-Saber-toothed Tiger,,Large,Beast,,Unaligned,"Arctic, Mountain",2,450,MM,336,MM336,,
+Sabre-Toothed Tiger,,Large,Beast,,Unaligned,"Arctic, Mountain",2,450,MM,336,MM336,,
 Sahuagin Priestess,,Medium,Humanoid,sahuagin,Lawful Evil,"Coastal, Underwater",2,450,MM,264,MM264,,
 Sea Dragon Wyrmling,,Medium,Dragon,,Neutral Evil,Underwater,2,450,TOB,136,TOB136,Y,
 Sea Hag,,Medium,Fey,,Chaotic Evil,"Coastal, Underwater",2,450,MM,179,MM179,Y,
@@ -405,7 +405,7 @@ Yuan-ti Broodguard,,Medium,Humanoid,yuan-ti,Neutral Evil,"Desert, Forest, Underd
 Algoid,,Medium,Plant,,Neutral,Swamp,3,700,FEF,8,FEF8,,
 Alseid Grovekeeper,,Medium,Monstrosity,,Chaotic Neutral,,3,700,TOB,15,TOB15,Y,
 Amphiptere,,Medium,Beast,,Unaligned,Forest,3,700,TOB,16,TOB16,Y,
-Ankylosaurus (Macetail),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,3,700,MM,79,MM79,,
+Ankylosaurus,,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,3,700,MM,79,MM79,,
 Aranea,,Large,Monstrosity,shapechanger,Chaotic Evil,"Forest, Underdark",3,700,FEF,13,FEF13,,
 Arboreal Grappler,,Medium,Aberration,,Neutral Evil,Forest,3,700,TOB,25,TOB25,Y,
 Ascomoid,,Large,Plant,,Unaligned,Underdark,3,700,FEF,16,FEF16,,
@@ -637,7 +637,7 @@ Tanarukk,,Medium,Fiend,"demon, orc",Chaotic Evil,"Hills, Mountain, Underdark",5,
 Temple Dog,,Medium,Celestial,,Any good,Extraplanar (Upper Planes),5,1800,TOB,378,TOB378,Y,
 Tlincalli (Scorpion Folk),,Large,Monstrosity,,Neutral Evil,Desert,5,1800,VGM,193,VGM193,,
 Tosculi Elite Bow Raider,,Medium,Humanoid,tosculi,Lawful Evil,"Desert, Grassland, Hills",5,1800,TOB,386,TOB386,Y,
-Triceratops (Tri-horn),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,5,1800,MM,80,MM80,Y,
+Triceratops,,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,5,1800,MM,80,MM80,Y,
 Troll,,Large,Giant,,Chaotic Evil,"Arctic, Forest, Hills, Mountain, Swamp, Underdark",5,1800,MM,291,MM291,Y,
 Umber Hulk,,Large,Monstrosity,,Chaotic Evil,Underdark,5,1800,MM,292,MM292,,
 Unicorn,,Large,Celestial,,Lawful Good,Forest,5,1800,MM,294,MM294,Y,
@@ -788,7 +788,7 @@ Shabti,,Medium,Construct,,Unaligned,"Swamp, Underdark",8,3900,TOB,343,TOB343,Y,
 Shoosuva,,Large,Fiend,demon,Chaotic Evil,"Arctic, Forest, Grassland, Hills",8,3900,VGM,137,VGM137,,
 Spirit Naga,,Large,Monstrosity,,Chaotic Evil,Underdark,8,3900,MM,234,MM234,Y,
 Tophet,,Huge,Construct,,Neutral Evil,Any,8,3900,TOB,383,TOB383,Y,
-Tyrannosaurus Rex (Dreadfang),,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,8,3900,MM,80,MM80,Y,
+Tyrannosaurus Rex,,Huge,Beast,dinosaur/behemoth,Unaligned,Grassland,8,3900,MM,80,MM80,Y,
 Xhkarsh,,Large,Aberration,,Neutral Evil,Any,8,3900,TOB,412,TOB412,Y,
 Young Bronze Dragon,,Large,Dragon,,Lawful Good,Coastal,8,3900,MM,108,MM108,Y,
 Young Cave Dragon,,Large,Dragon,,Neutral Evil,Underdark,8,3900,TOB,127,TOB127,Y,

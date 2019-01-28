@@ -1,7 +1,8 @@
 tmp/*
 *.py[cod]
 *.zip
-__pycache__/
+__pycache__
+encounter_env/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

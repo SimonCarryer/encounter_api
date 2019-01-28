@@ -288,450 +288,1110 @@ bandits:
     role: elite
 
 gnolls:
-  - Name: Gnoll
-    role: troops
-    occurrence: common
-  - Name: Gnoll Pack Lord
-    role: leader
-    occurrence: common
-  - Name: Gnoll Fang of Yeenoghu
-    role: leader
-    occurrence: uncommon
-  - Name: Giant Hyena
-    role: pet
-    occurrence: uncommon
-  - Name: Hyena
-    role: pet
-    occurrence: uncommon
+ - Name: Gnoll
+   role: troops
+   occurrence: common
+ - Name: Gnoll Pack Lord
+   role: leader
+   occurrence: common
+ - Name: Gnoll Fang of Yeenoghu
+   role: leader
+   occurrence: uncommon
+ - Name: Giant Hyena
+   role: pet
+   occurrence: uncommon
+ - Name: Hyena
+   role: pet
+   occurrence: common
 
 mind flayers:
-  - Name: Mind Flayer
-    role: leader
-    occurrence: common
-  - Name: Mind Flayer Arcanist
-    role: leader
-    occurrence: rare
-  - Name: Intellect Devourer
-    role: pet
-    occurrence: common
-  - Name: Grimlock
-    role: troops
-    occurrence: common
-  - Name: Psychic Gray Ooze
-    role: environmental hazard
-    occurrence: uncommon
-  - Name: Troglodyte
-    role: troops
-    occurrence: common
-  - Name: Quaggoth
-    role: pet
-    occurrence: uncommon
-  - Name: Ogre
-    role: troops
-    occurrence: common
+ - Name: Mind Flayer
+   role: leader
+   occurrence: common
+ - Name: Mind Flayer Arcanist
+   role: leader
+   occurrence: rare
+ - Name: Intellect Devourer
+   role: pet
+   occurrence: common
+ - Name: Grimlock
+   role: troops
+   occurrence: common
+ - Name: Psychic Gray Ooze
+   role: environmental hazard
+   occurrence: uncommon
+ - Name: Troglodyte
+   role: troops
+   occurrence: common
+ - Name: Quaggoth
+   role: pet
+   occurrence: uncommon
+ - Name: Ogre
+   role: troops
+   occurrence: common
 
 drow:
-  - Name: Drow
-    role: troops
-    occurrence: common
-  - Name: Drow Elite Warrior
-    role: elite
-    occurrence: common
-  - Name: Drow Mage
-    role: elite
-    occurrence: uncommon
-  - Name: Drow Priestess of Lolth
-    role: leader
-    occurrence: common
-  - Name: Yochlol
-    role: leader
-    occurrence: rare
-  - Name: Drider
-    role: pet
-    occurrence: uncommon
-  - Name: Quaggoth
-    role: pet
-    occurrence: uncommon
-  - Name: Quaggoth Thonot
-    role: pet
-    occurrence: rare
+ - Name: Drow
+   role: troops
+   occurrence: common
+ - Name: Drow Elite Warrior
+   role: elite
+   occurrence: common
+ - Name: Drow Mage
+   role: elite
+   occurrence: uncommon
+ - Name: Drow Priestess of Lolth
+   role: leader
+   occurrence: common
+ - Name: Yochlol
+   role: leader
+   occurrence: rare
+ - Name: Drider
+   role: pet
+   occurrence: uncommon
+ - Name: Quaggoth
+   role: pet
+   occurrence: uncommon
+ - Name: Quaggoth Thonot
+   role: pet
+   occurrence: rare
 
 lizardfolk:
-  - Name: Lizardfolk
-    role: troops
-    occurrence: common
-  - Name: Lizardfolk Shaman
-    role: leader
-    occurrence: common
-  - Name: Lizard King/Queen
-    role: leader
-    occurrence: rare
-  - Name: Giant Lizard
-    role: pet
-    occurrence: uncommon
-  - Name: Giant Crocodile
-    role: pet
-    occurrence: common
-  - Name: Crocodile
-    role: pet
-    occurrence: common
+ - Name: Lizardfolk
+   role: troops
+   occurrence: common
+ - Name: Lizardfolk Shaman
+   role: leader
+   occurrence: common
+ - Name: Lizard King/Queen
+   role: leader
+   occurrence: rare
+ - Name: Giant Lizard
+   role: pet
+   occurrence: uncommon
+ - Name: Giant Crocodile
+   role: pet
+   occurrence: common
+ - Name: Crocodile
+   role: pet
+   occurrence: common
 
 hobgoblins:
-  - Name: Hobgoblin
-    role: troops
-    occurrence: common
-  - Name: Hobgoblin Captain
-    role: leader
-    occurrence: common
-  - Name: Hobgoblin Warlord
-    role: leader
-    occurrence: common
-  - Name: Bugbear
-    role: elite
-    occurrence: uncommon
-  - Name: Goblin
-    role: pet
-    occurrence: uncommon
-  - Name: Wolf
-    role: pet
-    occurrence: common
-  - Name: Worg
-    role: pet
-    occurrence: uncommon
-  - Name: Ape
-    role: pet
-    occurrence: rare
+ - Name: Hobgoblin
+   role: troops
+   occurrence: common
+ - Name: Hobgoblin Captain
+   role: leader
+   occurrence: common
+ - Name: Hobgoblin Warlord
+   role: leader
+   occurrence: common
+ - Name: Bugbear
+   role: elite
+   occurrence: uncommon
+ - Name: Goblin
+   role: pet
+   occurrence: uncommon
+ - Name: Wolf
+   role: pet
+   occurrence: common
+ - Name: Worg
+   role: pet
+   occurrence: common
+ - Name: Ape
+   role: pet
+   occurrence: rare
 
 sewers:
-  - Name: Otyugh
-    occurrence: uncommon
-    role: solo
-  - Name: Swarm of Rats
-    occurrence: common
-  - Name: Giant Rat
-    occurrence: common
-  - Name: Carrion Crawler
-    occurrence: uncommon
-  - Name: Wererat
-    occurrence: common
-  - Name: Ghoul
-    occurrence: rare
-  - Name: Black Pudding
-    occurrence: uncommon
-    role: environmental hazard
-  - Name: Gray Ooze
-    occurrence: rare
-    role: environmental hazard
-  - Name: Ochre Jelly
-    occurrence: uncommon
-    role: environmental hazard
-  - Name: Gelatinous Cube
-    occurrence: uncommon
-  - Name: Water Weird
-    occurrence: rare
+ - Name: Otyugh
+   occurrence: uncommon
+   role: solo
+ - Name: Swarm of Rats
+   occurrence: common
+ - Name: Giant Rat
+   occurrence: common
+ - Name: Carrion Crawler
+   occurrence: uncommon
+ - Name: Wererat
+   occurrence: common
+ - Name: Ghoul
+   occurrence: rare
+ - Name: Black Pudding
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Gray Ooze
+   occurrence: rare
+   role: environmental hazard
+ - Name: Ochre Jelly
+   occurrence: common
+   role: environmental hazard
+ - Name: Gelatinous Cube
+   occurrence: uncommon
+ - Name: Water Weird
+   occurrence: rare
 
 swamp:
-  - Name: Young Black Dragon
-    occurrence: rare
-    role: solo
-  - Name: Black Dragon Wyrmling
-    occurrence: rare
-    role: solo
-  - Name: Ettercap
-    occurrence: rare
-    role: solo
-  - Name: Stirge
-    occurrence: common
-  - Name: Cockatrice
-    occurrence: rare
-    role: solo
-  - Name: Otyugh
-    occurrence: uncommon
-    role: solo
-  - Name: Shambling Mound
-    occurrence: uncommon
-  - Name: Will-o-wisp
-    occurrence: rare
-  - Name: Black Pudding
-    occurrence: rare
-    role: environmental hazard
-  - Name: Ochre Jelly
-    occurrence: uncommon
-    role: environmental hazard
-  - Name: Constrictor Snake
-    occurrence: common
-    role: solo
-  - Name: Crocodile
-    occurrence: common
-  - Name: Hydra
-    occurrence: common
-  - Name: Giant Constrictor Snake
-    occurrence: common
-    role: solo
-  - Name: Giant Spider
-    occurrence: common
-  - Name: Giant Crocodile
-    occurrence: common
-  - Name: Giant Frog
-    occurrence: common
-  - Name: Giant Toad
-    occurrence: common
-  - Name: Giant Wasp
-    occurrence: common
-  - Name: Poisonous Snake
-    occurrence: common
-  - Name: Swarm of Poisonous Snakes
-    occurrence: common
-  - Name: Stirge
-    occurrence: common
-  - Name: Swarm of Insects
-    occurrence: uncommon
-    role: environmental hazard
+ - Name: Young Black Dragon
+   occurrence: rare
+   role: solo
+ - Name: Black Dragon Wyrmling
+   occurrence: rare
+   role: solo
+ - Name: Ettercap
+   occurrence: rare
+   role: solo
+ - Name: Stirge
+   occurrence: common
+ - Name: Cockatrice
+   occurrence: rare
+ - Name: Otyugh
+   occurrence: uncommon
+   role: solo
+ - Name: Shambling Mound
+   occurrence: uncommon
+ - Name: Will-o-wisp
+   occurrence: rare
+ - Name: Black Pudding
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Ochre Jelly
+   occurrence: common
+   role: environmental hazard
+ - Name: Constrictor Snake
+   occurrence: common
+   role: solo
+ - Name: Crocodile
+   occurrence: common
+ - Name: Hydra
+   occurrence: common
+ - Name: Giant Constrictor Snake
+   occurrence: common
+   role: solo
+ - Name: Giant Spider
+   occurrence: common
+ - Name: Giant Crocodile
+   occurrence: common
+ - Name: Giant Frog
+   occurrence: common
+ - Name: Giant Toad
+   occurrence: common
+ - Name: Giant Wasp
+   occurrence: common
+ - Name: Poisonous Snake
+   occurrence: common
+ - Name: Swarm of Poisonous Snakes
+   occurrence: common
+ - Name: Stirge
+   occurrence: common
+ - Name: Swarm of Insects
+   occurrence: uncommon
+   role: environmental hazard
 
-mummies:
-  - Name: Mummy Lord
-    occurrence: common
-    role: leader
-  - Name: Mummy
-    occurrence: common
-    role: elite
-  - Name: Skeleton
-    occurrence: common
-    role: troops
-  - Name: Animated Armor
-    occurrence: uncommon
-    role: troops
-  - Name: Flying Sword
-    occurrence: uncommon
-    role: pet
-  - Name: Crawling Claw
-    occurrence: rare
-    role: environmental hazard
-  - Name: Shield Guardian
-    occurrence: rare
-    role: pet
-  - Name: Shadow
-    occurrence: uncommon
-    role: elite
-  - Name: Carrion Crawler
-    occurrence: rare
-    role: environmental hazard
-  - Name: Invisible Stalker
-    occurrence: uncommon
-    role: environmental hazard
-  - Name: Minotaur Skeleton
-    occurrence: uncommon
-    role: elite
-  - Name: Flameskull
-    occurrence: uncommon
-    role: pet
+necropolis:
+ - Name: Mummy Lord
+   occurrence: common
+   role: leader
+ - Name: Mummy
+   occurrence: common
+   role: elite
+ - Name: Skeleton
+   occurrence: common
+   role: troops
+ - Name: Animated Armor
+   occurrence: uncommon
+   role: troops
+ - Name: Flying Sword
+   occurrence: uncommon
+   role: pet
+ - Name: Crawling Claw
+   occurrence: rare
+   role: environmental hazard
+ - Name: Shield Guardian
+   occurrence: rare
+   role: pet
+ - Name: Shadow
+   occurrence: uncommon
+   role: elite
+ - Name: Carrion Crawler
+   occurrence: rare
+   role: environmental hazard
+ - Name: Invisible Stalker
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Minotaur Skeleton
+   occurrence: uncommon
+   role: elite
+ - Name: Flameskull
+   occurrence: uncommon
+   role: pet
 
 kuo-toa:
-  - Name: Kuo-toa Monitor
-    occurrence: uncommon
-    role: leader
-  - Name: Kuo-toa
-    occurrence: common
-    role: troops
-  - Name: Kuo-toa Archpriest
-    occurrence: common
-    role: leader
-  - Name: Kuo-toa Whip
-    occurrence: common
-    role: elite
-  - Name: Chuul
-    occurrence: rare
-    role: pet
+ - Name: Kuo-toa Monitor
+   occurrence: uncommon
+   role: leader
+ - Name: Kuo-toa
+   occurrence: common
+   role: troops
+ - Name: Kuo-toa Archpriest
+   occurrence: common
+   role: leader
+ - Name: Kuo-toa Whip
+   occurrence: common
+   role: elite
+ - Name: Chuul
+   occurrence: rare
+   role: pet
 
 blights:
-  - Name: Needle Blight
-    role: pet
-    occurrence: common
-  - Name: Twig Blight
-    role: troops
-    occurrence: common
-  - Name: Vine Blight
-    role: elite
-    occurrence: common
+ - Name: Needle Blight
+   role: pet
+   occurrence: common
+ - Name: Twig Blight
+   role: troops
+   occurrence: common
+ - Name: Vine Blight
+   role: elite
+   occurrence: common
 
 fey:
-  - Name: Pixie
-    occurrence: common
-  - Name: Displacer Beast
-    occurrence: uncommon
-  - Name: Dryad
-    occurrence: common
-  - Name: Green Hag
-    occurrence: rare
-  - Name: Night Hag
-    occurrence: rare
-  - Name: Satyr
-    occurrence: common
-  - Name: Sprite
-    occurrence: common
-  - Name: Blink Dog
-    occurrence: common
-  - Name: Giant Owl
-    occurrence: uncommon
-    role: environmental hazard
-  - Name: Young Faerie Dragon
-    occurrence: rare
-    role: environmental hazard
-  - Name: Adult Faerie Dragon
-    occurrence: rare
-    role: environmental hazard
-  - Name: Unicorn
-    occurrence: rare
-    role: solo
-  - Name: Awakened Tree
-    occurrence: uncommon
-  - Name: Giant Goat
-    occurrence: uncommon
-    role: environmental hazard
+ - Name: Pixie
+   occurrence: common
+ - Name: Displacer Beast
+   occurrence: uncommon
+ - Name: Dryad
+   occurrence: common
+ - Name: Green Hag
+   occurrence: rare
+ - Name: Night Hag
+   occurrence: rare
+ - Name: Satyr
+   occurrence: common
+ - Name: Sprite
+   occurrence: common
+ - Name: Blink Dog
+   occurrence: common
+ - Name: Giant Owl
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Young Faerie Dragon
+   occurrence: rare
+   role: environmental hazard
+ - Name: Adult Faerie Dragon
+   occurrence: rare
+   role: environmental hazard
+ - Name: Unicorn
+   occurrence: rare
+   role: solo
+ - Name: Awakened Tree
+   occurrence: uncommon
+ - Name: Giant Goat
+   occurrence: uncommon
+   role: environmental hazard
 
 civilised folk:
-  - Name: Mage
-    occurrence: rare
-    role: environmental hazard
-  - Name: Guard
-    occurrence: common
-    role: troops
-  - Name: Knight
-    occurrence: common
-    role: leader
-  - Name: Noble
-    occurrence: common
-    role: leader
-  - Name: Priest
-    occurrence: common
-    role: environmental hazard
-  - Name: Scout
-    occurrence: uncommon
-    role: elite
-  - Name: Spy
-    occurrence: rare
-    role: environmental hazard
-  - Name: Veteran
-    occurrence: uncommon
-    role: elite
-  - Name: Mastiff
-    occurrence: uncommon
-    role: pet
-  - Name: Blood Hawk
-    occurrence: rare
-    role: pet
-  - Name: Doppelganger
-    occurrence: rare
-    role: environmental hazard
-  - Name: Pseudodragon
-    occurrence: rare
-    role: environmental hazard
-  - Name: Commoner
-    occurrence: uncommon
-    role: troops
+ - Name: Mage
+   occurrence: rare
+   role: environmental hazard
+ - Name: Guard
+   occurrence: common
+   role: troops
+ - Name: Knight
+   occurrence: common
+   role: leader
+ - Name: Noble
+   occurrence: common
+   role: leader
+ - Name: Priest
+   occurrence: common
+   role: environmental hazard
+ - Name: Scout
+   occurrence: uncommon
+   role: elite
+ - Name: Spy
+   occurrence: rare
+   role: environmental hazard
+ - Name: Veteran
+   occurrence: uncommon
+   role: elite
+ - Name: Mastiff
+   occurrence: uncommon
+   role: pet
+ - Name: Blood Hawk
+   occurrence: rare
+   role: pet
+ - Name: Doppelganger
+   occurrence: rare
+   role: environmental hazard
+ - Name: Pseudodragon
+   occurrence: rare
+   role: environmental hazard
+ - Name: Commoner
+   occurrence: common
+   role: troops
 
 apex predators:
-  - Name: Basilisk
-    occurrence: common
-    role: solo
-  - Name: Behir
-    occurrence: common
-    role: solo
-  - Name: Bulette
-    occurrence: common
-    role: solo
-  - Name: Chimera
-    occurrence: uncommon
-    role: solo
-  - Name: Cyclops
-    occurrence: uncommon
-    role: solo
-  - Name: Displacer Beast
-    occurrence: common
-    role: solo
-  - Name: Young Red Dragon
-    occurrence: rare
-    role: solo
-  - Name: Young Green Dragon
-    occurrence: rare
-    role: solo
-  - Name: Young Blue Dragon
-    occurrence: rare
-    role: solo
-  - Name: Young Black Dragon
-    occurrence: rare
-    role: solo
-  - Name: Young White Dragon
-    occurrence: rare
-    role: solo
-  - Name: Hill Giant
-    occurrence: common
-    role: solo
-  - Name: Gorgon
-    occurrence: uncommon
-    role: solo
-  - Name: Griffon
-    occurrence: common
-    role: solo
-  - Name: Hydra
-    occurrence: common
-    role: solo
-  - Name: Manticore
-    occurrence: uncommon
-    role: solo
-  - Name: Owlbear
-    occurrence: common
-    role: solo
-  - Name: Peryton
-    occurrence: common
-    role: solo
-  - Name: Wyvern
-    occurrence: common
-    role: solo
-  - Name: Ogre
-    occurrence: common
-    role: solo
+ - Name: Medusa
+   occurrence: rare
+   role: solo
+ - Name: Basilisk
+   occurrence: common
+   role: solo
+ - Name: Behir
+   occurrence: common
+   role: solo
+ - Name: Bulette
+   occurrence: common
+   role: solo
+ - Name: Chimera
+   occurrence: uncommon
+   role: solo
+ - Name: Cyclops
+   occurrence: uncommon
+   role: solo
+ - Name: Displacer Beast
+   occurrence: common
+   role: solo
+ - Name: Young Red Dragon
+   occurrence: rare
+   role: solo
+ - Name: Young Green Dragon
+   occurrence: rare
+   role: solo
+ - Name: Young Blue Dragon
+   occurrence: rare
+   role: solo
+ - Name: Young Black Dragon
+   occurrence: rare
+   role: solo
+ - Name: Young White Dragon
+   occurrence: rare
+   role: solo
+ - Name: Hill Giant
+   occurrence: common
+   role: solo
+ - Name: Gorgon
+   occurrence: uncommon
+   role: solo
+ - Name: Griffon
+   occurrence: common
+   role: solo
+ - Name: Hydra
+   occurrence: common
+   role: solo
+ - Name: Manticore
+   occurrence: uncommon
+   role: solo
+ - Name: Owlbear
+   occurrence: common
+   role: solo
+ - Name: Peryton
+   occurrence: common
+   role: solo
+ - Name: Wyvern
+   occurrence: common
+   role: solo
+ - Name: Ogre
+   occurrence: common
+   role: solo
+ - Name: Werewolf
+   occurrence: rare
+   role: solo
+ - Name: Weretiger
+   occurrence: rare
+   role: solo
+ - Name: Werebear
+   occurrence: rare
+   role: solo
 
 cult of jubilex:
-  - Name: Cult Fanatic
-    occurrence: common
-    role: leader
-  - Name: Cultist
-    occurrence: common
-    role: troops
-  - Name: Otyugh
-    occurrence: rare
-    role: pet
-  - Name: Ochre Jelly
-    occurrence: uncommon
-    role: pet
-  - Name: Black Pudding
-    occurrence: uncommon
-    role: pet
-  - Name: Gray Ooze
-    occurrence: uncommon
-    role: pet
-  - Name: Gelatinous Cube
-    occurrence: uncommon
-    role: pet
+ - Name: Cult Fanatic
+   occurrence: common
+   role: leader
+ - Name: Cultist
+   occurrence: common
+   role: troops
+ - Name: Otyugh
+   occurrence: rare         
+   role: pet
+ - Name: Ochre Jelly
+   occurrence: uncommon
+   role: pet
+ - Name: Black Pudding
+   occurrence: uncommon
+   role: pet
+ - Name: Gray Ooze
+   occurrence: uncommon
+   role: pet
+ - Name: Gelatinous Cube
+   occurrence: uncommon
+   role: pet
+ - Name: Chasme
+   occurrence: rare
+   role: elite
+ - Name: Quasit
+   occurrence: rare
+   role: environmental hazard
 
+cult of orcus:
+ - Name: Cult Fanatic
+   occurrence: common
+   role: leader
+ - Name: Cultist
+   occurrence: common
+   role: troops
+ - Name: Zombie
+   occurrence: common
+   role: elite
+ - Name: Ghoul
+   occurrence: uncommon
+   role: elite
+ - Name: Ghast
+   occurrence: uncommon
+   role: elite
+ - Name: Wight
+   occurrence: rare
+   role: elite
+ - Name: Shadow
+   occurrence: uncommon
+   role: pet
+ - Name: Quasit
+   occurrence: rare
+   role: environmental hazard
+ - Name: Shadow Demon
+   occurrence: rare
+   role: elite
 
-cult of obox-ob:
-  - Name: Cult Fanatic
-    occurrence: common
-    role: leader
-  - Name: Cultist
-    occurrence: common
-    role: troops
-  - Name: Swarm of Insects
-    occurrence: uncommon
-    role: pet
-  - Name: Giant Centipede
-    occurrence: uncommon
-    role: pet
-  - Name: Giant Rat
-    occurrence: uncommon
-    role: pet
-  - Name: Swarm of Rats
-    occurrence: uncommon
-    role: pet
+cult of baphomet:
+ - Name: Cult Fanatic
+   occurrence: common
+   role: leader
+ - Name: Cultist
+   occurrence: common
+   role: troops
+ - Name: Minotaur
+   occurrence: uncommon
+   role: elite
+ - Name: Goristro
+   occurrence: rare
+   role: elite
+ - Name: Quasit
+   occurrence: rare
+   role: environmental hazard
+
+underdark:
+ - Name: Aboleth
+   occurrence: rare
+   role: solo
+ - Name: Behir
+   occurrence: common
+   role: solo
+ - Name: Beholder
+   occurrence: rare
+   role: solo
+ - Name: Carrion Crawler
+   occurrence: common
+ - Name: Chuul
+   occurrence: uncommon
+ - Name: Cloaker
+   occurrence: common
+ - Name: Darkmantle
+   occurrence: common
+ - Name: Drider
+   occurrence: uncommon
+ - Name: Duergar
+   occurrence: uncommon
+ - Name: Flumph
+   occurrence: common
+ - Name: Fomorian
+   occurrence: rare
+ - Name: Svirfneblin
+   occurrence: rare
+ - Name: Grell
+   occurrence: common
+ - Name: Grick
+   occurrence: common
+ - Name: Grimlock
+   occurrence: common
+ - Name: Hook Horror
+   occurrence: common
+ - Name: Piercer
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Quaggoth
+   occurrence: common
+ - Name: Roper
+   occurrence: uncommon
+   role: solo
+ - Name: Rust Monster
+   occurrence: uncommon
+ - Name: Troglodyte
+   occurrence: uncommon
+ - Name: Umber Hulk
+   occurrence: common
+ - Name: Mimic
+   occurrence: rare
+   role: solo
+ - Name: Giant Spider
+   occurrence: common
+ - Name: Giant Wolf Spider
+   occurrence: common
+ - Name: Giant Centipede
+   occurrence: common
+ - Name: Giant Rat
+   occurrence: common
+ - Name: Violet Fungus
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Gas Spore
+   occurrence: rare
+   role: environmental hazard
+ - Name: Purple Worm
+   occurrence: common
+   role: solo
+ - Name: Xorn
+   occurrence: rare
+   role: solo
+ - Name: Giant Lizard
+   occurrence: uncommon
+ - Name: Giant Bat
+   occurrence: common
+
+caves:
+ - Name: Basilisk
+   occurrence: rare
+   role: solo
+ - Name: Ankheg
+   occurrence: uncommon
+   role: solo
+ - Name: Behir
+   occurrence: rare
+   role: solo
+ - Name: Carrion Crawler
+   occurrence: uncommon
+ - Name: Chuul
+   occurrence: rare
+ - Name: Cloaker
+   occurrence: uncommon
+ - Name: Darkmantle
+   occurrence: uncommon
+ - Name: Drider
+   occurrence: rare
+ - Name: Grell
+   occurrence: uncommon
+ - Name: Grick
+   occurrence: uncommon
+ - Name: Hook Horror
+   occurrence: uncommon
+ - Name: Piercer
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Roper
+   occurrence: rare
+   role: solo
+ - Name: Rust Monster
+   occurrence: uncommon
+ - Name: Troglodyte
+   occurrence: uncommon
+ - Name: Giant Spider
+   occurrence: common
+ - Name: Giant Wolf Spider
+   occurrence: common
+ - Name: Giant Centipede
+   occurrence: common
+ - Name: Giant Rat
+   occurrence: common
+ - Name: Giant Bat
+   occurrence: common
+
+bugbears:
+ - Name: Bugbear
+   occurrence: common
+   role: troops
+ - Name: Bugbear Chief
+   occurrence: common
+   role: leader
+ - Name: Goblin
+   occurrence: rare
+   role: pet
+
+northmen:
+ - Name: Guard
+   role: troops
+   occurrence: common
+ - Name: Berserker
+   role: elite
+   occurrence: common
+ - Name: Gladiator
+   role: leader
+   occurrence: common
+ - Name: Blood Hawk
+   role: pet
+   occurrence: rare
+ - Name: Mammoth
+   role: pet
+   occurrence: rare
+ - Name: Giant Elk
+   role: pet
+   occurrence: rare
+ - Name: Werebear
+   role: leader
+   occurrence: rare
+ - Name: Druid
+   role: leader
+   occurrence: uncommon
+
+desert:
+ - Name: Ankheg
+   occurrence: uncommon
+   role: solo
+ - Name: Centaur
+   occurrence: rare
+ - Name: Young Blue Dragon
+   occurrence: rare
+   role: solo
+ - Name: Blue Dragon Wyrmling
+   occurrence: rare
+   role: solo
+ - Name: Griffon
+   occurrence: uncommon
+ - Name: Hippogriff
+   occurrence: uncommon
+ - Name: Lamia
+   occurrence: rare
+   role: solo
+ - Name: Manticore
+   occurrence: uncommon
+   role: solo
+ - Name: Roc
+   occurrence: common
+   role: solo
+ - Name: Ape
+   occurrence: common
+ - Name: Blood Hawk
+   occurrence: common
+ - Name: Giant Bat
+   occurrence: common
+ - Name: Giant Toad
+   occurrence: rare
+ - Name: Giant Scorpion
+   occurrence: common
+ - Name: Giant Vulture
+   occurrence: uncommon
+ - Name: Thri-kreen
+   occurrence: uncommon
+
+urban:
+ - Name: Gargoyle
+   occurrence: rare
+ - Name: Ghoul
+   occurrence: uncommon
+ - Name: Kenku
+   occurrence: common
+ - Name: Wererat
+   occurrence: uncommon
+ - Name: Revenant
+   occurrence: rare
+   role: solo
+ - Name: Assassin
+   occurrence: uncommon
+   role: solo
+ - Name: Bandit/Pirate
+   occurrence: common
+ - Name: Cult Fanatic
+   occurrence: uncommon
+   role: solo
+ - Name: Cultist
+   occurrence: common
+ - Name: Thug
+   occurrence: common
+
+yuan-ti:
+ - Name: Yuan-ti Abomination
+   occurrence: common
+   role: leader
+ - Name: Yuan-ti Malison
+   occurrence: common
+   role: elite
+ - Name: Yuan-ti Pureblood
+   occurrence: common
+   role: troops
+ - Name: Swarm of Poisonous Snakes
+   occurrence: uncommon
+   role: pet
+ - Name: Giant Constrictor Snake
+   occurrence: rare
+   role: pet
+ - Name: Constrictor Snake
+   occurrence: uncommon
+   role: pet
+ - Name: Flying Snake
+   occurrence: rare
+   role: pet
+ - Name: Giant Poisonous Snake
+   occurrence: rare
+   role: pet
+ - Name: Poisonous Snake
+   occurrence: uncommon
+   role: pet
+
+kenku:
+ - Name: Kenku
+   occurrence: common
+   role: troops
+ - Name: Swarm of Ravens
+   occurrence: rare
+   role: pet
+ - Name: Assassin
+   occurrence: rare
+   role: assassin
+ - Name: Spy
+   occurrence: uncommon
+   role: elite
+
+kobolds:
+ - Name: Kobold
+   occurrence: common 
+ - Name: Kobold
+   occurrence: uncommon
+ - Name: Winged Kobold
+   occurrence: rare
+
+modrons:
+ - Name: Monodrone
+   occurrence: common
+   role: troops
+ - Name: Duodrone
+   occurrence: common
+   role: elite
+ - Name: Tridrone
+   occurrence: common
+   role: leader
+ - Name: Quadrone
+   occurrence: common
+   role: elite
+ - Name: Pentadrone
+   occurrence: common
+   role: leader
+
+jungle tribes:
+ - Name: Tribal Warrior
+   occurrence: common
+   role: troops
+ - Name: Couatl
+   occurrence: rare
+   role: leader
+ - Name: Weretiger
+   occurrence: rare
+   role: leader
+ - Name: Flying Snake
+   occurrence: uncommon
+   role: pet
+ - Name: Scout
+   occurrence: uncommon
+   role: elite
+ - Name: Druid
+   occurrence: uncommon
+   role: leader
+
+elemental plane of earth:
+ - Name: Earth Elemental
+   occurrence: common
+ - Name: Xorn
+   occurrence: common
+ - Name: Gargoyle
+   occurrence: common
+ - Name: Dao
+   occurrence: common
+   role: solo
+ - Name: Azer
+   occurrence: rare
+ - Name: Galeb Duhr
+   occurrence: uncommon
+ - Name: Magma Mephit
+   occurrence: uncommon
+ - Name: Mud Mephit
+   occurrence: uncommon
+ - Name: Dust Mephit
+   occurrence: uncommon
+
+elemental plane of water:
+ - Name: Water Elemental
+   occurrence: common
+ - Name: Dragon Turtle
+   occurrence: rare
+ - Name: Marid
+   occurrence: common
+   role: solo
+ - Name: Ice Mephit
+   occurrence: uncommon
+ - Name: Mud Mephit
+   occurrence: uncommon
+ - Name: Merfolk
+   occurrence: rare
+ - Name: Aboleth
+   occurrence: rare
+
+elemental plane of fire:
+ - Name: Fire Elemental
+   occurrence: common
+ - Name: Efreeti
+   occurrence: common
+   role: solo
+ - Name: Magmin
+   occurrence: common
+ - Name: Magma Mephit
+   occurrence: uncommon
+ - Name: Smoke Mephit
+   occurrence: uncommon
+ - Name: Steam Mephit
+   occurrence: uncommon
+ - Name: Fire Snake
+   occurrence: uncommon
+ - Name: Salamander
+   occurrence: uncommon
+ - Name: Azer
+   occurrence: rare
+ 
+efreet:
+ - Name: Efreeti
+   occurrence: common
+   role: leader
+ - Name: Salamander
+   occurrence: common
+   role: troops
+ - Name: Fire Snake
+   occurrence: common
+   role: pet
+
+elemental plane of air:
+ - Name: Aarakocra
+   occurrence: common
+ - Name: Air Elemental
+   occurrence: common
+ - Name: Ice Mephit
+   occurrence: uncommon
+ - Name: Dust Mephit
+   occurrence: uncommon
+ - Name: Smoke Mephit
+   occurrence: uncommon
+ - Name: Djinni
+   occurrence: common
+   role: solo
+
+lost world:
+ - Name: Allosaurus
+   occurrence: uncommon
+   role: solo
+ - Name: Ankylosaurus
+   occurrence: common
+ - Name: Pteranodon
+   occurrence: uncommon
+ - Name: Triceratops
+   occurrence: common
+ - Name: Tyrannosaurus Rex
+   occurrence: rare
+   role: solo
+ - Name: Giant Centipede
+   occurrence: uncommon
+ - Name: Giant Ape
+   occurrence: rare
+   role: solo
+ - Name: Giant Crab
+   occurrence: uncommon
+ - Name: Giant Scorpion
+   occurrence: uncommon
+ - Name: Giant Wasp
+   occurrence: uncommon
+ - Name: Sabre-Toothed Tiger
+   occurrence: common
+   role: solo
+
+devils:
+ - Name: Imp
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Lemure
+   occurrence: common
+   role: troops
+ - Name: Barbed Devil
+   occurrence: uncommon
+   role: elite
+ - Name: Bearded Devil
+   occurrence: common
+   role: elite
+ - Name: Bone Devil
+   occurrence: common
+   role: leader
+ - Name: Chain Devil
+   occurrence: rare
+   role: solo
+ - Name: Erinyes
+   occurrence: common
+   role: troops
+ - Name: Horned Devil
+   occurrence: common
+   role: troops
+ - Name: Ice Devil
+   occurrence: uncommon
+   role: leader
+ - Name: Pit Fiend
+   occurrence: common
+   role: leader
+ - Name: Spined Devil
+   occurrence: common
+   role: elite
+   
+demons:
+ - Name: Balor
+   occurrence: common
+   role: leader
+ - Name: Barlgura
+   occurrence: common
+   role: troops
+ - Name: Chasme
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Dretch
+   occurrence: common
+   role: troops
+ - Name: Glabrezu
+   occurrence: uncommon
+   role: solo
+ - Name: Goristro
+   occurrence: common
+   role: pet
+ - Name: Hezrou
+   occurrence: common
+   role: troops
+ - Name: Manes
+   occurrence: common
+   role: pet
+ - Name: Marilith
+   occurrence: rare
+   role: leader
+ - Name: Nalfeshnee
+   occurrence: uncommon
+   role: leader
+ - Name: Quasit
+   occurrence: rare
+   role: environmental hazard
+ - Name: Shadow Demon
+   occurrence: rare
+ - Name: Vrock
+   occurrence: common
+   role: elite
+
+sahuagin:
+ - Name: Sahuagin
+   occurrence: common
+   role: troops
+ - Name: Sahuagin Priestess
+   occurrence: common
+   role: leader
+ - Name: Sahuagin Baron
+   occurrence: common
+   role: leader
+ - Name: Giant Shark
+   occurrence: rare
+   role: pet
+ - Name: Hunter Shark
+   occurrence: common
+   role: pet
+ - Name: Reef Shark
+   occurrence: uncommon
+   role: pet
+ - Name: Dragon Turtle
+   occurrence: rare
+   role: pet
+
+underwater:
+ - Name: Dragon Turtle
+   occurrence: rare
+   role: solo
+ - Name: Ghoul
+   occurrence: rare
+ - Name: Sea Hag
+   occurrence: rare
+   role: solo
+ - Name: Kraken
+   occurrence: rare
+   role: solo
+ - Name: Merfolk
+   occurrence: uncommon
+ - Name: Merrow
+   occurrence: uncommon
+   role: solo
+ - Name: Giant Crab
+   occurrence: uncommon
+ - Name: Giant Octopus
+   occurrence: common
+   role: solo
+ - Name: Giant Sea Horse
+   occurrence: rare
+ - Name: Giant Shark
+   occurrence: uncommon
+ - Name: Hunter Shark
+   occurrence: common
+ - Name: Reef Shark
+   occurrence: common
+ - Name: Killer Whale
+   occurrence: common
+ - Name: Swarm of Quippers
+   occurrence: common
+
+forest goblins:
+ - Name: Goblin
+   role: troops
+   occurrence: common
+ - Name: Goblin Boss
+   role: leader
+   occurrence: common
+ - Name: Giant Spider
+   role: pet
+   occurrence: uncommon
+ - Name: Giant Wolf Spider
+   role: pet
+   occurrence: uncommon
+
+fire giants:
+ - Name: Adult Red Dragon
+   role: leader
+   occurrence: rare
+ - Name: Fire Giant
+   role: troops
+   occurrence: common
+ - Name: Hell Hound
+   role: pet
+   occurrence: rare
+ - Name: Ogre
+   role: pet
+   occurrence: uncommon
+ - Name: Orc
+   role: pet
+   occurrence: uncommon
+
+cloud giants:
+ - Name: Cloud Giant
+   role: leader
+   occurrence: common
+ - Name: Fire Giant
+   role: elite
+   occurrence: rare
+ - Name: Frost Giant
+   role: troops
+   occurrence: uncommon
+ - Name: Hill Giant
+   role: troops
+   occurrence: common
+ - Name: Griffon
+   role: pet
+   occurrence: common
+ - Name: Wyvern
+   role: pet
+   occurrence: uncommon
+ - Name: Owlbear
+   role: pet
+   occurrence: uncommon
+ - Name: Lion
+   role: pet
+   occurrence: uncommon
