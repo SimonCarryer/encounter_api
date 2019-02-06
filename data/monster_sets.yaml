@@ -24,9 +24,6 @@ magical guardians:
   - Name: Homunculus    
     occurrence: rare
     role: environmental hazard
-  - Name: Intellect Devourer    
-    occurrence: uncommon
-    role: environmental hazard
   - Name: Dust Mephit    
     occurrence: uncommon
   - Name: Ice Mephit    
@@ -41,15 +38,18 @@ magical guardians:
     occurrence: uncommon
   - Name: Mimic    
     occurrence: common
+    role: solo
   - Name: Nothic    
     role: environmental hazard
-    occurrence: uncommon
+    occurrence: rare
   - Name: Nothic    
     occurrence: uncommon
+    role: solo
   - Name: Shield Guardian    
     occurrence: common
   - Name: Water Weird 
     occurrence: common
+    role: solo
   - Name: Invisible Stalker
     occurrence: uncommon
     role: environmental hazard
@@ -57,7 +57,7 @@ magical guardians:
 bullywugs:
   - Name: Swarm of Insects    
     role: environmental hazard
-    occurrence: uncommon    
+    occurrence: rare    
   - Name: Bullywug    
     role: troops
     occurrence: common
@@ -66,7 +66,7 @@ bullywugs:
     occurrence: common
   - Name: Giant Toad    
     role: pet
-    occurrence: common
+    occurrence: uncommon
 
 spiders:
   - Name: Ettercap      
@@ -79,8 +79,8 @@ spiders:
     role: troops
     occurrence: common
   - Name: Swarm of Insects      
-    role: environmental hazard
-    occurrence: common
+    role: troops
+    occurrence: uncommon
   - Name: Yochlol      
     role: leader
     occurrence: rare
@@ -88,8 +88,8 @@ spiders:
     role: leader
     occurrence: rare
   - Name: Phase Spider      
-    role: elite
-    occurrence: uncommon
+    role: troops
+    occurrence: rare
 
 orcs:
   - Name: Orc      
@@ -209,13 +209,15 @@ forest:
     role: solo
   - Name: Stirge   
     occurrence: common
+  - Name: Axe Beak
+    occurrence: common
 
 wolves:
   - Name: Wolf      
     occurrence: common
     role: troops
   - Name: Worg      
-    occurrence: common
+    occurrence: uncommon
     role: leader
   - Name: Worg      
     occurrence: uncommon
@@ -242,7 +244,6 @@ haunted:
     occurrence: common
   - Name: Crawling Claw      
     occurrence: rare
-    role: environmental hazard
   - Name: Wraith      
     occurrence: uncommon  
   - Name: Specter      
@@ -302,7 +303,7 @@ gnolls:
    occurrence: uncommon
  - Name: Hyena
    role: pet
-   occurrence: common
+   occurrence: uncommon
 
 mind flayers:
  - Name: Mind Flayer
