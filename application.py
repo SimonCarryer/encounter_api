@@ -21,17 +21,17 @@ parser.add_argument('monster_sets', action='split', required=True, help='Comma-s
 
 @api.route('/monster-sets')
 class MonsterSets(Resource):
-    '''List of accepted values for "monster sets" parameter.'''
     
     def get(self):
+        '''List of accepted values for "monster sets" parameter.'''
         return sorted(list(application.config['monster_sets'].keys()))
 
 @api.route("/encounter")
 class Encounter(Resource):
-    '''Returns an encounter json blob meeting the supplied specifications.'''
 
     @api.doc(parser=parser)
     def get(self):
+        '''Returns a random encounter meeting the supplied specifications.'''
         args = parser.parse_args()
         character_level_dict = Counter(args['character_levels'])
         monster_sets = args['monster_sets']
