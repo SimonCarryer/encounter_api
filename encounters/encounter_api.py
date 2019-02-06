@@ -1,10 +1,11 @@
 from .encounter import Encounter
 from collections import Counter
 from .monsters import MonsterManual
+import yaml
 import random
 
-
-difficulties = {}
+with open('data/xp_values.yaml') as f:
+    xp_values = yaml.load(f.read())
 
 
 class EncounterSource:
@@ -12,7 +13,7 @@ class EncounterSource:
                 xp_budget=None,
                 encounter_level=None,
                 character_level_dict=None,
-                monster_set=None,
+                monster_sets=None,
                 monster_source=MonsterManual,
                 style=None,
                 random_state=None):
@@ -29,6 +30,7 @@ class EncounterSource:
         else:
             raise NoXPBudgetError
         self.monster_source = monster_source()
+        monster_set = self.random_state.choice(monster_sets)
         if monster_set == 'all':
             monster_set = None
         monsters = self.monster_source.monsters(monster_set, self.random_state)

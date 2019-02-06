@@ -1,16 +1,46 @@
 import sys
 from flask import Flask, jsonify, redirect, url_for, request, render_template
+from flask_restplus import Resource, Api, reqparse
 from encounters.encounter_api import EncounterSource
+from encounters.monsters import load_monster_sets
+from collections import Counter
 
 application = Flask(__name__)
+api = Api(application,
+          version='0.1',
+          title='Encounter REST API',
+          description='REST-ful API for encounters',
+)
+
+application.config['monster_sets'] = load_monster_sets()
+
+parser = api.parser()
+parser.add_argument('character_levels', type=int, action='split', required=True, help='Comma-separated list of character levels.')
+parser.add_argument('monster_sets', action='split', required=True, help='Comma-separated list of valid monster sets.')
 
 
-@application.route("/", methods=['GET', 'POST'])
-def home():
-    return "ok, it works"
+@api.route('/monster-sets')
+class MonsterSets(Resource):
+    '''List of accepted values for "monster sets" parameter.'''
+    
+    def get(self):
+        return sorted(list(application.config['monster_sets'].keys()))
 
-@application.route("/encounter", methods=['GET', 'POST'])
-def encounter():
+@api.route("/encounter")
+class Encounter(Resource):
+    '''Returns an encounter json blob meeting the supplied specifications.'''
+
+    @api.doc(parser=parser)
+    def get(self):
+        args = parser.parse_args()
+        character_level_dict = Counter(args['character_levels'])
+        monster_sets = args['monster_sets']
+        source = EncounterSource(character_level_dict=character_level_dict, monster_sets=monster_sets)
+        encounter = source.get_encounter()
+        return encounter
+
+@application.route("/encounter-ui", methods=['GET', 'POST'])
+def encounter_ui():
     xp_budget = 450
     monster_set = None
     style = None
@@ -22,7 +52,7 @@ def encounter():
         style = request.form['style']
         if style == 'all':
             style = None
-    source = EncounterSource(xp_budget=xp_budget, style=style, monster_set=monster_set)
+    source = EncounterSource(xp_budget=xp_budget, style=style, monster_sets=[monster_set])
     sets = source.monster_source.monster_set_names
     styles = ['elite', 'leader', 'basic', 'all']
     encounter = source.get_encounter()
