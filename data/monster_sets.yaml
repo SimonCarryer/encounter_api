@@ -726,9 +726,6 @@ cult of jubilex:
  - Name: Gelatinous Cube
    occurrence: uncommon
    role: pet
- - Name: Chasme
-   occurrence: rare
-   role: elite
  - Name: Quasit
    occurrence: rare
    role: environmental hazard
