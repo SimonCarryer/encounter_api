@@ -4,6 +4,7 @@ from flask_restplus import Resource, Api, reqparse
 from encounters.encounter_api import EncounterSource
 from encounters.monsters import load_monster_sets
 from collections import Counter
+from werkzeug.exceptions import BadRequest
 
 application = Flask(__name__)
 api = Api(application,
@@ -35,6 +36,8 @@ class Encounter(Resource):
         args = parser.parse_args()
         character_level_dict = Counter(args['character_levels'])
         monster_sets = args['monster_sets']
+        if not all([monster_set in application.config['monster_sets'] for monster_set in monster_sets]):
+            raise BadRequest('One or more invalid monster sets in request')
         source = EncounterSource(character_level_dict=character_level_dict, monster_sets=monster_sets)
         encounter = source.get_encounter()
         return encounter
