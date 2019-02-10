@@ -53,6 +53,9 @@ magical guardians:
   - Name: Invisible Stalker
     occurrence: uncommon
     role: environmental hazard
+  - Name: Spectator
+    occurrence: uncommon
+    role: solo
 
 bullywugs:
   - Name: Swarm of Insects    
@@ -176,41 +179,91 @@ hills:
     role: solo
 
 forest:
-  - Name: Wolf      
-    occurrence: common 
+  - Name: Ankheg
+    occurrence: uncommon
+    role: solo
+  - Name: Basilisk
+    occurrence: rare
+    role: solo
+  - Name: Displacer Beast
+    occurrence: rare
+    role: solo
+  - Name: Young Green Dragon
+    occurrence: rare
+    role: solo
+  - Name: Green Dragon Wyrmling
+    occurrence: rare
+    role: solo
+  - Name: Ettin
+    occurrence: uncommon
+    role: solo
+  - Name: Faerie Dragoon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Green Hag
+    occurrence: rare
+    role: solo
+  - Name: Ogre
+    occurrence: uncommon
+  - Name: Owlbear
+    occurrence: uncommon
+    role: solo
+  - Name: Pseudodragon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Stirge
+    occurrence: common
+  - Name: Treant
+    occurrence: rare
+    role: solo
+  - Name: Troll
+    occurrence: uncommon
+  - Name: Unicorn
+    occurrence: rare
+    role: solo
+  - Name: Axe Beak
+    occurrence: common
+  - Name: Black Bear
+    occurrence: common
+    role: solo
+  - Name: Boar
+    occurrence: common
+    role: solo
+  - Name: Brown Bear
+    occurrence: common
+    role: solo
+  - Name: Dire Wolf
+    occurrence: uncommon
+  - Name: Giant Badger
+    occurrence: uncommon
+  - Name: Giant Boar
+    occurrence: uncommon
+    role: solo
+  - Name: Giant Elk
+    occurrence: rare
+    role: solo
   - Name: Giant Owl
     occurrence: uncommon
     role: solo
-  - Name: Brown Bear      
+  - Name: Giant Spider
     occurrence: common
     role: solo
-  - Name: Black Bear      
+  - Name: Giant Weasel
+    occurrence: common
+  - Name: Giant Wolf Spider
+    occurrence: common
+  - Name: Panther
     occurrence: common
     role: solo
-  - Name: Giant Wolf Spider      
-    occurrence: common
-  - Name: Giant Badger      
-    occurrence: common
-  - Name: Giant Wasp      
-    occurrence: common
-  - Name: Giant Spider      
-    occurrence: common
-  - Name: Giant Boar      
-    occurrence: common
-  - Name: Giant Elk      
-    occurrence: rare
-  - Name: Displacer Beast      
+  - Name: Phase Spider
     occurrence: uncommon
     role: solo
-  - Name: Dire Wolf      
-    occurrence: common
-  - Name: Basilisk      
+  - Name: Swarm of Ravens
     occurrence: uncommon
-    role: solo
-  - Name: Stirge   
+  - Name: Wolf
     occurrence: common
-  - Name: Axe Beak
-    occurrence: common
+  - Name: Worg
+    occurrence: uncommon
 
 wolves:
   - Name: Wolf      
@@ -376,6 +429,18 @@ lizardfolk:
  - Name: Crocodile
    role: pet
    occurrence: common
+ - Name: Young Green Dragon
+   role: leader
+   occurrence: rare
+ - Name: Adult Green Dragon
+   role: leader
+   occurrence: rare
+ - Name: Young Black Dragon
+   role: leader
+   occurrence: rare
+ - Name: Adult Black Dragon
+   role: leader
+   occurrence: rare
 
 hobgoblins:
  - Name: Hobgoblin
@@ -808,13 +873,18 @@ underdark:
    occurrence: common
  - Name: Grick
    occurrence: common
+ - Name: Grick Alpha
+   occurrence: common
+   role: solo
  - Name: Grimlock
    occurrence: common
  - Name: Hook Horror
    occurrence: common
  - Name: Piercer
-   occurrence: uncommon
+   occurrence: rare
    role: environmental hazard
+ - Name: Piercer
+   occurrence: uncommon
  - Name: Quaggoth
    occurrence: common
  - Name: Roper
@@ -878,6 +948,9 @@ caves:
    occurrence: uncommon
  - Name: Grick
    occurrence: uncommon
+ - Name: Grick Alpha
+   occurrence: common
+   role: solo
  - Name: Hook Horror
    occurrence: uncommon
  - Name: Piercer
@@ -900,6 +973,14 @@ caves:
    occurrence: common
  - Name: Giant Bat
    occurrence: common
+
+gricks:
+ - Name: Grick Alpha
+   occurrence: common
+   role: leader
+ - Name: Grick
+   occurrence: common
+   role: troops
 
 bugbears:
  - Name: Bugbear
