@@ -40,6 +40,7 @@ mock_monster_list_2 = [
 class MockMonsterManual:
     def __init__(self):
         self.name = 'mock'
+        self.monster_set_names = ['mock_monster_list_2']
         pass
 
     def monsters(self, monster_set_name, random_seed):

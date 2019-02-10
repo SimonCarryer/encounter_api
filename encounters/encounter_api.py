@@ -30,7 +30,10 @@ class EncounterSource:
         else:
             raise NoXPBudgetError
         self.monster_source = monster_source()
-        monster_set = self.random_state.choice(monster_sets)
+        if monster_sets is None:
+            monster_set = self.random_state.choice(self.monster_source.monster_set_names)
+        else:
+            monster_set = self.random_state.choice(monster_sets)
         if monster_set == 'all':
             monster_set = None
         monsters = self.monster_source.monsters(monster_set, self.random_state)

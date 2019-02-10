@@ -197,7 +197,10 @@ forest:
   - Name: Ettin
     occurrence: uncommon
     role: solo
-  - Name: Faerie Dragoon
+  - Name: Young Faerie Dragon
+    occurrence: rare
+    role: environmental hazard
+  - Name: Adult Faerie Dragon
     occurrence: rare
     role: environmental hazard
   - Name: Green Hag

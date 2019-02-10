@@ -197,7 +197,7 @@ def test_empty_lists():
     assert encounter.monsters == []
 
 def test_look_at_some_encounters():
-    source = EncounterSource(xp_budget=900, monster_set=None, style=None)
+    source = EncounterSource(xp_budget=900, monster_sets=None, style=None)
     #print(source.encounter.monster_lists)
     encounter = source.get_encounter()
     print(encounter)
