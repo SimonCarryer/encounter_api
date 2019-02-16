@@ -5,8 +5,11 @@ from encounters.encounter_api import EncounterSource
 from encounters.monsters import load_monster_sets
 from collections import Counter
 from werkzeug.exceptions import BadRequest
+from flask_cors import CORS
 
 application = Flask(__name__)
+cors = CORS(application)
+
 api = Api(application,
           version='0.1',
           title='Encounter REST API',
