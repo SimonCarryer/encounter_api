@@ -498,6 +498,7 @@ sewers:
    occurrence: uncommon
  - Name: Water Weird
    occurrence: rare
+   role: solo
 
 swamp:
  - Name: Young Black Dragon
@@ -687,7 +688,7 @@ civilised folk:
    role: pet
  - Name: Blood Hawk
    occurrence: rare
-   role: pet
+   role: environmental hazard
  - Name: Doppelganger
    occurrence: rare
    role: environmental hazard
@@ -797,6 +798,32 @@ cult of jubilex:
  - Name: Quasit
    occurrence: rare
    role: environmental hazard
+
+cult of obox-ob:
+ - Name: Cult Fanatic
+   occurrence: common
+   role: leader
+ - Name: Cultist
+   occurrence: common
+   role: troops
+ - Name: Swarm of Insects
+   occurrence: uncommon
+   role: pet
+ - Name: Giant Centipede
+   occurrence: uncommon
+   role: pet
+ - Name: Giant Rat
+   occurrence: uncommon
+   role: pet
+ - Name: Swarm of Rats
+   occurrence: uncommon
+   role: pet
+ - Name: Giant Spider
+   occurrence: uncommon
+   role: pet
+ - Name: Chasme
+   occurrence: rare
+   role: elite
 
 cult of orcus:
  - Name: Cult Fanatic
@@ -1007,7 +1034,7 @@ northmen:
    role: leader
    occurrence: common
  - Name: Blood Hawk
-   role: pet
+   role: environmental hazard
    occurrence: rare
  - Name: Mammoth
    role: pet
@@ -1108,7 +1135,7 @@ yuan-ti:
    role: pet
  - Name: Flying Snake
    occurrence: rare
-   role: pet
+   role: environmental hazard
  - Name: Giant Poisonous Snake
    occurrence: rare
    role: pet
@@ -1167,7 +1194,7 @@ jungle tribes:
    role: leader
  - Name: Flying Snake
    occurrence: uncommon
-   role: pet
+   role: environmental hazard
  - Name: Scout
    occurrence: uncommon
    role: elite
@@ -1477,3 +1504,182 @@ cloud giants:
  - Name: Lion
    role: pet
    occurrence: uncommon
+
+myconids:
+ - Name: Myconid Sprout
+   occurrence: common
+   role: troops
+ - Name: Myconid Adult
+   occurrence: common
+   role: elite
+ - Name: Myconid Sovereign
+   occurrence: common
+   role: leader
+ - Name: Quaggoth Spore Servant
+   occurrence: rare
+   role: pet
+
+arctic:
+ - Name: Young White Dragon
+   occurrence: rare
+   role: solo
+ - Name: White Dragon Wyrmling
+   occurrence: rare
+   role: solo
+ - Name: Young Remorhaz
+   occurrence: uncommon
+   role: solo
+ - Name: Remorhaz
+   occurrence: uncommon
+   role: solo
+ - Name: Frost Giant
+   occurrence: rare
+ - Name: Yeti
+   occurrence: uncommon
+ - Name: Abominable Yeti
+   occurrence: uncommon
+   role: solo
+ - Name: Dire Wolf
+   occurrence: common
+ - Name: Mammoth
+   occurrence: common
+ - Name: Polar Bear
+   occurrence: common
+   role: solo
+ - Name: Winter Wolf
+   occurrence: uncommon
+
+mountains:
+ - Name: Young White Dragon
+   occurrence: rare
+   role: solo
+ - Name: White Dragon Wyrmling
+   occurrence: rare
+   role: solo
+ - Name: Young Remorhaz
+   occurrence: uncommon
+   role: solo
+ - Name: Remorhaz
+   occurrence: uncommon
+   role: solo
+ - Name: Frost Giant
+   occurrence: rare
+ - Name: Yeti
+   occurrence: uncommon
+ - Name: Abominable Yeti
+   occurrence: uncommon
+   role: solo
+ - Name: Winter Wolf
+   occurrence: uncommon
+ - Name: Roc
+   occurrence: uncommon
+   role: solo
+ - Name: Giant Vulture
+   occurrence: common
+ - Name: Giant Eagle
+   occurrence: common
+   role: solo
+ - Name: Ape
+   occurrence: uncommon
+ - Name: Storm Giant
+   occurrence: rare
+   role: solo
+ - Name: Behir
+   occurrence: uncommon
+   role: solo
+ - Name: Young Red Dragon
+   occurrence: rare
+   role: solo
+ - Name: Red Dragon Wyrmling
+   occurrence: rare
+   role: solo
+ - Name: Wyvern
+   occurrence: uncommon
+
+frost giants:
+ - Name: Frost Giant
+   occurrence: common
+   role: troops
+ - Name: Winter Wolf
+   occurrence: uncommon
+   role: pet
+ - Name: Mammoth
+   occurrence: uncommon
+   role: pet
+ - Name: Young Remorhaz
+   occurrence: rare
+   role: pet
+ - Name: Young White Dragon
+   occurrence: rare
+   role: pet
+ - Name: Adult White Dragon
+   occurrence: rare
+   role: leader
+
+githzerai:
+ - Name: Githzerai Monk
+   occurrence: common
+   role: troops
+ - Name: Githzerai Zerth
+   occurrence: common
+   role: leader
+
+githyanki:
+ - Name: Githyanki Warrior
+   occurrence: common
+   role: troops
+ - Name: Githyanki Knight
+   occurrence: common
+   role: leader
+ - Name: Young Red Dragon
+   occurrence: rare
+   role: pet
+ - Name: Adult Red Dragon
+   occurrence: rare
+   role: pet
+
+plains:
+ - Name: Ankheg
+   occurrence: uncommon
+   role: solo
+ - Name: Bulette
+   occurrence: uncommon
+   role: solo
+ - Name: Centaur
+   occurrence: rare
+ - Name: Gorgon
+   occurrence: rare
+   role: solo
+ - Name: Griffon
+   occurrence: uncommon
+ - Name: Hippogriff
+   occurrence: uncommon
+ - Name: Manticore
+   occurrence: rare
+ - Name: Ogre
+   occurrence: uncommon
+ - Name: Roc
+   occurrence: rare
+ - Name: Ape
+   occurrence: common
+ - Name: Axe Beak
+   occurrence: common
+ - Name: Giant Goat
+   occurrence: uncommon
+ - Name: Giant Hyena
+   occurrence: common
+ - Name: Giant Lizard
+   occurrence: uncommon
+ - Name: Giant Weasel
+   occurrence: common
+ - Name: Giant Vulture
+   occurrence: rare
+ - Name: Giant Vulture
+   occurrence: rare
+   role: environmental hazard
+ - Name: Lion
+   occurrence: common
+ - Name: Phase Spider
+   occurrence: rare
+ - Name: Rhinoceros
+   occurrence: common
