@@ -3,7 +3,10 @@ from collections import defaultdict
 from copy import deepcopy
 from random import Random
 
-adjustments = [(1, 1), (2, 1.5), (6, 2), (10, 2.5), (14, 3), (1000, 4)]
+
+big_adjustments = {k: v for k, v in [(0, 0.5), (1, 0.5), (2, 1), (3, 1.5), (4, 1.5), (5, 1.5), (6, 1.5), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2.5), (12, 2.5), (13, 2.5), (14, 2.5), (15, 3), (16, 3), (17, 3), (18, 3), (19, 3), (20, 3)]}
+med_adjustments = {k: v for k, v in [(0, 1), (1, 1), (2, 1.5), (3, 2), (4, 2), (5, 2), (6, 2), (7, 2.5), (8, 2.5), (9, 2.5), (10, 2.5), (11, 3), (12, 3), (13, 3), (14, 3), (15, 4), (16, 4), (17, 4), (18, 4), (19, 4), (20, 4)]}
+small_adjustments = {k: v for k, v in [(0, 1.5), (1, 1.5), (2, 2), (3, 2.5), (4, 2.5), (5, 2.5), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (11, 4), (12, 4), (13, 4), (14, 4), (15, 5), (16, 5), (17, 5), (18, 5), (19, 5), (20, 5)]}
 
 '''
 Leader: Only ever one leader in an encounter
@@ -23,11 +26,20 @@ Basic: No leaders or elites
 '''
 
 class Encounter:
-    def __init__(self, xp_budget, monster_source, random_state=None, respect_roles=True, occurrence=None, style=None, lower_bound=0.5, upper_bound=1.5):
+    def __init__(self,
+                 xp_budget,
+                 monster_source,
+                 random_state=None,
+                 occurrence=None,
+                 style=None,
+                 lower_bound=0.5,
+                 upper_bound=1.5,
+                 n_characters=4):
         if random_state is None:
             self.random_state = Random()
         else:
             self.random_state = random_state
+        self.n_characters = n_characters
         self.lower_bound = lower_bound
         self.upper_bound = upper_bound
         self.xp_budget = xp_budget
@@ -91,7 +103,13 @@ class Encounter:
         return adjustment * monster_xp
 
     def calculate_adjustment(self, n_monsters):
-        return adjustments[bisect.bisect_left([i[0] for i in adjustments], n_monsters)][1]
+        if self.n_characters <= 2:
+            adjustment = small_adjustments[n_monsters]
+        elif self.n_characters >= 6:
+            adjustment = big_adjustments[n_monsters]
+        else:
+            adjustment = med_adjustments[n_monsters]
+        return adjustment
 
     def adjusted_xp_sum(self, monster_list, adjust=1):
         monster_count = len(monster_list) + adjust
@@ -110,14 +128,14 @@ class Encounter:
         possible_monsters = self.monster_source
         current_roles = [monster['role'] for monster in existing_monster_list]
         current_names = [monster['Name'] for monster in existing_monster_list]
+        if len(set(current_names)) >= 3:
+            possible_monsters = [monster for monster in possible_monsters if monster['Name'] in current_names]
         if 'leader' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'leader']
         if 'elite' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'elite' or monster['Name'] in current_names]
         if 'troops' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'troops' or monster['Name'] in current_names]
-        # if existing_monster_list == []:
-        #     possible_monsters = [monster for monster in possible_monsters if monster['role'] not in ['pet', 'environmental hazard']]
         if 'natural hazard' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['Name'] in current_names or monster['role'] == 'environmental hazard']
         if 'pet' in current_roles:

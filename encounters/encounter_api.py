@@ -23,10 +23,13 @@ class EncounterSource:
             self.random_state = random_state
         if xp_budget is not None:
             self.xp_budget = xp_budget
+            self.n_characters = 4
         elif encounter_level is not None:
             self.xp_budget = xp_values[encounter_level]
+            self.n_characters = 4
         elif character_level_dict is not None:
             self.xp_budget = self.budget_from_character_dict(character_level_dict)
+            self.n_characters = sum([i for i in character_level_dict.values()])
         else:
             raise NoXPBudgetError
         self.monster_source = monster_source()
@@ -37,7 +40,7 @@ class EncounterSource:
         if monster_set == 'all':
             monster_set = None
         monsters = self.monster_source.monsters(monster_set, self.random_state)
-        self.encounter = Encounter(self.xp_budget, monsters, random_state=self.random_state, style=style)
+        self.encounter = Encounter(self.xp_budget, monsters, random_state=self.random_state, style=style, n_characters=self.n_characters)
         
     def budget_from_character_dict(self, character_level_dict):
         xp_budget = 0

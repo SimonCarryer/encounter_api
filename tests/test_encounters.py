@@ -17,7 +17,7 @@ def test_right_idx():
 
 def test_possible_monsters():
     budget = 450
-    encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, respect_roles=False, occurrence='all')
+    encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, occurrence='all')
     possible = [monster['Name'] for monster in encounter.possible_monsters([])]
     assert possible == ['boss monster', 'trooper', 'fancy man', 'extra fancy man', 'doggo']
 
@@ -39,6 +39,13 @@ def test_calculate_adjustment():
     encounter = Encounter(xp_budget=200, monster_source=mock_monster_list)
     adjustments = [(i, encounter.calculate_adjustment(i)) for i in range(0, 20)]
     assert adjustments == [(0, 1), (1, 1), (2, 1.5), (3, 2), (4, 2), (5, 2), (6, 2), (7, 2.5), (8, 2.5), (9, 2.5), (10, 2.5), (11, 3), (12, 3), (13, 3), (14, 3), (15, 4), (16, 4), (17, 4), (18, 4), (19, 4)]
+    encounter = Encounter(xp_budget=200, monster_source=mock_monster_list, n_characters=2)
+    adjustments = [(i, encounter.calculate_adjustment(i)) for i in range(0, 20)]
+    assert adjustments == [(0, 1.5), (1, 1.5), (2, 2), (3, 2.5), (4, 2.5), (5, 2.5), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (11, 4), (12, 4), (13, 4), (14, 4), (15, 5), (16, 5), (17, 5), (18, 5), (19, 5)]
+    encounter = Encounter(xp_budget=200, monster_source=mock_monster_list, n_characters=6)
+    adjustments = [(i, encounter.calculate_adjustment(i)) for i in range(0, 20)]
+    assert adjustments == [(0, 0.5), (1, 0.5), (2, 1), (3, 1.5), (4, 1.5), (5, 1.5), (6, 1.5), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2.5), (12, 2.5), (13, 2.5), (14, 2.5), (15, 3), (16, 3), (17, 3), (18, 3), (19, 3)]
+
 
 def test_encounter_does_not_exceed_xp_budget():
     xp_values = []
@@ -95,7 +102,6 @@ def test_roles_respected():
     assert ('boss monster', 'boss monster') not in returned
     budget = 450
     encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, occurrence='all', lower_bound=0.8, upper_bound=1.2)
-    # assert ('doggo', 'doggo', 'doggo', 'doggo') not in encounter.monster_lists
     budget = 200
     encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list_2, occurrence='all', lower_bound=0.8, upper_bound=1.2)
     returned = [[m['Name'] for m in l] for l in encounter.monster_lists]
@@ -113,7 +119,7 @@ def test_get_lists_of_correct_occurrence():
     encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, occurrence='uncommon', lower_bound=0.8, upper_bound=1.2)
     returned = [[m['Name'] for m in l] for l in encounter.get_lists_of_correct_occurrence()]
     assert all(['doggo' in l or 'fancy_man' in l for l in returned])
-    encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, respect_roles=True, occurrence='common', lower_bound=0.8, upper_bound=1.2)
+    encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list, occurrence='common', lower_bound=0.8, upper_bound=1.2)
     returned = [[m['Name'] for m in l] for l in encounter.get_lists_of_correct_occurrence()]
     assert  all(['doggo' not in l and 'fancy_man' not in l and 'extra fancy man' not in l for l in returned])
 
@@ -124,7 +130,6 @@ def test_styles():
     for _ in range(10):
         encounter = Encounter(xp_budget=budget,
                                 monster_source=mock_monster_list,
-                                respect_roles=True,
                                 occurrence='common',
                                 style='leader')
         roles.append([monster['role'] for monster in encounter.monsters])
@@ -133,7 +138,6 @@ def test_styles():
     for _ in range(10):
         encounter = Encounter(xp_budget=budget,
                                 monster_source=mock_monster_list,
-                                respect_roles=True,
                                 occurrence='common',
                                 style='elite')
         roles.append([monster['role'] for monster in encounter.monsters])
@@ -142,7 +146,6 @@ def test_styles():
     for _ in range(10):
         encounter = Encounter(xp_budget=budget,
                                 monster_source=mock_monster_list,
-                                respect_roles=True,
                                 occurrence='common',
                                 style='basic')
         roles.append([monster['role'] for monster in encounter.monsters])
@@ -195,6 +198,12 @@ def test_empty_lists():
     encounter = Encounter(xp_budget=budget, monster_source=mock_monster_list_2, style='elite')
     # print([m['Name'] for m in encounter.monsters])
     assert encounter.monsters == []
+
+def test_api_passes_through_n_characters():
+    characters = {1: 1, 2: 1}
+    source = EncounterSource(character_level_dict=characters, monster_source=MockMonsterManual)
+    assert source.encounter.n_characters == 2
+
 
 def test_look_at_some_encounters():
     source = EncounterSource(xp_budget=900, monster_sets=None, style=None)
