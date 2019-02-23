@@ -41,6 +41,8 @@ class Encounter(Resource):
         monster_sets = args['monster_sets']
         if not all([monster_set in application.config['monster_sets'] for monster_set in monster_sets]):
             raise BadRequest('One or more invalid monster sets in request')
+        if not all([level <= 20 for level in character_level_dict.keys()]):
+            raise BadRequest('Maximum character level is 20')
         source = EncounterSource(character_level_dict=character_level_dict, monster_sets=monster_sets)
         encounter = source.get_encounter()
         return encounter
