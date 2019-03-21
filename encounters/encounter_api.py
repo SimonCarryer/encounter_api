@@ -1,6 +1,7 @@
 from .encounter import Encounter
 from collections import Counter
 from .monsters import MonsterManual
+from treasure.treasure_api import IndividualSource
 import yaml
 import random
 
@@ -47,6 +48,13 @@ class EncounterSource:
         for level in character_level_dict.keys():
             xp_budget += (xp_values[level]/4) * character_level_dict[level]
         return xp_budget
+
+    def get_treasure(self):
+        if any([monster.get('Type') == 'Humanoid' for monster in self.encounter.monsters]):
+            treasure = IndividualSource(xp_budget=self.xp_budget)
+            return treasure.get_treasure()
+        else:
+            return None
         
     def get_encounter(self):
         response = {}
@@ -64,4 +72,5 @@ class EncounterSource:
             else:
                 response['difficulty'] = 'medium'
             response['xp_value'] = self.encounter.total_xp()
+            response['treasure'] = self.get_treasure()
         return response

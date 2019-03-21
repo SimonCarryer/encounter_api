@@ -151,20 +151,6 @@ def test_styles():
         roles.append([monster['role'] for monster in encounter.monsters])
     assert all(['elite' not in role_set for role_set in roles]) and all(['leader' not in role_set for role_set in roles])
 
-# def test_encounter_source_displays_nicely():
-#     random_state = Random(0)
-#     source = EncounterSource(xp_budget=450, monster_source=MockMonsterManual, random_state=random_state)
-#     encounter = source.get_encounter()
-#     assert encounter == {'success': True,
-#                          'monster_set': 'mock',
-#                          'monsters': [
-#                              {'name': 'doggo', 'number': 1},
-#                              {'name': 'fancy man', 'number': 1}
-#                              ],
-#                          'difficulty': 0.8,
-#                          'xp_value': 250}
-
-
 def test_encounter_source_is_deterministic():
     monsters = []
     random_state = Random(3)
@@ -206,7 +192,7 @@ def test_api_passes_through_n_characters():
 
 
 def test_look_at_some_encounters():
-    source = EncounterSource(xp_budget=900, monster_sets=None, style=None)
-    #print(source.encounter.monster_lists)
+    source = EncounterSource(xp_budget=1800, monster_sets=None, style=None)
+    print(any([monster['Type'] == 'Humanoid' for monster in source.encounter.monsters]))
     encounter = source.get_encounter()
     print(encounter)

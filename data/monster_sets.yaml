@@ -56,6 +56,9 @@ magical guardians:
   - Name: Spectator
     occurrence: uncommon
     role: solo
+  - Name: Crawling Claw      
+    occurrence: rare
+    role: environmental hazard
 
 bullywugs:
   - Name: Swarm of Insects    
@@ -298,8 +301,6 @@ haunted:
     occurrence: common
   - Name: Skeleton      
     occurrence: common
-  - Name: Crawling Claw      
-    occurrence: rare
   - Name: Wraith      
     occurrence: uncommon  
   - Name: Specter      
@@ -320,7 +321,7 @@ bandits:
     role: leader
     occurrence: common
   - Name: Spy      
-    role: elite
+    role: environmental hazard
     occurrence: uncommon
   - Name: Half-ogre (Ogrillon)
     occurrence: uncommon
@@ -409,9 +410,14 @@ drow:
  - Name: Quaggoth
    role: pet
    occurrence: uncommon
- - Name: Quaggoth Thonot
-   role: pet
-   occurrence: rare
+
+quaggoths:
+  - Name: Quaggoth Thonot
+    role: leader
+    occurrence: uncommon
+  - Name: Quaggoth
+    role: troops
+    occurrence: common
 
 lizardfolk:
  - Name: Lizardfolk
@@ -953,6 +959,15 @@ underdark:
    occurrence: uncommon
  - Name: Giant Bat
    occurrence: common
+ - Name: Ochre Jelly
+   occurrence: uncommon
+ - Name: Gray Ooze
+   occurrence: rare
+   role: solo
+ - Name: Gelatinous Cube
+   occurrence: uncommon
+ - Name: Black Pudding
+   occurrence: uncommon
 
 caves:
  - Name: Basilisk
@@ -984,8 +999,10 @@ caves:
  - Name: Hook Horror
    occurrence: uncommon
  - Name: Piercer
-   occurrence: uncommon
+   occurrence: rare
    role: environmental hazard
+ - Name: Piercer
+   occurrence: uncommon
  - Name: Roper
    occurrence: rare
    role: solo
@@ -1003,6 +1020,15 @@ caves:
    occurrence: common
  - Name: Giant Bat
    occurrence: common
+ - Name: Ochre Jelly
+   occurrence: uncommon
+ - Name: Black Pudding
+   occurrence: uncommon
+ - Name: Gray Ooze
+   occurrence: rare
+   role: solo
+ - Name: Gelatinous Cube
+   occurrence: uncommon
 
 gricks:
  - Name: Grick Alpha
@@ -1152,7 +1178,7 @@ kenku:
    role: pet
  - Name: Assassin
    occurrence: rare
-   role: assassin
+   role: leader
  - Name: Spy
    occurrence: uncommon
    role: elite
@@ -1349,6 +1375,12 @@ devils:
  - Name: Spined Devil
    occurrence: common
    role: elite
+ - Name: Succubus/Incubus
+   occurrence: rare
+   role: environmental hazard
+ - Name: Cambion
+   occurrence: rare
+   role: leader
    
 demons:
  - Name: Balor
@@ -1389,6 +1421,12 @@ demons:
  - Name: Vrock
    occurrence: common
    role: elite
+ - Name: Succubus/Incubus
+   occurrence: rare
+   role: environmental hazard
+ - Name: Cambion
+   occurrence: rare
+   role: leader
 
 sahuagin:
  - Name: Sahuagin
