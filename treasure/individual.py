@@ -37,7 +37,7 @@ class Individual:
 
     def coins_to_objects(self):
         value = 0
-        coin_types = []
+        coin_types = sorted([coin_type for coin_type, value in self.coins.items() if value > 0])
         while sum(self.coins.values()) >= 300 or len(coin_types) > 3:
             coin_types = sorted([coin_type for coin_type, value in self.coins.items() if value > 0])
             coin_type = self.random_state.choice(coin_types)
