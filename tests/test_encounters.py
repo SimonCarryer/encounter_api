@@ -192,7 +192,6 @@ def test_api_passes_through_n_characters():
 
 
 def test_look_at_some_encounters():
-    source = EncounterSource(xp_budget=1800, monster_sets=None, style=None)
-    print(any([monster['Type'] == 'Humanoid' for monster in source.encounter.monsters]))
+    source = EncounterSource(xp_budget=16000, monster_sets=['civilised folk'], style=None)
     encounter = source.get_encounter()
-    print(encounter)
+    # print(encounter)

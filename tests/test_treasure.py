@@ -31,14 +31,29 @@ def test_hoard_generates_coins():
 
 def test_individual_treasure_returns_coins():
     state = Random(0)
-    individual = Individual(1, random_state=state)
-    assert individual.coins == ['13 SP']
+    individual = Individual(random_state=state)
+    coins = individual.roll_on_table(1)
+    assert coins['SP'] == 13
     state = Random(0)
-    individual = Individual(5, random_state=state)
-    assert individual.coins == ['210 SP', '70 GP']
+    individual = Individual(random_state=state)
+    coins = individual.roll_on_table(5)
+    assert coins['SP'] == 210
+    assert coins['GP'] == 70
     state = Random(0)
-    individual = Individual(11, random_state=state)
-    assert individual.coins == ['500 GP', '30 PP']
+    individual = Individual(random_state=state)
+    for level in [1, 5, 10]:
+        individual.roll_on_table(level)
+    assert individual.coins['CP'] == 1200
+    assert individual.coins['EP'] == 120
+
+def test_individual_treasure_generates_objects():
+    state = Random(0)
+    individual = Individual(random_state=state)
+    for level in [1, 5, 10]:
+        individual.roll_on_table(level)
+    individual.coins_to_objects()
+    #assert individual.objects == 'Gemstones and jewelry worth 330GP.'
+
 
 def test_npc_items_returns_item():
     state = Random(0)
@@ -71,7 +86,9 @@ def test_hoard_api():
 
 def test_individual_api():
     state = Random(0)
-    source = IndividualSource(encounter_level=10, random_state=state)
+    monsters = [{'Type': 'Humanoid', 'Challenge': 5}]
+    source = IndividualSource(monsters, random_state=state)
     treasure = source.get_treasure()
-    assert sorted(treasure['coins']) == ['210 SP', '70 GP']
+    #assert treasure['coins']['GP'] == 70
+
 

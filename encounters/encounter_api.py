@@ -50,11 +50,7 @@ class EncounterSource:
         return xp_budget
 
     def get_treasure(self):
-        if any([monster.get('Type') == 'Humanoid' for monster in self.encounter.monsters]):
-            treasure = IndividualSource(xp_budget=self.xp_budget)
-            return treasure.get_treasure()
-        else:
-            return None
+        return IndividualSource(self.encounter.monsters, random_state=self.random_state).get_treasure()
         
     def get_encounter(self):
         response = {}

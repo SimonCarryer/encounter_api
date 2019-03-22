@@ -58,6 +58,7 @@ class HoardSource(TreasureSource):
 
 class IndividualSource(TreasureSource):
     def __init__(self,
+                list_of_monsters,
                 xp_budget=None,
                 encounter_level=None,
                 character_level_dict=None,
@@ -67,10 +68,18 @@ class IndividualSource(TreasureSource):
                                 encounter_level=encounter_level,
                                 character_level_dict=character_level_dict,
                                 random_state=random_state)
-        self.contents = Individual(self.level, random_state=self.random_state)
+        self.contents = Individual(random_state=self.random_state)
+        monster_levels = []
+        for monster in list_of_monsters:
+            if monster.get('Type') == 'Humanoid':
+                if monster.get('Challenge'):
+                    level = float(monster['Challenge'])
+                    monster_levels.append(level)
+        self.contents.generate_treasure(monster_levels)
 
     def get_treasure(self):
         response = {
-            'coins': self.contents.coins
+            'coins': dict(self.contents.coins),
+            'objects': self.contents.objects
         }
         return response
