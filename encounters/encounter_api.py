@@ -40,9 +40,8 @@ class EncounterSource:
             monster_set = self.random_state.choice(monster_sets)
         if monster_set == 'all':
             monster_set = None
-        monsters = self.monster_source.monsters(monster_set, self.random_state)
-        self.encounter = Encounter(self.xp_budget, monsters, random_state=self.random_state, style=style, n_characters=self.n_characters)
-        
+        self.monsters = self.monster_source.monsters(monster_set, self.random_state)
+                
     def budget_from_character_dict(self, character_level_dict):
         xp_budget = 0
         for level in character_level_dict.keys():
@@ -52,7 +51,8 @@ class EncounterSource:
     def get_treasure(self):
         return IndividualSource(self.encounter.monsters, random_state=self.random_state).get_treasure()
         
-    def get_encounter(self):
+    def get_encounter(self, style=None):
+        self.encounter = Encounter(self.xp_budget, self.monsters, random_state=self.random_state, style=style, n_characters=self.n_characters)
         response = {}
         if self.encounter.monsters == []:
             response['success'] = False

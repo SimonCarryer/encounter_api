@@ -1,0 +1,106 @@
+flood:
+  rooms:
+    - description: The room is flooded with waist-deep water.
+      tags: [uninhabitable, underwater]
+    - description: Water runs down the wall of the room.
+    - description: The entire room is submerged beneath ice-cold water.
+      tags: [uninhabitable, underwater]
+    - description: A great pool of water fills one corner of the room.
+    - description: Dirt and debris are heaped against the walls of the room, the remnants of a past flood.
+    - description: The air is heavy with moisture, and water drips from the ceiling.
+    - description: The floor of this room is covered in an ankle-deep layer of mud.
+    - description: A section of floor has collapsed, and a black and icy underground river flows beneath.
+      tags: [cave-entrance]
+  passages:
+    - description: The passage is filled with waist-deep water.
+      weight: 3
+    - description: A section of this passage is completely submerged beneath floodwaters, necessitating a short swim.
+      weight: 4
+    - description: Water runs freeling down this passage, turning stairways into waterfalls, corridors into rivers.
+      weight: 2
+    - description: The floor of the corridor is covered in fine silt, sticky and wet.
+      weight: 1
+
+earthquake:
+  rooms:
+    - description: A section of floor has collapsed into a vast black void.
+    - description: A collapsed section of wall spews a vile gas into the room - Constitution save (Difficulty 11) or be Poisoned for 1 hour.
+      tags: [uninhabitable, hazard, cave-entrance]
+    - description: One wall has a giant fissure - deep, but too narrow to explore.
+      tags: [cave-entrance]
+    - description: The ceiling of this room has collapsed, leaving the floor covered in debris. Far above, the sky can be glimpsed through the hole.
+      tags: [entrance]
+    - description: The floor of this room has unstable patches, which might give way at any moment. Below is a natural cavern, 30' deep.
+      tags: [hazard]
+  passages:
+    - description: The door-frame is partly collapsed and twisted, jamming the door shut.
+      weight: 4
+    - description: The passageway is partly-collapsed, with only room to crawl.
+      weight: 3
+    - description: The passage is collapsed, negotiable only by sustained digging and crawling.
+      weight: 4
+    - description: The ceiling of the passageway is in danger of collapsing! Any rough treatment will bring it down.
+      weight: 2
+    - description: A slight breeze blows from this passageway.
+      weight: 1
+
+trees:
+  rooms:
+    - description: The roots of a giant tree turn half of the room into a maze of gnarled branches.
+    - description: Tree roots swarm from the ceiling and crawl down the walls.
+    - description: The whole ceiling of this room has collapsed long ago. In the dirt from the collapse, trees have grown, turning the room into a minature forest, stretching to the sky far above.
+      tags: [entrance]
+  passages:
+    - description: Tree roots have burst through the ceiling and are crawling along the passageway's walls.
+      weight: 1
+    - description: Tree roots completely block this passageway. Getting through them would require hacking or burning them away.
+      weight: 4
+    - description: Fine roots hang like cobwebs from the ceiling.
+      weight: 1
+    - description: Roots spring from one wall like claws, making the passage difficult to traverse.
+      weight: 3
+
+shadowfell:
+  rooms:
+    - description: This room is unnaturally cold, and torchlight seems to dim and flicker.
+    - description: Black shadows fill this room, seeming to flee the light reluctantly, and creep back when unobserved.
+    - description: Barely-perceptable voices whisper in a long-dead language.
+    - description: Mournful faces peer from dark corners, vanishing in the light.
+    - description: The oppressive atmosphere of this room leeches the life-force from intruders - Make a constitution save each round (Difficulty 11) or take 1d4 necrotic damage.
+      tags: [uninhabitable, hazard]
+    - description: Sound in this room seems unnaturally quiet and muffled.
+  passages:
+    - description: Insubstantial hands reach from the passage walls.
+      weight: 2
+    - description: The sound of footsteps can be heard, always just around the next corner.
+      weight: 1
+    - description: The passageway seems to turn in on itself. There's a 50% chance that a group travelling down the passage ends up back in the room they just left.
+      weight: 3
+
+age:
+  rooms:
+    - description: Stalagmites and stalagtites have formed on the floors and ceilings.
+    - description: One wall is covered in a thick carpet of white mushrooms.
+    - description: Cobwebs crowd the ceiling and coat the walls in sheets.
+    - description: Tunnelling creatures have burst through the wall of this room.
+      tags: [cave-entrance]
+    - description: The room is filled with patches of Yellow Mold.
+      tags: [uninhabitable, hazard]
+    - description: A mass of Brown Mold covers one wall.
+      tags: [uninhabitable, hazard]
+    - description: An ancient fire has left scorching and soot throughout the room.
+    - description: A large burrowing animal has created a narrow but navigable tunnel to the surface.
+      tags: [entrance]
+    - description: A stream of water runs through this room, a branch of an underground river which has worn through the walls.
+      tags: [cave-entrance]
+  passages:
+    - description: The door is jammed shut - swollen with age.
+      weight: 4
+    - description: The passageway is twisting and narrow, the ceiling low.
+      weight: 2
+    - description: The door is locked, the key long-gone.
+      weight: 4
+    - description: The passageway is long-disused, choked by cobwebs.
+      weight: 4
+    - description: A Green Slime lurks above the entrance to this passage.
+      weight: 3

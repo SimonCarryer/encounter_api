@@ -63,8 +63,10 @@ class Encounter:
         self.style = style
         if self.style == 'basic':
             self.monster_source = [monster for monster in self.monster_source if monster['role'] not in ['leader', 'elite']]
-        if self.style == 'elite':
+        elif self.style == 'elite':
             self.monster_source = [monster for monster in self.monster_source if monster['role'] not in ['leader']]
+        elif self.style == 'no leader':
+          self.monster_source = [monster for monster in self.monster_source if monster['role'] not in ['leader']]
         self.pick_monsters([])
         self.choose_monster_list()
         

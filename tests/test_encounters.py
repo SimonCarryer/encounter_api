@@ -188,6 +188,7 @@ def test_empty_lists():
 def test_api_passes_through_n_characters():
     characters = {1: 1, 2: 1}
     source = EncounterSource(character_level_dict=characters, monster_source=MockMonsterManual)
+    source.get_encounter()
     assert source.encounter.n_characters == 2
 
 
