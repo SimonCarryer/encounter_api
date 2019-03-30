@@ -2,7 +2,7 @@ import yaml
 
 def load_item_tables():
     item_tables = {}
-    with open('data/item_tables.yaml') as f:
+    with open('data/item_tables.yaml', encoding='utf-8') as f:
         tables = yaml.load(f.read())
     for key, value in tables.items():
         item_tables[key] = {}
@@ -14,7 +14,7 @@ def load_treasure_tables():
     treasure_tables = {}
     object_column_names = ['chance', 'object_die_n', 'object_die_sides', 'object_value', 'object_type', 'item_die_sides', 'item_table_name']
     coin_column_names = ['name', 'die_n', 'die_sides', 'multiplier']
-    with open('data/treasure_tables.yaml') as f:
+    with open('data/treasure_tables.yaml', encoding='utf-8') as f:
         tables = yaml.load(f.read())
     for key, values in tables.items():
         treasure_tables[key] = {'objects':[], 'coins':[]}
@@ -29,7 +29,7 @@ def load_treasure_tables():
 def load_individual_tables():
     individual_tables = {}
     coin_column_names = ['name', 'die_n', 'die_sides', 'multiplier']
-    with open('data/coins.yaml') as f:
+    with open('data/coins.yaml', encoding='utf-8') as f:
         tables = yaml.load(f.read())
     for level, table in tables.items():
         individual_tables[level] = {}
@@ -41,7 +41,7 @@ def load_individual_tables():
     return individual_tables
 
 def load_npc_items():
-    with open('data/npc_items.yaml') as f:
+    with open('data/npc_items.yaml', encoding='utf-8') as f:
         npc_items = yaml.load(f.read())
     return npc_items
 
