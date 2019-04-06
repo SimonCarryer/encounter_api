@@ -89,10 +89,10 @@ class EncounterPicker:
 
     def pick_encounter(self, difficulty=None, occurrence=None, style=None):
         if occurrence is None:
-            roll = self.random_state.randint(1, 10)
-            if roll <= 6:
+            roll = self.random_state.randint(1, 6)
+            if roll <= 3:
                 occurrence = 'common'
-            elif roll <= 9:
+            elif roll <= 5:
                 occurrence = 'uncommon'
             else:
                 occurrence = 'rare'

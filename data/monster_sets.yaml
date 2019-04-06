@@ -130,7 +130,7 @@ goblins:
   - Name: Goblin      
     role: troops
     occurrence: common
-  - Name: Goblin Boss      
+  - Name: Goblin Boss
     role: leader
     occurrence: common
   - Name: Wolf      
@@ -142,7 +142,7 @@ goblins:
   - Name: Worg      
     occurrence: rare
     role: pet
-  - Name: Bugbear      
+  - Name: Bugbear     
     occurrence: uncommon
     role: elite
 
@@ -157,7 +157,7 @@ hills:
     role: environmental hazard      
   - Name: Giant Owl
     occurrence: uncommon 
-    role: solo     
+    role: solo 
   - Name: Giant Eagle
     occurrence: uncommon  
     role: solo    
