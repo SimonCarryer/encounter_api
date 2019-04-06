@@ -161,7 +161,7 @@ hills:
   - Name: Giant Eagle
     occurrence: uncommon  
     role: solo    
-  - Name: Harpy      
+  - Name: Harpy
     occurrence: rare
   - Name: Hippogriff      
     occurrence: uncommon
@@ -810,10 +810,10 @@ cult of obox-ob:
    occurrence: common
    role: troops
  - Name: Swarm of Insects
-   occurrence: uncommon
+   occurrence: common
    role: pet
  - Name: Giant Centipede
-   occurrence: uncommon
+   occurrence: common
    role: pet
  - Name: Giant Rat
    occurrence: uncommon
@@ -1738,16 +1738,16 @@ svirfneblin:
 
 yugoloths:
  - Name: Arcanaloth
-   occurrence: rare
+   occurrence: uncommon
    role: environmental hazard
  - Name: Mezzoloth
    occurrence: common
    role: troops
  - Name: Nycaloth
-   occurrence: uncommon
+   occurrence: common
    role: elite
  - Name: Ultroloth
-   occurrence: uncommon
+   occurrence: common
    role: leader
  - Name: Succubus/Incubus
    occurrence: rare

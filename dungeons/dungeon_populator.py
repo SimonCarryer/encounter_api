@@ -16,7 +16,6 @@ class DungeonPopulator:
             self.random_state = random_state
         self.encounter_source = encounter_source
         self.treasure_source = treasure_source
-        monster_set = self.encounter_source.monster_source.name # this is janky af but it'll do for now.
 
     def roll(self, n):
         return self.random_state.randint(1, 6) >= n

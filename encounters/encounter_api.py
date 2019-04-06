@@ -38,9 +38,8 @@ class EncounterSource:
             monster_set = self.random_state.choice(self.monster_source.monster_set_names)
         else:
             monster_set = self.random_state.choice(monster_sets)
-        if monster_set == 'all':
-            monster_set = None
-        monsters = self.monster_source.monsters(monster_set, self.random_state)
+        self.monster_set = monster_set
+        monsters = self.monster_source.monsters(monster_set)
         encounters = EncounterBuilder(self.xp_budget, monsters, n_characters=self.n_characters).monster_lists
         self.encounter_picker = EncounterPicker(encounters, self.xp_budget, n_characters=self.n_characters, random_state=self.random_state)
                 
@@ -60,7 +59,7 @@ class EncounterSource:
             response['success'] = False
         else:
             response['success'] = True
-            response['monster_set'] = self.monster_source.name
+            response['monster_set'] = self.monster_set
             response['monsters'] = [{'name': k, 'number': v} for k, v in dict(Counter([monster['Name'] for monster in encounter['monsters']])).items()]
             response['difficulty'] = encounter['difficulty']
             response['xp_value'] = int(encounter['xp_value'])

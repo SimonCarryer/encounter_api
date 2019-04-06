@@ -43,7 +43,7 @@ class MockMonsterManual:
         self.monster_set_names = ['mock_monster_list_2']
         pass
 
-    def monsters(self, monster_set_name, random_seed):
+    def monsters(self, monster_set_name):
         return mock_monster_list
 
     def signs(self):

@@ -99,7 +99,7 @@ def test_dungeon_all_together_now():
 }
     state = Random()
     dungeon = Dungeon(specifications, random_state=state)    
-    for node, data in dungeon.layout.nodes(data=True):
-       print(data, '\n')
+    # for node, data in dungeon.layout.nodes(data=True):
+       # print(data, '\n')
 
 

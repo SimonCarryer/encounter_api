@@ -49,19 +49,11 @@ monster_sets = load_monster_sets()
     
 class MonsterManual():
     def __init__(self):
-        self.name = None
-        self.monster_sets = copy.deepcopy(monster_sets)
+        self.monster_sets = monster_sets
         self.monster_set_names = [key for key in self.monster_sets.keys()]
 
-    def monsters(self, monster_set_name, random_state):
-        if random_state is None:
-            self.random_state = Random()
-        else:
-            self.random_state = random_state
-        if monster_set_name is None:
-            monster_set_name = self.random_state.choice(self.monster_set_names)
-        self.name = monster_set_name
-        monster_set = self.monster_sets[monster_set_name]
+    def monsters(self, monster_set_name):
+        monster_set = copy.deepcopy(self.monster_sets[monster_set_name])
         return monster_set
 
     # def signs(self):

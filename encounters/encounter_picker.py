@@ -98,11 +98,17 @@ class EncounterPicker:
                 occurrence = 'rare'
         if style is None:
             roll = self.random_state.randint(1, 6)
-            if roll <= 3:
+            if roll == 1:
+                style = None
+            elif roll == 2:
+                style = 'no pets'
+            elif roll == 3:
                 style = 'basic'
-            if roll == 5:
+            elif roll == 4:
+                style = 'not just pets'
+            elif roll == 5:
                 style = 'elite'
-            if roll == 6:
+            elif roll == 6:
                 style = 'leader'
         if len(self.monsters[occurrence]) > 0:
             preferred_monster = self.random_state.choice(list(self.monsters[occurrence]))
