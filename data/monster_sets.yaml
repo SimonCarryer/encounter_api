@@ -1718,3 +1718,91 @@ plains:
    occurrence: rare
  - Name: Rhinoceros
    occurrence: common
+
+svirfneblin:
+ - Name: Svirfneblin
+   occurrence: common
+   role: troops
+ - Name: Galeb Duhr
+   occurrence: uncommon
+   role: pet
+ - Name: Xorn
+   occurrence: uncommon
+   role: pet
+ - Name: Earth Elemental
+   occurrence: rare
+   role: pet
+ - Name: Giant Lizard
+   occurrence: rare
+   role: pet
+
+yugoloths:
+ - Name: Arcanaloth
+   occurrence: rare
+   role: environmental hazard
+ - Name: Mezzoloth
+   occurrence: common
+   role: troops
+ - Name: Nycaloth
+   occurrence: uncommon
+   role: elite
+ - Name: Ultroloth
+   occurrence: uncommon
+   role: leader
+ - Name: Succubus/Incubus
+   occurrence: rare
+   role: environmental hazard
+
+slaadi:
+ - Name: Red Slaad
+   occurrence: common
+   role: troops
+ - Name: Blue Slaad
+   occurrence: common
+   role: elite
+ - Name: Green Slaad
+   role: leader
+   occurrence: uncommon
+ - Name: Gray Slaad 
+   role: solo
+   occurrence: rare
+ - Name: Death Slaad
+   occurrence: rare
+   role: leader
+
+vampires:
+ - Name: Vampire
+   occurrence: common
+   role: leader
+ - Name: Warrior Vampire
+   occurrence: uncommon
+   role: leader
+ - Name: Spellcaster Vampire
+   occurrence: rare
+   role: leader
+ - Name: Vampire Spawn
+   occurrence: common
+   role: elite
+ - Name: Dire Wolf
+   occurrence: uncommon
+   role: pet
+ - Name: Veteran
+   occurrence: uncommon
+   role: elite
+ - Name: Noble
+   occurrence: rare
+   role: environmental hazard
+ - Name: Spy
+   occurrence: rare
+   role: environmental hazard
+
+angels:
+ - Name: Deva
+   occurrence: common
+   role: solo
+ - Name: Planetar
+   occurrence: common
+   role: solo
+ - Name: Solar
+   occurrence: common
+   role: solo
