@@ -5,8 +5,8 @@ from collections import defaultdict
 coin_values = {
     'CP': 0.01,
     'SP': 0.1,
+    'EP': 0.5,
     'GP': 1.0,
-    'EP': 2.0,
     'PP': 5.0
 }
 

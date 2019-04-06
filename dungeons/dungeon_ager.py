@@ -11,11 +11,13 @@ with open('data/dungeon_age.yaml', 'r') as f:
             passage_effect['id'] = idx
 
 class DungeonAger:
-    def __init__(self, cause, random_state=None, age_chance=5):
+    def __init__(self, cause=None, random_state=None, age_chance=5):
         if random_state is None:
             self.random_state = Random()
         else:
             self.random_state = random_state
+        if cause is None:
+            cause = self.random_state.choice(list(dungeon_age.keys()))
         self.age_chance = age_chance
         self.room_effects = dungeon_age[cause]['rooms']
         self.passage_effects = dungeon_age[cause]['passages']

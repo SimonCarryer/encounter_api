@@ -7,6 +7,7 @@ from random import Random
 from mocks.mock_dungeon_layout import MockDungeonLayout
 from mocks.mock_encounter_source import MockEncounterSource
 from mocks.mock_treasure_source import MockTreasureSource
+from mocks.mock_monster_list import MockMonsterManual
 
 def test_dungeon_layout_has_correct_number_of_rooms():
     state = Random(0)
@@ -24,7 +25,7 @@ def test_dungeon_layout_tags_nodes():
 
 def test_dungeon_furnisher_loads_rooms():
     furnisher = DungeonFurnisher('stronghold')
-    assert len(furnisher.room_type_list) == 30
+    assert len(furnisher.room_type_list) > 0
 
 def test_dungeon_furnisher_adds_descriptions():
     layout = MockDungeonLayout()
@@ -35,7 +36,7 @@ def test_dungeon_furnisher_adds_descriptions():
 
 def test_dungeon_populator_adds_encounters():
     layout = MockDungeonLayout()
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterSource(monster_source=MockMonsterManual())
     treasure_source = MockTreasureSource()
     state = Random(0)
     populator = OriginalInhabitants(encounter_source, treasure_source, random_state=state)
@@ -59,7 +60,7 @@ def test_underground_natives():
     layout = MockDungeonLayout()
     state = Random(0)
     ager = DungeonAger('age', random_state=state)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterSource(monster_source=MockMonsterManual())
     treasure_source = MockTreasureSource()
     ager.age(layout)
     populator = UndergroundNatives(encounter_source, treasure_source, random_state=state)
@@ -70,7 +71,7 @@ def test_underground_natives():
 def test_lair():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterSource(monster_source=MockMonsterManual())
     treasure_source = MockTreasureSource()
     populator = Lair(encounter_source, treasure_source, random_state=state)
     populator.populate(layout)
@@ -80,7 +81,7 @@ def test_lair():
 def test_explorers():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterSource(monster_source=MockMonsterManual())
     treasure_source = MockTreasureSource()
     populator = Explorers(encounter_source, treasure_source, random_state=state)
     populator.populate(layout)
@@ -88,29 +89,17 @@ def test_explorers():
     #     print(data.get('encounter'), data.get('treasure'))
 
 def test_dungeon_all_together_now():
-    events = [
-    {   'type': 'populator',
-        'style': 'original_inhabitants',
-        'monster_sets': ['haunted', 'necropolis']
-    },
-    {   'type': 'ager',
-        'style': ['earthquake', 'age']
-    },
-    {   'type': 'populator',
-        'style': 'underground_natives',
-        'monster_sets': ['caves', 'myconids', 'gricks', 'kobolds']
-    },
-    {   'type': 'ager',
-        'style': ['flood', 'shadowfell', 'age']
-    },
-    {   'type': 'populator',
-        'style': 'explorers',
-        'monster_sets': ['goblins', 'orcs', 'bugbears', 'bandits']
-    }
-    ]
+    specifications = {
+    'inhabitants': {
+        'original_inhabitants': 'haunted',
+        'explorers': 'goblins',
+        'level': 3
+        },
+    'purpose': 'stronghold'
+}
     state = Random()
-    dungeon = Dungeon('stronghold', events, 4, random_state=state)    
+    dungeon = Dungeon(specifications, random_state=state)    
     for node, data in dungeon.layout.nodes(data=True):
-        print(data)
+       print(data, '\n')
 
 

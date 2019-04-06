@@ -53,6 +53,8 @@ class DungeonLayout(nx.Graph):
                 node['tags'].append('important')
             if len([i for i in self.neighbors(a)]) == 1 and a != 0:
                 node['tags'].append('dead-end')
+            if len([i for i in self.neighbors(a)]) >= 3:
+                node['tags'].append('hub')
         self.label_secret_nodes()
     
     def label_secret_nodes(self):

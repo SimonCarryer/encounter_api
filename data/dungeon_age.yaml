@@ -43,6 +43,8 @@ earthquake:
       weight: 2
     - description: A slight breeze blows from this passageway.
       weight: 1
+    - description: A 10' wide chasm has opened across the middle of this passageway.
+      weight: 4
 
 trees:
   rooms:
@@ -93,6 +95,7 @@ age:
       tags: [entrance]
     - description: A stream of water runs through this room, a branch of an underground river which has worn through the walls.
       tags: [cave-entrance]
+    - description: The wooden floor of the second level of this room has rotted away to nothing, leaving doorways suspended 10 feet off the ground.
   passages:
     - description: The door is jammed shut - swollen with age.
       weight: 4
@@ -103,4 +106,8 @@ age:
     - description: The passageway is long-disused, choked by cobwebs.
       weight: 4
     - description: A Green Slime lurks above the entrance to this passage.
+      weight: 3
+    - description: The wooden stairway in this passage has rotted, leaving nothing but holes in the stone walls, and a bare, steep slope.
+      weight: 2
+    - description: An iron ladder here has rusted to nothing, leaving an empty shaft.
       weight: 3

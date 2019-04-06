@@ -13,6 +13,12 @@ stronghold:
   tags: [rare]
 - description: Bedroom for use by the stronghold's master or important guests.
   tags: [important]
+- description: A long and wide hallway, with a high arched ceiling.
+  tags: [hub]
+- description: A broad landing overlooking another, lower room.
+  tags: [hub]
+- description: A wide spiralling staircase with many landings and branching corridors.
+  tags: [hub]
 - description: Chapel dedicated to a deity associated with the stronghold's master.
 - description: Cistern providing drinking water.
 - description: Dining room for intimate gatherings or informal meals.
@@ -101,6 +107,8 @@ temple:
   - description: Divination room , inscribed with runes and stocked with soothsaying implements.
   - description: Dormitory for lesser priests or students.
   - description: Guardroom.
+  - description: A long and vaulted hallway, lined with statues.
+    tags: [central]
   - description: Kennel for animals or monsters associated with the temple's deity.
   - description: Kitchen (might bear a disturbing resemblance to a torture chamber in an evil temple).
   - description: Library, well stocked with religious treatises.
@@ -126,6 +134,8 @@ mine:
   - description: Chapel dedicated to a patron deity of miners, earth , or protection.
   - description: Cistern providing drinking water for miners.
   - description: Guardroom.
+  - description: A long central shaft, with two sets of tracks for mine carts.
+    tags: [central]
   - description: Kitchen used to feed workers.
   - description: Laboratory used to conduct tests on strange minerals extracted from the mine.
   - description: Lode where metal ore is mined (75 percent chance of being depleted).

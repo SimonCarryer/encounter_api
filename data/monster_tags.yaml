@@ -1,0 +1,132 @@
+bullywugs:
+  - humanoid
+  - savage
+efreet:
+  - magical
+kenku:
+  - humanoid
+  - bird
+haunted:
+  - undead
+bugbears:
+  - savage
+  - humanoid
+underwater:
+githyanki:
+  - humanoid
+  - magical
+wolves:
+  - wolves
+  - beast
+elemental plane of water:
+bandits:
+  - humanoid
+drow:
+  - humanoid
+  - evil
+  - spiders
+apex predators:
+  - beast
+desert:
+  - beast
+lizardfolk:
+  - savage
+  - humanoid
+plains:
+  - beast
+cult of baphomet:
+  - evil
+  - humanoid
+northmen:
+  - humanoid
+forest goblins:
+  - savage
+  - humanoid
+  - spiders
+elemental plane of fire:
+frost giants:
+necropolis:
+  - undead
+githzerai:
+  - humanoid
+  - magical
+lost world:
+  - beast
+cult of orcus:
+  - evil
+  - humanoid
+goblins:
+  - savage
+  - humanoid
+cult of obox-ob:
+  - evil
+  - humanoid
+blights:
+  - undead
+quaggoths:
+  - savage
+  - beast
+mountains:
+  - beast
+  - bird
+gricks:
+  - cave-dweller
+underdark:
+  - cave-dweller
+orcs:
+  - savage
+  - humanoid
+swamp:
+  - beast
+forest:
+  - beast
+spiders:
+  - spiders
+  - cave-dweller
+hills:
+  - beast
+  - bird
+devils:
+  - evil
+gnolls:
+  - evil
+  - savage
+  - humanoid
+caves:
+  - cave-dweller
+cult of jubilex:
+  - evil
+  - humanoid
+  - fungus
+demons:
+  - evil
+civilised folk:
+  - humanoid
+elemental plane of air:
+yuan-ti:
+  - humanoid
+  - evil
+cloud giants:
+modrons:
+mind flayers:
+magical guardians:
+  - magical
+fire giants:
+kuo-toa:
+sewers:
+kobolds:
+  - humanoid
+  - savage
+elemental plane of earth:
+myconids:
+  - fungus
+sahuagin:
+jungle tribes:
+  - humanoid
+arctic:
+hobgoblins:
+  - humanoid
+  - savage
+urban:
+fey:
+  - fey

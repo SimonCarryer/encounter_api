@@ -579,9 +579,6 @@ necropolis:
  - Name: Flying Sword
    occurrence: uncommon
    role: pet
- - Name: Crawling Claw
-   occurrence: rare
-   role: environmental hazard
  - Name: Shield Guardian
    occurrence: rare
    role: pet
@@ -919,8 +916,6 @@ underdark:
  - Name: Piercer
    occurrence: rare
    role: environmental hazard
- - Name: Piercer
-   occurrence: uncommon
  - Name: Quaggoth
    occurrence: common
  - Name: Roper
@@ -968,6 +963,8 @@ underdark:
    occurrence: uncommon
  - Name: Black Pudding
    occurrence: uncommon
+ - Name: Piercer
+   occurrence: uncommon
 
 caves:
  - Name: Basilisk
@@ -1001,8 +998,6 @@ caves:
  - Name: Piercer
    occurrence: rare
    role: environmental hazard
- - Name: Piercer
-   occurrence: uncommon
  - Name: Roper
    occurrence: rare
    role: solo
@@ -1028,6 +1023,8 @@ caves:
    occurrence: rare
    role: solo
  - Name: Gelatinous Cube
+   occurrence: uncommon
+ - Name: Piercer
    occurrence: uncommon
 
 gricks:

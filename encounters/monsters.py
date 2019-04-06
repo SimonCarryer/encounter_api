@@ -3,6 +3,16 @@ import yaml
 from random import Random
 import copy
 
+with open('data/monster_tags.yaml') as f:
+    monster_tags = yaml.load(f.read())
+
+with open('data/monster_signs.yaml') as f:
+    monster_signs = []
+    for idx, sign_data in enumerate(yaml.load(f.read())):
+        sign_data.update({'idx': idx})
+        sign_data['tags'] = sign_data.get('tags', [])
+        sign_data['sign'] = sign_data.get('sign', '')
+        monster_signs.append(sign_data)
 
 def load_monster_manual():
     monster_dict = {}
@@ -53,3 +63,12 @@ class MonsterManual():
         self.name = monster_set_name
         monster_set = self.monster_sets[monster_set_name]
         return monster_set
+
+    # def signs(self):
+    #     tags = copy.deepcopy(monster_tags[self.name])
+    #     signs = []
+    #     for sign in copy.deepcopy(monster_signs):
+    #         if all([tag in tags for tag in sign['tags']]):
+    #             sign['sign'] += ' (%s)' % self.name
+    #             signs.append(sign)
+    #     return signs

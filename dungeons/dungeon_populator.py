@@ -3,6 +3,7 @@ from encounters.encounter_api import EncounterSource
 from treasure.treasure_api import HoardSource
 import networkx as nx
 
+
 class DungeonPopulator:
     def __init__(self,
                  encounter_source,
@@ -15,23 +16,28 @@ class DungeonPopulator:
             self.random_state = random_state
         self.encounter_source = encounter_source
         self.treasure_source = treasure_source
+        monster_set = self.encounter_source.monster_source.name # this is janky af but it'll do for now.
 
     def roll(self, n):
         return self.random_state.randint(1, 6) >= n
+
+    def sign(self):
+        return self.encounter_source.get_sign()
+
         
 class OriginalInhabitants(DungeonPopulator):
     def populate(self, layout):
         for room_id, data in layout.nodes(data=True):
             if 'important' in data['tags']:
-                data['encounter'] = self.encounter_source.get_encounter(style='leader')
+                data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
                 if self.roll(5):
                     data['treasure'] = self.treasure_source.get_treasure()
             elif 'entrance' in data['tags']:
                 data['encounter'] = self.encounter_source.get_encounter(style='basic')
             elif 'secret' in data['tags'] and self.roll(3):
-                data['encounter'] = self.encounter_source.get_encounter(style='basic')
+                data['encounter'] = self.encounter_source.get_encounter(style='elite')
             elif self.roll(5):
-                data['encounter'] = self.encounter_source.get_encounter(style='no leader')
+                data['encounter'] = self.encounter_source.get_encounter(style='no leader', difficulty='medium')
             else:
                 data['encounter'] = None
         return layout
@@ -52,7 +58,9 @@ class UndergroundNatives(DungeonPopulator):
         accessible_rooms = self.accessible_rooms(layout)
         for node, data in layout.nodes(data=True):
             if node in accessible_rooms:
-                if self.roll(5):
+                if 'cave-entrance' in data['tags'] and self.roll(2):
+                    data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
+                elif self.roll(5):
                     data['encounter'] = self.encounter_source.get_encounter()
                 else:
                     data['encounter'] = None
@@ -84,12 +92,16 @@ class Lair(DungeonPopulator):
             node = next_node
             next_node = self.explore(layout, node)
             i += 1
-        layout.node[node]['encounter'] = self.encounter_source.get_encounter()
+        for explored_node in self.explored_rooms:
+            layout.node[explored_node]['encounter'] = None
+        layout.node[node]['encounter'] = self.encounter_source.get_encounter(difficulty='hard', occurrence='rare')
         return layout
 
 class Explorers(DungeonPopulator):
     def start_node(self, layout):
         possibles = [node for node, data in layout.nodes(data=True) if 'entrance' in data['tags'] and 'uninhabitable' not in data['tags']]
+        if len(possibles) == 0:
+            return None
         return self.random_state.choice(possibles)
 
     def explore(self, layout, node):
@@ -97,14 +109,15 @@ class Explorers(DungeonPopulator):
         passages = layout[node]
         new_nodes = []
         for adjacent_node, data in passages.items():
-            if self.random_state.randint(1, 3) >= data['weight'] and adjacent_node not in self.explored_nodes:
-                # TODO: Do not include unihabitable/hazard rooms
+            if self.random_state.randint(1, 3) > data['weight'] and adjacent_node not in self.explored_nodes and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and 'hazard' not in layout.node[adjacent_node]['tags']:
                 new_nodes.append(adjacent_node)
         for node in new_nodes:
             self.explore(layout, node)
 
     def populate(self, layout):
         start_node = self.start_node(layout)
+        if start_node is None:
+            return layout
         self.explored_nodes = []
         self.explore(layout, start_node)
         subgraph = layout.subgraph(self.explored_nodes)
@@ -114,7 +127,7 @@ class Explorers(DungeonPopulator):
         final_room = self.random_state.choice([key for key, value in paths.items() if value == max_path])
         for node, data in nodes:
             if node == final_room:
-                data['encounter'] = self.encounter_source.get_encounter(style='leader')
+                data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
                 if self.roll(5):
                     data['treasure'] = self.treasure_source.get_treasure()
             elif node == start_node:

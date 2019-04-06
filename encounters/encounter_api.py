@@ -1,4 +1,5 @@
-from .encounter import Encounter
+from .encounter_builder import EncounterBuilder
+from .encounter_picker import EncounterPicker
 from collections import Counter
 from .monsters import MonsterManual
 from treasure.treasure_api import IndividualSource
@@ -16,7 +17,6 @@ class EncounterSource:
                 character_level_dict=None,
                 monster_sets=None,
                 monster_source=MonsterManual,
-                style=None,
                 random_state=None):
         if random_state is None:
             self.random_state = random.Random()
@@ -40,7 +40,9 @@ class EncounterSource:
             monster_set = self.random_state.choice(monster_sets)
         if monster_set == 'all':
             monster_set = None
-        self.monsters = self.monster_source.monsters(monster_set, self.random_state)
+        monsters = self.monster_source.monsters(monster_set, self.random_state)
+        encounters = EncounterBuilder(self.xp_budget, monsters, n_characters=self.n_characters).monster_lists
+        self.encounter_picker = EncounterPicker(encounters, self.xp_budget, n_characters=self.n_characters, random_state=self.random_state)
                 
     def budget_from_character_dict(self, character_level_dict):
         xp_budget = 0
@@ -48,25 +50,19 @@ class EncounterSource:
             xp_budget += (xp_values[level]/4) * character_level_dict[level]
         return xp_budget
 
-    def get_treasure(self):
-        return IndividualSource(self.encounter.monsters, random_state=self.random_state).get_treasure()
+    def get_treasure(self, monsters):
+        return IndividualSource(monsters, random_state=self.random_state).get_treasure()
         
-    def get_encounter(self, style=None):
-        self.encounter = Encounter(self.xp_budget, self.monsters, random_state=self.random_state, style=style, n_characters=self.n_characters)
+    def get_encounter(self, difficulty=None, occurrence=None, style=None):
+        encounter = self.encounter_picker.pick_encounter(difficulty=difficulty, occurrence=occurrence, style=style)
         response = {}
-        if self.encounter.monsters == []:
+        if encounter['monsters'] == []:
             response['success'] = False
         else:
             response['success'] = True
             response['monster_set'] = self.monster_source.name
-            response['monsters'] = [{'name': k, 'number': v} for k, v in dict(Counter([monster['Name'] for monster in self.encounter.monsters])).items()]
-            difficulty = self.encounter.adjusted_xp() / self.xp_budget
-            if difficulty <= 0.8:
-                response['difficulty'] = 'easy'
-            elif difficulty > 1.2:
-                response['difficulty'] = 'hard'
-            else:
-                response['difficulty'] = 'medium'
-            response['xp_value'] = self.encounter.total_xp()
-            response['treasure'] = self.get_treasure()
+            response['monsters'] = [{'name': k, 'number': v} for k, v in dict(Counter([monster['Name'] for monster in encounter['monsters']])).items()]
+            response['difficulty'] = encounter['difficulty']
+            response['xp_value'] = int(encounter['xp_value'])
+            response['treasure'] = self.get_treasure(encounter['monsters'])
         return response

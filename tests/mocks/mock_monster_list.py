@@ -45,3 +45,6 @@ class MockMonsterManual:
 
     def monsters(self, monster_set_name, random_seed):
         return mock_monster_list
+
+    def signs(self):
+        return {'sign': 'a sign', 'idx': 0}
