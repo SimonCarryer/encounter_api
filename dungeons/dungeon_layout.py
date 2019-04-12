@@ -34,10 +34,12 @@ class DungeonLayout(nx.Graph):
         if self.random_state.randint(1, 10) >= self.secret_chance:
             weight = 3
             tags = ['secret']
+            description = 'This is a secret passage.'
         else:
             weight = 1
             tags = []
-        self.add_edge(room, connecting_room, weight=weight, tags=tags)
+            description = ''
+        self.add_edge(room, connecting_room, weight=weight, tags=tags, description=description)
 
     def tag_nodes(self):
         nodes = [(node, data) for node, data in self.nodes(data=True) if 'secret' not in data['tags']]

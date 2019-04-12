@@ -4,6 +4,7 @@ tmp/*
 __pycache__
 */__pycache__/*
 encounter_env/*
+encounter_env36/*
 *.pyc
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

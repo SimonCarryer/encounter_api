@@ -110,7 +110,7 @@ def test_encounter_source_fails_nicely():
     assert not encounter['success']
 
 def test_look_at_some_encounters():
-    source = EncounterSource(xp_budget=1000, monster_sets=None)
+    source = EncounterSource(xp_budget=200, monster_sets=['apex predators'])
     encounter = source.get_encounter(difficulty=None, style=None, occurrence=None)
     # print(encounter['monsters'])
 

@@ -91,15 +91,12 @@ def test_explorers():
 def test_dungeon_all_together_now():
     specifications = {
     'inhabitants': {
-        'original_inhabitants': 'haunted',
-        'explorers': 'goblins',
-        'level': 3
+        'original_inhabitants': 'tomb',
+        'explorers': 'bandits',
+        'level': 4
         },
-    'purpose': 'stronghold'
-}
+    'purpose': 'tomb'
+    }
     state = Random()
     dungeon = Dungeon(specifications, random_state=state)    
-    # for node, data in dungeon.layout.nodes(data=True):
-       # print(data, '\n')
-
-
+    print(dungeon.module()['map'])

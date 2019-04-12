@@ -6,6 +6,8 @@ from encounters.monsters import load_monster_sets
 from collections import Counter
 from werkzeug.exceptions import BadRequest
 from flask_cors import CORS
+from dungeons.dungeon_api import DungeonSource
+import random
 
 application = Flask(__name__)
 cors = CORS(application)
@@ -46,6 +48,11 @@ class Encounter(Resource):
         source = EncounterSource(character_level_dict=character_level_dict, monster_sets=monster_sets)
         encounter = source.get_encounter()
         return encounter
+
+@application.route('/dungeon/<level>')
+def dungeon(level):
+    d = DungeonSource(int(level))
+    return render_template('dungeon.html', module=d.get_dungeon())
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0', debug=True)

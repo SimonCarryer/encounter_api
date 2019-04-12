@@ -8,15 +8,19 @@ flood:
     - description: A great pool of water fills one corner of the room.
     - description: Dirt and debris are heaped against the walls of the room, the remnants of a past flood.
     - description: The air is heavy with moisture, and water drips from the ceiling.
+    - description: A stream has washed away one wall of this room, exposing it to the outside world.
+      tags: [entrance]
     - description: The floor of this room is covered in an ankle-deep layer of mud.
     - description: A section of floor has collapsed, and a black and icy underground river flows beneath.
       tags: [cave-entrance]
+    - description: This room is filled with knee-deep, muddy water. Parts of the floor have collapsed, and standing in the wrong place can lead to a plunge into the pitch-black depths.
+      tags: [cave=entrance, uninhabitable, underwater, hazard]
   passages:
     - description: The passage is filled with waist-deep water.
       weight: 3
     - description: A section of this passage is completely submerged beneath floodwaters, necessitating a short swim.
       weight: 4
-    - description: Water runs freeling down this passage, turning stairways into waterfalls, corridors into rivers.
+    - description: Water runs freely down this passage, turning stairways into waterfalls, corridors into rivers.
       weight: 2
     - description: The floor of the corridor is covered in fine silt, sticky and wet.
       weight: 1
@@ -32,6 +36,8 @@ earthquake:
       tags: [entrance]
     - description: The floor of this room has unstable patches, which might give way at any moment. Below is a natural cavern, 30' deep.
       tags: [hazard]
+    - description: A great crack runs across the floor, and emits a chilly breeze.
+      tags: [cave-entrance]
   passages:
     - description: The door-frame is partly collapsed and twisted, jamming the door shut.
       weight: 4
@@ -52,6 +58,8 @@ trees:
     - description: Tree roots swarm from the ceiling and crawl down the walls.
     - description: The whole ceiling of this room has collapsed long ago. In the dirt from the collapse, trees have grown, turning the room into a minature forest, stretching to the sky far above.
       tags: [entrance]
+    - description: Tree roots have destroyed the masonry of one wall, exposing a narrow cave beyond.
+      tags: [cave-entrance]
   passages:
     - description: Tree roots have burst through the ceiling and are crawling along the passageway's walls.
       weight: 1

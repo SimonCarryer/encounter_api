@@ -51,7 +51,7 @@ class HoardSource(TreasureSource):
     def get_treasure(self):
         response = {
             'objects': self.contents.objects,
-            'items': self.contents.items,
+            'magic_items': self.contents.items,
             'coins': self.contents.coins
         }
         return response

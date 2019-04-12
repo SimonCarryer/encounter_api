@@ -1,0 +1,57 @@
+<!doctype html>
+<title>Random Dungeon</title>
+<head>
+
+</head>
+<body>
+    <h1>Title</h1>
+    <svg width="400" height="400">
+    {% for passage in module.map.passages %}
+    <line x1="{{passage.x1}}" 
+          y1="{{passage.y1}}"
+          x2="{{passage.x2}}"
+          y2="{{passage.y2}}" 
+          style="stroke:rgb(0,0,0);stroke-width:12"
+          {% if passage.style == 'dashed' %} stroke-dasharray="5,5" {% endif %}
+          />
+    {% endfor %}
+    {% for room in module.map.rooms %}
+    <rect width="{{room.w}}" height="{{room.h}}" x="{{room.x}}", y="{{room.y}}" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+    {% endfor %}
+    {% for passage in module.map.passages %}
+    <line x1="{{passage.x1}}" 
+          y1="{{passage.y1}}"
+          x2="{{passage.x2}}"
+          y2="{{passage.y2}}" 
+          style="stroke:rgb(255,255,255);stroke-width:6"
+          />
+    {% if passage.label %}
+    <text x="{{passage.label_x}}" y="{{passage.label_y}}" font-weight="bold" fill="black">{{passage.label}}</text>
+    {% endif %}
+    {% endfor %}
+    {% for room in module.map.rooms %}
+    <text x="{{room.x + (room.w/2)}}" y="{{room.y + (room.h/2)}}" font-weight="bold" fill="black">{{room.room_id}}</text>
+    {% endfor %}
+</svg><br>
+{% for passage in module.passages %}
+<b>{{passage.letter}}:</b> {{passage.description}}<br>
+{% endfor %}
+{% for room in module.rooms %}
+<h3>Room {{room.room_id}}</h3>
+{{room.description}}<br><br>
+{% if room.encounter %}
+<b>Encounter: {{room.encounter.monster_set}}</b><br>
+{% for monster in room.encounter.monsters %}
+  {{monster.name}}: {{monster.number}}<br>
+{% endfor %}
+Coins: {{room.encounter.treasure.coins}}<br>
+Objects: {{room.encounter.treasure.objects}}<br><br>
+{% endif %}
+{% if room.treasure %}
+<b>Treasure Hoard</b><br>
+Objects: {{room.treasure.objects}}<br>
+Coins: {{room.treasure.coins}}<br>
+Items: {{room.treasure.magic_items}}<br>
+{% endif %}
+{% endfor %}
+</body>

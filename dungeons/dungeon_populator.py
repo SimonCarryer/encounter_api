@@ -45,7 +45,7 @@ class UndergroundNatives(DungeonPopulator):
     def accessible_rooms(self, layout):
         accessible_rooms = []
         for node, data in layout.nodes(data=True):
-            if 'entrance' in data['tags'] or 'cave-entrance' in data['tags']:
+            if 'cave-entrance' in data['tags']:
                 accessible_rooms.append(node)
                 passages = layout[node]
                 for adjacent_node, data in passages.items():
@@ -68,32 +68,15 @@ class UndergroundNatives(DungeonPopulator):
 class Lair(DungeonPopulator):
     def start_node(self, layout):
         possibles = [node for node, data in layout.nodes(data=True) if 'entrance' in data['tags'] and 'uninhabitable' not in data['tags']]
-        return self.random_state.choice(possibles)
-
-    def explore(self, layout, node):
-        passages = layout[node]
-        possibles = []
-        for adjacent_node, data in passages.items():
-            if data['weight'] <= 2 and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and adjacent_node not in self.explored_rooms:
-                possibles.append(adjacent_node)
         if len(possibles) > 0:
             return self.random_state.choice(possibles)
         else:
             return None
 
     def populate(self, layout):
-        self.explored_rooms = []
         node = self.start_node(layout)
-        next_node = self.explore(layout, node)
-        i = 0
-        while self.roll(2+i) and next_node is not None:
-            self.explored_rooms.append(node)
-            node = next_node
-            next_node = self.explore(layout, node)
-            i += 1
-        for explored_node in self.explored_rooms:
-            layout.node[explored_node]['encounter'] = None
-        layout.node[node]['encounter'] = self.encounter_source.get_encounter(difficulty='hard', occurrence='rare')
+        if node is not None:
+            layout.node[node]['encounter'] = self.encounter_source.get_encounter(difficulty='hard')
         return layout
 
 class Explorers(DungeonPopulator):

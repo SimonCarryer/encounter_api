@@ -47,7 +47,7 @@ class DungeonHistory:
             }
             event = Event(event_details, inhabitants['level'], random_state=self.random_state)
             self.events.append(event)
-        if self.random_state.randint(1, 6) >= 4:
+        if self.random_state.randint(1, 6) >= 3:
             event_details = {'type': 'ager'}
             event = Event(event_details, random_state=self.random_state)
             self.events.append(event)
@@ -62,6 +62,13 @@ class DungeonHistory:
             event_details = {'type': 'ager'}
             event = Event(event_details, random_state=self.random_state)
             self.events.append(event)
+        event_details = {
+                'type': 'populator',
+                'style': 'lair',
+                'monster_sets': ['apex predators', 'forest']
+            }
+        event = Event(event_details, inhabitants['level'], random_state=self.random_state)
+        self.events.append(event)
         explorers = inhabitants.get('explorers')
         if explorers is not None:
             event_details = {

@@ -59,7 +59,7 @@ class EncounterBuilder:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'pet' or monster['Name'] in current_names]
         if 'solo' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] == 'environmental hazard']
-        if 'solo' not in current_roles:
+        if 'solo' not in current_roles and len(current_roles) > 0:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'solo']
         if 'environmental hazard' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'environmental hazard']

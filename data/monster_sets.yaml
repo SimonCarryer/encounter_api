@@ -266,6 +266,7 @@ forest:
     role: solo
   - Name: Swarm of Ravens
     occurrence: uncommon
+    role: environmental hazard
   - Name: Wolf
     occurrence: common
   - Name: Worg
@@ -288,26 +289,28 @@ wolves:
     role: leader
     occurrence: rare
 
-haunted:
-  - Name: Banshee      
-    occurrence: uncommon
+tomb:
   - Name: Ghast      
     occurrence: common
-  - Name: Ghost      
-    occurrence: common
-  - Name: Flameskull      
-    occurrence: rare
   - Name: Ghoul      
     occurrence: common
   - Name: Skeleton      
     occurrence: common
   - Name: Wraith      
     occurrence: uncommon  
+  - Name: Wight      
+    occurrence: common
+
+haunted:
+  - Name: Banshee      
+    occurrence: uncommon
+  - Name: Ghost      
+    occurrence: common
+  - Name: Wraith      
+    occurrence: uncommon  
   - Name: Specter      
     occurrence: common    
   - Name: Shadow      
-    occurrence: common
-  - Name: Wight      
     occurrence: common
 
 bandits:
@@ -483,6 +486,7 @@ sewers:
    role: solo
  - Name: Swarm of Rats
    occurrence: common
+   role: environmental hazard
  - Name: Giant Rat
    occurrence: common
  - Name: Carrion Crawler
@@ -557,6 +561,7 @@ swamp:
    occurrence: common
  - Name: Swarm of Poisonous Snakes
    occurrence: common
+   role: environmental hazard
  - Name: Stirge
    occurrence: common
  - Name: Swarm of Insects
@@ -703,6 +708,15 @@ civilised folk:
    role: troops
 
 apex predators:
+ - Name: Brown Bear
+   occurrence: common
+   role: solo
+ - Name: Death Dog
+   occurrence: rare
+   role: solo
+ - Name: Giant Hyena
+   occurrence: uncommon
+   role: solo
  - Name: Medusa
    occurrence: rare
    role: solo
@@ -774,6 +788,12 @@ apex predators:
    role: solo
  - Name: Werebear
    occurrence: rare
+   role: solo
+ - Name: Giant Ape
+   occurrence: rare
+   role: solo
+ - Name: Troll
+   occurrence: uncommon
    role: solo
 
 cult of jubilex:
