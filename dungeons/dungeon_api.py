@@ -1,9 +1,9 @@
 from .dungeon import Dungeon
 import random
 
-explorers = ['bandits', 'goblins', 'orcs', 'hobgoblins', 'gnolls', 'bugbears', 'spiders', None, None]
+explorers = ['bandits', 'goblins', 'orcs', 'hobgoblins', 'gnolls', 'bugbears', 'spiders', None]
 tomb = ['tomb', 'tomb', 'spiders', 'haunted', None]
-stronghold = [None, None, 'haunted']
+stronghold = [None, 'haunted']
 temple = ['haunted', 'devils', 'demons', 'magical guardians', None]
 treasure_vault = ['magical guardians', 'haunted', 'magical guardians']
 

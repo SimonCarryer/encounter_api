@@ -54,7 +54,7 @@ class DungeonHistory:
         event_details = {
                 'type': 'populator',
                 'style': 'underground_natives',
-                'monster_sets': ['caves', 'myconids', 'gricks']
+                'monster_sets': ['caves', 'myconids', 'gricks', 'spiders']
             }
         event = Event(event_details, inhabitants['level'], random_state=self.random_state)
         self.events.append(event)
@@ -65,7 +65,7 @@ class DungeonHistory:
         event_details = {
                 'type': 'populator',
                 'style': 'lair',
-                'monster_sets': ['apex predators', 'forest']
+                'monster_sets': ['apex predators', 'forest', 'wolves']
             }
         event = Event(event_details, inhabitants['level'], random_state=self.random_state)
         self.events.append(event)

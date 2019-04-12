@@ -290,16 +290,21 @@ wolves:
     occurrence: rare
 
 tomb:
-  - Name: Ghast      
-    occurrence: common
-  - Name: Ghoul      
-    occurrence: common
-  - Name: Skeleton      
+  - Name: Skeleton
     occurrence: common
   - Name: Wraith      
     occurrence: uncommon  
   - Name: Wight      
     occurrence: common
+  - Name: Ghast      
+    occurrence: common
+    role: leader
+  - Name: Ghoul      
+    occurrence: common
+    role: troops
+  - Name: Carrion Crawler
+    occurrence: rare
+    role: environmental hazard
 
 haunted:
   - Name: Banshee      
@@ -794,6 +799,15 @@ apex predators:
    role: solo
  - Name: Troll
    occurrence: uncommon
+   role: solo
+ - Name: Bone Naga
+   occurrence: rare
+   role: solo
+ - Name: Guardian Naga
+   occurrence: rare
+   role: solo
+ - Name: Spirit Naga
+   occurrence: rare
    role: solo
 
 cult of jubilex:

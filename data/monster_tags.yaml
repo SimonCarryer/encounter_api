@@ -1,6 +1,7 @@
 bullywugs:
   - humanoid
   - savage
+  - villages
 efreet:
   - magical
 kenku:
@@ -8,27 +9,39 @@ kenku:
   - bird
 haunted:
   - undead
+  - immortal
+tomb:
+  - undead
+  - immortal
 bugbears:
   - savage
   - humanoid
+  - dungeon-explorers
 underwater:
+  - water
 githyanki:
   - humanoid
   - magical
 wolves:
   - wolves
   - beast
+  - forest
 elemental plane of water:
+  - water
 bandits:
   - humanoid
+  - dungeon-explorers
 drow:
   - humanoid
   - evil
   - spiders
+  - underdark
 apex predators:
   - beast
+  - forest
 desert:
   - beast
+  - desert
 lizardfolk:
   - savage
   - humanoid
@@ -37,96 +50,138 @@ plains:
 cult of baphomet:
   - evil
   - humanoid
+  - dungeon-explorers
 northmen:
   - humanoid
 forest goblins:
   - savage
   - humanoid
   - spiders
+  - forest
 elemental plane of fire:
 frost giants:
 necropolis:
   - undead
+  - immortal
 githzerai:
   - humanoid
   - magical
 lost world:
   - beast
+  - lost-world
 cult of orcus:
   - evil
   - humanoid
+  - dungeon-explorers
 goblins:
   - savage
   - humanoid
+  - dungeon-explorers
 cult of obox-ob:
   - evil
   - humanoid
+  - dungeon-explorers
 blights:
-  - undead
+  - immortal
+  - forest
+  - evil
 quaggoths:
   - savage
   - beast
+  - underdark
 mountains:
   - beast
   - bird
+  - mounntains
 gricks:
   - cave-dweller
+  - underdark
 underdark:
   - cave-dweller
+  - underdark
 orcs:
   - savage
   - humanoid
+  - dungeon-explorers
 swamp:
   - beast
+  - swamp
 forest:
   - beast
+  - forest
 spiders:
   - spiders
   - cave-dweller
+  - dungeon-explorers
 hills:
   - beast
   - bird
+  - hills
 devils:
   - evil
+  - immortal
 gnolls:
   - evil
   - savage
   - humanoid
+  - dungeon-explorers
 caves:
   - cave-dweller
 cult of jubilex:
   - evil
   - humanoid
   - fungus
+  - dungeon-explorers
 demons:
   - evil
+  - immortal
 civilised folk:
   - humanoid
 elemental plane of air:
+  - bird
 yuan-ti:
   - humanoid
   - evil
 cloud giants:
 modrons:
+  - magical
+  - immortal
 mind flayers:
+  - underdark
 magical guardians:
   - magical
+  - immortal
 fire giants:
+  - fire
 kuo-toa:
+  - water
 sewers:
+  - sewers
 kobolds:
   - humanoid
   - savage
+  - dungeon-explorers
+  - cave-dweller
 elemental plane of earth:
+  - earth
 myconids:
   - fungus
+  - cave-dweller
 sahuagin:
+  - water
 jungle tribes:
   - humanoid
+  - lost-world
+  - jungle
 arctic:
+  - cold
 hobgoblins:
   - humanoid
   - savage
+  - dungeon-explorers
 urban:
+  - urban
 fey:
   - fey
+  - immortal
+  - forest
