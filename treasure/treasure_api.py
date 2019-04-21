@@ -56,6 +56,10 @@ class HoardSource(TreasureSource):
         }
         return response
 
+class NothingSource(TreasureSource):
+    def get_treasure(self):
+        return None
+
 class IndividualSource(TreasureSource):
     def __init__(self,
                 list_of_monsters,

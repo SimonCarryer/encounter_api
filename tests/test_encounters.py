@@ -4,6 +4,9 @@ from random import Random
 from encounters.encounter_builder import EncounterBuilder
 from encounters.encounter_picker import EncounterPicker
 from encounters.xp_calculator import XPCalulator
+from utils import library
+
+# library.use_mock_monster_manual()
 
 def test_right_role():
     budget = 450
@@ -79,13 +82,13 @@ def test_encounter_source_is_deterministic():
     monsters = []
     random_state = Random(3)
     for _ in range(0, 5):
-        source = EncounterSource(xp_budget=450, monster_source=MockMonsterManual, random_state=random_state)
+        source = EncounterSource(xp_budget=450, random_state=random_state)
         encounter = source.get_encounter()
         monsters.append(encounter['monsters'])
     random_state = Random(3)
     monsters2 = []
     for _ in range(0, 5):
-        source = EncounterSource(xp_budget=450, monster_source=MockMonsterManual, random_state=random_state)
+        source = EncounterSource(xp_budget=450, random_state=random_state)
         encounter = source.get_encounter()
         monsters2.append(encounter['monsters'])
     assert monsters == monsters2
@@ -105,7 +108,7 @@ def test_encounter_picker_fails_nicely():
 
 
 def test_encounter_source_fails_nicely():
-    source = EncounterSource(xp_budget=0, monster_source=MockMonsterManual)
+    source = EncounterSource(xp_budget=0)
     encounter = source.get_encounter()
     assert not encounter['success']
 
@@ -130,4 +133,3 @@ def test_encounter_picker():
     monster_lists = builder.monster_lists
     picker = EncounterPicker(monster_lists, budget, random_state=state)
     # print(picker.pick_encounter(style='no leader'))
-    

@@ -1,6 +1,7 @@
 from random import Random
 from encounters.encounter_api import EncounterSource
 from treasure.treasure_api import HoardSource
+from traps.trap import Trap
 import networkx as nx
 
 
@@ -8,6 +9,7 @@ class DungeonPopulator:
     def __init__(self,
                  encounter_source,
                  treasure_source,
+                 trap_source=None,
                  random_state=None,
                  ):
         if random_state is None:
@@ -22,20 +24,21 @@ class DungeonPopulator:
 
     def sign(self):
         return self.encounter_source.get_sign()
-
         
 class OriginalInhabitants(DungeonPopulator):
     def populate(self, layout):
         for room_id, data in layout.nodes(data=True):
-            if 'important' in data['tags']:
+            if 'trap' in data['tags'] and 'important' in data['tags']:
+                data['trap'] = Trap()
+            elif 'important' in data['tags']:
                 data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
                 if self.roll(5):
                     data['treasure'] = self.treasure_source.get_treasure()
             elif 'entrance' in data['tags']:
                 data['encounter'] = self.encounter_source.get_encounter(style='basic')
-            elif 'secret' in data['tags'] and self.roll(3):
+            elif 'secret' in data['tags'] and self.roll(2):
                 data['encounter'] = self.encounter_source.get_encounter(style='elite')
-            elif self.roll(5):
+            elif self.roll(4):
                 data['encounter'] = self.encounter_source.get_encounter(style='no leader', difficulty='medium')
             else:
                 data['encounter'] = None
@@ -59,7 +62,8 @@ class UndergroundNatives(DungeonPopulator):
             if node in accessible_rooms:
                 if 'cave-entrance' in data['tags'] and self.roll(2):
                     data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
-                elif self.roll(5):
+                    data['tags'] += ['hazard', 'uninhabitable']
+                elif self.roll(4):
                     data['encounter'] = self.encounter_source.get_encounter()
                 else:
                     data['encounter'] = None
@@ -77,6 +81,18 @@ class Lair(DungeonPopulator):
         node = self.start_node(layout)
         if node is not None:
             layout.node[node]['encounter'] = self.encounter_source.get_encounter(difficulty='hard')
+            layout.node[node]['tags'] += ['hazard', 'uninhabitable']
+            if self.roll(4):
+                layout.node[node]['treasure'] = self.treasure_source.get_treasure()
+        return layout
+
+class Taint(DungeonPopulator):
+    def populate(self, layout, tag=None):
+        for node, data in layout.nodes(data=True):
+            if tag in data['tags']:
+                layout.node[node]['encounter'] = self.encounter_source.get_encounter()
+                if 'important' in data['tags'] and self.roll(5):
+                    data['treasure'] = self.treasure_source.get_treasure()
         return layout
 
 class Explorers(DungeonPopulator):
@@ -91,7 +107,7 @@ class Explorers(DungeonPopulator):
         passages = layout[node]
         new_nodes = []
         for adjacent_node, data in passages.items():
-            if self.random_state.randint(1, 3) > data['weight'] and adjacent_node not in self.explored_nodes and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and 'hazard' not in layout.node[adjacent_node]['tags']:
+            if self.random_state.randint(1, 3) >= data['weight'] and adjacent_node not in self.explored_nodes and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and 'hazard' not in layout.node[adjacent_node]['tags']:
                 new_nodes.append(adjacent_node)
         for node in new_nodes:
             self.explore(layout, node)
@@ -116,7 +132,8 @@ class Explorers(DungeonPopulator):
                 data['encounter'] = self.encounter_source.get_encounter(style='basic')
                 data['treasure'] = None
             elif self.roll(4):
-                data['encounter'] = self.encounter_source.get_encounter(style='no leader')
+                style = self.random_state.choice(['basic', 'no leader', 'no pets'])
+                data['encounter'] = self.encounter_source.get_encounter(style=style)
                 data['treasure'] = None
             else:
                 data['encounter'] = None

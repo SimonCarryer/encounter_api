@@ -1,0 +1,12 @@
+ancient_inhabitants:
+  - immortal
+  - guardians
+contemporary_inhabitants:
+  - humanoid
+dungeon_natives:
+  - cave-dweller
+  - immortal
+lair_makers:
+  - beast
+new_explorers:
+  - dungeon-explorer

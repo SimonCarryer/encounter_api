@@ -29,7 +29,8 @@ class EncounterPicker:
                 'xp_value': self.xp_calculator.adjusted_xp_sum(monster_list)
             }
             for monster in monster_list:
-                self.monsters[monster['occurrence']].add(monster['Name'])
+                if monster['role'] not in ['environmental hazard', 'pet']:
+                    self.monsters[monster['occurrence']].add(monster['Name'])
             self.encounters.append(encounter)
 
     def encounter_occurrence(self, monster_set):
@@ -69,11 +70,13 @@ class EncounterPicker:
     def score_encounter(self, difficulty, occurrence, style, preferred_monster, encounter):
         score = 0
         if encounter['difficulty'] == difficulty:
-            score += 2
+            score += 4
         if encounter['occurrence'] == occurrence:
-            score += 1
+            score += 2
         if style in encounter['tags']:
-            score += 3
+            score += 8
+        elif 'not just pets' in encounter['tags']:
+            score += 1
         if preferred_monster in [m['Name'] for m in encounter['monsters']]:
             score += 1
         return score

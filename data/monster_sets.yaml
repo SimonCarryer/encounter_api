@@ -1,4 +1,4 @@
-magical guardians:
+wizards tower:
   - Name: Animated Armor    
     occurrence: common 
   - Name: Flying Sword    
@@ -6,7 +6,7 @@ magical guardians:
   - Name: Rug of Smothering    
     occurrence: common 
   - Name: Flameskull    
-    occurrence: uncommon 
+    occurrence: common 
   - Name: Gargoyle    
     occurrence: common  
   - Name: Gibbering Mouther    
@@ -43,7 +43,7 @@ magical guardians:
     role: environmental hazard
     occurrence: rare
   - Name: Nothic    
-    occurrence: uncommon
+    occurrence: rare
     role: solo
   - Name: Shield Guardian    
     occurrence: common
@@ -59,6 +59,31 @@ magical guardians:
   - Name: Crawling Claw      
     occurrence: rare
     role: environmental hazard
+  - Name: Earth Elemental
+    occurrence: uncommon
+  - Name: Fire Elemental
+    occurrence: uncommon
+  - Name: Water Elemental
+    occurrence: uncommon
+  - Name: Air Elemental
+    occurrence: uncommon
+  - Name: Magmin
+    occurrence: uncommon
+
+constructs:
+  - Name: Animated Armor    
+    occurrence: common 
+  - Name: Iron Golem    
+    occurrence: common
+  - Name: Stone Golem
+    occurrence: common
+  - Name: Helmed Horror
+    occurrence: common
+  - Name: Shield Guardian
+    occurrence: common
+  - Name: Nothic    
+    role: environmental hazard
+    occurrence: rare
 
 bullywugs:
   - Name: Swarm of Insects    
@@ -85,7 +110,7 @@ spiders:
     role: troops
     occurrence: common
   - Name: Swarm of Insects      
-    role: troops
+    role: pet
     occurrence: uncommon
   - Name: Yochlol      
     role: leader
@@ -307,16 +332,18 @@ tomb:
     role: environmental hazard
 
 haunted:
-  - Name: Banshee      
+  - Name: Banshee
     occurrence: uncommon
-  - Name: Ghost      
+  - Name: Ghost
     occurrence: common
-  - Name: Wraith      
-    occurrence: uncommon  
-  - Name: Specter      
+  - Name: Wraith
+    occurrence: uncommon
+  - Name: Specter
     occurrence: common    
-  - Name: Shadow      
+  - Name: Shadow
     occurrence: common
+  - Name: Will-o-wisp
+    occurrence: rare
 
 bandits:
   - Name: Bandit/Pirate      
@@ -511,6 +538,7 @@ sewers:
    role: environmental hazard
  - Name: Gelatinous Cube
    occurrence: uncommon
+   role: solo
  - Name: Water Weird
    occurrence: rare
    role: solo
@@ -579,34 +607,34 @@ necropolis:
    role: leader
  - Name: Mummy
    occurrence: common
-   role: elite
+   role: natural hazard
+ - Name: Mummy
+   occurrence: common
+   role: leader
  - Name: Skeleton
    occurrence: common
    role: troops
  - Name: Animated Armor
    occurrence: uncommon
-   role: troops
+   role: natural hazard
  - Name: Flying Sword
    occurrence: uncommon
-   role: pet
+   role: natural hazard
  - Name: Shield Guardian
    occurrence: rare
-   role: pet
+   role: natural hazard
  - Name: Shadow
    occurrence: uncommon
-   role: elite
+   role: natural hazard
  - Name: Carrion Crawler
    occurrence: rare
    role: environmental hazard
- - Name: Invisible Stalker
-   occurrence: uncommon
-   role: environmental hazard
  - Name: Minotaur Skeleton
-   occurrence: uncommon
-   role: elite
+   occurrence: rare
+   role: leader
  - Name: Flameskull
    occurrence: uncommon
-   role: pet
+   role: natural hazard
 
 kuo-toa:
  - Name: Kuo-toa Monitor
@@ -950,6 +978,9 @@ underdark:
  - Name: Piercer
    occurrence: rare
    role: environmental hazard
+ - Name: Violet Fungus
+   occurrence: rare
+   role: environmental hazard
  - Name: Quaggoth
    occurrence: common
  - Name: Roper
@@ -999,6 +1030,26 @@ underdark:
    occurrence: uncommon
  - Name: Piercer
    occurrence: uncommon
+ - Name: Violet Fungus
+   occurrence: uncommon
+
+oozes:
+ - Name: Violet Fungus
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Ochre Jelly
+   occurrence: common
+ - Name: Gray Ooze
+   occurrence: rare
+   role: solo
+ - Name: Gelatinous Cube
+   occurrence: common
+ - Name: Black Pudding
+   occurrence: uncommon
+ - Name: Violet Fungus
+   occurrence: common
+ - Name: Gas Spore
+   occurrence: rare
 
 caves:
  - Name: Basilisk
@@ -1032,6 +1083,9 @@ caves:
  - Name: Piercer
    occurrence: rare
    role: environmental hazard
+ - Name: Violet Fungus
+   occurrence: rare
+   role: environmental hazard
  - Name: Roper
    occurrence: rare
    role: solo
@@ -1058,7 +1112,10 @@ caves:
    role: solo
  - Name: Gelatinous Cube
    occurrence: uncommon
+   role: solo
  - Name: Piercer
+   occurrence: uncommon
+ - Name: Violet Fungus
    occurrence: uncommon
 
 gricks:
@@ -1283,8 +1340,6 @@ elemental plane of earth:
 elemental plane of water:
  - Name: Water Elemental
    occurrence: common
- - Name: Dragon Turtle
-   occurrence: rare
  - Name: Marid
    occurrence: common
    role: solo
@@ -1292,10 +1347,6 @@ elemental plane of water:
    occurrence: uncommon
  - Name: Mud Mephit
    occurrence: uncommon
- - Name: Merfolk
-   occurrence: rare
- - Name: Aboleth
-   occurrence: rare
 
 elemental plane of fire:
  - Name: Fire Elemental

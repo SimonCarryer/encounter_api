@@ -1,12 +1,19 @@
 from random import Random
 import yaml
 
-with open('data/dungeon_rooms.yaml', 'r') as f:
-    dungeon_rooms = yaml.load(f)
-    for purpose in dungeon_rooms.keys():
-        for idx, room in enumerate(dungeon_rooms[purpose]):
+with open('data/dungeon_types.yaml', 'r') as f:
+    dungeon_rooms = {}
+    dungeon_tags = {}
+    dungeon_info = yaml.load(f)
+    for purpose in dungeon_info.keys():
+        rooms = []
+        for idx, room in enumerate(dungeon_info[purpose]['rooms']):
             room['room_id'] = idx
             room['tags'] = room.get('tags', [])
+            rooms.append(room)
+        dungeon_rooms[purpose] = rooms
+        dungeon_tags[purpose] = dungeon_info[purpose]['tags']
+
 
 class DungeonFurnisher:
     def __init__(self, purpose, random_state=None):
@@ -21,6 +28,7 @@ class DungeonFurnisher:
     def furnish(self, layout):
         for n, room in layout.nodes(data=True):
             room['description'] = self.choose_room_type(room['tags'])
+        layout.purpose = self.purpose
         return layout
 
     def appropriate_room_type(self, room_type, room_tags):

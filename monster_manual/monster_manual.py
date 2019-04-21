@@ -2,6 +2,11 @@ import csv
 import yaml
 from random import Random
 import copy
+import numpy as np
+
+with open('data/xp_values.yaml') as f:
+    xp_values = yaml.load(f.read())
+    level_lookup = {value: key for key, value in xp_values.items()}
 
 with open('data/monster_tags.yaml') as f:
     monster_tags = yaml.load(f.read())
@@ -51,10 +56,50 @@ class MonsterManual():
     def __init__(self):
         self.monster_sets = monster_sets
         self.monster_set_names = [key for key in self.monster_sets.keys()]
+        self.monster_tags = copy.deepcopy(monster_tags)
 
     def monsters(self, monster_set_name):
         monster_set = copy.deepcopy(self.monster_sets[monster_set_name])
         return monster_set
+
+    def get_monster_set_by_tags(self, list_of_tags, monster_sets=None, any_or_all=any, exclude=False):
+        if list_of_tags is None:
+            list_of_tags = []
+        if monster_sets is None:
+            monster_sets = self.monster_set_names
+        if exclude:
+            filter_sets = lambda x: not any_or_all(x)
+        else:
+            filter_sets = lambda x: any_or_all(x)
+        sets = []
+        for monster_set in monster_sets:
+            set_tags =  self.monster_tags.get(monster_set, [])
+            if filter_sets([tag in set_tags for tag in list_of_tags]):
+                sets.append(monster_set)
+        return sets
+
+    def get_monster_sets(self, all_tags=None, any_tags=None, none_tags=None, level=None, sets=None):
+        if sets is None:
+            sets = self.monster_set_names
+        if all_tags is not None:
+            sets = self.get_monster_set_by_tags(all_tags, monster_sets=sets, any_or_all=all)
+        if any_tags is not None:
+            sets = self.get_monster_set_by_tags(any_tags, monster_sets=sets, any_or_all=any)
+        if none_tags is not None:
+            sets = self.get_monster_set_by_tags(none_tags, monster_sets=sets, any_or_all=any, exclude=True)
+        if level is not None:
+            sets = [monster_set for monster_set in sets if self.appropriate_challenge(monster_set, level)]
+        return sets
+
+    def appropriate_challenge(self, monster_set, level):
+        monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set]]
+        good_challenge_monsters = [monster_level for monster_level in monster_levels if monster_level <= level*2 and monster_level >= level/4]
+        number_of_monsters = len(good_challenge_monsters)
+        median = np.median(monster_levels)
+        return number_of_monsters >= 5 or (median <= level*2 and median >= level/4)
+
+
+        
 
     # def signs(self):
     #     tags = copy.deepcopy(monster_tags[self.name])

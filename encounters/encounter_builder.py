@@ -53,6 +53,8 @@ class EncounterBuilder:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'elite' or monster['Name'] in current_names]
         if 'troops' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['role'] != 'troops' or monster['Name'] in current_names]
+        if 'natural hazard' not in current_roles and current_roles != []:
+            possible_monsters = [monster for monster in possible_monsters if monster['Name'] in current_names or monster['role'] != 'natural hazard']
         if 'natural hazard' in current_roles:
             possible_monsters = [monster for monster in possible_monsters if monster['Name'] in current_names or monster['role'] == 'environmental hazard']
         if 'pet' in current_roles:

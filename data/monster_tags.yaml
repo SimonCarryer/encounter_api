@@ -1,9 +1,9 @@
 bullywugs:
   - humanoid
-  - savage
-  - villages
 efreet:
   - magical
+  - fire
+  - immortal
 kenku:
   - humanoid
   - bird
@@ -13,10 +13,11 @@ haunted:
 tomb:
   - undead
   - immortal
+  - guardian
 bugbears:
   - savage
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
 underwater:
   - water
 githyanki:
@@ -27,10 +28,14 @@ wolves:
   - beast
   - forest
 elemental plane of water:
+  - magical
   - water
+  - immortal
+  - elemental
 bandits:
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
+  - human
 drow:
   - humanoid
   - evil
@@ -43,26 +48,38 @@ desert:
   - beast
   - desert
 lizardfolk:
-  - savage
   - humanoid
+  - swamp
 plains:
   - beast
+  - plains
 cult of baphomet:
   - evil
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
+  - human
 northmen:
   - humanoid
+  - human
 forest goblins:
   - savage
   - humanoid
   - spiders
   - forest
 elemental plane of fire:
+  - fire
+  - immortal
+  - elemental
+  - magical
 frost giants:
+  - cold
+  - giant
+  - arctic
 necropolis:
   - undead
   - immortal
+  - guardian
+  - desert
 githzerai:
   - humanoid
   - magical
@@ -72,19 +89,22 @@ lost world:
 cult of orcus:
   - evil
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
+  - human
 goblins:
   - savage
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
 cult of obox-ob:
   - evil
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
+  - human
 blights:
   - immortal
   - forest
   - evil
+  - plant
 quaggoths:
   - savage
   - beast
@@ -92,17 +112,16 @@ quaggoths:
 mountains:
   - beast
   - bird
-  - mounntains
+  - mountains
 gricks:
   - cave-dweller
-  - underdark
 underdark:
   - cave-dweller
   - underdark
 orcs:
   - savage
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
 swamp:
   - beast
   - swamp
@@ -112,7 +131,9 @@ forest:
 spiders:
   - spiders
   - cave-dweller
-  - dungeon-explorers
+  - dungeon-explorer
+  - forest
+  - swamp
 hills:
   - beast
   - bird
@@ -120,56 +141,80 @@ hills:
 devils:
   - evil
   - immortal
+  - fiend
 gnolls:
   - evil
   - savage
   - humanoid
-  - dungeon-explorers
+  - dungeon-explorer
 caves:
   - cave-dweller
 cult of jubilex:
   - evil
   - humanoid
   - fungus
-  - dungeon-explorers
+  - human
 demons:
   - evil
+  - fiend
   - immortal
 civilised folk:
   - humanoid
+  - human
 elemental plane of air:
+  - magical
+  - elemental
   - bird
+  - air
 yuan-ti:
   - humanoid
   - evil
+  - jungle
 cloud giants:
+  - giant
+  - mountains
 modrons:
   - magical
   - immortal
 mind flayers:
   - underdark
-magical guardians:
+wizards tower:
+  - guardian
   - magical
+  - immortal
+constructs:
+  - guardian
+  - construct
   - immortal
 fire giants:
   - fire
+  - giant
 kuo-toa:
+  - cave-dweller
+  - underdark
   - water
 sewers:
+  - urban
   - sewers
 kobolds:
   - humanoid
   - savage
-  - dungeon-explorers
+  - dungeon-explorer
   - cave-dweller
 elemental plane of earth:
+  - immortal
+  - magical
+  - elemental
   - earth
 myconids:
   - fungus
   - cave-dweller
 sahuagin:
   - water
+  - savage
+  - humanoid
 jungle tribes:
+  - human
   - humanoid
   - lost-world
   - jungle
@@ -178,10 +223,22 @@ arctic:
 hobgoblins:
   - humanoid
   - savage
-  - dungeon-explorers
+  - dungeon-explorer
 urban:
   - urban
 fey:
   - fey
-  - immortal
   - forest
+oozes:
+  - cave-dweller
+  - fungus
+yugoloths:
+  - evil
+  - immortal
+  - magical
+  - fiend
+angels:
+  - celestial
+  - immortal
+  - magical
+  - fiend

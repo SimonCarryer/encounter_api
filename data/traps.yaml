@@ -1,0 +1,183 @@
+attack:
+  setback: 3, 5
+  dangerous: 6, 8
+  deadly: 9, 12
+
+save:
+  setback: 10, 11
+  dangerous: 12, 15
+  deadly: 16, 20
+
+damage:
+  4:
+    setback: 1
+    dangerous: 2
+    deadly: 4
+  10:
+    setback: 2
+    dangerous: 4
+    deadly: 10
+  16:
+    setback: 4
+    dangerous: 10
+    deadly: 18
+  20:
+    setback: 10
+    dangerous: 18
+    deadly: 24
+
+mechanical:
+  telltales:
+    - visible wires
+    - loose stones
+    - oddly-constructed masonry
+    - suspicious slits or gaps
+    - a hollow sound
+    - the smell of grease
+    - unusual wear-patterns
+    - discoloured stone
+    - bloodstains
+    - scratches in the stonework
+    - the sound of a spring under tension
+  trigger:
+    - turning a door handle
+    - pressure plate
+    - tripwire
+    - picking up an object
+    - opening a door
+    - opening a chest or cupboard
+    - upsetting a carefully-balanced statue
+  effect:
+    4:
+      - name: Pitfall
+        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 bludgeoning damage.
+      - name: Spear
+        effect: Attack roll at +${attack}, causing ${damage}d10 piercing damage.
+      - name: Arrow
+        effect: Attack roll at +${attack}, causing ${damage}d10 piercing damage.
+      - name: Falling object
+        effect: The object causes ${damage}d8 bludgeoning damage in a 10' radius. Dex save (difficulty ${save}) to avoid the damage.
+      - name: Poison Needle
+        effect: Con save (difficulty ${save}), causing ${damage}d10 poison damage.
+      - name: Falling object
+        effect: The object causes ${damage}d10 bludgeoning damage. Dex save (difficulty ${save}) to avoid the damage.
+      - name: Legcatcher
+        effect: The target is restrained. On their turn, they can make a difficulty ${save} Str save to end this condition. Failing this save, they take ${damage}d4 piercing damage.
+    10:
+      - name: Pitfall
+        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 bludgeoning damage.
+      - name: Falling objects
+        effect: The objects cause ${damage}d8 bludgeoning damage in a 10' radius. Dex save (difficulty ${save}) to avoid the damage.
+      - name: Falling object
+        effect: The object causes ${damage}d10 bludgeoning damage. Dex save (difficulty ${save}) to avoid the damage.
+      - name: Scything blade
+        effect: Attack roll at +${attack}, causing ${damage}d10 slashing damage.
+      - name: Poison Gas
+        effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
+      - name: Legcatcher
+        effect: The target is restrained. On their turn, they can make a difficulty ${save} Str save to end this condition. Failing this save, they take ${damage}d4 piercing damage.
+    16:
+      - name: Poison Gas
+        effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
+      - name: Whirling blades
+        effect: Whirling blades make an attack at +${attack} against everyone in a 15' radius, each causing ${damage}d6 slashing damage.
+      - name: Rolling boulder
+        effect: Everyone in a straight line from the trigger point must make a Dex save (difficulty ${save}), or take ${damage}d10 bludgeoning damage.
+      - name: Grinding pit
+        effect: Dex save (difficulty ${save}) or fall into the grinding gears, incurring ${damage}d10 slashing damage.
+      - name: Acid spray
+        effect: Everyone in a 30' cone takes ${damage}d6 acid damage. Dex save (difficulty ${save}) for half damage.
+      - name: Collapsing ceiling
+        effect: The ceiling falls, causing ${damage}d8 bludgeoning damage (Dex save - DC${save} for half) to everyone in the room. The room is now difficult terrain.
+    20:
+      - name: Poison Gas
+        effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
+      - name: Whirling blades
+        effect: Whirling blades make an attack at +${attack} against everyone in a 15' radius, each causing ${damage}d6 slashing damage.
+      - name: Rolling boulder
+        effect: Everyone in a straight line from the trigger point must make a Dex save (difficulty ${save}), or take ${damage}d10 bludgeoning damage.
+      - name: Grinding pit
+        effect: Dex save (difficulty ${save}) or fall into the grinding gears, incurring ${damage}d10 slashing damage.
+      - name: Crushing Walls
+        effect: The walls cause ${damage}d8 bludgeoning damage (Str save - DC${save} for half) to everyone in the room.
+      - name: Acid spray
+        effect: Everyone in a 30' cone takes ${damage}d6 acid damage. Dex save (difficulty ${save}) for half damage.
+      - name: Collapsing ceiling
+        effect: The ceiling falls, causing ${damage}d8 bludgeoning damage (Dex save - DC${save} for half) to everyone in the room. The room is now difficult terrain.
+
+magical:
+  telltales:
+    - hair standing on end
+    - a finely inscribed rune
+    - the smell of a spell component
+    - a feeling of being watched
+    - discoloured stone
+    - unusual wear-patterns
+    - distant chimes
+    - a premonition of danger
+    - a faint rumbling sound
+    - sooty or slimy residue
+  trigger:
+    - reading a rune
+    - standing on a sigil
+    - interacting with an object
+    - being seen by a statue
+    - making any sound
+    - touching a symbol
+    - crossing between two statues
+    - failing to speak the safe word
+    - touching a gemstone
+  effect:
+    4:
+      - name: Burst of Flame
+        effect: The flame causes ${damage}d8 damage (Dex save DC${save} for half) to everyone in a 30' cone.
+      - name: Fear spell
+        effect: The target makes a DC${save} Wis save, or is frightened of the source of the spell - usually a statue or carved image.
+      - name: Blinding spell
+        effect: The target makes a DC${save} Con save, or is blinded. The condition ends after a short rest.
+      - name: Lightning
+        effect: The bolt strikes anyone in the room who fails a DC${save} Dex save, for ${damage}d6 lightning damage.
+      - name: Eyebeams
+        effect: The beams make an attack roll at +${attack}, causing ${damage}d10 radiant or necrotic damage.
+      - name: Sleep spell
+        effect: Everyone in the room must make a DC${save} Wis save or fall unconsicous. The effect ends after an hour, or if the target is woken.
+      - name: Summon Monsters
+        effect: The trap summons the following monsters, which immediately attack. ${monsters}
+    10:
+      - name: Burst of Flame
+        effect: The flame causes ${damage}d8 damage (Dex save DC${save} for half) to everyone in a 30' cone.
+      - name: Rotting Curse
+        effect: The cursed victim takes ${damage}d10 necrotic damage (Con save DC${save} for half)
+      - name: Fear spell
+        effect: The target makes a DC${save} Wis save, or is frightened of the source of the spell - usually a statue or carved image.
+      - name: Blinding spell
+        effect: The target makes a DC${save} Con save, or is blinded. The condition ends after a short rest.
+      - name: Lightning
+        effect: The bolt strikes anyone in the room who fails a DC${save} Dex save, for ${damage}d6 lightning damage.
+      - name: Eyebeams
+        effect: The beams make an attack roll at +${attack}, causing ${damage}d10 radiant or necrotic damage.
+      - name: Summon Monsters
+        effect: The trap summons the following monsters, which immediately attack. ${monsters}
+    16:
+      - name: Magical Blades
+        effect: Attack roll at +${attack}, causing ${damage}d10 slashing damage.
+      - name: Lightning
+        effect: The bolt strikes anyone in the room who fails a DC${save} Dex save, for ${damage}d6 lightning damage.
+      - name: Animate Statue
+        effect: The statue makes one attack at +${attack}, for ${damage}d10 slashing or bludgeoning damage. The statue then turns back to stone.
+      - name: Petrifying ray
+        effect: The ray makes an attack at +${attack}. If struck, the victim must make a Con save DC${save} or be Petrified. They may make another save every hour.
+      - name: Summon Monsters
+        effect: The trap summons the following monsters, which immediately attack. ${monsters}
+    20:
+      - name: Animate Statue
+        effect: The statue makes one attack at +${attack}, for ${damage}d10 slashing or bludgeoning damage. The statue then turns back to stone.
+      - name: Petrifying ray
+        effect: The ray makes an attack at +${attack}. If struck, the victim must make a Con save DC${save} or be Petrified. They may make another save every hour.
+      - name: Lightning
+        effect: The bolt strikes anyone in the room who fails a DC${save} Dex save, for ${damage}d6 lightning damage.
+      - name: Vortex
+        effect: A whirling vortex drags everyone in the room 10' towards the vortex every round (Str save DC${save} to avoid). Anyone reaching the center of the vortex is transported to a remote demiplane, as per the "Hedged Prison" variant of the Imprisonment spell.
+      - name: Summon Monsters
+        effect: The trap summons the following monsters, which immediately attack. ${monsters}
+

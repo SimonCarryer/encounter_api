@@ -9,6 +9,7 @@ class DungeonLayout(nx.Graph):
         else:
             self.random_state = random_state
         self.secret_chance = secret_chance
+        self.tags = []
         if n_rooms > 0:
             # make each room
             for room_idx in range(n_rooms):

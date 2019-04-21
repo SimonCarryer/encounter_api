@@ -1,79 +1,23 @@
 from .dungeon import Dungeon
-import random
+from .dungeon_layout import DungeonLayout
+from .dungeon_templates import some_examples
+from random import Random
 
-explorers = ['bandits', 'goblins', 'orcs', 'hobgoblins', 'gnolls', 'bugbears', 'spiders', None]
-tomb = ['tomb', 'tomb', 'spiders', 'haunted', None]
-stronghold = [None, 'haunted']
-temple = ['haunted', 'devils', 'demons', 'magical guardians', None]
-treasure_vault = ['magical guardians', 'haunted', 'magical guardians']
+
 
 class DungeonSource():
-    def __init__(self, level):
+    def __init__(self, level, random_state=None):
+        if random_state is None:
+            self.random_state = Random()
+        else:
+            self.random_state = random_state
         self.level = level
-        specifications = random.choice([self.tomb(), self.stronghold(), self.temple(), self.treasure_vault()])
-        self.dungeon = Dungeon(specifications)
+        layout = DungeonLayout(n_rooms=self.random_state.randint(5, 8))
+        templates = self.random_state.choice(some_examples)
+        for template in templates:
+            template(self.level, random_state=self.random_state).alter_dungeon(layout)
+        self.dungeon = Dungeon(layout)
 
     def get_dungeon(self):
         return self.dungeon.module()
-
-
-    def tomb(self):
-        specifications = {
-        'inhabitants': {
-            'original_inhabitants': random.choice(tomb),
-            'explorers': random.choice(explorers),
-            'level': self.level
-            },
-        'purpose': 'tomb',
-        'rooms': random.randint(5, 8)
-        }
-        return specifications
-
-    def mine(self):
-        specifications = {
-        'inhabitants': {
-            'original_inhabitants': None,
-            'explorers': random.choice(explorers),
-            'level': self.level
-            },
-        'purpose': 'mine',
-        'rooms': random.randint(5, 8)
-        }
-        return specifications
-    
-    def stronghold(self):
-        specifications = {
-        'inhabitants': {
-            'original_inhabitants': random.choice(stronghold),
-            'explorers': random.choice(explorers),
-            'level': self.level
-            },
-        'purpose': 'stronghold',
-        'rooms': random.randint(5, 8)
-        }
-        return specifications
-
-    def temple(self):
-        specifications = {
-        'inhabitants': {
-            'original_inhabitants': random.choice(temple),
-            'explorers': random.choice(explorers),
-            'level': self.level
-            },
-        'purpose': 'temple',
-        'rooms': random.randint(5, 8)
-        }
-        return specifications
-
-    def treasure_vault(self):
-        specifications = {
-        'inhabitants': {
-            'original_inhabitants': random.choice(treasure_vault),
-            'explorers': None,
-            'level': self.level
-            },
-        'purpose': 'treasure vault',
-        'rooms': random.randint(5, 8)
-        }
-        return specifications
 

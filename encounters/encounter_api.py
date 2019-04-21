@@ -1,10 +1,10 @@
 from .encounter_builder import EncounterBuilder
 from .encounter_picker import EncounterPicker
 from collections import Counter
-from .monsters import MonsterManual
 from treasure.treasure_api import IndividualSource
 import yaml
 import random
+from utils.library import monster_manual
 
 with open('data/xp_values.yaml') as f:
     xp_values = yaml.load(f.read())
@@ -16,7 +16,6 @@ class EncounterSource:
                 encounter_level=None,
                 character_level_dict=None,
                 monster_sets=None,
-                monster_source=MonsterManual,
                 random_state=None):
         if random_state is None:
             self.random_state = random.Random()
@@ -33,13 +32,12 @@ class EncounterSource:
             self.n_characters = sum([i for i in character_level_dict.values()])
         else:
             raise NoXPBudgetError
-        self.monster_source = monster_source()
         if monster_sets is None:
-            monster_set = self.random_state.choice(self.monster_source.monster_set_names)
+            monster_set = self.random_state.choice(monster_manual.monster_set_names)
         else:
             monster_set = self.random_state.choice(monster_sets)
         self.monster_set = monster_set
-        monsters = self.monster_source.monsters(monster_set)
+        monsters = monster_manual.monsters(monster_set)
         encounters = EncounterBuilder(self.xp_budget, monsters, n_characters=self.n_characters).monster_lists
         self.encounter_picker = EncounterPicker(encounters, self.xp_budget, n_characters=self.n_characters, random_state=self.random_state)
                 

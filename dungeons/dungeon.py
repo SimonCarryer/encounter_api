@@ -1,31 +1,16 @@
-from .dungeon_history import DungeonHistory
-from .dungeon_furnisher import DungeonFurnisher
-from .dungeon_layout import DungeonLayout
 from random import Random
 import networkx as nx
-
-example_specifications = {
-    'inhabitants': {
-        'original_inhabitants': 'haunted',
-        'new_explorers': 'goblins',
-        'level': 3
-        },
-    'purpose': 'stronghold'
-}
 
 letters = 'abcdefghijklmnopqrstuvwxyz'
 
 class Dungeon:
     def __init__(self,
-                 specifications,
+                 layout,
                  random_state=None):
         if random_state is None:
             self.random_state = Random()
         else:
             self.random_state = random_state
-        layout = DungeonLayout(specifications['rooms'], connectivity_threshold=1.2, random_state=self.random_state)
-        DungeonFurnisher(specifications['purpose'], random_state=self.random_state).furnish(layout)
-        DungeonHistory(specifications['inhabitants'], random_state=self.random_state).alter_dungeon(layout)
         self.layout = layout
 
     def module(self):
@@ -43,6 +28,7 @@ class Dungeon:
                 seq += 1
                 module['passages'].append(passage)
         module['map'] = self.map()
+        module['dungeon_type'] = self.layout.purpose
         return module
 
     def make_postions(self, arr, max_dim=300):
@@ -65,7 +51,8 @@ class Dungeon:
                 'x': x,
                 'y': y,
                 'h': 40,
-                'w': 40
+                'w': 40,
+                'entrance': True if 'entrance' in self.layout.node[room_id]['tags'] else False
             }
             rooms.append(room)
         passages = []

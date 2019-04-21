@@ -81,7 +81,7 @@ def test_hoard_api():
     source = HoardSource(encounter_level=10, random_state=state)
     treasure = source.get_treasure()
     assert treasure['objects'] == '8 gems of value 50gp each (total 400gp)'
-    assert sorted(treasure['items']) == ['Potion of animal friendship', 'Potion of growth', 'Potion of water breathing', 'Spell scroll (3rd leve l)']
+    assert sorted(treasure['magic_items']) == ['Potion of animal friendship', 'Potion of growth', 'Potion of water breathing', 'Spell scroll (3rd leve l)']
     assert sorted(treasure['coins']) == ['1,900 GP', '130 PP', '7,000 SP', '700 CP']
 
 def test_individual_api():
