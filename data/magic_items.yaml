@@ -1,18 +1,67 @@
 Adamantine armor: uncommon
+Adamantine armor (chain mail): uncommon
+Adamantine armor (chain shirt): uncommon
+Adamantine armor (scale mail): uncommon
+Adamantine armor (breastplate): uncommon
+Adamantine armor (half plate): uncommon
+Adamantine armor (plate): uncommon
+Adamantine armor (splint): uncommon
+Armor of resistance: rare
+Armor of resistance (leather): rare
+Armor of resistance (studded leather): rare
+Armor of resistance (chain mail): rare
+Armor of resistance (chain shirt): rare
+Armor of resistance (scale mail): rare
+Armor of resistance (breastplate): rare
+Armor of resistance (splint): rare
+Armor of resistance (half plate): rare
+Armor of resistance (plate): rare
 Alchemy jug: uncommon
-Ammunition +1: uncommon
-Ammunition +2: rare
-Ammunition +3: very rare
+Ammunition, +1: uncommon
+Ammunition, +2: rare
+Ammunition, +3: very rare
 Amulet of health: rare
 Amulet of proof against detection and location: uncommon
 Amulet of the planes: very rare
 Animated shield: very rare
 Apparatus of Kwalish: legendary
-Armor +1: rare
-Armor +2: very rare
-Armor +3: legendary
+Armor, +1: rare
+Armor, +1 studded leather: rare
+Armor, +1 leather: rare
+Armor, +1 chain mail: rare
+Armor, +1 chain shirt: rare
+Armor, +1 scale mail: rare
+Armor, +1 breastplate: rare
+Armor, +1 splint: rare
+Armor, +1 half plate: rare
+Armor, +1 plate: rare
+Armor, +2: very rare
+Armor, +2 leather: very rare
+Armor, +2 studded leather: very rare
+Armor, +2 chain mail: very rare
+Armor, +2 chain shirt: very rare
+Armor, +2 scale mail: very rare
+Armor, +2 breastplate: very rare
+Armor, +2 splint: very rare
+Armor, +2 half plate: very rare
+Armor, +2 plate: very rare
+Armor, +3 leather: legendary
+Armor, +3 studded leather: legendary
+Armor, +3 chain mail: legendary
+Armor, +3 chain shirt: legendary
+Armor, +3 scale mail: legendary
+Armor, +3 breastplate: legendary
+Armor, +3 splint: legendary
+Armor, +3 half plate: legendary
+Armor, +3 plate: legendary
+Armor, +3: legendary
 Armor of invulnerability: legendary
 Armor of resistance: rare
+Armor of resistance (chain mail): rare
+Armor of resistance (chain shirt): rare
+Armor of resistance (scale mail): rare
+Armor of resistance (breastplate): rare
+Armor of resistance (splint): rare
 Armor of vulnerability: rare
 Arrow of slaying: very rare
 Arrow-catching shield: rare
@@ -20,13 +69,18 @@ Bag of beans: rare
 Bag of devouring: very rare
 Bag of holding: uncommon
 Bag of tricks: uncommon
+Bag of tricks (gray): uncommon
+Bag of tricks (rust): uncommon
+Bag of tricks (tan): uncommon
 Bead of force: rare
 Belt of dwarvenkind: rare
-Belt of giant strength (cloud giant): legendary
-Belt of giant strength (fire giant): very rare
-Belt of giant strength (frost or stone giant): very rare
-Belt of giant strength (hill giant): rare
-Belt of giant strength (storm giant): legendary
+Belt of cloud giant strength: legendary
+Belt of fire giant strength: very rare
+Belt of frost giant strength: very rare
+Belt of frost (or stone) giant strength: very rare
+Belt of stone giant strength: very rare
+Belt of hill giant strength: rare
+Belt of storm giant strength: legendary
 Berserker axe: rare
 Boots of elvenkind: uncommon
 Boots of levitation: rare
@@ -53,11 +107,11 @@ Cloak of invisibility: legendary
 Cloak of protection: uncommon
 Cloak of the bat: rare
 Cloak of the manta ray: uncommon
-Crystal ball: very rare
-Crystal ball: legendary
+Crystal ball (very rare version): very rare
+Crystal ball (legendary version): legendary
 Cube of force: rare
 Cubic gate: legendary
-Daern’s instant fortress: rare
+Daern's instant fortress: rare
 Dagger of venom: rare
 Dancing sword: very rare
 Decanter of endless water: uncommon
@@ -83,6 +137,8 @@ Eversmoking bottle: uncommon
 Eyes of charming: uncommon
 Eyes of minute seeing: uncommon
 Eyes of the eagle: uncommon
+Figurine of wondrous power: rare
+Serpentine owl: rare
 Figurine of wondrous power (bronze griffon): rare
 Figurine of wondrous power (ebony fly): rare
 Figurine of wondrous power (golden lions): rare
@@ -111,22 +167,22 @@ Helm of brilliance: very rare
 Helm of comprehending languages: uncommon
 Helm of telepathy: uncommon
 Helm of teleportation: rare
-Heward’s handy haversack: rare
+Heward's handy haversack: rare
 Holy avenger: legendary
 Horn of blasting: rare
-Horn of valhalla (bronze): very rare
-Horn of valhalla (iron): legendary
-Horn of valhalla (silver or brass): rare
+Horn of Valhalla (bronze): very rare
+Horn of Valhalla (iron): legendary
+Horn of Valhalla (silver or brass): rare
 Horseshoes of a zephyr: very rare
 Horseshoes of speed: rare
 Immovable rod: uncommon
-Instrument of the bard (Anstruth harp): very rare
-Instrument of the bard (Canaith mandolin): rare
-Instrument of the bard (Cli lyre): rare
-Instrument of the bard (Doss lute): uncommon
-Instrument of the bard (Fochlucan bandore): uncommon
-Instrument of the bard (Mac-Fuirmidh cittern): uncommon
-Instrument of the bard (Ollamh harp): legendary
+Instrument of the bards (Anstruth harp): very rare
+Instrument of the bards (Canaith mandolin): rare
+Instrument of the bards (Cli lyre): rare
+Instrument of the bards (Doss lute): uncommon
+Instrument of the bards (Fochlucan bandore): uncommon
+Instrument of the bards (Mac-Fuimidh cittern): uncommon
+Instrument of the bards (Ollamh harp): legendary
 Ioun stone (absorption): very rare
 Ioun stone (agility): very rare
 Ioun stone (awareness): rare
@@ -141,10 +197,10 @@ Ioun stone (regeneration): legendary
 Ioun stone (reserve): rare
 Ioun stone (strength): very rare
 Ioun stone (sustenance): rare
-Iron bands of bilarro: rare
+Iron bands of Bilarro: rare
 Iron flask: legendary
 Javelin of lightning: uncommon
-Keoghtom’s ointment: uncommon
+Keoghtom's ointment: uncommon
 Lantern of revealing: uncommon
 Luck blade: legendary
 Mace of disruption: rare
@@ -155,7 +211,7 @@ Manual of bodily health: very rare
 Manual of gainful exercise: very rare
 Manual of golems: very rare
 Manual of quickness of action: very rare
-Mariner’s armor: uncommon
+Mariner's armor: uncommon
 Medallion of thoughts: uncommon
 Mirror of life trapping: very rare
 Mithral armor: uncommon
@@ -163,8 +219,8 @@ Necklace of adaptation: uncommon
 Necklace of fireballs: rare
 Necklace of prayer beads: rare
 Nine lives stealer: very rare
-Nolzur’s marvelous pigments: very rare
-Oathbow: very rare
+Nolzur's marvelous pigments: very rare
+Oath bow: very rare
 Oil of etherealness: rare
 Oil of sharpness: very rare
 Oil of slipperiness: uncommon
@@ -184,11 +240,12 @@ Potion of diminution: rare
 Potion of fire breath: uncommon
 Potion of flying: very rare
 Potion of gaseous form: rare
-Potion of giant strength (cloud giant): very rare
-Potion of giant strength (fire giant): rare
-Potion of giant strength (frost or stone giant): rare
-Potion of giant strength (hill giant): uncommon
-Potion of giant strength (storm giant): legendary
+Potion of cloud giant strength: very rare
+Potion of stone giant strength: very rare
+Potion of fire giant strength: rare
+Potion of frost giant strength: rare
+Potion of hill giant strength: uncommon
+Potion of storm giant strength: legendary
 Potion of greater healing: uncommon
 Potion of growth: uncommon
 Potion of healing: common
@@ -204,11 +261,14 @@ Potion of resistance: uncommon
 Potion of speed: very rare
 Potion of vitality: very rare
 Potion of water breathing: uncommon
-Quaal’s feather token: rare
+Quaal's feather token: rare
 Quiver of Ehlonna: uncommon
 Ring of animal influence: rare
 Ring of djinni summoning: legendary
-Ring of elemental command: legendary
+Ring of air elemental command: legendary
+Ring of water elemental command: legendary
+Ring of fire elemental command: legendary
+Ring of earth elemental command: legendary
 Ring of evasion: rare
 Ring of feather falling: rare
 Ring of free action: rare
@@ -227,7 +287,7 @@ Ring of the ram: rare
 Ring of three wishes: legendary
 Ring of warmth: uncommon
 Ring of water walking: uncommon
-Ring of x-ray vision: rare
+Ring of X-ray vision: rare
 Robe of eyes: rare
 Robe of scintillating colors: very rare
 Robe of stars: very rare
@@ -239,9 +299,9 @@ Rod of lordly might: legendary
 Rod of resurrection: legendary
 Rod of rulership: rare
 Rod of security: very rare
-Rod of the pact keeper +1: uncommon
-Rod of the pact keeper +2: rare
-Rod of the pact keeper +3: very rare
+Rod of the pact keeper, +1: uncommon
+Rod of the pact keeper, +2: rare
+Rod of the pact keeper, +3: very rare
 Rope of climbing: uncommon
 Rope of entanglement: rare
 Saddle of the cavalier: uncommon
@@ -250,9 +310,9 @@ Scimitar of speed: very rare
 Scroll of protection: rare
 Sending stones: uncommon
 Sentinel shield: uncommon
-Shield +1: uncommon
-Shield +2: rare
-Shield +3: very rare
+Shield, +1: uncommon
+Shield, +2: rare
+Shield, +3: very rare
 Shield of missile attraction: rare
 Slippers of spider climbing: uncommon
 Sovereign glue: legendary
@@ -282,7 +342,7 @@ Staff of the woodlands: rare
 Staff of thunder and lightning: very rare
 Staff of withering: rare
 Stone of controlling earth elementals: rare
-Stone of good luck (luckstone): uncommon
+Stone of good luck: uncommon
 Sun blade: rare
 Sword of answering: legendary
 Sword of life stealing: rare
@@ -311,14 +371,14 @@ Wand of magic missiles: uncommon
 Wand of paralysis: rare
 Wand of polymorph: very rare
 Wand of secrets: uncommon
-Wand of the war mage +1: uncommon
-Wand of the war mage +2: rare
-Wand of the war mage +3: very rare
+Wand of the war mage, +1: uncommon
+Wand of the war mage, +2: rare
+Wand of the war mage, +3: very rare
 Wand of web: uncommon
 Wand of wonder: rare
-Weapon +1: uncommon
-Weapon +2: rare
-Weapon +3: very rare
+Weapon, +1: uncommon
+Weapon, +2: rare
+Weapon, +3: very rare
 Weapon of warning: uncommon
 Well of many worlds: legendary
 Wind fan: uncommon

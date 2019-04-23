@@ -29,7 +29,8 @@ def test_get_monster_sets():
 
 def test_get_monster_set_level():
     mm = MonsterManual()
-    # print(sorted(mm.get_monster_sets(all_tags=['humanoid'], any_tags=['evil', 'magical'])))
+    # for level in range(1, 20):
+        # print(sorted(mm.get_monster_sets(all_tags=['evil', 'humanoid'], level=level)))
 
 
 

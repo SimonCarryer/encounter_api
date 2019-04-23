@@ -92,14 +92,10 @@ class MonsterManual():
         return sets
 
     def appropriate_challenge(self, monster_set, level):
-        monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set]]
-        good_challenge_monsters = [monster_level for monster_level in monster_levels if monster_level <= level*2 and monster_level >= level/4]
+        monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops']]
+        good_challenge_monsters = [monster_level for monster_level in monster_levels if monster_level < level-0.5 and monster_level >= (level/12)-0.5]
         number_of_monsters = len(good_challenge_monsters)
-        median = np.median(monster_levels)
-        return number_of_monsters >= 5 or (median <= level*2 and median >= level/4)
-
-
-        
+        return number_of_monsters > 0
 
     # def signs(self):
     #     tags = copy.deepcopy(monster_tags[self.name])

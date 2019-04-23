@@ -1,3 +1,3 @@
 class MockTreasureSource:
-    def get_treasure(self):
-        return {'coins': 'some nice coins'}
+    def get_treasure(self, shares=1):
+        return {'coins': '%d coins' % shares}

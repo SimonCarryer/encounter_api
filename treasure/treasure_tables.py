@@ -40,14 +40,23 @@ def load_individual_tables():
                 individual_tables[level][roll].append({name: value for name, value in zip(coin_column_names, row)})
     return individual_tables
 
-def load_npc_items():
-    with open('data/npc_items.yaml', encoding='utf-8') as f:
-        npc_items = yaml.load(f.read())
-    return npc_items
+def load_magic_items():
+    with open('data/magic_items.yaml', encoding='utf-8') as f:
+        magic_items = yaml.load(f.read())
+    return magic_items
 
+def load_item_values(item_tables, magic_items):
+    with open('data/item_values.yaml', encoding='utf-8') as f:
+        rarity_values = yaml.load(f.read())
+    item_values = {}
+    for list_of_items in item_tables.values():
+        for item in list_of_items['items']:
+            item_values[item] = rarity_values[magic_items[item]]
+    return item_values
 
     
-npc_items = load_npc_items()
+magic_items = load_magic_items()
 item_tables = load_item_tables()
 treasure_tables = load_treasure_tables()
 individual_tables = load_individual_tables()
+item_values = load_item_values(item_tables, magic_items)

@@ -18,7 +18,7 @@ flood:
     - description: A section of floor has collapsed, and a black and icy underground river flows beneath.
       tags: [cave-entrance]
     - description: This room is filled with knee-deep, muddy water. Parts of the floor have collapsed, and standing in the wrong place can lead to a plunge into the pitch-black depths.
-      tags: [cave-entrance, uninhabitable, underwater, hazard]
+      tags: [cave-entrance, uninhabitable, hazard]
   passages:
     - description: The passage is filled with waist-deep water.
       weight: 3
@@ -27,6 +27,8 @@ flood:
     - description: Water runs freely down this passage, turning stairways into waterfalls, corridors into rivers.
       weight: 2
     - description: The floor of the corridor is covered in fine silt, sticky and wet.
+      weight: 1
+    - description: There is a string smell of mould in this passageway.
       weight: 1
 
 earthquake:
@@ -45,6 +47,7 @@ earthquake:
       tags: [cave-entrance]
     - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely trecherous.
       tags: [difficult]
+    - description: The collapse of the ceiling has turned this once-large room into a network of narrow passages.
   passages:
     - description: The door-frame is partly collapsed and twisted, jamming the door shut.
       weight: 4
@@ -60,6 +63,8 @@ earthquake:
       weight: 4
     - description: The columns which once supported the ceiling have toppled, and must be clambered over.
       weight: 2
+    - descriptions: The sound of rushing water can be heard in this passageway.
+      weight: 1
 
 trees:
   tags:

@@ -72,10 +72,12 @@ mechanical:
         effect: The object causes ${damage}d10 bludgeoning damage. Dex save (difficulty ${save}) to avoid the damage.
       - name: Scything blade
         effect: Attack roll at +${attack}, causing ${damage}d10 slashing damage.
-      - name: Poison Gas
+      - name: Poison gas
         effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
       - name: Legcatcher
         effect: The target is restrained. On their turn, they can make a difficulty ${save} Str save to end this condition. Failing this save, they take ${damage}d4 piercing damage.
+      - name: Hail of arrows
+        effect: Everyone in a 15' radius takes ${damage}d18 piercing damage. Dex save (difficulty ${save}) for half damage.
     16:
       - name: Poison Gas
         effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
@@ -89,6 +91,10 @@ mechanical:
         effect: Everyone in a 30' cone takes ${damage}d6 acid damage. Dex save (difficulty ${save}) for half damage.
       - name: Collapsing ceiling
         effect: The ceiling falls, causing ${damage}d8 bludgeoning damage (Dex save - DC${save} for half) to everyone in the room. The room is now difficult terrain.
+      - name: Hail of arrows
+        effect: Everyone in a 15' radius takes ${damage}d18 piercing damage. Dex save (difficulty ${save}) for half damage.
+      - name: Acid pit
+        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 acid damage.
     20:
       - name: Poison Gas
         effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
@@ -104,6 +110,8 @@ mechanical:
         effect: Everyone in a 30' cone takes ${damage}d6 acid damage. Dex save (difficulty ${save}) for half damage.
       - name: Collapsing ceiling
         effect: The ceiling falls, causing ${damage}d8 bludgeoning damage (Dex save - DC${save} for half) to everyone in the room. The room is now difficult terrain.
+      - name: Acid pit
+        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 acid damage.
 
 magical:
   telltales:

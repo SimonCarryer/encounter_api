@@ -9,6 +9,7 @@ with open('data/dungeon_age.yaml', 'r') as f:
             room_effect['tags'] = room_effect.get('tags', [])
         for idx, passage_effect in enumerate(dungeon_age[cause]['passages']):
             passage_effect['id'] = idx
+            passage_effect['description'] = passage_effect.get('description', '')
 
 class DungeonAger:
     def __init__(self, cause=None, random_state=None, required_tags=None):
@@ -17,10 +18,12 @@ class DungeonAger:
         else:
             self.random_state = random_state
         if cause is None:
-            cause = self.random_state.choice(list(dungeon_age.keys()))
-        self.room_effects = dungeon_age[cause]['rooms']
-        self.passage_effects = dungeon_age[cause]['passages']
-        self.tags = dungeon_age[cause]['tags']
+            self.cause = self.random_state.choice(list(dungeon_age.keys()))
+        else:
+            self.cause = cause
+        self.room_effects = dungeon_age[self.cause]['rooms']
+        self.passage_effects = dungeon_age[self.cause]['passages']
+        self.tags = dungeon_age[self.cause]['tags']
         self.used_room_effects = []
         self.used_passage_effects = []
 
@@ -50,7 +53,12 @@ class DungeonAger:
             current_description = layout[passage[0]][passage[1]].get('description', '')
             layout[passage[0]][passage[1]]['description'] = ' '.join([current_description, effect['description']])
 
+    def add_event(self, layout):
+        event = 'Event: %s' % self.cause
+        layout.history.append(event)
+
     def age(self, layout):
         self.choose_room_effects(layout)
         self.choose_passage_effects(layout)
+        self.add_event(layout)
         return layout

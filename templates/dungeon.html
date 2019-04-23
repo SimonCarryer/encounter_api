@@ -12,7 +12,7 @@
           x2="{{passage.x2}}"
           y2="{{passage.y2}}" 
           style="stroke:rgb(0,0,0);stroke-width:12"
-          {% if passage.style == 'dashed' %} stroke-dasharray="5,5" {% endif %}
+          {% if passage.secret %} stroke-dasharray="5,5" {% endif %}
           />
     {% endfor %}
     {% for room in module.map.rooms %}
@@ -56,9 +56,14 @@ Coins: {{room.encounter.treasure.coins}}<br>
 Objects: {{room.encounter.treasure.objects}}<br><br>
 {% endif %}
 {% endif %}
+{% if room.trap %}
+<b>Trap:</b><br>
+{{room.trap}}<br><br>
+{% endif %}
 {% if room.treasure %}
 <b>Treasure Hoard</b><br>
-Objects: {{room.treasure.objects}}<br>
+Gemstones, by GP value: {{room.treasure.gemstones}}<br>
+Art objects, by GP value: {{room.treasure.objects}}<br>
 Coins: {{room.treasure.coins}}<br>
 Items: {{room.treasure.magic_items}}<br>
 {% endif %}

@@ -1,8 +1,10 @@
 from treasure.hoard import Hoard
 from treasure.individual import Individual
 from treasure.npc_items import NPC_item
-from treasure.treasure_api import TreasureSource, HoardSource, IndividualSource
+from treasure.treasure_api import TreasureSource, HoardSource, IndividualSource, RawHoardSource
+from treasure.treasure_manager import TreasureManager
 from random import Random
+from treasure.treasure_tables import item_values
 
 def test_hoard_is_instantiated_with_level():
     hoard = Hoard(1)
@@ -17,7 +19,7 @@ def test_hoard_generates_items():
     assert hoard.items == ['Ammunition, +3']
     state = Random(5)
     hoard = Hoard(11, random_state=state)
-    assert hoard.items == ['Wand of the war mage, + 1']
+    assert hoard.items == ['Wand of the war mage, +1']
 
 def test_hoard_generates_objects():
     state = Random(0)
@@ -60,7 +62,7 @@ def test_npc_items_returns_item():
     item = NPC_item(1, random_state=state)
     assert item.item == 'None'
     item = NPC_item(8, random_state=state)
-    assert item.item == 'Necklace of adaptation'
+    assert item.item == 'Winged boots'
 
 def test_treasure_api_sets_level():
     source = TreasureSource(encounter_level=1)
@@ -81,7 +83,7 @@ def test_hoard_api():
     source = HoardSource(encounter_level=10, random_state=state)
     treasure = source.get_treasure()
     assert treasure['objects'] == '8 gems of value 50gp each (total 400gp)'
-    assert sorted(treasure['magic_items']) == ['Potion of animal friendship', 'Potion of growth', 'Potion of water breathing', 'Spell scroll (3rd leve l)']
+    assert sorted(treasure['magic_items']) == ['Potion of animal friendship', 'Potion of growth', 'Potion of water breathing', 'Spell scroll (3rd level)']
     assert sorted(treasure['coins']) == ['1,900 GP', '130 PP', '7,000 SP', '700 CP']
 
 def test_individual_api():
@@ -91,4 +93,49 @@ def test_individual_api():
     treasure = source.get_treasure()
     #assert treasure['coins']['GP'] == 70
 
+def test_treasure_manager_makes_treasure():
+    state = Random(0)
+    source = RawHoardSource(encounter_level=1, random_state=state)
+    items = source.get_treasure()
+    manager = TreasureManager(items)
+    treasure = manager.get_treasure(1)
+    assert sorted(treasure.items) == sorted(items)
 
+def test_treasure_manager_assigns_all_items_by_share():
+    state = Random(0)
+    source = RawHoardSource(encounter_level=1, random_state=state)
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    other_treasure = manager.get_treasure(2)
+    assert sorted(treasure.items + other_treasure.items) == sorted(items)
+    assert len(treasure.items) < len(other_treasure.items)
+    #print(treasure.items)
+
+def test_treasure_manager_deletes_treasures():
+    state = Random(0)
+    source = RawHoardSource(encounter_level=1, random_state=state)
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    assert sorted(treasure.items) == sorted(items)
+    other_treasure = manager.get_treasure(2)
+    assert sorted(treasure.items) != sorted(items)
+    manager.delete_treasure(other_treasure)
+    assert sorted(treasure.items) == sorted(items)
+
+def test_treasures_look_nice():
+    state = Random(0)
+    source = RawHoardSource(encounter_level=1, random_state=state)
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    # print(treasure)
+
+def test_delete_last_treasure():
+    state = Random(0)
+    source = RawHoardSource(encounter_level=1, random_state=state)
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    manager.delete_treasure(treasure)

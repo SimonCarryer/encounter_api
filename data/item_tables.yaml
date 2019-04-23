@@ -12,13 +12,13 @@ B:
   - 15: Potion of greater healing
   - 22: Potion of fire breath
   - 29: Potion of resistance
-  - 34: Ammunition , +1
+  - 34: Ammunition, +1
   - 39: Potion of animal friendship
   - 44: Potion of hill giant strength
   - 49: Potion of growth
   - 54: Potion of water breathing
   - 59: Spell scroll (2nd level)
-  - 64: Spell scroll (3rd leve l)
+  - 64: Spell scroll (3rd level)
   - 67: Bag of holding
   - 70: Keoghtom's ointment
   - 73: Oil of slipperiness
@@ -55,7 +55,7 @@ C:
   - 47: Potion of frost giant strength
   - 52: Potion of stone giant strength
   - 57: Potion of heroism
-  - 62: Potion of invu lnerabil ity
+  - 62: Potion of invulnerability
   - 67: Potion of mind reading
   - 72: Spell scroll (5th level)
   - 75: Elixir of health
@@ -118,14 +118,14 @@ F:
   - 41: Hat of disguise
   - 43: Javelin of lightning
   - 45: Pearl of power
-  - 47: Rod of the pact keeper, + 1
+  - 47: Rod of the pact keeper, +1
   - 49: Slippers of spider climbing
   - 51: Staff of the adder
   - 53: Staff of the python
   - 55: Sword of vengeance
   - 57: Trident of fish command
   - 59: Wand of magic missiles
-  - 61: Wand of the war mage, + 1
+  - 61: Wand of the war mage, +1
   - 63: Wand of web
   - 65: Weapon of warning
   - 66: Adamantine armor (chain mail)
@@ -183,13 +183,13 @@ G:
   - 27: Brazier of commanding fire elementals
   - 28: Cape of the mountebank
   - 29: Censer of controlling air elementals
-  - 30: Armor, +
+  - 30: Armor, +1
   - 31: Armor of resistance (chain mail)
-  - 32: Armor,+
+  - 32: Armor, +2
   - 33: Armor of resistance (chain shirt)
   - 34: Cloak of displacement
   - 35: Cloak of the bat
-  - 36: Cube afforce
+  - 36: Cube of force
   - 37: Daern's instant fortress
   - 38: Dagger of venom
   - 39: Dimensional shackles
@@ -203,11 +203,11 @@ G:
   - 47: Horn of blasting
   - 48: Horn of Valhalla (silver or brass)
   - 49: Instrument of the bards (Canaith mandolin)
-  - 50: Instrument ofthe bards (Cii lyre)
-  - 51: loun stone (awareness)
-  - 52: loun stone (protection)
-  - 53: loun stone (reserve)
-  - 54: loun stone (sustenance)
+  - 50: Instrument of the bards (Cli lyre)
+  - 51: Ioun stone (awareness)
+  - 52: Ioun stone (protection)
+  - 53: Ioun stone (reserve)
+  - 54: Ioun stone (sustenance)
   - 55: Iron bands of Bilarro
   - 56: Armor, +1 leather
   - 57: Armor of resistance (leather)
@@ -299,15 +299,15 @@ H:
   - 72: Figurine of wondrous power (obsidian steed)
   - 73: Frost brand
   - 74: Helm of brilliance
-  - 75: Horn ofValhalla (bronze)
+  - 75: Horn of Valhalla (bronze)
   - 76: Instrument of the bards (Anstruth harp)
-  - 77: loun stone (absorption)
-  - 78: loun stone (agility)
-  - 79: loun stone (fortitude)
-  - 80: loun stone (insight)
-  - 81: loun stone (intellect)
-  - 82: loun stone (leadership)
-  - 83: loun stone (strength)
+  - 77: Ioun stone (absorption)
+  - 78: Ioun stone (agility)
+  - 79: Ioun stone (fortitude)
+  - 80: Ioun stone (insight)
+  - 81: Ioun stone (intellect)
+  - 82: Ioun stone (leadership)
+  - 83: Ioun stone (strength)
   - 84: Armor, +2 leather
   - 85: Manual of bodily health
   - 86: Manual of gainful exercise
@@ -318,9 +318,9 @@ H:
   - 91: Oath bow
   - 92: Armor, +2 scale mail
   - 93: Spellguard shield
-  - 94: Armor, + 1 splint
+  - 94: Armor, +1 splint
   - 95: Armor of resistance (splint)
-  - 96: Armor, + 1 studded leather
+  - 96: Armor, +1 studded leather
   - 97: Armor of resistance (studded leather)
   - 98: Tome of clear thought
   - 99: Tome of leadership and influence
@@ -344,7 +344,7 @@ I:
   - 49: Armor, +3 chain shirt
   - 51: Cloak of invisibility
   - 53: Crystal ball (legendary version)
-  - 55: Armor, + 1 half plate
+  - 55: Armor, +1 half plate
   - 57: Iron flask
   - 59: Armor, +3 leather
   - 61: Armor, +1 plate
@@ -355,7 +355,7 @@ I:
   - 71: Armor, +2 splint
   - 73: Armor, +2 studded leather
   - 75: Well of many worlds
-  - 76: Magic armor (roll dl2)
+  - 76: Armor, +2
   - 77: Apparatus of Kwalish
   - 78: Armor of invulnerability
   - 79: Belt of storm giant strength
@@ -363,13 +363,13 @@ I:
   - 81: Deck of many things
   - 82: Efreeti chain
   - 83: Armor of resistance (half plate)
-  - 84: Horn ofValhalla (iron)
+  - 84: Horn of Valhalla (iron)
   - 85: Instrument of the bards (Ollamh harp)
-  - 86: loun stone (greater absorption)
-  - 87: loun stone (mastery)
-  - 88: loun stone (regeneration)
+  - 86: Ioun stone (greater absorption)
+  - 87: Ioun stone (mastery)
+  - 88: Ioun stone (regeneration)
   - 89: Plate armor of etherealness
-  - 90: Plate armor of resistance
+  - 90: Armor of resistance (plate)
   - 91: Ring of air elemental command
   - 92: Ring of earth elemental command
   - 93: Ring of fire elemental command

@@ -56,6 +56,23 @@ class HoardSource(TreasureSource):
         }
         return response
 
+class RawHoardSource(TreasureSource):
+    def __init__(self,
+                xp_budget=None,
+                encounter_level=None,
+                character_level_dict=None,
+                random_state=None):
+        TreasureSource.__init__(self,
+                                xp_budget=xp_budget,
+                                encounter_level=encounter_level,
+                                character_level_dict=character_level_dict,
+                                random_state=random_state)
+        self.contents = Hoard(self.level, random_state=self.random_state)
+
+    def get_treasure(self):
+        response = self.contents.raw_list
+        return response
+
 class NothingSource(TreasureSource):
     def get_treasure(self):
         return None

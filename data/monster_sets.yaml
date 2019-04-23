@@ -1803,6 +1803,7 @@ plains:
    occurrence: rare
  - Name: Rhinoceros
    occurrence: common
+   role: solo
 
 svirfneblin:
  - Name: Svirfneblin
@@ -1891,3 +1892,7 @@ angels:
  - Name: Solar
    occurrence: common
    role: solo
+
+troglodytes:
+ - Name: Troglodyte
+   occurrence: common

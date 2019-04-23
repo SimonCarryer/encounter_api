@@ -1,4 +1,5 @@
 from random import Random
+from traps.trap_api import TrapSource
 import yaml
 
 with open('data/dungeon_types.yaml', 'r') as f:
@@ -27,7 +28,9 @@ class DungeonFurnisher:
 
     def furnish(self, layout):
         for n, room in layout.nodes(data=True):
-            room['description'] = self.choose_room_type(room['tags'])
+            room_type = self.choose_room_type(room['tags'])
+            room['description'] = room_type['description']
+            room['tags'] += room_type['tags']
         layout.purpose = self.purpose
         return layout
 
@@ -35,12 +38,19 @@ class DungeonFurnisher:
         appropriate = False
         if room_tags == [] and 'secret' not in room_type['tags'] and 'important' not in room_type['tags']:
             appropriate = True
+        elif 'secret' in room_tags and 'secret' not in room_type['tags']:
+            appropriate = False
         elif any([tag in room_type['tags'] for tag in room_tags]):
             appropriate = True
+        if 'entrance' in room_type['tags'] and 'entrance' not in room_tags:
+            appropriate = False
         return appropriate
 
+    def suitable_rooms(self, room_tags):
+        return [room_type for room_type in self.room_type_list if self.appropriate_room_type(room_type, room_tags)]
+
     def choose_room_type(self, room_tags):
-        suitable_room_types = [room_type for room_type in self.room_type_list if self.appropriate_room_type(room_type, room_tags)]
+        suitable_room_types = self.suitable_rooms(room_tags)
         final = [room_type for room_type in suitable_room_types if room_type['room_id'] not in self.used_room_types]
         if len(final) > 0:
             room_type = self.random_state.choice(final)
@@ -48,5 +58,5 @@ class DungeonFurnisher:
             room_type = self.random_state.choice(suitable_room_types)
         else:
             room_type = self.random_state.choice(self.room_type_list)
-        self.used_room_types.append(room['room_id'])
-        return room_type['description']
+        self.used_room_types.append(room_type['room_id'])
+        return room_type

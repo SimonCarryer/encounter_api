@@ -19,4 +19,4 @@ def test_trap_summon():
 
 def test_trap_api():
     source = TrapSource(5)
-    print(source.get_trap())
+    #print(source.get_trap())

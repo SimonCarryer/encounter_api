@@ -9,6 +9,7 @@ class Hoard:
         else:
             self.random_state = random_state
         self.level = level
+        self.raw_list = []
         self.objects, self.items, self.coins = self.roll_on_treasure_table()
 
     def find_appropriate_treasure_table(self):
@@ -21,6 +22,8 @@ class Hoard:
             return "No art objects or gems."
         roll = sum([self.random_state.randint(1, int(die_sides)) for _ in range(int(die_n))])
         total = int(roll)*int(value)
+        for _ in range(int(roll)):
+            self.raw_list.append((object_type, int(value)))
         return "%d %ss of value %dgp each (total %dgp)" % (int(roll), object_type, int(value), total)
 
     def get_items(self, die_sides, table_name):
@@ -29,11 +32,14 @@ class Hoard:
         else:
             roll = self.random_state.randint(1, int(die_sides))
             items = [self.roll_on_item_tables(table_name) for _ in range(roll)]
+        for item in items:
+            self.raw_list.append(('magic item', item))
         return items
 
     def get_coins(self, coin_type, die_n, die_sides, multiplier):
         roll = sum([self.random_state.randint(1, int(die_sides)) for _ in range(int(die_n))])
         total = roll * int(multiplier)
+        self.raw_list.append((coin_type, total))
         return "%s %s" % ("{:,}".format(total), coin_type)
 
 

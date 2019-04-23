@@ -5,6 +5,8 @@ class TrapSource:
     def __init__(self, level, trap_class=None, random_state=None):
         if random_state is None:
             self.random_state = Random()
+        else:
+            self.random_state = random_state
         self.level = level
         self.trap_class = trap_class
 
