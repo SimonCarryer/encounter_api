@@ -94,7 +94,7 @@ mechanical:
       - name: Hail of arrows
         effect: Everyone in a 15' radius takes ${damage}d18 piercing damage. Dex save (difficulty ${save}) for half damage.
       - name: Acid pit
-        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 acid damage.
+        effect: Dex save (difficulty ${save}) or fall into a vat of acid, incurring ${damage}d10 acid damage.
     20:
       - name: Poison Gas
         effect: The gas causes ${damage}d6 poison damage to everyone in the room. Con save (difficulty ${save}) for half.
@@ -111,7 +111,7 @@ mechanical:
       - name: Collapsing ceiling
         effect: The ceiling falls, causing ${damage}d8 bludgeoning damage (Dex save - DC${save} for half) to everyone in the room. The room is now difficult terrain.
       - name: Acid pit
-        effect: Dex save (difficulty ${save}) or fall, incurring ${damage}d10 acid damage.
+        effect: Dex save (difficulty ${save}) or fall into a vat of acid, incurring ${damage}d10 acid damage.
 
 magical:
   telltales:
@@ -166,6 +166,8 @@ magical:
         effect: The beams make an attack roll at +${attack}, causing ${damage}d10 radiant or necrotic damage.
       - name: Summon Monsters
         effect: The trap summons the following monsters, which immediately attack. ${monsters}
+      - name: Nightmare
+        effect: Everyone in the room must make a Charisma save (DC${save}) or take ${damage}d6 psychic damage as they confront their worst fears.
     16:
       - name: Magical Blades
         effect: Attack roll at +${attack}, causing ${damage}d10 slashing damage.
@@ -177,6 +179,8 @@ magical:
         effect: The ray makes an attack at +${attack}. If struck, the victim must make a Con save DC${save} or be Petrified. They may make another save every hour.
       - name: Summon Monsters
         effect: The trap summons the following monsters, which immediately attack. ${monsters}
+      - name: Nightmare
+        effect: Everyone in the room must make a Charisma save (DC${save}) or take ${damage}d6 psychic damage as they confront their worst fears.
     20:
       - name: Animate Statue
         effect: The statue makes one attack at +${attack}, for ${damage}d10 slashing or bludgeoning damage. The statue then turns back to stone.
@@ -188,4 +192,6 @@ magical:
         effect: A whirling vortex drags everyone in the room 10' towards the vortex every round (Str save DC${save} to avoid). Anyone reaching the center of the vortex is transported to a remote demiplane, as per the "Hedged Prison" variant of the Imprisonment spell.
       - name: Summon Monsters
         effect: The trap summons the following monsters, which immediately attack. ${monsters}
+      - name: Nightmare
+        effect: Everyone in the room must make a Charisma save (DC${save}) or take ${damage}d6 psychic damage as they confront their worst fears.
 

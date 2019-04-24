@@ -46,6 +46,7 @@
 {% for room in module.rooms %}
 <h3>Room {{room.room_id}}</h3>
 {{room.description}}<br><br>
+{% if room.sign %}{{room.sign}}<br><br>{% endif %}
 {% if room.encounter %}
 <b>Encounter: {{room.encounter.monster_set}}</b><br>
 {% for monster in room.encounter.monsters %}

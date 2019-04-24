@@ -51,6 +51,7 @@ def load_monster_sets():
     return monster_sets
 
 monster_sets = load_monster_sets()
+
     
 class MonsterManual():
     def __init__(self):
@@ -92,16 +93,18 @@ class MonsterManual():
         return sets
 
     def appropriate_challenge(self, monster_set, level):
-        monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops']]
-        good_challenge_monsters = [monster_level for monster_level in monster_levels if monster_level < level-0.5 and monster_level >= (level/12)-0.5]
-        number_of_monsters = len(good_challenge_monsters)
+        mob_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops']]
+        good_challenge_mobs = [monster_level for monster_level in mob_monster_levels if monster_level < level-0.5 and monster_level >= (level/12)-0.5]
+        boss_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['leader', 'solo']]
+        good_challenge_bosses = [monster_level for monster_level in boss_monster_levels if monster_level <= level+1 and monster_level >= level-2]
+        number_of_monsters = len(good_challenge_mobs + good_challenge_bosses)
         return number_of_monsters > 0
 
-    # def signs(self):
-    #     tags = copy.deepcopy(monster_tags[self.name])
-    #     signs = []
-    #     for sign in copy.deepcopy(monster_signs):
-    #         if all([tag in tags for tag in sign['tags']]):
-    #             sign['sign'] += ' (%s)' % self.name
-    #             signs.append(sign)
-    #     return signs
+    def get_signs(self, monster_set):
+        tags = monster_tags[monster_set]
+        signs = []
+        for sign in copy.deepcopy(monster_signs):
+            if all([tag in tags for tag in sign['tags']]):
+                sign = sign['sign'] + ' (%s)' % monster_set
+                signs.append(sign)
+        return signs

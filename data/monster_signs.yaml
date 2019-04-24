@@ -112,8 +112,6 @@
   tags: [humanoid]
 - sign: An escaped slave or captive, hiding or fleeing pursuit.
   tags: [humanoid]
-- tags: A cache of weapons and/or ammunition.
-  tags: [humanoid]
 - sign: Mournful howling.
   tags: [wolves]
 - sign: Spiderwebs, as thick as a piece of wool.
@@ -140,3 +138,29 @@
   tags: [fungus]
 - sign: A rotting, mouldy smell.
   tags: [fungus]
+- sign: A cache of weapons and/or ammunition.
+  tags: [humanoid]
+- sign: A nobleman's insignia on a discarded piece of clothing.
+  tags: [human, evil]
+- sign: A sacrificial victim, bound and prepared.
+  tags: [humanoid, evil]
+- sign: A wild animal tied up and waiting for slaughter.
+  tags: [humanoid]
+- sign: An absence of the usual subterranean fauna.
+  tags: [undead]
+- sign: The feeling of being watched.
+  tags: [guardian]
+- sign: Rats feasting on the remains of a meal.
+  tags: [humanoid]
+- sign: Rooms arranged according to cosmic concordances.
+  tags: [magical]
+- sign: A bullied and rejected member of the tribe.
+  tags: [savage, humanoid]
+- sign: A slave of the tribe, on an errand.
+  tags: [savage, humanoid]
+- sign: A trail of blood, as if something has been dragged.
+  tags: [beast]
+- sign: Candles arranged in a significant pattern.
+  tags: [evil, magical]
+- sign: Steps worn as if by the passage of feet over thousands of years.
+  tags: [immortal]

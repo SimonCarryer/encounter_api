@@ -1,9 +1,11 @@
 from encounters import EncounterSource
+from mocks.mock_encounter_source import MockEncounterSource
 from tests.mocks.mock_monster_list import mock_monster_list, mock_monster_list_2, MockMonsterManual
 from random import Random
 from encounters.encounter_builder import EncounterBuilder
 from encounters.encounter_picker import EncounterPicker
 from encounters.xp_calculator import XPCalulator
+from encounters.encounter_manager import EncounterManager
 from utils import library
 
 # library.use_mock_monster_manual()
@@ -133,3 +135,65 @@ def test_encounter_picker():
     monster_lists = builder.monster_lists
     picker = EncounterPicker(monster_lists, budget, random_state=state)
     # print(picker.pick_encounter(style='no leader'))
+
+def test_encounter_manager_adds_encounters():
+    state = Random(0)
+    source = MockEncounterSource()
+    manager = EncounterManager()
+    manager.add_encounter_source('test', source)
+    encounter = manager.get_encounter('test', style='test style')
+    assert encounter['source name'] == 'test'
+    assert encounter['style'] == 'test style'
+    assert manager.encounters['test'] == 1
+
+def test_encounter_manager_deletes_encounters():
+    state = Random(0)
+    source = MockEncounterSource()
+    manager = EncounterManager()
+    manager.add_encounter_source('test', source)
+    encounter = manager.get_encounter('test', style='test style')
+    assert manager.encounters['test'] == 1
+    manager.delete_encounter(encounter)
+    assert manager.encounters['test'] == 0
+
+def test_encounter_manager_gets_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    manager = EncounterManager()
+    manager.add_encounter_source('test', source)
+    sign = manager.get_sign('test')
+    assert str(sign) == repr('a sign of some scary monsters')
+
+def test_encounter_manager_deletes_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    manager = EncounterManager()
+    manager.add_encounter_source('test', source)
+    sign = manager.get_sign('test')
+    manager.delete_signs('test')
+    assert str(manager.signs['test'][0]) == 'None'
+
+def test_deleting_encounters_deletes_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    with EncounterManager() as manager:
+        manager.add_encounter_source('test', source)
+        encounter = manager.get_encounter('test')
+        sign = manager.get_sign('test')
+        # print(sign)
+        manager.delete_encounter(encounter)
+    # print(sign)
+
+def test_deleting_different_encounters_deletes_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    with EncounterManager() as manager:
+        manager.add_encounter_source('test', source)
+        manager.add_encounter_source('test_2', source)
+        encounter = manager.get_encounter('test')
+        encounter_2 = manager.get_encounter('test_2')
+        sign = manager.get_sign('test')
+        # print(sign)
+        manager.delete_encounter(encounter)
+        # print(manager.encounters)
+    # print(sign)

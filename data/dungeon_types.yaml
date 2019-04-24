@@ -1,113 +1,125 @@
 stronghold:
   tags:
   rooms:
-  - description: A grand entry-hall with a great staircase and double doors.
-    tags: [entrance, guarded]
-  - description: A great shaft serviced by rickety wooden platforms raised and lowered on chains.
-    tags: [entrance]
-  - description: Antechamber where visitors seeking access to the stronghold wait.
-  - description: Armory holding high-quality gear, including light siege weapons such as ballistas.
-  - description: Audience chamber used by the master of the stronghold to receive visitors.
-    tags: [central, entrance]
-  - description: Aviary or zoo for keeping exotic creatures.
-    tags: [rare]
-  - description: Banquet room for hosting celebrations and guests.
-    tags: [central]
-  - description: Barracks used by elite guards.
-    tags: [guarded]
-  - description: Bath outfitted with a marble floor and other luxurious accoutrements.
-    tags: [rare]
-  - description: Bedroom for use by the stronghold's master or important guests.
-    tags: [important]
-  - description: A long and wide hallway, with a high arched ceiling.
-    tags: [hub, guarded]
-  - description: A wide spiralling staircase with many landings and branching corridors.
-    tags: [hub, entrance, guarded]
-  - description: An elaborate ballroom with a high ceiling supported by tall pillars.
-  - description: A forge for repairing equipment.
-  - description: Chapel dedicated to a deity associated with the stronghold's master.
-    tags: [guarded]
-  - description: Cistern providing drinking water.
-  - description: Dining room for intimate gatherings or informal meals.
-    tags: [rare]
-  - description: Dressing room featuring a number of wardrobes.
-    tags: [dead-end]
-  - description: Gallery for the display of expensive works of art and trophies.
-    tags: [rare, treasure, guarded]
-  - description: Game room used to entertain visitors.
-  - description: Guardroom.
-    tags: [guarded]
-  - description: Kennel where monsters or trained animals that protect the stronghold are kept.
-    tags: [rare]
-  - description: Kitchen designed to prepare exotic foods for large numbers of guests.
-  - description: Library with an extensive collection of rare books.
-    tags: [rare, guarded]
-  - description: Library with forbidden and dangerous books.
-    tags: [rare, secret, guarded]
-  - description: Lounge used to entertain guests.
-  - description: Shrine to a forbidden or evil deity, worshipped in secret.
-    tags: [rare, secret, guarded]
-  - description: Pantry, including cellar for wine or spirits.
-  - description: Sitting room for family and intimate guests.
-  - description: Storage for mundane goods and supplies.
-    tags: [dead-end]
-  - description: Strong room or vault for protecting important treasures.
-    tags: [secret, treasure, guarded]
-  - description: Trapped strongroom.
-    tags: [secret, trap]
-  - description: Study, including a writing desk.
-    tags: [dead-end]
-  - description: Throne room, elaborately decorated.
-    tags: [important, guarded]
-  - description: Waiting room where lesser guests are held before receiving an audience.
-    tags: [central]
-  - description: Latrine or bath.
-    tags: [dead-end]
-  - description: Crypt belonging to the stronghold's master or someone else of importance.
-    tags: [secret, guarded]
-  - description: Panic room for hiding in if the stronghold is assaulted.
-    tags: [secret, trap, dead-end, treasure]
-  - description: Trap room for luring unwary trespassers.
-    tags: [dead-end, trap]
-  - description: War-room with frescoed or carved maps.
-  - description: Secure quarters for a shameful or secret prisoner.
-    tags: [secret]
+    - description: A grand entry-hall with a great staircase and double doors.
+      tags: [entrance, guarded]
+    - description: A great shaft serviced by rickety wooden platforms raised and lowered on chains.
+      tags: [entrance]
+    - description: Antechamber where visitors seeking access to the stronghold wait.
+    - description: Armory holding high-quality gear, including light siege weapons such as ballistas.
+    - description: Audience chamber used by the master of the stronghold to receive visitors.
+      tags: [central, entrance]
+    - description: Aviary or zoo for keeping exotic creatures.
+      tags: [rare]
+    - description: Banquet room for hosting celebrations and guests.
+      tags: [central]
+    - description: Barracks used by elite guards.
+      tags: [guarded]
+    - description: Bath outfitted with a marble floor and other luxurious accoutrements.
+      tags: [rare]
+    - description: Bedroom for use by the stronghold's master or important guests.
+      tags: [important]
+    - description: A long and wide hallway, with a high arched ceiling.
+      tags: [hub, guarded]
+    - description: A wide spiralling staircase with many landings and branching corridors.
+      tags: [hub, entrance, guarded]
+    - description: An elaborate ballroom with a high ceiling supported by tall pillars.
+    - description: A forge for repairing equipment.
+    - description: Chapel dedicated to a deity associated with the stronghold's master.
+      tags: [guarded]
+    - description: Cistern providing drinking water.
+    - description: Dining room for intimate gatherings or informal meals.
+      tags: [rare]
+    - description: Dressing room featuring a number of wardrobes.
+      tags: [dead-end]
+    - description: Gallery for the display of expensive works of art and trophies.
+      tags: [rare, treasure, guarded]
+    - description: Game room used to entertain visitors.
+    - description: Guardroom.
+      tags: [guarded]
+    - description: Kennel where monsters or trained animals that protect the stronghold are kept.
+      tags: [rare]
+    - description: Kitchen designed to prepare exotic foods for large numbers of guests.
+    - description: Library with an extensive collection of rare books.
+      tags: [rare, guarded]
+    - description: Library with forbidden and dangerous books.
+      tags: [rare, secret, guarded]
+    - description: Lounge used to entertain guests.
+    - description: Shrine to a forbidden or evil deity, worshipped in secret.
+      tags: [rare, secret, guarded, treasure]
+    - description: Pantry, including cellar for wine or spirits.
+    - description: Sitting room for family and intimate guests.
+    - description: Storage for mundane goods and supplies.
+      tags: [dead-end]
+    - description: Strong room or vault for protecting important treasures.
+      tags: [secret, treasure, guarded]
+    - description: Trapped strongroom.
+      tags: [secret, trap]
+    - description: Study, including a writing desk.
+      tags: [dead-end]
+    - description: Throne room, elaborately decorated.
+      tags: [important, guarded, treasure]
+    - description: Waiting room where lesser guests are held before receiving an audience.
+      tags: [central]
+    - description: Latrine or bath.
+      tags: [dead-end]
+    - description: Crypt belonging to the stronghold's master or someone else of importance.
+      tags: [secret, guarded]
+    - description: Panic room for hiding in if the stronghold is assaulted.
+      tags: [secret, trap, dead-end, treasure]
+    - description: Trap room for luring unwary trespassers.
+      tags: [dead-end, trap]
+    - description: War-room with frescoed or carved maps.
+    - description: Secure quarters for a shameful or secret prisoner.
+      tags: [secret]
+  secret passages:
+    - This secret passageway is concealed behind an ancient wall-hanging.
+    - A framed painting conceals the hidden doorway to this passage.
+    - The door to this passageway is concealed behind stacks of crates or piles of old furnishings.
+    - A sconce on the wall is actually the handle of the concealed door to this passage.
+    - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
+    - A rug on the floor covers the trapdoor entrance to this passage.
 
 tomb:
   tags:
     - undead
   rooms:
-  - description: An entry-hall with a great staircase and double doors.
-    tags: [entrance]
-  - description: A grand mausoleum with stained-glass windows, and stairs leading downward.
-    tags: [entrance]
-  - description: A forbidding room displaying reminders of impeding death.
-    tags: [entrance]
-  - description: Workshop for embalming the dead.
-  - description: Antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals.
-  - description: Chapel dedicated to deities that watch over the dead and protect their resting places.
-    tags: [central, guarded]
-  - description: Crypt for less important burials.
-    tags: [central, guarded]
-  - description: Divination room, used in rituals to contact the dead for guidance.
-    tags: [guarded]
-  - description: False crypt (trapped) to kill or capture thieves.
-    tags: [dead-end, trap]
-  - description: Gallery to display the deeds of the deceased through trophies, statues, paintings and so forth.
-    tags: [important, treasure, guarded]
-  - description: Grand crypt for a noble, high priest, or other important individual.
-    tags: [important, guarded]
-  - description: Guardroom, usually guarded by undead, constructs, or other creatures that don't need to eat or sleep.
-    tags: [central, entrance, guarded]
-  - description: Robing room for priests to prepare for burial rituals.
-  - description: Storage, stocked with tools for maintaining the tomb and preparing the dead for burial.
-  - description: Tomb where the wealthiest and most important folk are interred, protected by secret doors and traps.
-    tags: [secret, trap]
-  - description: Workshop for embalming the dead.
-  - description: Burial chamber for excommunicated or shameful dead.
-    tags: [secret, guarded]
-  - description: Treasure room holding goods to accompany the dead in the afterlife.
-    tags: [secret, treasure]
+    - description: An entry-hall with a great staircase and double doors.
+      tags: [entrance]
+    - description: A grand mausoleum with stained-glass windows, and stairs leading downward.
+      tags: [entrance]
+    - description: A forbidding room displaying reminders of impending death.
+      tags: [entrance]
+    - description: Workshop for embalming the dead.
+    - description: Antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals.
+    - description: Chapel dedicated to deities that watch over the dead and protect their resting places.
+      tags: [central, guarded]
+    - description: Crypt for less important burials.
+      tags: [central, guarded]
+    - description: Divination room, used in rituals to contact the dead for guidance.
+      tags: [guarded]
+    - description: False crypt (trapped) to kill or capture thieves.
+      tags: [dead-end, trap]
+    - description: Gallery to display the deeds of the deceased through trophies, statues, paintings and so forth.
+      tags: [important, treasure, guarded]
+    - description: Grand crypt for a noble, high priest, or other important individual.
+      tags: [important, guarded, treasure]
+    - description: Guardroom, usually guarded by undead, constructs, or other creatures that don't need to eat or sleep.
+      tags: [central, entrance, guarded]
+    - description: Robing room for priests to prepare for burial rituals.
+    - description: Storage, stocked with tools for maintaining the tomb and preparing the dead for burial.
+    - description: Tomb where the wealthiest and most important folk are interred, protected by secret doors and traps.
+      tags: [secret, trap, treasure]
+    - description: Workshop for embalming the dead.
+    - description: Burial chamber for excommunicated or shameful dead.
+      tags: [secret, guarded]
+    - description: Treasure room holding goods to accompany the dead in the afterlife.
+      tags: [secret, treasure]
+  secret passages:
+    - A bas-relief carving is actually a hidden door to this passage
+    - What appears to be a sarcophagus is actually the entrance to this secret passage.
+    - This doorway is concealed by thick cobwebs and dust.
+    - A statue can be rolled aside to reveal this passageway.
 
 temple:
   tags:
@@ -162,6 +174,11 @@ temple:
       tags: [dead-end]
     - description: Well for drinking water, defendable in the case of attack or siege.
     - description: Workshop for repairing or creating weapons, religious items, and tools.
+  secret passages:
+    - A bas-relief carving is actually a hidden door to this passage.
+    - This doorway is concealed by thick cobwebs and dust.
+    - A religious symbol must be correctly aligned to open this passageway.
+    - A statue can be rolled aside to reveal this passageway.
 
 mine:
   tags:
@@ -192,6 +209,11 @@ mine:
       tags: [entrance, guarded]
     - description: A vertical shaft down into the earth, deep mud at the bottom.
       tags: [entrance]
+  secret passages:
+    - A heap of rubble conceals the entrance to this passage.
+    - Stacked crates cover the entrance to this passage.
+    - This passage is boarded up and easily missed, but some of the boards are loose.
+    - A heap of rubbish obscures the entrance to this passage.
 
 treasure vault:
   tags:
@@ -207,17 +229,19 @@ treasure vault:
     - description: Armory containing mundane and magic gear used by the treasure vault's guards.
       tags: [dead-end]
     - description: Barracks for guards.
-      tags: [central]
+      tags: [central, guarded]
     - description: Cistern providing fresh water.
       tags: [dead-end]
     - description: Guardroom to defend against intruders.
+      tags: [guarded]
     - description: Kennel for trained beasts used to guard the treasure vault.
     - description: Kitchen for feeding guards.
     - description: Display room for showing off treasures.
       tags: [important, treasure]
     - description: Watch room that allows guards to observe those who approach the dungeon.
+      tags: [guarded]
     - description: Prison for holding captured intruders.
-      tags: [dead-end]
+      tags: [dead-end, guarded]
     - description: Strongroom for storage of more fungible treasures.
       tags: [dead-end, important, trap, treasure]
     - description: Strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by locked or secret door.
@@ -230,6 +254,13 @@ treasure vault:
       tags: [secret]
     - description: Trap room for luring unwary trespassers.
       tags: [dead-end, trap]
+  secret passages:
+    - This secret passageway is concealed behind an ancient wall-hanging.
+    - A framed painting conceals the hidden doorway to this passage.
+    - The door to this passageway is concealed behind stacks of crates or piles of old furnishings.
+    - A sconce on the wall is actually the handle of the concealed door to this passage.
+    - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
+    - A rug on the floor covers the trapdoor entrance to this passage.
 
 cave:
   tags:
@@ -260,3 +291,11 @@ cave:
     - description: A keyhole-shaped passage, with ledges either side of a deep crevasse.
       tags: [central]
     - description: A low, flat room with small stalagtites and stalagmites all over.
+  secret passages:
+    - A cascade of water covers the entrance to this passage.
+    - A trick of the light makes this passageway impossible to see unless it's right in front of you.
+    - A heap of rubble conceals the entrance to this passage.
+    - From a distance, this passage appears too narrow to enter.
+    - Thick stalagtites obscure the entrance to this passageway.
+    - A large, flat boulder can be rolled aside to reveal this passageway.
+    - The entrance to this passageway is just below the surface of a pool of water.

@@ -25,12 +25,14 @@ class Dungeon:
         rooms = []
         for room_idx, data in self.layout.nodes(data=True):
             room = data
+            if room.get('sign') == 'None':
+                room['sign'] = None
             room['room_id'] = room_ids[room_idx]
             rooms.append(room)
         module['rooms'] = sorted(rooms, key=lambda x: x['room_id'])
         seq = 0
         for start, end, data in self.layout.edges(data=True):
-            if data['weight'] >=2:
+            if data['description'] != '':
                 passage = {'description': data.get('description', '')}
                 passage['letter'] = letters[seq]
                 seq += 1

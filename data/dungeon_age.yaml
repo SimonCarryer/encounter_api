@@ -28,7 +28,7 @@ flood:
       weight: 2
     - description: The floor of the corridor is covered in fine silt, sticky and wet.
       weight: 1
-    - description: There is a string smell of mould in this passageway.
+    - description: There is a strong smell of mould in this passageway.
       weight: 1
 
 earthquake:

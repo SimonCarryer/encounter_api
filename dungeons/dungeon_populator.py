@@ -3,9 +3,13 @@ from encounters.encounter_api import EncounterSource
 from treasure.treasure_api import HoardSource
 from traps.trap import Trap
 import networkx as nx
+import uuid
 
 class NoEncountersSource:
     def get_encounter(*args, **kwargs):
+        return None
+
+    def get_sign(self, name=None):
         return None
 
 class NoTrapSource:
@@ -19,11 +23,16 @@ class NoTreasureSource:
 
 class DungeonPopulator:
     def __init__(self,
+                 name=None,
                  encounter_source=None,
                  treasure_source=None,
                  trap_source=None,
                  random_state=None,
                  ):
+        if name is None:
+            self.name = str(uuid.uuid4())
+        else:
+            self.name = name
         if random_state is None:
             self.random_state = Random()
         else:
@@ -53,52 +62,58 @@ class DungeonPopulator:
         else:
             return None
 
-    def monster_set(self):
-        if hasattr(self.encounter_source, 'monster_set'):
-            return self.encounter_source.monster_set
-        else:
-            return
+    def get_encounter(self, **style):
+        return self.encounter_source.get_encounter(self.name, **style)
 
-    def add_event(self, layout):
-        event = '%s: %s' % (type(self).__name__, self.monster_set())
-        layout.history.append(event)
+    def delete_encounter(self, encounter):
+        self.encounter_source.delete_encounter(encounter)
 
-        
+    def get_treasure(self, shares=1):
+        return self.treasure_source.get_treasure(shares)
+
+    def get_sign(self):
+        return self.encounter_source.get_sign(self.name)
+
+    def delete_treasure(self, treasure):
+        self.treasure_source.delete_treasure(treasure)
+  
 class OriginalInhabitants(DungeonPopulator):
     def populate(self, layout):
         for room_id, data in layout.nodes(data=True):
-            trap, encounter, treasure = self.populate_room(room_id, data)
+            trap, encounter, treasure, sign = self.populate_room(room_id, data)
             data['trap'] = trap
             data['encounter'] = encounter
             data['treasure'] = treasure
             if trap is not None:
                 data['tags'] += ['hazard', 'uninhabitable']
-        self.add_event(layout)
+            data['sign'] = sign
         return layout
 
     def populate_room(self, room_id, data):
         trap = None
         encounter = None
         treasure = None
+        sign = self.get_sign()
         if data.get('treasure') is not None:
-                self.treasure_source.delete_treasure(data['treasure'])
+            self.delete_treasure(data['treasure'])
+        if data.get('encounter') is not None:
+            self.delete_encounter(data['encounter'])
         if 'trap' in data['tags'] and 'important' in data['tags']:
             trap = self.get_trap(challenge='deadly')
         elif 'trap' in data['tags']:
             trap = self.get_trap()
-        elif 'important' in data['tags']:
-            encounter = self.encounter_source.get_encounter(style='leader', difficulty='hard')
-            if self.roll(5):
-                treasure = self.treasure_source.get_treasure(shares=2)
+        elif 'important' in data['tags'] and 'guarded' in data['tags']:
+            encounter = self.get_encounter(style='leader', difficulty='hard')
+            treasure = self.get_treasure(shares=2)
         elif 'entrance' in data['tags'] and self.roll(4):
-            encounter = self.encounter_source.get_encounter(style='basic')
+            encounter = self.get_encounter(style='basic')
         elif 'secret' in data['tags'] and self.roll(2):
-            encounter = self.encounter_source.get_encounter(style='elite')
+            encounter = self.get_encounter(style='elite')
         elif 'guarded' in data['tags'] and self.roll(2) and self.roll(4):
-            encounter = self.encounter_source.get_encounter(style='no leader', difficulty='medium')
-        if 'treasure' in data['tags']:
-            treasure = self.treasure_source.get_treasure()
-        return trap, encounter, treasure
+            encounter = self.get_encounter(style='no leader', difficulty='medium')
+        if 'treasure' in data['tags'] and treasure is None:
+            treasure = self.get_treasure()
+        return trap, encounter, treasure, sign
 
 
 class UndergroundNatives(DungeonPopulator):
@@ -117,14 +132,16 @@ class UndergroundNatives(DungeonPopulator):
         accessible_rooms = self.accessible_rooms(layout)
         for node, data in layout.nodes(data=True):
             if node in accessible_rooms:
+                if data.get('encounter') is not None:
+                    self.delete_encounter(data['encounter'])
                 if 'cave-entrance' in data['tags'] and self.roll(2):
-                    data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
+                    data['encounter'] = self.get_encounter(style='leader', difficulty='hard')
                     data['tags'] += ['uninhabitable']
                 elif self.roll(4):
-                    data['encounter'] = self.encounter_source.get_encounter()
+                    data['encounter'] = self.get_encounter(style='no leader')
                 else:
                     data['encounter'] = None
-        self.add_event(layout)
+                data['sign'] = self.get_sign()
         return layout
 
 class Lair(DungeonPopulator):
@@ -135,24 +152,48 @@ class Lair(DungeonPopulator):
         else:
             return None
 
+    def explore(self, layout, node):
+        passages = layout[node]
+        new_nodes = []
+        for adjacent_node, data in passages.items():
+            if self.random_state.randint(1, 2) > data['weight'] and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and 'hazard' not in layout.node[adjacent_node]['tags']:
+                new_nodes.append(adjacent_node)
+        if len(new_nodes) > 0:
+            return self.random_state.choice(new_nodes)
+        else:
+            return None
+
+    def clear_room(self, node, layout):
+        if layout.node[node].get('encounter') is not None:
+            self.delete_encounter(layout.node[node].get('encounter'))
+            layout.node[node]['encounter'] = None
+        layout.node[node]['sign'] = self.get_sign()
+        layout.node[node]['tags'] += ['hazard', 'uninhabitable']
+
     def populate(self, layout):
         node = self.start_node(layout)
+        second_node = self.explore(layout, node)
         if node is not None:
-            layout.node[node]['encounter'] = self.encounter_source.get_encounter(difficulty='hard')
-            layout.node[node]['tags'] += ['hazard', 'uninhabitable']
-            if layout.node[node].get('treasure') is not None:
-                self.treasure_source.delete_treasure(data['treasure'])
+            self.clear_room(node, layout)
+            if second_node is not None:
+                self.clear_room(second_node, layout)
+                node = second_node
+            layout.node[node]['encounter'] = self.get_encounter(difficulty='hard')
             if self.roll(3):
-                layout.node[node]['treasure'] = self.treasure_source.get_treasure(shares=2)
-        self.add_event(layout)
+                layout.node[node]['treasure'] = self.get_treasure(shares=2)
         return layout
 
 class Taint(DungeonPopulator):
     def populate(self, layout, tag=None):
         for node, data in layout.nodes(data=True):
             if tag in data['tags']:
-                layout.node[node]['encounter'] = self.encounter_source.get_encounter()
-        self.add_event(layout)
+                if data.get('encounter') is not None:
+                    self.delete_encounter(data['encounter'])
+                if 'treasure' in data['tags']: 
+                    difficulty = 'hard'
+                else:
+                    difficulty = None
+                layout.node[node]['encounter'] = self.get_encounter(difficulty=difficulty)
         return layout
 
 class Explorers(DungeonPopulator):
@@ -184,27 +225,28 @@ class Explorers(DungeonPopulator):
         max_path = max(paths.values())
         final_room = self.random_state.choice([key for key, value in paths.items() if value == max_path])
         for node, data in nodes:
+            if data.get('encounter') is not None:
+                self.delete_encounter(data['encounter'])
             if data.get('treasure') is not None:
-                self.treasure_source.delete_treasure(data['treasure'])
+                self.delete_treasure(data['treasure'])
             if node == final_room:
-                data['encounter'] = self.encounter_source.get_encounter(style='leader', difficulty='hard')
-                if self.roll(5):
-                    data['treasure'] = self.treasure_source.get_treasure(shares=2)
+                data['encounter'] = self.get_encounter(style='leader', difficulty='hard')
+                if self.roll(4):
+                    data['treasure'] = self.get_treasure(shares=2)
+                else:
+                    data['treasure'] = self.get_treasure(shares=1)
             elif node == start_node:
-                data['encounter'] = self.encounter_source.get_encounter(style='basic')
+                data['encounter'] = self.get_encounter(style='basic')
                 data['treasure'] = None
             elif self.roll(4):
-                style = self.random_state.choice(['basic', 'no leader', 'no pets'])
-                data['encounter'] = self.encounter_source.get_encounter(style=style)
+                style = self.random_state.choice(['basic', 'no leader', 'basic'])
+                data['encounter'] = self.get_encounter(style=style)
                 data['treasure'] = None
             else:
                 data['encounter'] = None
                 data['treasure'] = None
-        self.add_event(layout)
+            data['sign'] = self.get_sign()
         return layout
-
-        
-
 
 
         

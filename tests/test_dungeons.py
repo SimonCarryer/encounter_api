@@ -10,6 +10,8 @@ from mocks.mock_encounter_source import MockEncounterSource
 from mocks.mock_treasure_source import MockTreasureSource
 from mocks.mock_monster_list import MockMonsterManual
 from mocks.mock_trap_source import MockTrapSource
+from mocks.mock_encounter_source import MockEncounterManager
+from encounters.encounter_manager import EncounterManager
 from utils import library
 
 def test_dungeon_layout_has_correct_number_of_rooms():
@@ -52,10 +54,10 @@ def test_dungeon_furnisher_suitable_rooms():
 
 def test_dungeon_populator_adds_encounters():
     layout = MockDungeonLayout()
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
     state = Random(0)
-    populator = OriginalInhabitants(encounter_source, treasure_source, random_state=state)
+    populator = OriginalInhabitants(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #      print(data.get('encounter'))
@@ -85,10 +87,10 @@ def test_underground_natives():
     layout = MockDungeonLayout()
     state = Random(0)
     ager = DungeonAger('age', random_state=state)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
     ager.age(layout)
-    populator = UndergroundNatives(encounter_source, treasure_source, random_state=state)
+    populator = UndergroundNatives(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('tags'))
@@ -96,10 +98,10 @@ def test_underground_natives():
 def test_original_inhabitants():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
     trap_source = MockTrapSource()
-    populator = OriginalInhabitants(encounter_source, treasure_source, trap_source=trap_source, random_state=state)
+    populator = OriginalInhabitants(encounter_source=encounter_source, treasure_source=treasure_source, trap_source=trap_source, random_state=state)
     populator.populate(layout)
     dungeon = Dungeon(layout)
     #print(dungeon.module()['rooms'])
@@ -107,9 +109,9 @@ def test_original_inhabitants():
 def test_lair():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
-    populator = Lair(encounter_source, treasure_source, random_state=state)
+    populator = Lair(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('tags'))
@@ -117,9 +119,9 @@ def test_lair():
 def test_explorers():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
-    populator = Explorers(encounter_source, treasure_source, random_state=state)
+    populator = Explorers(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('treasure'))
@@ -128,10 +130,10 @@ def test_explorers():
 def test_taint():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterSource()
+    encounter_source = MockEncounterManager()
     treasure_source = MockTreasureSource()
     layout.node[0]['tags'] = ['populate']
-    populator = Taint(encounter_source, treasure_source, random_state=state)
+    populator = Taint(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
     populator.populate(layout, tag='populate')
 #     for node, data in layout.nodes(data=True):
 #         print(data.get('encounter'), data.get('treasure'))
@@ -139,8 +141,9 @@ def test_taint():
 def test_dungeon_templates():
     layout = MockDungeonLayout()
     layout.purpose = 'temple'
+    encounter_manager = MockEncounterManager()
     state = Random()
-    template =  HauntedTemplate(1)
+    template =  HauntedTemplate(1, encounter_manager=encounter_manager)
     template.alter_dungeon(layout)
     # print(template.get_monster_sets())
     # for node, data in layout.nodes(data=True):
@@ -162,3 +165,13 @@ def test_module_orders_rooms_correctly():
     layout.purpose = 'temple'
     dungeon = Dungeon(layout)
     assert dungeon.get_room_ids() == {0: 1, 3: 2, 2: 3, 4: 4, 1: 5}
+
+def test_integration_from_encounter_manager_to_populator():
+    layout = MockDungeonLayout()
+    layout.purpose = 'temple'
+    with EncounterManager() as manager:
+        template = AncientRemnantsTempleTemplate(4, treasure_manager=None, encounter_manager=manager)
+        template.alter_dungeon(layout)
+        # print(manager.encounters)
+
+    

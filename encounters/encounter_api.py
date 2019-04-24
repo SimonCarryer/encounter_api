@@ -9,7 +9,6 @@ from utils.library import monster_manual
 with open('data/xp_values.yaml') as f:
     xp_values = yaml.load(f.read())
 
-
 class EncounterSource:
     def __init__(self,
                 xp_budget=None,
@@ -40,6 +39,7 @@ class EncounterSource:
         monsters = monster_manual.monsters(monster_set)
         encounters = EncounterBuilder(self.xp_budget, monsters, n_characters=self.n_characters).monster_lists
         self.encounter_picker = EncounterPicker(encounters, self.xp_budget, n_characters=self.n_characters, random_state=self.random_state)
+        self.used_signs = set()
                 
     def budget_from_character_dict(self, character_level_dict):
         xp_budget = 0
@@ -63,3 +63,13 @@ class EncounterSource:
             response['xp_value'] = int(encounter['xp_value'])
             response['treasure'] = self.get_treasure(encounter['monsters'])
         return response
+
+    def get_sign(self):
+        signs = [sign for sign in monster_manual.get_signs(self.monster_set) if sign not in self.used_signs]
+        if len(signs) > 0:
+            sign = self.random_state.choice(signs)
+            self.used_signs.add(sign)
+        else:
+            sign = None
+        return sign
+

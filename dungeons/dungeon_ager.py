@@ -49,7 +49,7 @@ class DungeonAger:
         affected_passages = self.random_state.sample(passages, n_effects)
         effects = self.random_state.sample(self.passage_effects, n_effects)
         for effect, passage in zip(effects, affected_passages):
-            layout[passage[0]][passage[1]]['weight'] = effect['weight']
+            layout[passage[0]][passage[1]]['weight'] = max([effect['weight'], layout[passage[0]][passage[1]]['weight']])
             current_description = layout[passage[0]][passage[1]].get('description', '')
             layout[passage[0]][passage[1]]['description'] = ' '.join([current_description, effect['description']])
 

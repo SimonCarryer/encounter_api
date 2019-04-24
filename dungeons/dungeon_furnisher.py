@@ -5,6 +5,7 @@ import yaml
 with open('data/dungeon_types.yaml', 'r') as f:
     dungeon_rooms = {}
     dungeon_tags = {}
+    secret_passages = {}
     dungeon_info = yaml.load(f)
     for purpose in dungeon_info.keys():
         rooms = []
@@ -14,6 +15,7 @@ with open('data/dungeon_types.yaml', 'r') as f:
             rooms.append(room)
         dungeon_rooms[purpose] = rooms
         dungeon_tags[purpose] = dungeon_info[purpose]['tags']
+        secret_passages[purpose] = dungeon_info[purpose]['secret passages']
 
 
 class DungeonFurnisher:
@@ -31,12 +33,15 @@ class DungeonFurnisher:
             room_type = self.choose_room_type(room['tags'])
             room['description'] = room_type['description']
             room['tags'] += room_type['tags']
+        for start, end, data in layout.edges(data=True):
+            if 'secret' in data.get('tags', []):
+                data['description'] = self.random_state.choice(secret_passages[self.purpose])
         layout.purpose = self.purpose
         return layout
 
     def appropriate_room_type(self, room_type, room_tags):
         appropriate = False
-        if room_tags == [] and 'secret' not in room_type['tags'] and 'important' not in room_type['tags']:
+        if room_tags == [] and 'secret' not in room_type['tags'] and 'important' not in room_type['tags'] and 'entrance' not in room_type['tags']:
             appropriate = True
         elif 'secret' in room_tags and 'secret' not in room_type['tags']:
             appropriate = False

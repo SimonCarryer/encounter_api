@@ -27,6 +27,7 @@ class DungeonLayout(nx.Graph):
                     connecting_room = self.random_state.sample(connected_components[idx+1], 1)[0]
                     self.connect_rooms(room, connecting_room)
             # label nodes
+            self.paths = {a: len(nx.shortest_path(self, 0, a)) for a in self.nodes()}
             self.tag_nodes()
 
     def add_room(self, room_idx):
@@ -36,7 +37,7 @@ class DungeonLayout(nx.Graph):
         if self.random_state.randint(1, 10) >= self.secret_chance:
             weight = 3
             tags = ['secret']
-            description = 'This is a secret passage.'
+            description = ''
         else:
             weight = 1
             tags = []
@@ -46,25 +47,25 @@ class DungeonLayout(nx.Graph):
     def tag_nodes(self):
         nodes = [(node, data) for node, data in self.nodes(data=True) if 'secret' not in data['tags']]
         central_nodes = [i for i in nx.articulation_points(self)]
-        paths = {a: len(nx.shortest_path(self, 0, a)) for a, node in nodes}
-        max_path = max(paths.values())
+        max_path = max(self.paths.values())
         for a, node in nodes:
             if a == 0:
                 node['tags'].append('entrance')
             if a in central_nodes:
                 node['tags'].append('central')
-            if paths[a] == max_path:
+            if self.paths[a] == max_path:
                 node['tags'].append('important')
             if len([i for i in self.neighbors(a)]) == 1 and a != 0:
                 node['tags'].append('dead-end')
             if len([i for i in self.neighbors(a)]) >= 3:
                 node['tags'].append('hub')
-            node['distance'] = paths[a]
+            node['distance'] = self.paths[a]
         self.label_secret_nodes()
     
     def label_secret_nodes(self):
         for node, data in self.nodes(data=True):
             if node > 0:
+                data['distance'] = self.paths[node]
                 paths = nx.all_simple_paths(self, 0, node)
                 if all([self.any_secrets_in_path(path) for path in paths]):
                     data['tags'].append('secret')

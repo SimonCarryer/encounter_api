@@ -1,10 +1,12 @@
 from .dungeon_populator import Lair, OriginalInhabitants, UndergroundNatives, Explorers, Taint
 from .dungeon_ager import DungeonAger
 from encounters.encounter_api import EncounterSource
+from encounters.encounter_manager import EncounterManager
 from treasure.treasure_api import HoardSource, NothingSource
 from .dungeon_furnisher import DungeonFurnisher
 from random import Random
 import yaml
+import uuid
 from utils.library import monster_manual, use_real_monster_manual
 from traps.trap_api import TrapSource
 from treasure.treasure_manager import TreasureManager
@@ -18,7 +20,7 @@ with open('data/dungeon_age.yaml', 'r') as f:
             effects.append(room_effect)
 
 class DungeonTemplate:
-    def __init__(self, level, treasure_manager=None, monster_set=None, random_state=None):
+    def __init__(self, level, treasure_manager=None, monster_set=None, encounter_manager=None, random_state=None):
         if random_state is None:
             self.random_state = Random()
         else:
@@ -27,6 +29,11 @@ class DungeonTemplate:
             self.treasure_manager = TreasureManager(RawHoardSource(level, random_state=self.random_state).get_treasure(), random_state=self.random_state)
         else:
             self.treasure_manager = treasure_manager
+        if encounter_manager is None:
+            self.encounter_manager = EncounterManager()
+        else:
+            self.encounter_manager = encounter_manager
+        self.name = str(uuid.uuid4())
         self.monster_set = monster_set
         self.level = level
 
@@ -38,28 +45,21 @@ class DungeonTemplate:
             return sets
         else:
             return [self.monster_set]
-    
-class DungeonBaseTemplate(DungeonTemplate):
-    def build_populator(self, monster_sets, trap_source=None):
+
+    def build_populator(self, monster_sets, populator_method=OriginalInhabitants, trap_source=None):
         encounter_source = EncounterSource(encounter_level=self.level,
                                             monster_sets=monster_sets,
                                             random_state=self.random_state)
+        self.encounter_manager.add_encounter_source(self.name, encounter_source)
         treasure_source = self.treasure_manager
-        return OriginalInhabitants(encounter_source, treasure_source, trap_source=trap_source, random_state=self.random_state)
+        return populator_method(name=self.name, encounter_source=self.encounter_manager, treasure_source=treasure_source, trap_source=trap_source, random_state=self.random_state)
+    
+    def build_ager(self, cause):
+        return DungeonAger(cause=cause, random_state=self.random_state)
 
+class DungeonBaseTemplate(DungeonTemplate):
     def build_furnisher(self, dungeon_type):
         return DungeonFurnisher(dungeon_type, random_state=self.random_state)
-
-class DungeonTaintTemplate(DungeonTemplate):
-    def build_ager(self, ager_type):
-        return DungeonAger(cause=ager_type, random_state=self.random_state)
-
-    def build_populator(self, monster_sets):
-        encounter_source = EncounterSource(encounter_level=self.level,
-                                            monster_sets=monster_sets,
-                                            random_state=self.random_state)
-        treasure_source = self.treasure_manager
-        return Taint(encounter_source, treasure_source, random_state=self.random_state)
 
 class NewInhabitantsTemplate(DungeonTemplate):
     def free_rooms(self, layout):
@@ -77,24 +77,6 @@ class NewInhabitantsTemplate(DungeonTemplate):
             current_description = layout.node[new_entrance].get('description', '')
             layout.node[new_entrance]['description'] = ' '.join([current_description, effect['description']])
 
-    def build_ager(self, ager_type):
-        return DungeonAger(cause=ager_type, random_state=self.random_state)
-
-    def build_populator(self, monster_sets, method, treasure=None):
-        encounter_source = EncounterSource(encounter_level=self.level,
-                                            monster_sets=monster_sets,
-                                            random_state=self.random_state)
-        if treasure is None:
-            treasure_source = self.treasure_manager
-        else:
-            treasure_source = treasure(encounter_level=self.level,
-                                       random_state=self.random_state)
-        return method(encounter_source, treasure_source, random_state=self.random_state)
-
-class DungeonAgeTemplate(DungeonTemplate):
-    def build_ager(self, ager_type):
-        return DungeonAger(cause=ager_type, random_state=self.random_state)
-
 class HauntedTombTemplate(DungeonBaseTemplate):
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['undead', 'immortal', 'guardian'])
@@ -109,7 +91,7 @@ class AbandonedStrongholdTemplate(DungeonBaseTemplate):
     def alter_dungeon(self, layout):
         self.build_furnisher('stronghold').furnish(layout)
         trap_source = TrapSource(self.level, trap_class='mechanical', random_state=self.random_state)
-        populator = OriginalInhabitants(encounter_source=None, treasure_source=self.treasure_manager, trap_source=trap_source, random_state=self.random_state)
+        populator = OriginalInhabitants(name=self.name, encounter_source=None, treasure_source=self.treasure_manager, trap_source=trap_source, random_state=self.random_state)
         populator.populate(layout)
         return layout
 
@@ -140,7 +122,7 @@ class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
 
 class InUseTempleTemplate(DungeonBaseTemplate):
     def get_monster_sets(self):
-        return self.monster_sets(required_tags=['humanoid'], any_tags=['evil', 'magical'])
+        return self.monster_sets(required_tags=['humanoid'], any_tags=['evil', 'magical'], none_tags=['underdark'])
 
     def alter_dungeon(self, layout):
         self.build_furnisher('temple').furnish(layout)
@@ -149,48 +131,39 @@ class InUseTempleTemplate(DungeonBaseTemplate):
 
 class InfestedCaveTemplate(DungeonBaseTemplate):
     def get_monster_sets(self):
-        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark'])
+        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark', 'rare'])
 
     def alter_dungeon(self, layout):
         self.build_furnisher('cave').furnish(layout)
-        self.build_populator(self.get_monster_sets()).populate(layout)
-        self.build_ager().age(layout)
+        self.build_ager(cause='cave-age').age(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=UndergroundNatives).populate(layout)
         return layout
 
-    def build_ager(self):
-        return DungeonAger(cause='cave-age', random_state=self.random_state)
-
-    def build_populator(self, monster_sets):
-        encounter_source = EncounterSource(encounter_level=self.level,
-                                            monster_sets=monster_sets,
-                                            random_state=self.random_state)
-        return OriginalInhabitants(encounter_source, treasure_source=None, random_state=self.random_state)
-
-class HauntedTemplate(DungeonTaintTemplate):
+class HauntedTemplate(DungeonTemplate):
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['undead'], none_tags=['guardian'])
     
     def alter_dungeon(self, layout):
         self.build_ager('shadowfell').age(layout)
-        self.build_populator(self.get_monster_sets()).populate(layout, tag='shadowfell')
+        self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='shadowfell')
         return layout
 
-class TreeChokedTemplate(DungeonTaintTemplate):
+class TreeChokedTemplate(DungeonTemplate):
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['plant'])
 
     def alter_dungeon(self, layout):
         self.build_ager('trees').age(layout)
-        self.build_populator(self.get_monster_sets()).populate(layout, tag='trees')
+        self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='trees')
         return layout
 
-class FungalInfectionTemplate(DungeonTaintTemplate):
+class FungalInfectionTemplate(DungeonTemplate):
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['fungus', 'cave-dweller'])
 
     def alter_dungeon(self, layout):
         self.build_ager('fungus').age(layout)
-        self.build_populator(self.get_monster_sets()).populate(layout, tag='fungus')
+        self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='fungus')
         return layout
 
 class InfestedTemplate(NewInhabitantsTemplate):
@@ -199,16 +172,14 @@ class InfestedTemplate(NewInhabitantsTemplate):
         age_effect = self.random_state.choice(['earthquake', 'flood', 'age'])
         self.build_ager(age_effect).age(layout)
         self.make_an_entrace(layout, tag='cave-entrance')
-        self.build_populator(monster_sets, UndergroundNatives, treasure=NothingSource).populate(layout)
-        self.make_an_entrace(layout, tag='cave-entrance')
-        self.build_populator(monster_sets, UndergroundNatives, treasure=NothingSource).populate(layout)
+        self.build_populator(monster_sets, populator_method=UndergroundNatives).populate(layout)
         return layout
 
 class LairTemplate(NewInhabitantsTemplate):
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
         monster_sets = self.monster_sets(required_tags=['beast'], any_tags=['forest', 'mountains', 'desert', 'plains', 'swamp', 'arctic'])
-        self.build_populator(monster_sets, Lair).populate(layout)
+        self.build_populator(monster_sets, populator_method=Lair).populate(layout)
         return layout
 
 class ExplorerTemplate(NewInhabitantsTemplate):
@@ -220,13 +191,13 @@ class ExplorerTemplate(NewInhabitantsTemplate):
 
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
-        self.build_populator(self.get_monster_sets(layout), Explorers).populate(layout)
+        self.build_populator(self.get_monster_sets(layout), populator_method=Explorers).populate(layout)
         return layout
 
-class PassingAgesTemplate(DungeonAgeTemplate):
+class PassingAgesTemplate(DungeonTemplate):
     def alter_dungeon(self, layout):
         age_effect = self.random_state.choice(['earthquake', 'flood', 'age', 'fungus', 'trees'])
-        self.build_ager(age_effect).age(layout)
+        self.build_ager(cause=age_effect).age(layout)
 
 some_examples = [
 [HauntedTombTemplate, PassingAgesTemplate, ExplorerTemplate],
