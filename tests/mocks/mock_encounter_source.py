@@ -9,7 +9,7 @@ class MockEncounterSource:
     def get_sign(self):
         return 'a sign of some scary monsters'
 
-class MockEncounterManager:
+class MockDungeonManager:
     def __init__(self):
         self.encounter_source = MockEncounterSource()
 
@@ -23,3 +23,12 @@ class MockEncounterManager:
 
     def get_sign(self, name):
         return self.encounter_source.get_sign()
+
+    def add_event(self, *args):
+        pass
+
+    def get_treasure(self, shares=1):
+        return 'Some cool treasure'
+
+    def get_monster_sets(self, **kwargs):
+        return ['goblins', 'kobolds']

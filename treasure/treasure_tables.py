@@ -45,6 +45,11 @@ def load_magic_items():
         magic_items = yaml.load(f.read())
     return magic_items
 
+def load_unique_items():
+    with open('data/unique_items.yaml', encoding='utf-8') as f:
+        unique_items = yaml.load(f.read())
+    return unique_items
+
 def load_item_values(item_tables, magic_items):
     with open('data/item_values.yaml', encoding='utf-8') as f:
         rarity_values = yaml.load(f.read())
@@ -54,9 +59,12 @@ def load_item_values(item_tables, magic_items):
             item_values[item] = rarity_values[magic_items[item]]
     return item_values
 
+with open('data/item_properties.yaml', encoding='utf-8') as f:
+    item_properties = yaml.load(f.read())
     
 magic_items = load_magic_items()
 item_tables = load_item_tables()
 treasure_tables = load_treasure_tables()
 individual_tables = load_individual_tables()
 item_values = load_item_values(item_tables, magic_items)
+unique_items = load_unique_items()

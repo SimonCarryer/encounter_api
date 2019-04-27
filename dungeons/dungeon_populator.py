@@ -20,12 +20,10 @@ class NoTreasureSource:
     def get_treasure(*args, **kwargs):
         return None
 
-
 class DungeonPopulator:
     def __init__(self,
                  name=None,
-                 encounter_source=None,
-                 treasure_source=None,
+                 dungeon_manager=None,
                  trap_source=None,
                  random_state=None,
                  ):
@@ -37,14 +35,12 @@ class DungeonPopulator:
             self.random_state = Random()
         else:
             self.random_state = random_state
-        if encounter_source is None:
+        if dungeon_manager is None:
             self.encounter_source = NoEncountersSource()
-        else:
-            self.encounter_source = encounter_source
-        if treasure_source is None:
             self.treasure_source = NoTreasureSource()
         else:
-            self.treasure_source = treasure_source
+            self.encounter_source = dungeon_manager
+            self.treasure_source = dungeon_manager
         if trap_source is None:
             self.trap_source = NoTrapSource()
         else:
@@ -109,7 +105,7 @@ class OriginalInhabitants(DungeonPopulator):
             encounter = self.get_encounter(style='basic')
         elif 'secret' in data['tags'] and self.roll(2):
             encounter = self.get_encounter(style='elite')
-        elif 'guarded' in data['tags'] and self.roll(2) and self.roll(4):
+        elif 'guarded' in data['tags'] and self.roll(2):
             encounter = self.get_encounter(style='no leader', difficulty='medium')
         if 'treasure' in data['tags'] and treasure is None:
             treasure = self.get_treasure()
@@ -227,8 +223,10 @@ class Explorers(DungeonPopulator):
         for node, data in nodes:
             if data.get('encounter') is not None:
                 self.delete_encounter(data['encounter'])
+                data['encounter'] = None
             if data.get('treasure') is not None:
                 self.delete_treasure(data['treasure'])
+                data['treasure'] = None
             if node == final_room:
                 data['encounter'] = self.get_encounter(style='leader', difficulty='hard')
                 if self.roll(4):

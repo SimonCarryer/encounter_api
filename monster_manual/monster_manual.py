@@ -54,10 +54,14 @@ monster_sets = load_monster_sets()
 
     
 class MonsterManual():
-    def __init__(self):
+    def __init__(self, terrain=None):
+        self.terrain = terrain
         self.monster_sets = monster_sets
         self.monster_set_names = [key for key in self.monster_sets.keys()]
         self.monster_tags = copy.deepcopy(monster_tags)
+        if terrain is not None:
+            self.monster_sets = {key: monster_sets[key] for key in self.get_monster_sets(any_tags=[terrain, 'any terrain'])}
+            self.monster_set_names = [key for key in self.monster_sets.keys()]
 
     def monsters(self, monster_set_name):
         monster_set = copy.deepcopy(self.monster_sets[monster_set_name])

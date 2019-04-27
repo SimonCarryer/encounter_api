@@ -3,15 +3,15 @@ from dungeons.dungeon_furnisher import DungeonFurnisher
 from dungeons.dungeon_populator import OriginalInhabitants, UndergroundNatives, Lair, Explorers
 from dungeons.dungeon_ager import DungeonAger
 from dungeons.dungeon import Dungeon
+from dungeons.dungeon_manager import DungeonManager, TreasureManager
 from dungeons.dungeon_templates import *
 from random import Random
 from mocks.mock_dungeon_layout import MockDungeonLayout
 from mocks.mock_encounter_source import MockEncounterSource
-from mocks.mock_treasure_source import MockTreasureSource
+from mocks.mock_treasure_source import MockTreasureSource, MockRawHoardSource
 from mocks.mock_monster_list import MockMonsterManual
 from mocks.mock_trap_source import MockTrapSource
-from mocks.mock_encounter_source import MockEncounterManager
-from encounters.encounter_manager import EncounterManager
+from mocks.mock_encounter_source import MockDungeonManager
 from utils import library
 
 def test_dungeon_layout_has_correct_number_of_rooms():
@@ -54,10 +54,9 @@ def test_dungeon_furnisher_suitable_rooms():
 
 def test_dungeon_populator_adds_encounters():
     layout = MockDungeonLayout()
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
+    manager = MockDungeonManager()
     state = Random(0)
-    populator = OriginalInhabitants(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
+    populator = OriginalInhabitants(dungeon_manager=manager, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #      print(data.get('encounter'))
@@ -87,10 +86,9 @@ def test_underground_natives():
     layout = MockDungeonLayout()
     state = Random(0)
     ager = DungeonAger('age', random_state=state)
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
+    manager = MockDungeonManager()
     ager.age(layout)
-    populator = UndergroundNatives(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
+    populator = UndergroundNatives(dungeon_manager=manager, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('tags'))
@@ -98,10 +96,9 @@ def test_underground_natives():
 def test_original_inhabitants():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
+    manager = MockDungeonManager()
     trap_source = MockTrapSource()
-    populator = OriginalInhabitants(encounter_source=encounter_source, treasure_source=treasure_source, trap_source=trap_source, random_state=state)
+    populator = OriginalInhabitants(dungeon_manager=manager, trap_source=trap_source, random_state=state)
     populator.populate(layout)
     dungeon = Dungeon(layout)
     #print(dungeon.module()['rooms'])
@@ -109,9 +106,8 @@ def test_original_inhabitants():
 def test_lair():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
-    populator = Lair(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
+    manager = MockDungeonManager()
+    populator = Lair(dungeon_manager=manager, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('tags'))
@@ -119,9 +115,8 @@ def test_lair():
 def test_explorers():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
-    populator = Explorers(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
+    manager = MockDungeonManager()
+    populator = Explorers(dungeon_manager=manager, random_state=state)
     populator.populate(layout)
     # for node, data in layout.nodes(data=True):
     #     print(data.get('encounter'), data.get('treasure'))
@@ -130,10 +125,10 @@ def test_explorers():
 def test_taint():
     layout = MockDungeonLayout()
     state = Random(0)
-    encounter_source = MockEncounterManager()
-    treasure_source = MockTreasureSource()
+    manager = MockDungeonManager()
     layout.node[0]['tags'] = ['populate']
-    populator = Taint(encounter_source=encounter_source, treasure_source=treasure_source, random_state=state)
+    manager = MockDungeonManager()
+    populator = Taint(dungeon_manager=manager, random_state=state)
     populator.populate(layout, tag='populate')
 #     for node, data in layout.nodes(data=True):
 #         print(data.get('encounter'), data.get('treasure'))
@@ -141,9 +136,9 @@ def test_taint():
 def test_dungeon_templates():
     layout = MockDungeonLayout()
     layout.purpose = 'temple'
-    encounter_manager = MockEncounterManager()
+    manager = MockDungeonManager()
     state = Random()
-    template =  HauntedTemplate(1, encounter_manager=encounter_manager)
+    template =  HauntedTemplate(1, dungeon_manager=manager)
     template.alter_dungeon(layout)
     # print(template.get_monster_sets())
     # for node, data in layout.nodes(data=True):
@@ -154,7 +149,8 @@ def test_populator_uses_treasure_source():
     layout = MockDungeonLayout()
     layout.purpose = 'temple'
     state = Random()
-    template = GuardedTreasureVaultTemplate(1, treasure_manager=MockTreasureSource())
+    manager=MockDungeonManager()
+    template = GuardedTreasureVaultTemplate(1, dungeon_manager=manager)
     template.alter_dungeon(layout)
 #     for node, data in layout.nodes(data=True):
 #         print(data.get('treasure'), '\n')
@@ -169,9 +165,143 @@ def test_module_orders_rooms_correctly():
 def test_integration_from_encounter_manager_to_populator():
     layout = MockDungeonLayout()
     layout.purpose = 'temple'
-    with EncounterManager() as manager:
-        template = AncientRemnantsTempleTemplate(4, treasure_manager=None, encounter_manager=manager)
+    with DungeonManager(1, layout) as manager:
+        template = AncientRemnantsTempleTemplate(4, dungeon_manager=manager)
         template.alter_dungeon(layout)
         # print(manager.encounters)
 
+def test_manager_adds_encounters():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    manager.add_encounter_source('test', source)
+    encounter = manager.get_encounter('test', style='test style')
+    assert encounter['source name'] == 'test'
+    assert encounter['style'] == 'test style'
+    assert manager.encounters['test'] == 1
+
+def test_manager_deletes_encounters():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    manager.add_encounter_source('test', source)
+    encounter = manager.get_encounter('test', style='test style')
+    assert manager.encounters['test'] == 1
+    manager.delete_encounter(encounter)
+    assert manager.encounters['test'] == 0
+
+def test_manager_adds_events():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    with DungeonManager(1, layout) as manager:
+        template = AncientRemnantsTempleTemplate(4, dungeon_manager=manager, random_state=state)
+        template.alter_dungeon(layout)
+    assert layout.events[0] == 'Echoes of the former worship still remain: (elemental plane of water)'
+
+def test_manager_only_shows_events_if_there_are_encounters():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    with DungeonManager(1, layout) as manager:
+        template = AncientRemnantsTempleTemplate(4, dungeon_manager=manager)
+        template.alter_dungeon(layout)
+        manager.encounters[template.name] = 0
+    assert layout.events == []
+
+def test_manager_gets_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    manager.add_encounter_source('test', source)
+    sign = manager.get_sign('test')
+    assert str(sign) == repr('a sign of some scary monsters')
+
+def test_manager_deletes_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    manager.add_encounter_source('test', source)
+    sign = manager.get_sign('test')
+    manager.delete_signs('test')
+    assert str(manager.signs['test'][0]) == 'None'
+
+def test_deleting_encounters_deletes_signs():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    with DungeonManager(1, layout) as manager:
+        manager.add_encounter_source('test', source)
+        encounter = manager.get_encounter('test')
+        sign = manager.get_sign('test')
+        # print(sign)
+        manager.delete_encounter(encounter)
+    # print(sign)
+
+def test_deleting_different_encounters_deletes_signs():
+    state = Random(0)
+    layout = MockDungeonLayout()
+    source = MockEncounterSource()
+    with DungeonManager(1, layout) as manager:
+        manager.add_encounter_source('test', source)
+        manager.add_encounter_source('test_2', source)
+        encounter = manager.get_encounter('test')
+        encounter_2 = manager.get_encounter('test_2')
+        sign = manager.get_sign('test')
+        # print(sign)
+        manager.delete_encounter(encounter)
+        # print(manager.encounters)
+    # print(sign)
     
+def test_treasure_manager_makes_treasure():
+    state = Random(0)
+    source = MockRawHoardSource()
+    items = source.get_treasure()
+    manager = TreasureManager(items)
+    treasure = manager.get_treasure(1)
+    assert sorted(treasure.items) == sorted(items)
+
+def test_treasure_manager_assigns_all_items_by_share():
+    state = Random(0)
+    source = MockRawHoardSource()
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    other_treasure = manager.get_treasure(2)
+    assert sorted(treasure.items + other_treasure.items) == sorted(items)
+    assert len(treasure.items) < len(other_treasure.items)
+    #print(treasure.items)
+
+def test_treasure_manager_deletes_treasures():
+    state = Random(0)
+    source = MockRawHoardSource()
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    assert sorted(treasure.items) == sorted(items)
+    other_treasure = manager.get_treasure(2)
+    assert sorted(treasure.items) != sorted(items)
+    manager.delete_treasure(other_treasure)
+    assert sorted(treasure.items) == sorted(items)
+
+def test_treasures_look_nice():
+    state = Random(0)
+    source = MockRawHoardSource()
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    # print(treasure)
+
+def test_delete_last_treasure():
+    state = Random(0)
+    source = MockRawHoardSource()
+    items = source.get_treasure()
+    manager = TreasureManager(items, random_state=state)
+    treasure = manager.get_treasure(1)
+    manager.delete_treasure(treasure)

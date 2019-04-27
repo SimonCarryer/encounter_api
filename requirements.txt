@@ -31,6 +31,7 @@ MarkupSafe==1.1.0
 mccabe==0.6.1
 networkx==2.2
 nose2==0.8.0
+numpy==1.16.2
 pathspec==0.5.5
 python-dateutil==2.7.5
 pytz==2018.9

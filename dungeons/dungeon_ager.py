@@ -53,12 +53,7 @@ class DungeonAger:
             current_description = layout[passage[0]][passage[1]].get('description', '')
             layout[passage[0]][passage[1]]['description'] = ' '.join([current_description, effect['description']])
 
-    def add_event(self, layout):
-        event = 'Event: %s' % self.cause
-        layout.history.append(event)
-
     def age(self, layout):
         self.choose_room_effects(layout)
         self.choose_passage_effects(layout)
-        self.add_event(layout)
         return layout

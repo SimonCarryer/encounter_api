@@ -30,7 +30,7 @@
   tags: [savage]
 - sign: The smell of cheap tobacco.
   tags: [humanoid]
-- sign: A lingering smell of woodsmoke from a far-off cooking fire..
+- sign: A lingering smell of woodsmoke from a cooking fire..
   tags: [humanoid]
 - sign: Indistinct shouting voices.
   tags: [humanoid]
@@ -114,7 +114,7 @@
   tags: [humanoid]
 - sign: Mournful howling.
   tags: [wolves]
-- sign: Spiderwebs, as thick as a piece of wool.
+- sign: Spiderwebs, thick as twine and strong as steel.
   tags: [spiders]
 - sign: Dried-out husks of once-living things, wrapped in cocoons of silk.
   tags: [spiders]
@@ -164,3 +164,19 @@
   tags: [evil, magical]
 - sign: Steps worn as if by the passage of feet over thousands of years.
   tags: [immortal]
+- sign: Regurgitated food.
+  tags: [beast]
+- sign: A creature's young - still blind and crawling.
+  tags: [beast]
+- sign: A letter from a distant correspondent, detailing some secret dealings.
+  tags: [human]
+- sign: A musical instrument, battered but serviceable.
+  tags: [humanoid]
+- sign: Wax seals placed over doorways - a sign of protective magic.
+  tags: [guardian]
+- sign: A doorway is broken wide open, the frame widened to permit the passage of something huge.
+  tags: [giant, savage]
+- sign: An uprooted sapling, fashioned into a spear.
+  tags: [giant, savage]
+- sign: Crude paintings daubed on the walls.
+  tags: [humanoid]

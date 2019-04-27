@@ -48,7 +48,11 @@ bandits:
   - humanoid
   - dungeon-explorer
   - human
-  - any terrain
+  - forest
+  - hills
+  - mountains
+  - desert
+  - plains
 drow:
   - humanoid
   - evil
@@ -62,6 +66,9 @@ apex predators:
   - mountains
   - plains
   - jungle
+jungle:
+  - jungle
+  - beast
 desert:
   - beast
   - desert
@@ -129,8 +136,7 @@ cult of obox-ob:
   - any terrain
 blights:
   - immortal
-  - forest
-  - jungle
+  - any terrain
   - evil
   - plant
 quaggoths:
@@ -143,9 +149,11 @@ mountains:
   - mountains
 gricks:
   - cave-dweller
+  - any terrain
 underdark:
   - cave-dweller
   - underdark
+  - beast
 orcs:
   - savage
   - humanoid
@@ -165,6 +173,7 @@ spiders:
   - swamp
   - desert
   - jungle
+  - underdark
 hills:
   - beast
   - bird
@@ -182,6 +191,7 @@ gnolls:
   - any terrain
 caves:
   - cave-dweller
+  - any terrain
 cult of jubilex:
   - evil
   - humanoid
@@ -207,6 +217,7 @@ yuan-ti:
   - evil
   - jungle
   - desert
+  - plains
 cloud giants:
   - giant
   - mountains
@@ -217,6 +228,7 @@ modrons:
 mind flayers:
   - underdark
   - cave-dweller
+  - dungeon-explorer
 wizards tower:
   - guardian
   - magical
@@ -232,10 +244,12 @@ fire giants:
   - giant
   - desert
   - mountains
+  - dungeon-explorer
 kuo-toa:
   - cave-dweller
   - underdark
   - water
+  - dungeon-explorer
 sewers:
   - urban
   - sewers
@@ -254,6 +268,7 @@ myconids:
   - fungus
   - cave-dweller
   - underdark
+  - rare
 sahuagin:
   - water
   - savage
@@ -263,6 +278,7 @@ jungle tribes:
   - human
   - humanoid
   - lost-world
+  - dungeon-explorer
   - jungle
 arctic:
   - cold
@@ -283,6 +299,7 @@ oozes:
   - cave-dweller
   - fungus
   - rare
+  - any terrain
 yugoloths:
   - evil
   - immortal
@@ -304,3 +321,9 @@ slaadi:
   - magical
   - immortal
   - any terrain
+low giants:
+  - giant
+  - beast
+  - forest
+  - hills
+  - savage

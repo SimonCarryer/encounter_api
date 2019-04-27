@@ -1,8 +1,8 @@
 from .dungeon import Dungeon
 from .dungeon_layout import DungeonLayout
 from .dungeon_templates import some_examples
-from treasure.treasure_manager import TreasureManager
-from encounters.encounter_manager import EncounterManager
+from .dungeon_manager import DungeonManager
+from .special_events import VillainHideout, LostItem
 from treasure.treasure_api import RawHoardSource
 from random import Random
 
@@ -17,15 +17,23 @@ class DungeonSource():
         self.level = level
         layout = DungeonLayout(n_rooms=self.random_state.randint(5, 8))
         templates = self.random_state.choice(some_examples)
-        treasure_manager = TreasureManager(RawHoardSource(self.level, random_state=self.random_state).get_treasure(), random_state=self.random_state)
-        with EncounterManager() as encounter_manager:
+        terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'underdark', 'plains', 'hills', 'jungle', 'swamp'])
+        with DungeonManager(self.level, layout, terrain=terrain) as dungeon_manager:
             for template in templates:
                 template(self.level,
-                         encounter_manager=encounter_manager,
-                         treasure_manager=treasure_manager,
+                         dungeon_manager=dungeon_manager,
                          random_state=self.random_state).alter_dungeon(layout)
+            for special_event in self.special_events(layout):
+                special_event(self.level, dungeon_manager, random_state=self.random_state).alter_dungeon(layout)
         self.dungeon = Dungeon(layout)
 
     def get_dungeon(self):
         return self.dungeon.module()
+
+    def special_events(self, layout):
+        special_events = [LostItem]
+        # if self.random_state.randint(1, 6) >= 5:
+        #     special_events.append(VillainHideout)
+        return special_events
+
 

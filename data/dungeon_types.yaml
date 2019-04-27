@@ -79,7 +79,6 @@ stronghold:
     - A sconce on the wall is actually the handle of the concealed door to this passage.
     - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
     - A rug on the floor covers the trapdoor entrance to this passage.
-
 tomb:
   tags:
     - undead
@@ -120,7 +119,6 @@ tomb:
     - What appears to be a sarcophagus is actually the entrance to this secret passage.
     - This doorway is concealed by thick cobwebs and dust.
     - A statue can be rolled aside to reveal this passageway.
-
 temple:
   tags:
     - magical
@@ -179,7 +177,6 @@ temple:
     - This doorway is concealed by thick cobwebs and dust.
     - A religious symbol must be correctly aligned to open this passageway.
     - A statue can be rolled aside to reveal this passageway.
-
 mine:
   tags:
   rooms:
@@ -214,7 +211,6 @@ mine:
     - Stacked crates cover the entrance to this passage.
     - This passage is boarded up and easily missed, but some of the boards are loose.
     - A heap of rubbish obscures the entrance to this passage.
-
 treasure vault:
   tags:
     - guardian
@@ -261,7 +257,6 @@ treasure vault:
     - A sconce on the wall is actually the handle of the concealed door to this passage.
     - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
     - A rug on the floor covers the trapdoor entrance to this passage.
-
 cave:
   tags:
     - cave-dweller
@@ -287,6 +282,8 @@ cave:
       tags: [important]
     - description: Enormous crystals cover the walls and shatter torchlight into millions of shards.
       tags: [important]
+    - description: A fallen stalagtite forms a narrow bridge across a deep crevasse.
+      tags: [central]
     - description: A marvelous room of dripping water, dazzling crystals, and glittering silica.
     - description: A keyhole-shaped passage, with ledges either side of a deep crevasse.
       tags: [central]

@@ -4,7 +4,10 @@
 
 </head>
 <body>
-    <h1>Random {{module.dungeon_type}}</h1>
+    <h1>Random {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h1>
+    {% for event in module.history %}
+    {{event}}<br>
+    {% endfor %}<br>
     <svg width="400" height="400">
     {% for passage in module.map.passages %}
     <line x1="{{passage.x1}}" 
@@ -53,6 +56,7 @@
   {{monster.name}}: {{monster.number}}<br>
 {% endfor %}
 {% if room.encounter.treasure %}
+{% if room.encounter.treasure.magic_items %}Magic Items: {{room.encounter.treasure.magic_items}}<br>{% endif %}
 Coins: {{room.encounter.treasure.coins}}<br>
 Objects: {{room.encounter.treasure.objects}}<br><br>
 {% endif %}

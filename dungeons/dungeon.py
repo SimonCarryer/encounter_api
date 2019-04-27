@@ -39,7 +39,8 @@ class Dungeon:
                 module['passages'].append(passage)
         module['map'] = self.map()
         module['dungeon_type'] = self.layout.purpose
-        module['history'] = self.layout.history
+        module['dungeon_terrain'] = self.layout.terrain
+        module['history'] = self.layout.events
         return module
 
     def make_postions(self, arr, max_dim=300):
@@ -75,12 +76,12 @@ class Dungeon:
                 'y1': ys[start] +20,
                 'x2': xs[end] +20,
                 'y2': ys[end] +20,
-                'label': letters[seq]+'.' if data['weight'] >= 2 else None,
+                'label': letters[seq]+'.' if data['description'] != '' else None,
                 'label_x': int((xs[start] + xs[end])/2) + 30,
                 'label_y': int((ys[start] + ys[end])/2)
                 }
             passages.append(passage)
-            if data['weight'] >= 2:
+            if data['description'] != '':
                 seq += 1
         return {'rooms': rooms, 'passages': passages}
 

@@ -61,6 +61,8 @@ class EncounterPicker:
             tags.append('no pets')
         if roles != set(['pet']):
             tags.append('not just pets')
+        if roles != set(['environmental hazard']):
+            tags.append('not just pets')
         if not any([role in roles for role in ['environmental hazard', 'pet', 'leader']]):
             tags.append('basic')
         if roles == set(['pet']):

@@ -163,13 +163,13 @@ goblins:
     occurrence: uncommon
   - Name: Giant Rat      
     role: pet
-    occurrence: uncommon
+    occurrence: common
   - Name: Worg      
     occurrence: rare
     role: pet
   - Name: Bugbear     
     occurrence: uncommon
-    role: elite
+    role: pet
 
 hills:
   - Name: Panther      
@@ -498,7 +498,7 @@ hobgoblins:
    occurrence: common
  - Name: Bugbear
    role: elite
-   occurrence: uncommon
+   occurrence: rare
  - Name: Goblin
    role: pet
    occurrence: uncommon
@@ -553,8 +553,6 @@ swamp:
  - Name: Ettercap
    occurrence: rare
    role: solo
- - Name: Stirge
-   occurrence: common
  - Name: Cockatrice
    occurrence: rare
  - Name: Otyugh
@@ -675,6 +673,7 @@ fey:
    occurrence: rare
  - Name: Night Hag
    occurrence: rare
+   role: solo
  - Name: Satyr
    occurrence: common
  - Name: Sprite
@@ -1896,3 +1895,217 @@ angels:
 troglodytes:
  - Name: Troglodyte
    occurrence: common
+
+jungle:
+ - Name: Ettercap
+   occurrence: rare
+   role: solo
+ - Name: Shambling Mound
+   occurrence: uncommon
+ - Name: Constrictor Snake
+   occurrence: common
+   role: solo
+ - Name: Hydra
+   occurrence: common
+ - Name: Giant Constrictor Snake
+   occurrence: common
+   role: solo
+ - Name: Giant Lizard
+   occurrence: common
+ - Name: Troll
+   occurrence: rare
+ - Name: Giant Poisonous Snake
+   occurrence: common
+   role: solo
+ - Name: Giant Spider
+   occurrence: common
+ - Name: Giant Wasp
+   occurrence: common
+ - Name: Poisonous Snake
+   occurrence: common
+ - Name: Swarm of Poisonous Snakes
+   occurrence: common
+   role: environmental hazard
+ - Name: Stirge
+   occurrence: common
+ - Name: Swarm of Insects
+   occurrence: uncommon
+   role: environmental hazard
+ - Name: Bone Naga
+   occurrence: rare
+   role: solo
+ - Name: Guardian Naga
+   occurrence: rare
+   role: solo
+ - Name: Spirit Naga
+   occurrence: rare
+   role: solo
+
+low giants:
+  - Name: Hill Giant
+    occurrence: common
+  - Name: Ettin
+    occurrence: uncommon
+    role: solo
+  - Name: Ogre
+    occurrence: common
+  - Name: Troll
+    occurrence: common
+
+villains:
+  - Name: Deva
+    occurrence: rare
+    role: solo
+  - Name: Planetar
+    occurrence: rare
+    role: solo
+  - Name: Solar
+    occurrence: rare
+    role: solo
+  - Name: Green Hag
+    occurrence: common
+    role: solo
+  - Name: Night Hag
+    occurrence: common
+    role: solo
+  - Name: Medusa
+    occurrence: common
+    role: solo   
+  - Name: Cambion
+    occurrence: common
+    role: solo
+  - Name: Death Knight
+    occurrence: common
+    role: solo
+  - Name: Drider
+    occurrence: common
+    role: solo
+  - Name: Drow Elite Warrior
+    occurrence: common
+    role: solo
+  - Name: Drow Mage
+    occurrence: common
+    role: solo
+  - Name: Hell Hound
+    occurrence: rare
+    role: environmental hazard
+  - Name: Empyrean
+    occurrence: common
+    role: solo
+  - Name: Young Faerie Dragon
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Adult Faerie Dragon
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Half-Red Dragon Veteran
+    occurrence: common
+    role: solo
+  - Name: Lich
+    occurrence: common
+    role: solo
+  - Name: Werewolf
+    occurrence: common
+    role: solo
+  - Name: Wereboar
+    occurrence: common
+    role: solo
+  - Name: Weretiger
+    occurrence: common
+    role: solo
+  - Name: Wererat
+    occurrence: common
+    role: solo
+  - Name: Nightmare
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Oni
+    occurrence: common
+    role: solo
+  - Name: Rakshasa
+    occurrence: common
+    role: solo
+  - Name: Shield Guardian
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Succubus/Incubus
+    occurrence: common
+    role: solo 
+  - Name: Vampire
+    occurrence: common
+    role: solo  
+  - Name: Archmage
+    occurrence: common
+    role: solo
+  - Name: Assassin
+    occurrence: common
+    role: solo
+  - Name: Bandit/Pirate Captain
+    occurrence: common
+    role: solo
+  - Name: Berserker
+    occurrence: common
+    role: solo
+  - Name: Cult Fanatic
+    occurrence: common
+    role: solo
+  - Name: Druid
+    occurrence: common
+    role: solo
+  - Name: Gladiator
+    occurrence: common
+    role: solo
+  - Name: Knight
+    occurrence: common
+    role: solo
+  - Name: Mage
+    occurrence: common
+    role: solo
+  - Name: Noble
+    occurrence: common
+    role: solo
+  - Name: Priest
+    occurrence: common
+    role: solo
+  - Name: Spy
+    occurrence: common
+    role: solo
+  - Name: Veteran
+    occurrence: common
+    role: solo
+  - Name: Worg
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Sabre-Toothed Tiger
+    occurrence: rare
+    role: environmental hazard
+  - Name: Winter Wolf
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Panther
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Giant Weasel
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Giant Poisonous Snake
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Giant Rat
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Giant Boar
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Death Dog
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Ape
+    occurrence: uncommon
+    role: environmental hazard
+  - Name: Beholder
+    occurrence: common
+    role: solo
+  - Name: Doppelganger
+    occurrence: common
+    role: solo

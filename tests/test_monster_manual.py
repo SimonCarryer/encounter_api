@@ -29,14 +29,17 @@ def test_get_monster_sets():
 
 def test_get_monster_set_level():
     mm = MonsterManual()
-    for level in range(1, 21):
-        print(sorted(mm.get_monster_sets(all_tags=['cave-dweller'], none_tags=['underdark'], level=level)))
+    # for level in range(1, 21):
+    #     print(sorted(mm.get_monster_sets(all_tags=['jungle', 'humanoid'], any_tags=['magical', 'evil'], level=level)))
 
 def test_get_sings():
     mm = MonsterManual()
     # for sign in mm.get_signs('bugbears'):
     #     print(sign)
 
+def test_specify_terrain():
+    mm = MonsterManual(terrain='underdark')
+    # print(mm.monster_set_names)
 
 
 
