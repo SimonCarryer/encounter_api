@@ -272,5 +272,5 @@ some_examples = [
 [InfestedCaveTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, LairTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, FungalInfectionTemplate, ExplorerTemplate],
-[InfestedCaveTemplate, PassingAgesTemplate, LairTemplate]
+[InfestedCaveTemplate, LairTemplate, LairTemplate]
 ]

@@ -21,6 +21,7 @@ api = Api(application,
 parser = reqparse.RequestParser()
 parser.add_argument('character_levels', type=int, action='split', required=True, help='Comma-separated list of character levels.')
 parser.add_argument('monster_sets', action='split', required=True, help='Comma-separated list of valid monster sets.')
+parser.add_argument('difficulty', type=str, required=False, help='Desired difficulty for encounter - medium, difficult, hard. Outcome not guaranteed.')
 
 tag_parser = reqparse.RequestParser()
 tag_parser.add_argument('all_tags', action='split', required=False, help='Required tags - all must be present')
@@ -55,12 +56,15 @@ class Encounter(Resource):
         args = parser.parse_args()
         character_level_dict = Counter(args['character_levels'])
         monster_sets = args['monster_sets']
+        difficulty = args['difficulty']
+        if not args['difficulty'] is None and args['difficulty'] not in ['medium', 'easy', 'hard']:
+            raise BadRequest('Invalid difficulty value')
         if not all([monster_set in monster_manual.monster_sets for monster_set in monster_sets]):
             raise BadRequest('One or more invalid monster sets in request')
         if not all([level <= 20 for level in character_level_dict.keys()]):
             raise BadRequest('Maximum character level is 20')
         source = EncounterSource(character_level_dict=character_level_dict, monster_sets=monster_sets)
-        encounter = source.get_encounter()
+        encounter = source.get_encounter(difficulty=difficulty)
         return encounter
 
 @application.route('/dungeon/<level>')

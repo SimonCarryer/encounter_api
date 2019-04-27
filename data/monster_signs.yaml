@@ -180,3 +180,7 @@
   tags: [giant, savage]
 - sign: Crude paintings daubed on the walls.
   tags: [humanoid]
+- sign: An incantation in a long-dead language carefully inscribed on a wall.
+  tags: [magical, guardian]
+- sign: Rich furnishings standing untouched by the ravages of time.
+  tags: [magical, guardian]

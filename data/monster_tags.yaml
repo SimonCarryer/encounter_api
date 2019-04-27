@@ -116,7 +116,7 @@ githzerai:
   - any terrain
 lost world:
   - beast
-  - lost world
+  - lost-world
 cult of orcus:
   - evil
   - humanoid
@@ -229,6 +229,7 @@ mind flayers:
   - underdark
   - cave-dweller
   - dungeon-explorer
+  - abberation
 wizards tower:
   - guardian
   - magical
@@ -327,3 +328,8 @@ low giants:
   - forest
   - hills
   - savage
+villains:
+  - rare
+  - any terrain
+  - humanoid
+  - human
