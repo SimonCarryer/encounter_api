@@ -18,18 +18,33 @@ api = Api(application,
           description='REST-ful API for encounters',
 )
 
-
-parser = api.parser()
+parser = reqparse.RequestParser()
 parser.add_argument('character_levels', type=int, action='split', required=True, help='Comma-separated list of character levels.')
 parser.add_argument('monster_sets', action='split', required=True, help='Comma-separated list of valid monster sets.')
+
+tag_parser = reqparse.RequestParser()
+tag_parser.add_argument('all_tags', action='split', required=False, help='Required tags - all must be present')
+tag_parser.add_argument('any_tags', action='split', required=False, help='Required tags - one must be present')
+tag_parser.add_argument('none_tags', action='split', required=False, help='Excluded tags - none must be present')
 
 
 @api.route('/monster-sets')
 class MonsterSets(Resource):
     
+    @api.doc(parser=tag_parser)
     def get(self):
-        '''List of accepted values for "monster sets" parameter.'''
-        return sorted(list(monster_manual.get_monster_sets()))
+        '''Returns list "monster_set" matching supplied tags.'''
+        args = tag_parser.parse_args()
+        return monster_manual.get_monster_sets(all_tags=args['all_tags'],
+                                               any_tags=args['any_tags'],
+                                               none_tags=args['none_tags'])
+
+@api.route('/encounter-tags')
+class EncounterTags(Resource):
+    
+    def get(self):
+        '''List of valid tags for monster sets'''
+        return monster_manual.get_tags()
 
 @api.route("/encounter")
 class Encounter(Resource):

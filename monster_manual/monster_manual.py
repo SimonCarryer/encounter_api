@@ -62,6 +62,7 @@ class MonsterManual():
         if terrain is not None:
             self.monster_sets = {key: monster_sets[key] for key in self.get_monster_sets(any_tags=[terrain, 'any terrain'])}
             self.monster_set_names = [key for key in self.monster_sets.keys()]
+        self.tags = set([tag for tags in self.monster_tags.values() for tag in tags])
 
     def monsters(self, monster_set_name):
         monster_set = copy.deepcopy(self.monster_sets[monster_set_name])
@@ -94,7 +95,10 @@ class MonsterManual():
             sets = self.get_monster_set_by_tags(none_tags, monster_sets=sets, any_or_all=any, exclude=True)
         if level is not None:
             sets = [monster_set for monster_set in sets if self.appropriate_challenge(monster_set, level)]
-        return sets
+        return sorted(list(sets))
+
+    def get_tags(self):
+        return sorted(list(self.tags))
 
     def appropriate_challenge(self, monster_set, level):
         mob_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops']]

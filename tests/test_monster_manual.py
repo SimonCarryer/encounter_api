@@ -41,6 +41,10 @@ def test_specify_terrain():
     mm = MonsterManual(terrain='underdark')
     # print(mm.monster_set_names)
 
+def test_get_tags():
+    mm = MonsterManual()
+    # print(mm.get_tags())
+
 
 
 
