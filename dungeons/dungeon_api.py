@@ -31,9 +31,10 @@ class DungeonSource():
         return self.dungeon.module()
 
     def special_events(self, layout):
-        special_events = [LostItem]
-        # if self.random_state.randint(1, 6) >= 5:
-        #     special_events.append(VillainHideout)
+        special_events = []
+        if self.random_state.randint(1, 6) >= 4:
+            event = self.random_state.choice([VillainHideout, LostItem])
+            special_events.append(event)
         return special_events
 
 
