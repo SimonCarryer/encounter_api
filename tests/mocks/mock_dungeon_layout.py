@@ -8,5 +8,5 @@ class MockDungeonLayout(nx.Graph):
         for start, end, weight in [(0, 1, 1), (1, 2, 3), (1, 3, 1), (3, 4, 4), (4, 5, 1), (3, 6, 1)]:
             self.add_edge(start, end, weight=weight)
         self.tags = []
-        self.purpose = 'mock'
+        self.purpose = 'temple'
         self.events = []

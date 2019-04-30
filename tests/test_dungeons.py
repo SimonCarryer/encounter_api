@@ -200,7 +200,7 @@ def test_manager_adds_events():
     with DungeonManager(1, layout) as manager:
         template = AncientRemnantsTempleTemplate(4, dungeon_manager=manager, random_state=state)
         template.alter_dungeon(layout)
-    assert layout.events[0] == 'Echoes of the former worship still remain: (elemental plane of water)'
+    assert layout.events[0] == 'Echoes of the former worship still remain: (elemental plane of fire)'
 
 def test_manager_only_shows_events_if_there_are_encounters():
     state = Random(0)
@@ -220,7 +220,7 @@ def test_manager_gets_signs():
     manager = DungeonManager(1, layout)
     manager.add_encounter_source('test', source)
     sign = manager.get_sign('test')
-    assert str(sign) == repr('a sign of some scary monsters')
+    assert str(sign) == 'a sign of some scary monsters'
 
 def test_manager_deletes_signs():
     state = Random(0)
@@ -230,7 +230,7 @@ def test_manager_deletes_signs():
     manager.add_encounter_source('test', source)
     sign = manager.get_sign('test')
     manager.delete_signs('test')
-    assert str(manager.signs['test'][0]) == 'None'
+    assert str(manager.signs['test'][0]) == ''
 
 def test_deleting_encounters_deletes_signs():
     state = Random(0)

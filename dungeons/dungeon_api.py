@@ -2,7 +2,7 @@ from .dungeon import Dungeon
 from .dungeon_layout import DungeonLayout
 from .dungeon_templates import some_examples
 from .dungeon_manager import DungeonManager
-from .special_events import VillainHideout, LostItem
+from .special_events import VillainHideout, LostItem, Prison
 from treasure.treasure_api import RawHoardSource
 from random import Random
 
@@ -17,7 +17,7 @@ class DungeonSource():
         self.level = level
         layout = DungeonLayout(n_rooms=self.random_state.randint(5, 8))
         templates = self.random_state.choice(some_examples)
-        terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'underdark', 'plains', 'hills', 'jungle', 'swamp'])
+        terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'])
         with DungeonManager(self.level, layout, terrain=terrain) as dungeon_manager:
             for template in templates:
                 template(self.level,
@@ -32,8 +32,8 @@ class DungeonSource():
 
     def special_events(self, layout):
         special_events = []
-        if self.random_state.randint(1, 6) >= 4:
-            event = self.random_state.choice([VillainHideout, LostItem])
+        if self.random_state.randint(1, 6) >= 5:
+            event = self.random_state.choice([VillainHideout, LostItem, Prison])
             special_events.append(event)
         return special_events
 

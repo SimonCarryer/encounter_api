@@ -71,17 +71,21 @@ wizards tower:
     occurrence: uncommon
 
 constructs:
-  - Name: Animated Armor    
+  - Name: Animated Armor   
     occurrence: common 
+  - Name: Animated Armor    
+    occurrence: uncommon 
   - Name: Iron Golem    
     occurrence: common
   - Name: Stone Golem
     occurrence: common
   - Name: Helmed Horror
     occurrence: common
+  - Name: Helmed Horror
+    occurrence: uncommon
   - Name: Shield Guardian
     occurrence: common
-  - Name: Nothic    
+  - Name: Nothic
     role: environmental hazard
     occurrence: rare
 
@@ -94,7 +98,7 @@ bullywugs:
     occurrence: common
   - Name: Giant Frog    
     role: pet
-    occurrence: common
+    occurrence: uncommon
   - Name: Giant Toad    
     role: pet
     occurrence: uncommon
@@ -131,13 +135,13 @@ orcs:
     occurrence: common
   - Name: Orc Eye of Gruumsh      
     role: elite
-    occurrence: uncommon
+    occurrence: common
   - Name: Orog      
     role: troops
     occurrence: common
   - Name: Troll      
     role: pet
-    occurrence: common
+    occurrence: uncommon
   - Name: Half-ogre (Ogrillon)
     role: elite
     occurrence: uncommon
@@ -163,7 +167,7 @@ goblins:
     occurrence: uncommon
   - Name: Giant Rat      
     role: pet
-    occurrence: common
+    occurrence: uncommon
   - Name: Worg      
     occurrence: rare
     role: pet
@@ -409,24 +413,24 @@ mind flayers:
    occurrence: common
  - Name: Grimlock
    role: troops
-   occurrence: common
+   occurrence: uncommon
  - Name: Psychic Gray Ooze
    role: environmental hazard
    occurrence: uncommon
  - Name: Troglodyte
    role: troops
-   occurrence: common
+   occurrence: uncommon
  - Name: Quaggoth
    role: pet
    occurrence: uncommon
  - Name: Ogre
    role: troops
-   occurrence: common
+   occurrence: uncommon
 
 drow:
  - Name: Drow
    role: troops
-   occurrence: common
+   occurrence: uncommon
  - Name: Drow Elite Warrior
    role: elite
    occurrence: common
@@ -449,7 +453,7 @@ drow:
 quaggoths:
   - Name: Quaggoth Thonot
     role: leader
-    occurrence: uncommon
+    occurrence: common
   - Name: Quaggoth
     role: troops
     occurrence: common
@@ -469,10 +473,10 @@ lizardfolk:
    occurrence: uncommon
  - Name: Giant Crocodile
    role: pet
-   occurrence: common
+   occurrence: uncommon
  - Name: Crocodile
    role: pet
-   occurrence: common
+   occurrence: uncommon
  - Name: Young Green Dragon
    role: leader
    occurrence: rare
@@ -504,10 +508,10 @@ hobgoblins:
    occurrence: uncommon
  - Name: Wolf
    role: pet
-   occurrence: common
+   occurrence: uncommon
  - Name: Worg
    role: pet
-   occurrence: common
+   occurrence: uncommon
  - Name: Ape
    role: pet
    occurrence: rare
@@ -1275,6 +1279,8 @@ kobolds:
    occurrence: common 
  - Name: Kobold
    occurrence: uncommon
+ - Name: Kobold
+   occurrence: rare 
  - Name: Winged Kobold
    occurrence: rare
 
@@ -1376,7 +1382,7 @@ efreet:
    occurrence: common
    role: troops
  - Name: Fire Snake
-   occurrence: common
+   occurrence: uncommon
    role: pet
 
 elemental plane of air:
@@ -1523,7 +1529,7 @@ sahuagin:
    occurrence: rare
    role: pet
  - Name: Hunter Shark
-   occurrence: common
+   occurrence: uncommon
    role: pet
  - Name: Reef Shark
    occurrence: uncommon
@@ -1951,6 +1957,11 @@ low giants:
     occurrence: common
   - Name: Troll
     occurrence: common
+
+azers:
+  - Name: Azer
+    occurrence: common
+    role: troops
 
 villains:
   - Name: Deva

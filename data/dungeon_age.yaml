@@ -221,11 +221,29 @@ cave-age:
       weight: 4
 
 
-# volcano:
-#   tags:
-#     - fire
-#   rooms:
-#     - description: A pool of lava floods half this room, and the air is stifling hot.
-#     - description: Jets of steam periodically blast from cracks in the floor. On a d6 roll of 6 each round, all creatures must make a Dexterity save (Difficulty 15) or take 2d6 fire damage.
-#       tags: [hazard, uninhabitable]
-#   passages:
+volcano:
+  tags:
+    - fire
+  rooms:
+    - description: A pool of lava floods half this room - it is lit with a ruddy glow, and the air is stifling hot.
+    - description: Jets of steam periodically blast from cracks in the floor. On a d6 roll of 5 or 6 each round, all creatures must make a Dexterity save (Difficulty 15) or take 2d10 fire damage.
+      tags: [hazard, uninhabitable, cave-entrance]
+    - description: This chamber is periodically shaken by some huge subterranean force.
+    - description: Sulphurous pools of water bubble throughout this room, and thick steam obscures everything beyond 10'.
+    - description: One wall of this room opens out into a massive magma chamber. It is lit with dim light, and the heat is powerful.
+      tags: [cave-entrance]
+    - description: The floor of this room is crumbling into a pit of magma below.
+      tags: [cave-entrance]
+    - description: Blinding smoke pours through cracks in the floor of this room, making it impossible to see any distance.
+      tags: [hazard, uninhabitable]
+  passages:
+    - description: A 10' wide river of lava runs across this passageway.
+      weight: 4
+    - description: Periodic jets of steam turn this passageway into a deadly obstacle course - make a Dex save (DC15) or take 2d10 fire damage.
+      weight: 4
+    - description: This passage is filled with choking gas, making it impassable to most creatures.
+      weight: 4
+    - description: The air in this passageway is stifling hot.
+      weight: 2
+    - description: There's a rumbling sound in this passageway.
+      weight: 1

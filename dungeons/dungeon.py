@@ -25,7 +25,7 @@ class Dungeon:
         rooms = []
         for room_idx, data in self.layout.nodes(data=True):
             room = data
-            if room.get('sign') == 'None':
+            if room.get('sign', '') == 'None':
                 room['sign'] = None
             room['room_id'] = room_ids[room_idx]
             rooms.append(room)
@@ -41,6 +41,7 @@ class Dungeon:
         module['dungeon_type'] = self.layout.purpose
         module['dungeon_terrain'] = self.layout.terrain
         module['history'] = self.layout.events
+        module['name'] = self.layout.name
         return module
 
     def make_postions(self, arr, max_dim=300):

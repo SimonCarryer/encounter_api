@@ -1,0 +1,52 @@
+prison:
+  prisoners:
+    - Mummy Lord
+    - Aboleth
+    - Dao
+    - Marid
+    - Efreeti
+    - Djinni
+    - Pit Fiend
+    - Balor
+    - Marilith
+    - Ultroloth
+    - Death Slaad
+    - Vampire
+    - Deva
+    - Planetar
+    - Solar
+    - Death Knight
+    - Night Hag
+    - Empyrean
+    - Lich
+    - Rakshasa
+    - Oni
+  templates:
+    - This room is the prison for an ancient $prisoner. The door to this room is made of $adjective $material. The door can only be opened by $method. If freed, the prisoner will $gratitude.
+  methods:
+    - offering the blood of a $creature
+    - destroying a diamond worth 10,000GP
+    - finding a long-lost key
+    - saying the true name of the prisoner
+  adjectives:
+    - black
+    - slimy
+    - red
+    - bleeding
+    - screaming
+    - writhing
+    - pulsating
+    - red-hot
+    - whispering
+  materials:
+    - iron
+    - steel
+    - flesh
+    - wood
+    - stone
+  gratitudes:
+    - offer information about events of the distant past
+    - offer magical secrets - a new spell
+    - immediately attack
+    - try to escape to renew their reign of terror
+    - ask for the party's help in completing a long-neglected task

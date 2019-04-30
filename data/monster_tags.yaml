@@ -44,6 +44,7 @@ elemental plane of water:
   - water
   - immortal
   - elemental
+  - any terrain
 bandits:
   - humanoid
   - dungeon-explorer
@@ -99,6 +100,7 @@ elemental plane of fire:
   - immortal
   - elemental
   - magical
+  - any terrain
 frost giants:
   - cold
   - giant
@@ -212,6 +214,7 @@ elemental plane of air:
   - elemental
   - bird
   - air
+  - any terrain
 yuan-ti:
   - humanoid
   - evil
@@ -245,6 +248,8 @@ fire giants:
   - giant
   - desert
   - mountains
+  - plains
+  - hills
   - dungeon-explorer
 kuo-toa:
   - cave-dweller
@@ -265,6 +270,7 @@ elemental plane of earth:
   - magical
   - elemental
   - earth
+  - any terrain
 myconids:
   - fungus
   - cave-dweller
@@ -333,3 +339,8 @@ villains:
   - any terrain
   - humanoid
   - human
+azers:
+  - magical
+  - fire
+  - earth
+  - any terrain

@@ -1,5 +1,6 @@
 from .treasure_tables import unique_items, magic_items, item_properties
 from random import Random
+from names.name_api import NameGenerator
 
 class NPC_item:
     def __init__(self, level, martial=False, random_state=None):
@@ -14,10 +15,16 @@ class NPC_item:
         self.level = level
         self.item = self.get_item()
         self.properties = self.get_properties()
+        self.name_generator = NameGenerator()
         self.name = self.get_name()
 
     def get_name(self):
-        return 'Item name here'
+        if 'shield' in self.item.lower():
+            return self.name_generator.shield()
+        elif 'armor' in self.item.lower():
+            return self.name_generator.armour()
+        else:
+            return self.name_generator.weapon()
 
     def rarities(self):
         return ['uncommon', 'rare', 'very rare', 'legendary'][int(round(self.level/10)):max([int(round((self.level)/4)),1])]

@@ -4,7 +4,9 @@
 
 </head>
 <body>
-    <h1>Random {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h1>
+    <h1>{{module.name}}</h1>
+    <h2>A random {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h2>
+    <h3>Rumours</h3>
     {% for event in module.history %}
     {{event}}<br>
     {% endfor %}<br>
@@ -49,7 +51,7 @@
 {% for room in module.rooms %}
 <h3>Room {{room.room_id}}</h3>
 {{room.description}}<br><br>
-{% if room.sign %}{{room.sign}}<br><br>{% endif %}
+{% if room.sign %}<b>Signs: </b>{{room.sign}}<br><br>{% endif %}
 {% if room.encounter %}
 <b>Encounter: {{room.encounter.monster_set}}</b><br>
 {% for monster in room.encounter.monsters %}

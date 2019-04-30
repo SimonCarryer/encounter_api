@@ -1,6 +1,7 @@
 from encounters.encounter_api import EncounterSource
 from treasure.treasure_api import RawHoardSource
 from monster_manual.monster_manual import MonsterManual
+from names.name_api import NameGenerator
 from random import Random
 
 
@@ -9,7 +10,10 @@ class Sign:
         self.sign = sign
 
     def __str__(self):
-        return repr(self.sign)
+        if self.sign:
+            return self.sign
+        else:
+            return ''
 
     def delete(self):
         self.sign = None
@@ -80,16 +84,21 @@ class TreasureManager:
             self.assign_items()
 
 class DungeonManager:
-    def __init__(self, level, layout, terrain=None):
+    def __init__(self, level, layout, terrain=None, random_state=None):
+        if random_state is None:
+            self.random_state = Random()
+        else:
+            self.random_state = random_state
         self.layout = layout
         self.encounter_sources = {}
         self.encounters = {}
         self.signs = {}
-        treasure = RawHoardSource(level).get_treasure()
-        self.treasure_manager = TreasureManager(treasure)
+        treasure = RawHoardSource(level, random_state=self.random_state).get_treasure()
+        self.treasure_manager = TreasureManager(treasure, random_state=self.random_state)
         self.terrain = terrain
         self.monster_manual = MonsterManual(terrain=terrain)
         self.events = []
+        self.name_generator = NameGenerator(random_state=self.random_state)
 
     def add_encounter_source(self, source_name, encounter_source):
         self.encounter_sources[source_name] = encounter_source
@@ -147,6 +156,7 @@ class DungeonManager:
         for source_name in self.encounter_sources:
             if self.encounters[source_name] == 0:
                 self.delete_signs(source_name)
+        self.layout.name = self.name_generator.dungeon_name(self.layout.purpose, terrain=self.terrain)
         self.layout.terrain = self.terrain
         self.layout.events = [self.parse_event(event) for event in self.events if event['source_name'] == 'special' or self.encounters[event['source_name']] > 0]
 

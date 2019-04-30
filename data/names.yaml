@@ -1,0 +1,715 @@
+templates:
+  mine:
+    - The $adjective $noun
+    - $simple_name's $noun
+    - ${prefix_name}'s $noun
+    - $simple_name's $adjective $noun
+    - The $noun
+    - $title's $noun
+    - $prefix_name
+    - $place $noun
+    - $simple_name's $belonging
+    - $prefix_name's $belonging
+    - $title's $noun
+    - The $title's $belonging
+    - The $adjective $belonging
+    - The $descriptor $belonging
+    - The $descriptor $noun
+    - The $noun at $place
+  stronghold:
+    - The $noun of $fancy_name
+    - The $noun of $simple_name
+    - $simple_name's $adjective $noun
+    - The $adjective $noun
+    - $fancy_name's $belonging
+    - $fancy_name's $noun
+    - The $symbol's $noun
+    - $symbol $noun
+    - The $symbol
+    - The $adjective $noun of $simple_name
+    - The $symbol
+    - $title's $noun
+    - $title's $belonging
+    - $prefix_name's $noun
+    - $prefix_name's $belonging
+    - The $title
+    - The $descriptor $noun
+    - $place $noun
+    - The $sobriquet's $noun
+    - $sobriquet $noun
+    - The $noun at $place
+  temple:
+    - The $noun of $material
+    - The $belonging of $material
+    - The $adjective $noun
+    - The $symbol's $noun
+    - The $noun of the $symbol
+    - The $noun of ${symbol}s
+    - The $noun of the ${symbol}s
+    - $fancy_name's $noun
+    - The $noun of the $title
+    - The $noun at $place
+    - The $belonging of the ${symbol}
+  tomb:
+    - The $symbol's $noun
+    - The $adjective $noun
+    - $fancy_name's $noun
+    - $fancy_name's $belonging
+    - The $noun of the ${symbol}
+    - The $noun of $fancy_name
+    - $prefix_name's $noun
+    - The $noun at $place
+  cave:
+    - ${symbol} $noun
+    - ${symbol} $belonging
+    - $simple_name's $noun
+    - $simple_name's $belonging
+    - $simple_name's ${belonging}s
+    - $prefix_name's $noun
+    - $prefix_name's $belonging
+    - The ${symbol}s
+    - $symbol $noun
+    - ${symbol}'s ${noun}s
+    - ${noun}s of $fancy_name
+    - $title's $noun
+    - $title's ${noun}s
+    - The ${title}s
+    - The $adjective $noun
+    - The $adjective ${noun}s
+    - $place $noun
+    - The $noun at $place
+  treasure vault:
+    - The $noun of $fancy_name
+    - The $adjective $noun
+    - $fancy_name's $noun
+    - The $adjective $noun of $simple_name
+    - $title's $noun
+    - $simple_name's $noun
+    - $simple_name's $adjective $noun
+    - The $noun of the ${symbol}
+    - The $title's $belonging
+    - $fancy_name's $belonging
+    - The ${sobriquet}'s $belonging
+    - The $noun at $place
+dungeon types:
+  mine:
+      nouns:
+        - Delve
+        - Mine
+        - Quarry
+        - Dig
+        - Motherlode
+        - Pit
+        - Tin Mine
+        - Silver Mine
+        - Copper Mine
+      belongings:
+        - Mistake
+        - Folly
+        - Hole
+        - Pride
+        - Lament
+        - Ruin
+        - Wife
+        - Gambit
+        - Baby
+  stronghold:
+      nouns:
+        - Bastion
+        - Stronghold
+        - Redoubt
+        - Keep
+        - Palace
+        - Hall
+        - Hold
+        - Bailey
+        - Fort
+        - Fortress
+        - Castle
+        - Ruins
+      belongings:
+        - Seat
+        - Throne
+        - Pride
+        - Retreat
+        - Fist
+        - Hammer
+        - Anvil
+        - Shield
+  temple:
+      nouns:
+        - Temple
+        - Fane
+        - Font
+        - Altar
+        - Church
+        - Shrine
+        - Sanctuary
+        - Chapel
+      belongings:
+        - House
+        - Home
+        - Throne
+        - Abbey
+  tomb:
+      nouns:
+        - Tomb
+        - Grave
+        - Vault
+        - Crypt
+        - Barrow
+        - Shrine
+      belongings:
+        - Burial
+        - Rest
+  cave:
+      nouns:
+        - Cave
+        - Cavern
+        - Grotto
+        - Cave
+        - Canyon
+      belongings:
+        - Deep
+        - Dark
+        - Hole
+  treasure vault:
+      nouns:
+        - Vault
+        - Dungeon
+        - Pit
+        - Cache
+        - Catacombs
+        - Sanctum
+        - Hold
+        - Library
+        - Seclusium
+      belongings:
+        - Secret
+        - Mistake
+        - Hole
+        - Pride
+        - Ruin
+        - Wife
+        - Gambit
+        - Mischief
+        - Joke
+        - Baby
+        - Repository
+other words:
+  adjectives:
+    - Lost
+    - Forgotten
+    - Forlorn
+    - Forbidden
+    - Last
+    - Abandoned
+    - Black
+    - Dismal
+    - Great
+    - Silent
+    - Old
+    - Haunted
+    - Hidden
+    - Cursed
+    - Impregnable
+    - Dark
+    - Nameless
+    - Endless
+    - Bottomless
+    - Sunken
+    - Dusty
+    - Cold
+    - Lonely
+    - Sunless
+    - Gaunt
+    - Damned
+    - Hopeless
+    - Rotten
+    - Fallen
+    - Broken
+    - Winter
+    - Quiet
+    - Iron
+    - Golden
+    - Shining
+    - Deadly
+    - Ashen
+    - Wormy
+    - Tangled
+  symbols:
+    - Leviathan
+    - Fool
+    - Liberator
+    - Mother
+    - Father
+    - Knight
+    - Virgin
+    - Sister
+    - Iron
+    - Giant
+    - Dragon
+    - Beast
+    - Rebuker
+    - Violator
+    - Sinner
+    - Eagle
+    - Night
+    - Blade
+    - Brother
+    - Thistle
+    - Thinker
+    - Tree
+    - Light
+    - Fate
+    - Lion
+    - Bone
+    - Spider
+    - Dagger
+    - Hound
+    - Punisher
+    - Bride
+    - Tormenter
+    - Book
+    - Cauldron
+    - Pauper
+    - Raven
+    - Flame
+    - Spite
+    - Hunger
+    - Stone
+    - Goat
+    - Worm
+    - Snake
+    - Boar
+    - Griffin
+    - Stag
+    - Sparrow
+    - Lover
+    - Skull
+    - Rook
+    - Wyrm
+  materials:
+    - Stone
+    - Iron
+    - Steel
+    - Bone
+    - Wood
+    - Flesh
+    - Blood
+    - Ice
+    - Ashes
+    - Amber
+    - Gold
+    - Crystal
+places:
+  templates:
+    - $adjective $geography
+    - ${simple_name}'s $geography
+    - $symbol $geography
+    - ${title}'s $geography
+    - $sobriquet $geography
+  geography:
+      mountains:
+          - Ridge
+          - Valley
+          - Peak
+          - Cliffs
+          - Crag
+          - Mountain
+          - Pass
+          - Rock
+      hills:
+          - Ridge
+          - Valley
+          - Rock
+          - Peak
+          - Hill
+          - Cliffs
+          - Gully
+          - Pass
+          - Falls
+          - Canyon
+          - Hollow
+          - Moor
+          - Creek
+          - Gorge
+          - Run
+      arctic:
+          - Valley
+          - Ridge
+          - Flats
+          - Hill
+          - Mountain
+          - Waste
+      forest:
+          - Hill
+          - Fork
+          - Ridge
+          - Valley
+          - Forest
+          - Grove
+          - River
+          - Creek
+          - Mill
+          - Ford
+          - Woods
+          - Pond
+          - Bridge
+          - River
+          - Road
+      plains:
+          - Heath
+          - Road
+          - Steppe
+          - Moor
+          - Flats
+          - Plains
+          - Field
+          - River
+          - Ford
+          - Bridge      
+      swamp:
+          - Marsh
+          - Bog
+          - Pond
+          - Fen
+          - Bridge
+          - Moor
+      desert:
+          - Dunes
+          - Flats
+          - Pool
+          - Valley
+          - Waste
+          - Barrens
+      jungle:
+          - Marsh
+          - Bush
+          - Wilds
+          - River
+          - Hill
+  adjectives:
+    - Goblin
+    - Witch
+    - Windy
+    - Dry
+    - Broken
+    - Green
+    - Old
+    - Big
+    - Lost
+    - Cold
+    - Black
+    - Hermit
+    - South
+    - North
+    - West
+    - East
+    - Big
+    - Bracken
+    - Fern
+    - Lonely
+    - High
+    - Low
+    - Pine
+    - White
+    - Stoney
+    - Snowy
+    - Copper
+    - Oak
+    - Cedar
+    - Ash
+    - Porkchop
+    - Sugar
+    - Howling
+    - Hollering
+    - Battle
+personal names:
+  fancy templates:
+    - $name
+    - $title $name
+    - The $title
+    - The $adjective $title
+    - $name the $adjective
+    - $prefix $name
+    - The $descriptor $title
+    - The $sobriquet $title
+    - $name the $sobriquet
+    - The $sobriquet
+    - The $descriptor $sobriquet
+  prefix templates:
+    - $prefix $name
+    - $descriptor $name
+  villain templates:
+    - $name the $sobriquet
+    - $descriptor $name
+    - $prefix $name
+  male names:
+    - Pontelroy
+    - Mischip
+    - Quarbart
+    - Frob
+    - Cuthbert
+    - Drood
+    - Vorn
+    - Stevven
+    - Belwar
+    - Ragbert
+    - Everd
+    - Marth
+    - Rikkard
+    - Paal
+    - Jammes
+    - Johann
+    - Jean
+    - Bertforth
+    - Vinchorp
+    - Qualmarth
+    - Gortimer
+    - Cnut
+    - Gothmort
+    - Vootlesean
+    - Rikk
+    - Tootmarl
+    - Mirv
+    - Ectogruel
+    - Flambert
+    - Frobisher
+    - Rector
+    - Wilberth
+    - Todd
+    - Ronald
+    - Robworth
+    - Tib
+    - Hector
+  female names:
+    - Lillian
+    - Agatha
+    - Medea
+    - Warbeth
+    - Anne
+    - Marge
+    - Alea
+    - Borthea
+    - Bertina
+    - Helga
+    - Joan
+    - Jean
+    - Jeanie
+    - Helena
+    - Charverth
+    - Helaforth
+    - Swordsmary
+    - Suemora
+    - Angelore
+    - Valena
+    - Betty
+    - Ruthelette
+    - Charmonde
+    - Lucinda
+    - Deirdre
+    - Wandablade
+    - Stephenora
+    - Amber
+    - Agonybelle
+    - Morrigu
+    - Martha
+    - Elizawen
+    - Gwenyth
+  male titles:
+    - King
+    - Earl
+    - Prince
+    - Lord
+    - Duke
+    - Baron
+    - Archduke
+    - Count
+    - Viscount
+    - Archmage
+    - Abbot
+  female titles:
+    - Lady
+    - Queen
+    - Duchess
+    - Baroness
+    - Princess
+    - Countess
+    - Archmage
+  male prefixes:
+    - Sir
+    - Father
+    - Master
+    - Brother
+    - Lord
+    - Father
+  female prefixes:
+    - Dame
+    - Mistress
+    - Lady
+    - Sister
+    - Madame
+  descriptors:
+    - Hairy
+    - Black
+    - Old
+    - Big
+    - Ugly
+    - Poor
+    - Little
+    - Lucky
+    - Pretty
+    - Fair
+    - Unlucky
+    - Red
+    - Bad
+    - Bloody
+    - Mad
+    - Sweet
+    - Young
+    - Stuttering
+    - Smiling
+    - Fat
+    - Slim
+  adjectives:
+    - Foolish
+    - Wise
+    - Mighty
+    - Ugly
+    - Strong
+    - Old
+    - Venerable
+    - Good
+    - Kind
+    - Able
+    - Bad
+    - Black
+    - Bold
+    - Chaste
+    - Child
+    - Cruel
+    - Fair
+    - Fat
+    - Gentle
+    - Grim
+    - Holy
+    - Just
+    - Lame
+    - Rash
+    - Elder
+    - Mad
+    - Merry
+    - Wicked
+    - Bloodthirsty
+    - Crosseyed
+    - Crouchback
+    - Crooked
+    - Holy
+    - Weak
+    - Young
+  sobriquets:
+    - Bear
+    - Drunk
+    - Hunter
+    - Lion
+    - Butcher
+    - Dragon
+    - Giant
+    - Crow
+    - Warrior
+    - Wolf
+    - Bard
+    - Sorcerer
+    - Witch
+    - Magus
+    - Toecutter
+    - Skinner
+    - Heartbreaker
+    - Toothbreaker
+    - Torchbearer
+    - Gravedigger
+    - Wizard
+    - Ghoul
+    - Halfbreed
+    - Elf
+    - Dwarf
+    - Devil
+    - Vulture
+    - Trembler
+    - Mixblood
+    - Beauty
+    - Burnt
+    - Ghost
+    - Scapegrace
+    - Gaunt
+weapons:
+    templates:
+        - $fancy_name's $weapon
+        - $first$last
+        - The $symbol $weapon
+        - The $weapon of the $sobriquet
+    items:
+        - Sword
+        - Hammer
+        - Mace
+        - Axe
+        - Spear
+        - Blade
+    first:
+        - Foe
+        - Orc
+        - Man
+        - Vermin
+        - Rat
+        - Grey
+        - Black
+        - Red
+        - Blood
+        - Shadow
+        - Fell
+        - Worm
+        - Night
+        - Steel
+        - Stone
+        - Song
+        - Brother
+    last:
+        - hammer
+        - slayer
+        - taker
+        - blade
+        - bane
+        - catcher
+        - wand
+        - cleaver
+        - fate
+        - cutter
+        - send
+        - spear
+        - knife
+        - foe
+        - fell
+        - biter
+        - prow
+        - woe
+        - taster
+        - tongue
+        - sticker
+        - brand
+        - ring
+shields:
+  templates:
+    - $fancy_name's $shield
+    - The $symbol $shield
+    - The $shield of the $sobriquet
+  items:
+    - Shield
+    - Protector
+    - Defender
+armour:
+  templates:
+    - $fancy_name's $armour
+    - The $armour of the $sobriquet
+  items:
+    - Armour

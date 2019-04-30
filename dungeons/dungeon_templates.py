@@ -87,12 +87,14 @@ class NewInhabitantsTemplate(DungeonTemplate):
 
     def make_an_entrace(self, layout, tag='entrance'):
         if len(self.free_entrances(layout, tag=tag)) == 0:
-            new_entrance = self.random_state.choice(self.free_rooms(layout))
-            entrance_effects = [effect for effect in effects if tag in effect.get('tags', [])]
-            effect = self.random_state.choice(entrance_effects)
-            layout.node[new_entrance]['tags'] += [tag]
-            current_description = layout.node[new_entrance].get('description', '')
-            layout.node[new_entrance]['description'] = ' '.join([current_description, effect['description']])
+            free_rooms = self.free_rooms(layout)
+            if len(free_rooms) > 0:
+                new_entrance = self.random_state.choice(free_rooms)
+                entrance_effects = [effect for effect in effects if tag in effect.get('tags', [])]
+                effect = self.random_state.choice(entrance_effects)
+                layout.node[new_entrance]['tags'] += [tag]
+                current_description = layout.node[new_entrance].get('description', '')
+                layout.node[new_entrance]['description'] = ' '.join([current_description, effect['description']])
 
 class HauntedTombTemplate(DungeonBaseTemplate):
     def event_type(self):
@@ -138,7 +140,7 @@ class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
         return 'Echoes of the former worship still remain'
 
     def get_monster_sets(self):
-        return self.monster_sets(required_tags=['immortal'], any_tags=['evil', 'magical'])
+        return self.monster_sets(required_tags=['immortal'], any_tags=['evil', 'magical'], none_tags=['underdark'])
     
     def alter_dungeon(self, layout):
         self.build_furnisher('temple').furnish(layout)
@@ -151,7 +153,7 @@ class InUseTempleTemplate(DungeonBaseTemplate):
         return 'Protected by fanatical worshipers'
 
     def get_monster_sets(self):
-        return self.monster_sets(required_tags=['humanoid'], any_tags=['evil', 'magical'])
+        return self.monster_sets(required_tags=['humanoid'], any_tags=['evil', 'magical'], none_tags=['underdark'])
 
     def alter_dungeon(self, layout):
         self.build_furnisher('temple').furnish(layout)
@@ -164,7 +166,7 @@ class InfestedCaveTemplate(DungeonBaseTemplate):
         return 'Home to cave-dwelling creatures'
 
     def get_monster_sets(self):
-        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['rare'])
+        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['rare', 'underdark'])
 
     def alter_dungeon(self, layout):
         self.build_furnisher('cave').furnish(layout)
@@ -208,12 +210,24 @@ class FungalInfectionTemplate(DungeonTemplate):
         self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='fungus')
         return layout
 
+class VolcanicTemplate(DungeonTemplate):
+    def event_type(self):
+        return 'Near-destroyed by volcanic activity'
+
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['fire'])
+
+    def alter_dungeon(self, layout):
+        self.build_ager('volcano').age(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='fire')
+        return layout
+
 class InfestedTemplate(NewInhabitantsTemplate):
     def event_type(self):
         return 'Infested with subterranean fauna'
 
     def alter_dungeon(self, layout):
-        monster_sets = self.monster_sets(required_tags=['cave-dweller'])
+        monster_sets = self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark', 'rare'])
         age_effect = self.random_state.choice(['earthquake', 'flood', 'age'])
         self.build_ager(age_effect).age(layout)
         self.make_an_entrace(layout, tag='cave-entrance')
@@ -226,7 +240,7 @@ class LairTemplate(NewInhabitantsTemplate):
 
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
-        monster_sets = self.monster_sets(required_tags=['beast'])
+        monster_sets = self.monster_sets(required_tags=['beast'], none_tags=['underdark'])
         self.build_populator(monster_sets, populator_method=Lair).populate(layout)
         return layout
 
@@ -235,9 +249,9 @@ class ExplorerTemplate(NewInhabitantsTemplate):
         return 'A lair for marauders and savages'
 
     def get_monster_sets(self, layout):
-        none_tags = ['evil']
+        none_tags = ['evil', 'underdark']
         if layout.purpose == 'temple':
-            none_tags = None
+            none_tags = ['underdark']
         return self.monster_sets(required_tags=['dungeon-explorer'], none_tags=none_tags)
 
     def alter_dungeon(self, layout):
@@ -260,16 +274,20 @@ some_examples = [
 [AbandonedStrongholdTemplate, TreeChokedTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, InfestedTemplate, LairTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, FungalInfectionTemplate, ExplorerTemplate],
+[AbandonedStrongholdTemplate, VolcanicTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, LairTemplate],
 [GuardedTreasureVaultTemplate, InfestedTemplate],
 [AbandonedMineTemplate, InfestedTemplate, ExplorerTemplate],
+[AbandonedMineTemplate, VolcanicTemplate, ExplorerTemplate],
 [AbandonedMineTemplate, InfestedTemplate, LairTemplate],
 [AbandonedMineTemplate, PassingAgesTemplate, FungalInfectionTemplate, LairTemplate],
 [AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
 [InUseTempleTemplate],
 [InfestedCaveTemplate, ExplorerTemplate],
+[InfestedCaveTemplate, VolcanicTemplate],
+[InfestedCaveTemplate, TreeChokedTemplate],
 [InfestedCaveTemplate, LairTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, FungalInfectionTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, LairTemplate, LairTemplate]

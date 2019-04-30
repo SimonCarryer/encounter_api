@@ -184,3 +184,7 @@
   tags: [magical, guardian]
 - sign: Rich furnishings standing untouched by the ravages of time.
   tags: [magical, guardian]
+- sign: A crudely-made doll or mannekin.
+  tags: [humanoid]
+- sign: The heavy feeling of long-undisturbed air.
+  tags: [immortal]

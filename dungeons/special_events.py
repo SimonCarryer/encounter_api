@@ -1,7 +1,12 @@
 from .dungeon_templates import DungeonTemplate
 from encounters.encounter_api import EncounterSource
 from treasure.npc_items import NPC_item
+from string import Template
 import networkx as nx
+import yaml
+
+with open('data/special_events.yaml', 'r') as f:
+    special_events_data = yaml.load(f)
 
 class SpecialEvent(DungeonTemplate):
     def distance_to_entrances(self, node, entrances, layout):
@@ -29,6 +34,15 @@ class SpecialEvent(DungeonTemplate):
 
     def delete_treasure(self, treasure):
         self.dungeon_manager.delete_treasure(treasure)
+
+    def find_best_room(self, layout):
+        distances = self.room_distances(layout, max_edge_weight=4)
+        sort_key = lambda x: distances[x] if distances.get(x) else 0
+        distances = sorted(layout.nodes(), key=sort_key, reverse=True)
+        if len(distances) > 0:
+            return distances[0]
+        else:
+            return None
 
 
 class VillainHideout(SpecialEvent):
@@ -78,7 +92,9 @@ class VillainHideout(SpecialEvent):
         return 'The hideout for a well-known villain'
 
     def villain_name(self):
-        return 'villain name here'
+        if not hasattr(self, 'set_name'):
+            self.set_name = self.dungeon_manager.name_generator.villain_name()
+        return self.set_name
 
     def alter_dungeon(self, layout):
         best_room = self.find_best_room(layout)
@@ -112,3 +128,68 @@ class LostItem(SpecialEvent):
         if best_room is not None:
             layout.node[best_room]['description'] += self.description(item)
             self.dungeon_manager.add_event('special', self.event_type(), item.name)
+
+class SpecialRoom(SpecialEvent):
+    def add_room(self,
+                 layout,
+                 secret=False,
+                 passage_description=None,
+                 room_description=None,
+                 room_encounter=None):
+        best_room = self.find_best_room(layout)
+        new_room_id = len(layout.nodes())
+        layout.add_room(new_room_id)
+        layout.connect_rooms(best_room, new_room_id)
+        layout.node[new_room_id]['description'] = room_description
+        layout.node[new_room_id]['encounter'] = room_encounter
+        layout.node[new_room_id]['distance'] = layout.node[best_room]['distance'] + 1
+        if secret:
+            layout[best_room][new_room_id]['tags'].append('secret')
+            layout[best_room][new_room_id]['weight'] = 3
+        else:
+            layout[best_room][new_room_id]['weight'] = 1
+        layout[best_room][new_room_id]['description'] = passage_description
+
+class Prison(SpecialRoom):
+    def get_encounter(self, prisoner):
+        response = {}
+        response['success'] = True
+        response['monster_set'] = prisoner
+        response['monsters'] = [{'name': prisoner, 'number': 1}]
+        response['difficulty'] = None
+        response['xp_value'] = None
+        response['treasure'] = None
+        return response
+
+    def alter_dungeon(self, layout):
+        prisoner = self.prisoner()
+        self.add_room(layout,
+                    secret=False,
+                    room_description=self.room_description(prisoner),
+                    passage_description='This passageway is barred by an enormous and imposing door - see the adjoining room description for details.',
+                    room_encounter=self.get_encounter(prisoner))
+        self.dungeon_manager.add_event('special', self.event_type(), prisoner)
+        
+    def event_type(self):
+        return 'A prison for a powerful immortal being'
+
+    def prisoner(self):
+        prisoners = special_events_data['prison']['prisoners']
+        return self.random_state.choice(prisoners)
+
+    def room_description(self, prisoner):
+        template = Template(self.random_state.choice(special_events_data['prison']['templates']))
+        method = Template(self.random_state.choice(special_events_data['prison']['methods']))
+        d = {
+            'prisoner': prisoner,
+            'adjective': self.random_state.choice(special_events_data['prison']['adjectives']),
+            'material': self.random_state.choice(special_events_data['prison']['materials']),
+            'method': method.substitute({'creature': self.prisoner()}),
+            'gratitude': self.random_state.choice(special_events_data['prison']['gratitudes'])
+        }
+        return template.substitute(d)
+        
+
+
+
+
