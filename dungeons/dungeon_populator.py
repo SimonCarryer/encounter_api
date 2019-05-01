@@ -247,4 +247,3 @@ class Explorers(DungeonPopulator):
         return layout
 
 
-        

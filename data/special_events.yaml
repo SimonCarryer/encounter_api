@@ -44,9 +44,19 @@ prison:
     - flesh
     - wood
     - stone
+    - ivory
   gratitudes:
     - offer information about events of the distant past
     - offer magical secrets - a new spell
     - immediately attack
     - try to escape to renew their reign of terror
     - ask for the party's help in completing a long-neglected task
+underdark entrance:
+  rooms:
+    - A vast underground lake - the far shore well out of sight.
+    - A vertical shaft of unknowable depth. Far below, weird lights can be seen.
+    - A roaring underground waterfall, its depths far below.
+  passages:
+    - This passageway appears to have been tunneled through rock by some huge subterranean creature.
+    - This passageway has formed as the result of the room's floor collapsing into a cave network.
+    - An underground stream has formed this passage, wearing away the rock.

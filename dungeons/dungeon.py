@@ -53,7 +53,7 @@ class Dungeon:
         return [int(val * scale) for val in arr]
 
     def map(self):
-        pos = nx.spring_layout(self.layout, fixed=[0], pos={0: (0, 1)})
+        pos = nx.spring_layout(self.layout, fixed=[0], pos={0: (0, 1)}, weight=None)
         xs = self.make_postions([r[0] for r in pos.values()])
         ys = self.make_postions([r[1] for r in pos.values()])
         room_ids = self.get_room_ids()

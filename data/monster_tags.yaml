@@ -33,6 +33,7 @@ githyanki:
   - humanoid
   - magical
   - any terrain
+  - psychic
 wolves:
   - wolves
   - beast
@@ -59,6 +60,7 @@ drow:
   - evil
   - spiders
   - underdark
+  - dungeon-explorer
 apex predators:
   - beast
   - forest
@@ -116,6 +118,7 @@ githzerai:
   - humanoid
   - magical
   - any terrain
+  - psychic
 lost world:
   - beast
   - lost-world
@@ -145,6 +148,7 @@ quaggoths:
   - savage
   - beast
   - underdark
+  - dungeon-explorer
 mountains:
   - beast
   - bird
@@ -175,7 +179,6 @@ spiders:
   - swamp
   - desert
   - jungle
-  - underdark
 hills:
   - beast
   - bird
@@ -233,6 +236,7 @@ mind flayers:
   - cave-dweller
   - dungeon-explorer
   - abberation
+  - psychic
 wizards tower:
   - guardian
   - magical
@@ -344,3 +348,8 @@ azers:
   - fire
   - earth
   - any terrain
+svirfneblin:
+  - underdark
+  - humanoid
+  - dungeon-explorer
+  - earth

@@ -1,4 +1,5 @@
 from .dungeon_templates import DungeonTemplate
+from .dungeon_populator import Explorers
 from encounters.encounter_api import EncounterSource
 from treasure.npc_items import NPC_item
 from string import Template
@@ -135,7 +136,8 @@ class SpecialRoom(SpecialEvent):
                  secret=False,
                  passage_description=None,
                  room_description=None,
-                 room_encounter=None):
+                 room_encounter=None,
+                 room_tags=None):
         best_room = self.find_best_room(layout)
         new_room_id = len(layout.nodes())
         layout.add_room(new_room_id)
@@ -143,6 +145,8 @@ class SpecialRoom(SpecialEvent):
         layout.node[new_room_id]['description'] = room_description
         layout.node[new_room_id]['encounter'] = room_encounter
         layout.node[new_room_id]['distance'] = layout.node[best_room]['distance'] + 1
+        if room_tags is not None:
+            layout.node[new_room_id]['tags'] += room_tags
         if secret:
             layout[best_room][new_room_id]['tags'].append('secret')
             layout[best_room][new_room_id]['weight'] = 3
@@ -189,7 +193,42 @@ class Prison(SpecialRoom):
         }
         return template.substitute(d)
         
+class UnderdarkExplorers(Explorers):
+    def start_node(self, layout):
+        possibles = [node for node, data in layout.nodes(data=True) if 'underdark-entrance' in data['tags'] and 'uninhabitable' not in data['tags']]
+        if len(possibles) == 0:
+            return None
+        return self.random_state.choice(possibles)
 
+class UnderdarkEntrance(SpecialRoom):
+    def find_best_room(self, layout):
+        free_nodes = [node for node, data in layout.nodes(data=True) if 'entrance' not in data['tags'] and 'uninhabitable' not in data['tags']]
+        if len(free_nodes) > 0:
+            return self.random_state.choice(free_nodes)
 
+    def room_description(self, layout):
+        return self.random_state.choice(special_events_data['underdark entrance']['rooms']) + ' This room is an entrance to the underdark.'
+
+    def passage_description(self, layout):
+        if layout.purpose == 'cave':
+            return ''
+        else:
+            return self.random_state.choice(special_events_data['underdark entrance']['passages'])
+
+    def alter_dungeon(self, layout):
+        self.add_room(layout,
+                        secret=False,
+                        passage_description=self.passage_description(layout),
+                        room_description=self.room_description(layout),
+                        room_encounter=None,
+                        room_tags=['underdark-entrance'])
+        monster_sets = self.monster_sets(required_tags=['underdark', 'dungeon-explorer'])
+        self.build_populator(monster_sets=monster_sets, populator_method=UnderdarkExplorers).populate(layout)
+        return layout
+
+    def event_type(self):
+        return 'A gateway for creatures from the underdark'
+
+    
 
 

@@ -2,7 +2,7 @@ from .dungeon import Dungeon
 from .dungeon_layout import DungeonLayout
 from .dungeon_templates import some_examples
 from .dungeon_manager import DungeonManager
-from .special_events import VillainHideout, LostItem, Prison
+from .special_events import VillainHideout, LostItem, Prison, UnderdarkEntrance
 from treasure.treasure_api import RawHoardSource
 from random import Random
 
@@ -32,6 +32,8 @@ class DungeonSource():
 
     def special_events(self, layout):
         special_events = []
+        if self.random_state.randint(1, 6) >= 6:
+            special_events.append(UnderdarkEntrance)
         if self.random_state.randint(1, 6) >= 5:
             event = self.random_state.choice([VillainHideout, LostItem, Prison])
             special_events.append(event)
