@@ -10,7 +10,7 @@ creator:
   - Elemental Fire. This item is warm to the touch, and any metal parts are crafted from black iron. Sigils of flames cover its surface. Shades of red and orange are the prominent colors.
   - Elemental Water. Lustrous fish scales replace leather or cloth on this item, and metal portions are instead crafted from seashells and worked as hard as any metal.
   - Elf. The item is half the normal weight. It is adorned with symbols of nature. Leaves, vines, stars, and the like .
-  - Fey. The item is exquisitely crafted from the finest materials and glows with a pale radi ance - moonlight, shedding dim light in a 5-foot radi s Any metal in the item is silver or mithral , rathe· than iron or steel.
+  - Fey. The item is exquisitely crafted from the finest materials and glows with a pale radiance - moonlight, shedding dim light in a 5-foot radi s Any metal in the item is silver or mithral , rathe· than iron or steel.
   - Fiend. The item is made of black iron or horn inscribed with runes, and any cloth or leather components are crafted from the hide of fiends. It is warm to the touch and features leering faces. Vile runes engraved on its surface. Celestials find the item's presence repulsive.
   - Giant. The item is larger than normal and was crafted by giants for use by their smaller allies.
   - Gnome. The item is crafted to appear ordinary, and it might look worn. It could also incorporate gems and mechanical components, even if these aren't essential to the item's function.
@@ -26,7 +26,8 @@ history:
   - Symbol of Power. This item was once used as a symbol of royal regalia or as a badge of high office. Its former owner or that person's descendants might desire it, or someone might mistakenly assume the new owner is the item's legitimate inheritor.
 minor property:
   - Beacon. The bearer can use a bonus action to cause the item to shed bright light in a 10-foot radius and dim light for an additional10 feet, or to extinguish the light.
-  - Compass. The wielder can use an action to learn which way is north. Conscientious. When the bearer of this item contemplates or undertakes a malevolent act, the item enhances pangs of conscience.
+  - Compass. The wielder can use an action to learn which way is north. 
+  - Conscientious. When the bearer of this item contemplates or undertakes a malevolent act, the item enhances pangs of conscience.
   - Delver. While underground , the bearer of this item always knows the item's depth below the surface and the direction to the nearest staircase, ramp, or other path leading upward.
   - Gleaming. This item never gets dirty.
   - Guardian. The item whispers warnings to its bearer, granting a +2 bonus to initiative if the bearer isn't incapacitated. 

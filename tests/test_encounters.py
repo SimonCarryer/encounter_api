@@ -81,12 +81,12 @@ def test_correct_lists_generated():
 
 def test_encounter_source_is_deterministic():
     monsters = []
-    random_state = Random(3)
+    random_state = Random(4)
     for _ in range(0, 5):
         source = EncounterSource(xp_budget=450, random_state=random_state)
         encounter = source.get_encounter()
         monsters.append(encounter['monsters'])
-    random_state = Random(3)
+    random_state = Random(4)
     monsters2 = []
     for _ in range(0, 5):
         source = EncounterSource(xp_budget=450, random_state=random_state)
@@ -133,4 +133,4 @@ def test_encounter_picker():
     builder = EncounterBuilder(budget, monster_source)
     monster_lists = builder.monster_lists
     picker = EncounterPicker(monster_lists, budget, random_state=state)
-    # print(picker.pick_encounter(style='no leader'))
+    # print(picker.pick_encounter(difficulty='hard', style='basic', occurrence='common'))

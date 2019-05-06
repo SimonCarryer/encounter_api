@@ -134,7 +134,7 @@ orcs:
     role: leader
     occurrence: common
   - Name: Orc Eye of Gruumsh      
-    role: elite
+    role: leader
     occurrence: common
   - Name: Orog      
     role: troops
@@ -515,6 +515,9 @@ hobgoblins:
  - Name: Ape
    role: pet
    occurrence: rare
+ - Name: Owlbear
+   role: pet
+   occurrence: rare
 
 sewers:
  - Name: Otyugh
@@ -840,6 +843,9 @@ apex predators:
  - Name: Spirit Naga
    occurrence: rare
    role: solo
+ - Name: Ettin
+   occurrence: common
+   role: solo
 
 cult of jubilex:
  - Name: Cult Fanatic
@@ -940,6 +946,9 @@ cult of baphomet:
    role: environmental hazard
 
 underdark:
+ - Name: Rust Monster
+   occurrence: rare
+   role: environmental hazard
  - Name: Aboleth
    occurrence: rare
    role: solo
@@ -1055,6 +1064,9 @@ oozes:
    occurrence: rare
 
 caves:
+ - Name: Rust Monster
+   occurrence: rare
+   role: environmental hazard
  - Name: Basilisk
    occurrence: rare
    role: solo
@@ -1588,9 +1600,6 @@ forest goblins:
    occurrence: uncommon
 
 fire giants:
- - Name: Adult Red Dragon
-   role: leader
-   occurrence: rare
  - Name: Fire Giant
    role: troops
    occurrence: common
@@ -2120,3 +2129,11 @@ villains:
   - Name: Doppelganger
     occurrence: common
     role: solo
+
+fomorians:
+ - Name: Fomorian
+   occurrence: common
+
+duergar:
+ - Name: Duergar
+   occurrence: uncommon

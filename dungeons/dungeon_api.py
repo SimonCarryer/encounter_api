@@ -2,7 +2,7 @@ from .dungeon import Dungeon
 from .dungeon_layout import DungeonLayout
 from .dungeon_templates import some_examples
 from .dungeon_manager import DungeonManager
-from .special_events import VillainHideout, LostItem, Prison, UnderdarkEntrance
+from .special_events import VillainHideout, LostItem, ForbiddingDoor, UnderdarkEntrance
 from treasure.treasure_api import RawHoardSource
 from random import Random
 
@@ -32,10 +32,12 @@ class DungeonSource():
 
     def special_events(self, layout):
         special_events = []
-        if self.random_state.randint(1, 6) >= 6:
+        if self.random_state.randint(1, 6) >= 6 and layout.purpose == 'cave':
+            special_events.append(UnderdarkEntrance)
+        elif self.random_state.randint(1, 10) == 10:
             special_events.append(UnderdarkEntrance)
         if self.random_state.randint(1, 6) >= 5:
-            event = self.random_state.choice([VillainHideout, LostItem, Prison])
+            event = self.random_state.choice([VillainHideout, LostItem, ForbiddingDoor])
             special_events.append(event)
         return special_events
 

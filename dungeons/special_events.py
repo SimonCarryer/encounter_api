@@ -1,8 +1,11 @@
 from .dungeon_templates import DungeonTemplate
 from .dungeon_populator import Explorers
+from .dungeon_manager import Treasure
 from encounters.encounter_api import EncounterSource
 from treasure.npc_items import NPC_item
+from treasure.treasure_api import RawHoardSource
 from string import Template
+from traps.trap import Trap
 import networkx as nx
 import yaml
 
@@ -53,11 +56,7 @@ class VillainHideout(SpecialEvent):
                                             random_state=self.random_state)
         encounter_source.monster_set = self.villain_name()
         self.dungeon_manager.add_encounter_source(self.name, encounter_source)
-        if self.random_state.randint(1, 6) >= 3:
-            style = 'basic'
-        else:
-            style = 'not just pets'
-        encounter = self.dungeon_manager.get_encounter(self.name, style=style)
+        encounter = self.dungeon_manager.get_encounter(self.name, style='leader', difficulty='medium')
         if encounter['difficulty'] in ['easy', 'medium'] and self.random_state.randint(1, 6) >= 3:
             item = NPC_item(self.level, random_state=self.random_state)
             encounter['treasure']['magic_items'] = item.item
@@ -109,7 +108,9 @@ class LostItem(SpecialEvent):
         return NPC_item(self.level, martial=True, random_state=self.random_state)
 
     def description(self, item):
-        return '\n'.join([item.name, item.item] + item.properties)
+        found = self.random_state.choice(special_events_data['lost item']['found'])
+        base = ' ' + found + ' is "%s", a "%s" with the following special properties:\n\n' % (item.name, item.item)
+        return base + '\n'.join(item.properties) + '\n'
 
     def find_best_room(self, layout):
         distances = self.room_distances(layout, max_edge_weight=4)
@@ -137,14 +138,16 @@ class SpecialRoom(SpecialEvent):
                  passage_description=None,
                  room_description=None,
                  room_encounter=None,
-                 room_tags=None):
+                 room_tags=None,
+                 room_treasure=None):
         best_room = self.find_best_room(layout)
         new_room_id = len(layout.nodes())
         layout.add_room(new_room_id)
         layout.connect_rooms(best_room, new_room_id)
         layout.node[new_room_id]['description'] = room_description
         layout.node[new_room_id]['encounter'] = room_encounter
-        layout.node[new_room_id]['distance'] = layout.node[best_room]['distance'] + 1
+        layout.node[new_room_id]['treasure'] = room_treasure
+        layout.node[new_room_id]['distance'] = layout.node[best_room].get('distance', 9) + 1
         if room_tags is not None:
             layout.node[new_room_id]['tags'] += room_tags
         if secret:
@@ -154,7 +157,10 @@ class SpecialRoom(SpecialEvent):
             layout[best_room][new_room_id]['weight'] = 1
         layout[best_room][new_room_id]['description'] = passage_description
 
-class Prison(SpecialRoom):
+class ForbiddingDoor(SpecialRoom):
+    def purpose(self):
+        return self.random_state.choice(special_events_data['forbidding door']['purposes'])
+
     def get_encounter(self, prisoner):
         response = {}
         response['success'] = True
@@ -165,33 +171,77 @@ class Prison(SpecialRoom):
         response['treasure'] = None
         return response
 
-    def alter_dungeon(self, layout):
-        prisoner = self.prisoner()
-        self.add_room(layout,
-                    secret=False,
-                    room_description=self.room_description(prisoner),
-                    passage_description='This passageway is barred by an enormous and imposing door - see the adjoining room description for details.',
-                    room_encounter=self.get_encounter(prisoner))
-        self.dungeon_manager.add_event('special', self.event_type(), prisoner)
-        
-    def event_type(self):
-        return 'A prison for a powerful immortal being'
-
-    def prisoner(self):
-        prisoners = special_events_data['prison']['prisoners']
-        return self.random_state.choice(prisoners)
-
-    def room_description(self, prisoner):
-        template = Template(self.random_state.choice(special_events_data['prison']['templates']))
-        method = Template(self.random_state.choice(special_events_data['prison']['methods']))
+    def get_trap(self):
+        trap = Trap(self.level)
+        template = trap.template
         d = {
-            'prisoner': prisoner,
-            'adjective': self.random_state.choice(special_events_data['prison']['adjectives']),
-            'material': self.random_state.choice(special_events_data['prison']['materials']),
-            'method': method.substitute({'creature': self.prisoner()}),
-            'gratitude': self.random_state.choice(special_events_data['prison']['gratitudes'])
+            'name': trap.name,
+            'telltale': trap.telltale,
+            'spot': trap.spot,
+            'trigger': 'attempting to open the door',
+            'damage': trap.damage,
+            'save': trap.save,
+            'attack': trap.attack,
+            'monsters': trap.summon_monsters()
         }
         return template.substitute(d)
+
+    def prison(self, layout):
+        prisoner = self.random_state.choice(special_events_data['forbidding door']['prison']['prisoners'])
+        template = Template(self.random_state.choice(special_events_data['forbidding door']['prison']['templates']))
+        d = {
+        'prisoner': prisoner,
+        'gratitude': self.random_state.choice(special_events_data['forbidding door']['prison']['gratitudes'])
+        }
+        description = template.substitute(d)
+        self.add_room(layout,
+                    secret=False,
+                    room_description=self.room_description(description),
+                    passage_description='This passageway is barred by an enormous and imposing door - see the adjoining room description for details.',
+                    room_encounter=self.get_encounter(prisoner))
+
+    def treasure(self, layout):
+        description = 'Behind the door is a large and richly-appointed treasure room.'
+        treasure = Treasure(None)
+        level = min([self.level + 5, 20])
+        for item in RawHoardSource(encounter_level=level).get_treasure():
+            treasure.get_item(*item)
+        self.add_room(layout,
+            secret=False,
+            room_description=self.room_description(description),
+            passage_description='This passageway is barred by an enormous and imposing door - see the adjoining room description for details.',
+            room_encounter=None,
+            room_treasure=treasure
+            )
+
+    def alter_dungeon(self, layout):
+        purpose = self.purpose()
+        if purpose == 'prison':
+            self.prison(layout)
+        elif purpose == 'treasure vault':
+            self.treasure(layout)
+        self.dungeon_manager.add_event('special', self.event_type(purpose), None)
+        
+    def event_type(self, purpose):
+        return special_events_data['forbidding door'][purpose]['event']
+
+    def room_description(self, specific_description):
+        template = Template(self.random_state.choice(special_events_data['forbidding door']['templates']))
+        method = Template(self.random_state.choice(special_events_data['forbidding door']['methods']))
+        creature = self.random_state.choice(special_events_data['forbidding door']['prison']['prisoners'])
+        decoration_template = Template(self.random_state.choice(special_events_data['forbidding door']['decorations']))
+        decoration_d = {}
+        for word in ['script', 'message', 'motif']:
+            decoration_d[word] = self.random_state.choice(special_events_data['forbidding door'][word + 's'])
+        decoration = decoration_template.substitute(decoration_d)
+        d = {
+            'adjective': self.random_state.choice(special_events_data['forbidding door']['adjectives']),
+            'material': self.random_state.choice(special_events_data['forbidding door']['materials']),
+            'method': method.substitute({'creature': creature}),
+            'trap': self.get_trap(),
+            'decoration': decoration
+        }
+        return template.substitute(d) + ' ' + specific_description
         
 class UnderdarkExplorers(Explorers):
     def start_node(self, layout):
@@ -222,13 +272,9 @@ class UnderdarkEntrance(SpecialRoom):
                         room_description=self.room_description(layout),
                         room_encounter=None,
                         room_tags=['underdark-entrance'])
-        monster_sets = self.monster_sets(required_tags=['underdark', 'dungeon-explorer'])
+        monster_sets = self.monster_sets(required_tags=['underdark', 'dungeon-explorer']) + ['underdark']
         self.build_populator(monster_sets=monster_sets, populator_method=UnderdarkExplorers).populate(layout)
         return layout
 
     def event_type(self):
         return 'A gateway for creatures from the underdark'
-
-    
-
-

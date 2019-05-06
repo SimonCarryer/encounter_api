@@ -1,0 +1,259 @@
+
+fountain:
+  effects:
+    - $verb the water gives the effect of a "Charm of Restoration" (DMG page 228). $disclaimer
+    - The water functions as holy water.
+    - $verb the water has the effect of a Greater Restoration spell. $disclaimer
+    - $verb the water has the same effect as a $potion. $disclaimer
+    - The "water" is in fact strong acid - touching it causes 1d10 acid damage. Being immersed in it causes 8d10 acid damage every round.
+    - The water is just water.
+    - $verb the water causes 1d10 psychic damage, but the character gains the effects of a $potion. $disclaimer
+  templates:
+    - Water pours from the mouth of a stone $creature into a large pool.
+    - A carved $creature holds aloft a bowl, which is filled with water.
+    - A niche in the wall bears carvings of ${creature}s, and water bubbles up from within.
+    - A natural spring forms part of this room, with rough stone steps descending into the water.
+    - A pool in the center of the room has a mosaic of ${creature}s at the bottom.
+  creatures:
+    - lion
+    - griffon
+    - human figure
+    - fish
+    - mermaid
+    - snake
+    - dragon
+    - minotaur
+    - geometric shape
+    - jug
+    - gargoyle
+    - medusa
+    - skull
+  verbs:
+    - Drinking
+    - Bathing in
+    - Touching
+  potions:
+    - Potion of Poison
+    - Potion of Healing
+    - Philtre of Love
+    - Potion of Gaseous Form
+    - Potion of Giant Strength (Hill Giant)
+    - Potion of Longevity
+    - Potion of Vitality
+    - Potion of Growth
+    - Potion of Diminution
+
+sarcophagus:
+  templates:
+    - a $noun of $material on a dais, carved with $adjective ${motif}s.
+    - a $adjective $noun - topped with a $motif of $material.
+    - a $adjective $noun of $material in the shape of a $motif.
+  nouns:
+    - sarcophagus
+    - catafalque
+    - casket
+    - hollow niche
+    - box
+  materials:
+    - stone
+    - iron
+    - amber
+    - marble
+    - ivory
+    - crystal
+    - ebony
+  adjectives:
+    - sombre
+    - peaceful
+    - strangely-proportioned
+    - sinister
+    - decrepit
+    - ghoulish
+    - blackened
+    - filigreed
+  motifs:
+    - skull
+    - human figure
+    - dragon
+    - skeleton
+    - face
+    - symbol
+  effects:
+    - Anyone lying or placed in the $noun is the target of the $spell spell.
+    - The $motif will speak of the deeds of the bodies the $noun has contained.
+    - Inside the $noun is inscribed the text of the $spell spell.
+    - There is a dessicated human corpse interred here.
+    - It is empty.
+  spells:
+    - the "Slumber" version of the Imprisonment
+    - Gentle Repose
+    - Raise Dead
+    - Astral Projection
+    - Disintegration
+
+portal:
+  templates:
+    - An unadorned $material $shape stands here.
+    - You can see a $shape of $material adorned with carved ${motif}s.
+    - In this room you see a pair of carved ${motif}s supporting a $shape of $material.
+    - A huge ${motif} of $material looms over a stone $shape.
+  materials:
+    - stone
+    - bone
+    - iron
+    - ice
+    - amber
+    - marble
+    - ivory
+    - crystal
+    - ebony
+  motifs:
+    - dragon
+    - lion
+    - griffon
+    - human figure
+    - skeleton
+    - flower
+    - sword
+    - sigil
+  shapes:
+    - dais
+    - archway
+    - sphere
+    - doorway
+    - ring
+  spells:
+    - Commune
+    - Augury
+    - Contact Other Plane
+    - Divination
+  activations:
+    - simply by touching it
+    - by speaking a secret command word (requires attunement)
+    - by completing a 10 minute ritual (Arcana DC15)
+    - by completing an hour-long ritual (Arcana DC15)
+    - simply by staring into it
+    - by standing in it
+  effects:
+    - The $shape acts as a teleportation circle.
+    - The $shape functions as a Crystal Ball.
+    - Once per day, the $shape allows you to cast the $spell spell $activation.
+    - The $shape is inscribed with the text of the $spell spell.
+    - Touching the $shape puts the character in contact with a divine or otherwise powerful being, as if they had cast the $spell spell.
+    - The $shape is a Gate, allowing passage to a plane of the DM's choice $activation.
+    - The $shape is otherwise unremarkable.
+  
+
+statue:
+  templates:
+    - a $material statue of $fancy_name. They are shown $single_activity.
+    - a $material statue of a $motif. The $motif is depicted $single_activity.
+    - a statue of $material depicting a strange hybrid of $motif and $other_motif.
+    - a $material sculpture of a $motif and a $other_motif $pair_activity.
+  motif:
+    - lion
+    - dragon
+    - skeleton
+    - snake
+    - medusa
+    - gargoyle
+    - warrior
+    - wizard
+    - nobleman
+    - noblewoman
+    - beggar
+    - young man
+    - young woman
+    - priest
+  single_activity:
+    - deep in thought
+    - in great pain
+    - in abject fear
+    - posing heroically
+    - reading a book
+    - in repose
+  pair_activity:
+    - locked in battle
+    - in a passionate embrace
+    - supporting a great pillar
+    - supporting a stone sphere
+  material:
+    - rough stone
+    - polished stone
+    - marble
+    - bronze
+    - clay
+    - glass
+    - crystal
+  enticements:
+    - The eyes of the statue are gemstones worth 10GP each.
+    - The statue is inlaid with patterns in fine gold, worth maybe 50GP.
+    - The statue is by a renowned sculptor, and could be worth hundreds of gold pieces.
+    - The statue's eyes seem to follow you around the room.
+    - The statue is likely to be of significant sentimental value to $fancy_name.
+  penalty:
+    - make a Charisma save (DC15) or become Frightened for 1 minute
+    - make a saving throw as if they had been targeted by the Stone to Flesh spell
+  effects:
+    - If touched, the statue comes to life, and attacks as a creature of the DM's choice.
+    - The statue is hollow, and contains a cache of coins worth 100GP. It must be broken open to retrieve the coins.
+    - The statue can be moved aside, to reveal a secret tunnel to a nearby room in the dungeon.
+    - The statue incorporates a real creature, petrified long ago and now used as a decoration. The effect can be dispelled, returning the creature to life.
+    - Anyone making eye contact with the statue must $penalty.
+    - Touching the statue, the character must $penalty.
+    - The statue is icy cold to the touch.
+    - The statue is just a regular statue.
+    - The statue seems to whisper of events long ago.
+    - The $material is actually just paint over plaster, and the statue is a cheap fake.
+
+magic crystal:
+  templates:
+    - A huge $colour $noun emerges from one wall. It seems to be $verb.
+    - Brilliant $colour light emanates from a collection of ${verb} ${noun}s in the center of the room.
+    - The ceiling is made of a gently glowing $noun of bright $colour.
+    - A large $noun in one corner of the room seems to be gently $verb.
+  verbs:
+    - pulsing
+    - throbbing
+    - humming
+    - whispering
+    - crackling
+    - muttering
+    - ticking
+  nouns:
+    - rock
+    - crystal
+    - gemstone
+    - stone
+  colours:
+    - aquamarine
+    - pink
+    - teal
+    - cyan
+    - chartreuse
+    - multicolour
+    - ultraviolet
+    - crimson
+  spells:
+    - Mirror Image
+    - Levitate
+    - Magic Missile
+    - Color Spray
+    - Invisibility
+    - Blur
+  effects:
+    - The $noun emits an Antimagic field which encompasses the whole room.
+    - The room is a Wild Magic zone - roll on the table every time a spell is cast.
+    - Spells cast at the $noun target every creature in the room.
+    - Any spell cast in the room targets a random creature instead.
+    - Spellcasters who start their turn in the room take 2d10 psychic damage.
+    - Any character who starts their turn in the room is targeted by the $spell spell.
+    - Any character who starts their turn in the room can spend an action to cast the $spell spell.
+    - The $noun has no other effects.  
+  admonishments:
+    - Attempting to remove the $noun will cause it to shatter into millions of worthless pieces.
+    - Any attempt to dislodge the $noun is fruitless, and the character is the target of the $spell spell.
+    - The $noun can be removed, but it is heavy, and its effects fade over the course of several days.
+    - Touching the $noun turns the character's skin and hair bright $colour until the end of their next long rest.
+    - A Wizard of sufficient level carrying a piece of the $noun on their person can prepare $spell, even if it's not in their spellbook.
+    - The $noun is completely immovable and unbreakable.

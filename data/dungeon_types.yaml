@@ -90,6 +90,7 @@ tomb:
     - description: A forbidding room displaying reminders of impending death.
       tags: [entrance]
     - description: Workshop for embalming the dead.
+    - description: An ossuary with elaborate decorations of bone.
     - description: Antechamber for those that have come to pay respect to the dead or prepare themselves for burial rituals.
     - description: Chapel dedicated to deities that watch over the dead and protect their resting places.
       tags: [central, guarded]

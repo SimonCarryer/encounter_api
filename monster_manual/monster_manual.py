@@ -104,9 +104,8 @@ class MonsterManual():
         mob_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops']]
         good_challenge_mobs = [monster_level for monster_level in mob_monster_levels if monster_level < level-0.5 and monster_level >= (level/12)-0.5]
         boss_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['leader', 'solo']]
-        good_challenge_bosses = [monster_level for monster_level in boss_monster_levels if monster_level <= level+1 and monster_level >= level-2]
-        number_of_monsters = len(good_challenge_mobs + good_challenge_bosses)
-        return number_of_monsters > 0
+        good_challenge_bosses = [monster_level for monster_level in boss_monster_levels if monster_level <= level and monster_level >= level-10]
+        return (len(mob_monster_levels) == 0 or len(good_challenge_mobs) > 0) and (len(boss_monster_levels) == 0 or len(good_challenge_bosses) > 0)
 
     def get_signs(self, monster_set):
         tags = monster_tags[monster_set]

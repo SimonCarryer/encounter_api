@@ -190,5 +190,37 @@
   tags: [immortal]
 - sign: Whispering voices inside your mind.
   tags: [psychic]
+- sign: A sudden strong headache.
+  tags: [psychic]
 - sign: The feeling that your thoughts are being observed.
   tags: [psychic]
+- sign: The words "KEEP OUT" scrawled on a wall.
+  tags: [humanoid, dungeon-explorer]
+- sign: Countless tally-marks carved into a flat surface.
+  tags: [immortal]
+- sign: Food set out to be eaten, still fresh and undecayed.
+  tags: [immortal, magical, guardian]
+- sign: The rattling of dry bones.
+  tags: [undead, guardian]
+- sign: The buzzing of flies.
+  tags: [swamp]
+- sign: A crawling sensation in the back of the mind.
+  tags: [abberation]
+- sign: A deep silence.
+  tags: [immortal, guardian]
+- sign: Weirdly glowing algae coating the walls.
+  tags: [underdark]
+- sign: The smell of oil and grease.
+  tags: [construct]
+- sign: Unnatural warmth to the air.
+  tags: [magical, fire]
+- sign: A blazing forge and red-hot metal.
+  tags: [fire]
+- sign: The sound of picks on stone.
+  tags: [earth]
+- sign: Fresh rubble.
+  tags: [earth]
+- sign: Wet footprints.
+  tags: [water]
+- sign: An unexpected gust of wind.
+  tags: [air]

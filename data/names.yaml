@@ -210,6 +210,7 @@ other words:
     - Silent
     - Old
     - Haunted
+    - Stinking
     - Hidden
     - Cursed
     - Impregnable
@@ -289,6 +290,9 @@ other words:
     - Skull
     - Rook
     - Wyrm
+    - Hook
+    - Crook
+    - Scepter
   materials:
     - Stone
     - Iron
@@ -390,6 +394,7 @@ places:
           - River
           - Hill
   adjectives:
+    - Shuddering
     - Goblin
     - Witch
     - Windy
@@ -481,13 +486,77 @@ personal names:
     - Todd
     - Ronald
     - Robworth
+    - Gawaine
+    - Gamel
+    - Constantin
+    - Bertram
+    - Leofric
     - Tib
     - Hector
+    - Conall
+    - Iain
+    - Isaac
+    - Jac
+    - Griffith
+    - Cedrik
+    - Quintis
+    - Sextus
+    - Hildemar
+    - Friedger
+    - Luther
+    - Friedbert
+    - Dagobert
+    - William
+    - Filibert
+    - Dieter
+    - Hasso
+    - Erwin
+    - Rayner
+    - Luitwin
+    - Ubaldo
+    - Curt
+    - Dankmar
+    - Gilbert
+    - Gismondo
+    - Marmaduke
+    - Sampson
+    - Retgar
   female names:
+    - Ragenhild
+    - Eulalia
+    - Isolde
+    - Crystobell
+    - Ursula
+    - Millicent
+    - Riccarda
+    - Reinhilde
+    - Burghild
+    - Roswitha
+    - Frederika
+    - Roswitha
+    - Ida
+    - Huguette
+    - Burglinde
+    - Irmlinde
+    - Abelarda
+    - Gerburg
+    - Belinda
+    - Wendelina
+    - Ulrike
+    - Bliktrud
+    - Aristea
+    - Rosamunde
+    - Brunhilde
+    - Irma
+    - Aurelia
+    - Iseabail
+    - Lili
+    - Meridith
     - Lillian
     - Agatha
     - Medea
     - Warbeth
+    - Claudia
     - Anne
     - Marge
     - Alea
@@ -510,6 +579,7 @@ personal names:
     - Lucinda
     - Deirdre
     - Wandablade
+    - Maud
     - Stephenora
     - Amber
     - Agonybelle
@@ -517,6 +587,7 @@ personal names:
     - Martha
     - Elizawen
     - Gwenyth
+    - Brythe
   male titles:
     - King
     - Earl
@@ -571,6 +642,7 @@ personal names:
     - Stuttering
     - Smiling
     - Fat
+    - Stinky
     - Slim
   adjectives:
     - Foolish

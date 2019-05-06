@@ -1,7 +1,11 @@
 <!doctype html>
 <title>Random {{module.dungeon_type}}</title>
 <head>
-
+<style>
+p {
+  white-space: pre-wrap;
+}
+</style>
 </head>
 <body>
     <h1>{{module.name}}</h1>
@@ -50,8 +54,10 @@
 {% endfor %}
 {% for room in module.rooms %}
 <h3>Room {{room.room_id}}</h3>
-{{room.description}}<br><br>
-{% if room.sign %}<b>Signs: </b>{{room.sign}}<br><br>{% endif %}
+<div>
+    <p>{{room.description}}</p>
+    {% if room.sign %}<p><b>Signs: </b>{{room.sign}}</p>{% endif %}
+</div>
 {% if room.encounter %}
 <b>Encounter: {{room.encounter.monster_set}}</b><br>
 {% for monster in room.encounter.monsters %}

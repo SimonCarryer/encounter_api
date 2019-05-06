@@ -30,7 +30,7 @@ def test_get_monster_sets():
 def test_get_monster_set_level():
     mm = MonsterManual()
     # for level in range(1, 21):
-    #     print(sorted(mm.get_monster_sets(all_tags=['fire'], any_tags=None, level=level)))
+    #     print(sorted(mm.get_monster_sets(all_tags=['dungeon-explorer'], any_tags=None, none_tags=['underdark', 'evil'], level=level)))
 
 def test_get_sings():
     mm = MonsterManual()

@@ -77,6 +77,8 @@ class Trap:
         else:
             difficulty = 'hard'
         sets = library.monster_manual.get_monster_sets(any_tags=['fiend', 'celestial', 'elemental'], level=self.level)
+        if len(sets) == 0:
+            sets = library.monster_manual.get_monster_sets(any_tags=['elemental'], level=None)
         encounter = EncounterSource(encounter_level=self.level, monster_sets=sets).get_encounter(style='basic', difficulty=difficulty)
         monsters = ', '.join(['%s: %d' % (m['name'], m['number']) for m in encounter['monsters']])
         return monsters

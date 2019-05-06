@@ -104,9 +104,9 @@ class OriginalInhabitants(DungeonPopulator):
         elif 'entrance' in data['tags'] and self.roll(4):
             encounter = self.get_encounter(style='basic')
         elif 'secret' in data['tags'] and self.roll(2):
-            encounter = self.get_encounter(style='elite')
+            encounter = self.get_encounter(style='exotic')
         elif 'guarded' in data['tags'] and self.roll(2):
-            encounter = self.get_encounter(style='no leader', difficulty='medium')
+            encounter = self.get_encounter(difficulty='medium')
         if 'treasure' in data['tags'] and treasure is None:
             treasure = self.get_treasure()
         return trap, encounter, treasure, sign
@@ -134,7 +134,7 @@ class UndergroundNatives(DungeonPopulator):
                     data['encounter'] = self.get_encounter(style='leader', difficulty='hard')
                     data['tags'] += ['uninhabitable']
                 elif self.roll(4):
-                    data['encounter'] = self.get_encounter(style='no leader')
+                    data['encounter'] = self.get_encounter()
                 else:
                     data['encounter'] = None
                 data['sign'] = self.get_sign()
@@ -237,8 +237,7 @@ class Explorers(DungeonPopulator):
                 data['encounter'] = self.get_encounter(style='basic')
                 data['treasure'] = None
             elif self.roll(4):
-                style = self.random_state.choice(['basic', 'no leader', 'basic'])
-                data['encounter'] = self.get_encounter(style=style)
+                data['encounter'] = self.get_encounter()
                 data['treasure'] = None
             else:
                 data['encounter'] = None

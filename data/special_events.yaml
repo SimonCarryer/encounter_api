@@ -1,33 +1,15 @@
-prison:
-  prisoners:
-    - Mummy Lord
-    - Aboleth
-    - Dao
-    - Marid
-    - Efreeti
-    - Djinni
-    - Pit Fiend
-    - Balor
-    - Marilith
-    - Ultroloth
-    - Death Slaad
-    - Vampire
-    - Deva
-    - Planetar
-    - Solar
-    - Death Knight
-    - Night Hag
-    - Empyrean
-    - Lich
-    - Rakshasa
-    - Oni
-  templates:
-    - This room is the prison for an ancient $prisoner. The door to this room is made of $adjective $material. The door can only be opened by $method. If freed, the prisoner will $gratitude.
+forbidding door:
   methods:
     - offering the blood of a $creature
-    - destroying a diamond worth 10,000GP
+    - destroying a diamond worth 1,000GP
     - finding a long-lost key
-    - saying the true name of the prisoner
+    - saying the true name of the creature that created the door
+    - a level 10 or higher Cleric of a Lawful Good deity
+    - a long-forgotten magical ritual
+  templates:
+    - The door to this room is made of $adjective $material. The door can only be opened by $method. $decoration.
+    - A $adjective door of $material bars entrance to this room. $decoration. Only $method can open the door.
+    - A $adjective door of $material bars entrance to this room. The door can only be opened by $method. Any attempt triggers a trap - a $trap.
   adjectives:
     - black
     - slimy
@@ -38,6 +20,7 @@ prison:
     - pulsating
     - red-hot
     - whispering
+    - forbidding
   materials:
     - iron
     - steel
@@ -45,12 +28,76 @@ prison:
     - wood
     - stone
     - ivory
-  gratitudes:
-    - offer information about events of the distant past
-    - offer magical secrets - a new spell
-    - immediately attack
-    - try to escape to renew their reign of terror
-    - ask for the party's help in completing a long-neglected task
+    - granite
+    - marble
+  decorations:
+    - The door bears inscriptions in $script script, telling $message
+    - A carved $motif on the door can be convinced to talk, and will reveal $message
+    - Images of ${motif}s are marked on the door
+  scripts:
+    - Draconic
+    - Elvish
+    - Dwarven
+    - Aquan
+    - Ignan
+    - Demonic
+    - ancient human
+    - unrecognisable
+    - indecipherable
+    - magically obscured
+    - plain
+  messages:
+    - the secret to opening the door
+    - tales of heroic deeds from centuries past
+    - hints of what lies beyond the door
+    - nothing but esoteric ramblings
+    - magical secrets - the text to a Wizard spell
+  motifs:
+    - human face
+    - demonic face
+    - skull
+    - human figure
+    - dragon
+    - wizard
+    - gargoyle
+  purposes:
+    - prison
+    - treasure vault
+  prison:
+    event: A prison for a powerful immortal being
+    prisoners:
+      - Mummy Lord
+      - Aboleth
+      - Dao
+      - Marid
+      - Efreeti
+      - Djinni
+      - Pit Fiend
+      - Balor
+      - Marilith
+      - Ultroloth
+      - Death Slaad
+      - Vampire
+      - Deva
+      - Planetar
+      - Solar
+      - Death Knight
+      - Night Hag
+      - Empyrean
+      - Lich
+      - Rakshasa
+      - Oni
+    templates:
+      - This room is the prison for an ancient $prisoner. If freed the prisoner will $gratitude.
+      - It guards a long-imprisoned $prisoner, trapped for many centuries. If freed the prisoner will $gratitude.
+    gratitudes:
+      - offer information about events of the distant past
+      - offer magical secrets - a new Wizard spell
+      - immediately attack
+      - try to escape to renew their reign of terror
+      - ask for the party's help in completing a long-neglected task
+  treasure vault:
+    event: The location of a vast treasure
 underdark entrance:
   rooms:
     - A vast underground lake - the far shore well out of sight.
@@ -60,3 +107,11 @@ underdark entrance:
     - This passageway appears to have been tunneled through rock by some huge subterranean creature.
     - This passageway has formed as the result of the room's floor collapsing into a cave network.
     - An underground stream has formed this passage, wearing away the rock.
+lost item:
+  found:
+    - Incorporated into a crude shrine
+    - Among the parched bones of a long-dead hero
+    - Buried beneath a pile of rubble and detritus
+    - In a finely-worked chest, locked tight
+    - Cunningly hidden behind a secret panel
+    - Lying in a corner, forgotten

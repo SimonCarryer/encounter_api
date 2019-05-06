@@ -268,6 +268,8 @@ class PassingAgesTemplate(DungeonTemplate):
 some_examples = [
 [HauntedTombTemplate, PassingAgesTemplate, ExplorerTemplate],
 [HauntedTombTemplate, PassingAgesTemplate, LairTemplate, ExplorerTemplate],
+[HauntedTombTemplate, FungalInfectionTemplate, LairTemplate, ExplorerTemplate],
+[HauntedTombTemplate, PassingAgesTemplate],
 [AbandonedStrongholdTemplate, HauntedTemplate, LairTemplate],
 [AbandonedStrongholdTemplate, HauntedTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, InfestedTemplate, ExplorerTemplate],

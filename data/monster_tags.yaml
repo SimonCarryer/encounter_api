@@ -1,6 +1,7 @@
 bullywugs:
   - humanoid
   - swamp
+  - dungeon-explorer
 efreet:
   - magical
   - fire
@@ -11,6 +12,7 @@ kenku:
   - bird
   - forest
   - desert
+  - dungeon-explorer
   - urban
 haunted:
   - undead
@@ -50,11 +52,7 @@ bandits:
   - humanoid
   - dungeon-explorer
   - human
-  - forest
-  - hills
-  - mountains
-  - desert
-  - plains
+  - any terrain
 drow:
   - humanoid
   - evil
@@ -64,11 +62,7 @@ drow:
 apex predators:
   - beast
   - forest
-  - desert
-  - swamp
-  - mountains
-  - plains
-  - jungle
+  - any terrain
 jungle:
   - jungle
   - beast
@@ -77,6 +71,7 @@ desert:
   - desert
 lizardfolk:
   - humanoid
+  - dungeon-explorer
   - swamp
 plains:
   - beast
@@ -108,6 +103,7 @@ frost giants:
   - giant
   - arctic
   - mountains
+  - dungeon-explorer
 necropolis:
   - undead
   - immortal
@@ -338,6 +334,7 @@ low giants:
   - forest
   - hills
   - savage
+  - dungeon-explorer
 villains:
   - rare
   - any terrain
@@ -353,3 +350,11 @@ svirfneblin:
   - humanoid
   - dungeon-explorer
   - earth
+fomorians:
+  - underdark
+  - giant
+  - dungeon-explorer
+duergar:
+  - underdark
+  - humanoid
+  - dungeon-explorer

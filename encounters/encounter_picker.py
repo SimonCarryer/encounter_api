@@ -24,7 +24,7 @@ class EncounterPicker:
             encounter = {
                 'difficulty': self.encounter_difficulty(monster_list),
                 'occurrence': self.encounter_occurrence(monster_list),
-                'tags': self.encounter_tags(monster_list),
+                'style': self.encounter_style(monster_list),
                 'monsters': monster_list,
                 'xp_value': self.xp_calculator.adjusted_xp_sum(monster_list)
             }
@@ -32,6 +32,11 @@ class EncounterPicker:
                 if monster['role'] not in ['environmental hazard', 'pet']:
                     self.monsters[monster['occurrence']].add(monster['Name'])
             self.encounters.append(encounter)
+        self.difficulty_weight = 4
+        self.style_weight = 8
+        self.occurrence_weight = 2
+        self.preferred_monster_weight = 1
+        self.set_modifier = 16
 
     def encounter_occurrence(self, monster_set):
         max_occurrence = max([occurrence_dict[monster['occurrence']] for monster in monster_set])
@@ -52,47 +57,41 @@ class EncounterPicker:
             difficulty = 'deadly'
         return difficulty
 
-    def encounter_tags(self, monster_set):
-        roles = set([m['role'] for m in monster_set])
-        tags = list(roles)
-        if 'leader' not in roles:
-            tags.append('no leader')
-        if 'pet' not in roles:
-            tags.append('no pets')
-        if roles != set(['pet']):
-            tags.append('not just pets')
-        if roles != set(['environmental hazard']):
-            tags.append('not just pets')
-        if not any([role in roles for role in ['environmental hazard', 'pet', 'leader']]):
-            tags.append('basic')
-        if roles == set(['pet']):
-            tags.append('just pets')
-        return tags
+    def encounter_style(self, monster_set):
+        roles = [monster['role'] for monster in monster_set]
+        if 'leader' in roles or 'solo' in roles:
+            style = 'leader'
+        elif not any([role in roles for role in ['environmental hazard', 'pet', 'leader']]):
+            style = 'basic'
+        else:
+            style = 'exotic'
+        return style
 
-    def score_encounter(self, difficulty, occurrence, style, preferred_monster, encounter):
+    def score_encounter(self, difficulty, occurrence, style, preferred_monster, encounter, weights):
         score = 0
         if encounter['difficulty'] == difficulty:
-            score += 4
+            score += weights['difficulty']
         if encounter['occurrence'] == occurrence:
-            score += 2
-        if style in encounter['tags']:
-            score += 8
-        elif 'not just pets' in encounter['tags']:
-            score += 1
+            score += weights['occurrence']
+        if style == encounter['style']:
+            score += weights['style']
         if preferred_monster in [m['Name'] for m in encounter['monsters']]:
-            score += 1
+            score += weights['preferred_monster']
         return score
 
-    def top_encounters(self, difficulty, occurrence, style, preferred_monster):
-        encounter_scores = [(self.score_encounter(difficulty, occurrence, style, preferred_monster, encounter), encounter) for encounter in self.encounters]
+    def top_encounters(self, difficulty, occurrence, style, preferred_monster, weights):
+        encounter_scores = [(self.score_encounter(difficulty, occurrence, style, preferred_monster, encounter, weights), encounter) for encounter in self.encounters]
         max_score = max([score for score, encounter in encounter_scores])
         top_encounters = [encounter for score, encounter in encounter_scores if score == max_score]
-        while len(top_encounters) == 0:
-            max_score -= 1
-            top_encounters += [encounter for score, encounter in encounter_scores if score == max_score]
         return top_encounters
 
     def pick_encounter(self, difficulty=None, occurrence=None, style=None):
+        weights = {
+            'difficulty': self.difficulty_weight,
+            'occurrence': self.occurrence_weight,
+            'style': self.style_weight,
+            'preferred_monster': self.preferred_monster_weight
+        }
         if occurrence is None:
             roll = self.random_state.randint(1, 6)
             if roll <= 3:
@@ -101,20 +100,18 @@ class EncounterPicker:
                 occurrence = 'uncommon'
             else:
                 occurrence = 'rare'
+        else:
+            weights['occurrence'] += self.set_modifier
         if style is None:
             roll = self.random_state.randint(1, 6)
-            if roll == 1:
-                style = None
-            elif roll == 2:
-                style = 'no pets'
-            elif roll == 3:
+            if roll <= 3:
                 style = 'basic'
-            elif roll == 4:
-                style = 'not just pets'
-            elif roll == 5:
-                style = 'elite'
+            elif roll <= 5:
+                style = 'exotic'
             elif roll == 6:
                 style = 'leader'
+        else:
+            weights['style'] += self.set_modifier
         if len(self.monsters[occurrence]) > 0:
             preferred_monster = self.random_state.choice(list(self.monsters[occurrence]))
         else:
@@ -122,7 +119,7 @@ class EncounterPicker:
         if len(self.encounters) == 0:
             return {'monsters': []}
         else:
-            top_encounters = self.top_encounters(difficulty, occurrence, style, preferred_monster)
+            top_encounters = self.top_encounters(difficulty, occurrence, style, preferred_monster, weights)
             pick = self.random_state.choice(top_encounters)
             roles = set([monster['role'] for monster in pick['monsters']])
             return pick
