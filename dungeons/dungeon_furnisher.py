@@ -8,6 +8,7 @@ with open('data/dungeon_types.yaml', 'r') as f:
     dungeon_rooms = {}
     dungeon_tags = {}
     secret_passages = {}
+    extra_details = {}
     dungeon_info = yaml.load(f)
     for purpose in dungeon_info.keys():
         rooms = []
@@ -16,8 +17,8 @@ with open('data/dungeon_types.yaml', 'r') as f:
             room['tags'] = room.get('tags', [])
             rooms.append(room)
         dungeon_rooms[purpose] = rooms
-        dungeon_tags[purpose] = dungeon_info[purpose]['tags']
         secret_passages[purpose] = dungeon_info[purpose]['secret passages']
+        extra_details[purpose] = dungeon_info[purpose]['extra details']
 
 with open('data/special_furnishings.yaml', 'r') as f:
     special_furnishings_data = yaml.load(f)
@@ -31,12 +32,15 @@ class DungeonFurnisher:
         self.purpose = purpose
         self.room_type_list = dungeon_rooms[purpose]
         self.used_room_types = []
-        self.special_furnishings = [Fountain(), Sarcophagus(), Portal(), Statue(), MagicCrystal()]
+        self.special_furnishings = [f(random_state=self.random_state) for f in [Fountain, Sarcophagus, Portal, Statue, MagicCrystal]]
 
     def furnish(self, layout):
         for n, room in layout.nodes(data=True):
             room_type = self.choose_room_type(room['tags'])
             room['description'] = room_type['description']
+            if self.random_state.randint(1, 6) >= 5:
+                extra = self.random_state.choice(extra_details[self.purpose])
+                room['description'] += ' ' + extra
             room['tags'] += room_type['tags']
         for start, end, data in layout.edges(data=True):
             if 'secret' in data.get('tags', []):

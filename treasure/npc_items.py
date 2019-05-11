@@ -15,7 +15,7 @@ class NPC_item:
         self.level = level
         self.item = self.get_item()
         self.properties = self.get_properties()
-        self.name_generator = NameGenerator()
+        self.name_generator = NameGenerator(random_state=self.random_state)
         self.name = self.get_name()
 
     def get_name(self):

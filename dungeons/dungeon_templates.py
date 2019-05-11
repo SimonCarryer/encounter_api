@@ -3,7 +3,6 @@ from .dungeon_ager import DungeonAger
 from encounters.encounter_api import EncounterSource
 from treasure.treasure_api import HoardSource, NothingSource
 from .dungeon_furnisher import DungeonFurnisher
-from .dungeon_manager import DungeonManager
 from random import Random
 import yaml
 import uuid
@@ -47,7 +46,7 @@ class DungeonTemplate:
         else:
             return [self.monster_set]
 
-    def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None):
+    def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None, wandering=True):
         if monster_sets is None:
             encounter_source = NoEncountersSource()
         else:
@@ -59,7 +58,7 @@ class DungeonTemplate:
                                      dungeon_manager=self.dungeon_manager,
                                      trap_source=trap_source,
                                      random_state=self.random_state)
-        self.dungeon_manager.add_event(self.name, self.event_type(), encounter_source.monster_set)
+        self.dungeon_manager.add_event(self.name, self.event_type(), encounter_source.monster_set, wandering=wandering)
         return populator
     
     def build_ager(self, cause):
@@ -106,7 +105,7 @@ class HauntedTombTemplate(DungeonBaseTemplate):
     def alter_dungeon(self, layout):
         self.build_furnisher('tomb').furnish(layout)
         trap_source = TrapSource(self.level)
-        self.build_populator(self.get_monster_sets(), trap_source=trap_source).populate(layout)
+        self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
         return layout
 
 class AbandonedStrongholdTemplate(DungeonBaseTemplate):
@@ -127,7 +126,7 @@ class GuardedTreasureVaultTemplate(DungeonBaseTemplate):
     def alter_dungeon(self, layout):
         self.build_furnisher('treasure vault').furnish(layout)
         trap_source = TrapSource(self.level)
-        self.build_populator(self.get_monster_sets(), trap_source=trap_source).populate(layout)
+        self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
         return layout
 
 class AbandonedMineTemplate(DungeonBaseTemplate):
@@ -145,7 +144,7 @@ class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
     def alter_dungeon(self, layout):
         self.build_furnisher('temple').furnish(layout)
         trap_source = TrapSource(self.level, trap_class='magical')
-        self.build_populator(self.get_monster_sets(), trap_source=trap_source).populate(layout)
+        self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
         return layout
 
 class InUseTempleTemplate(DungeonBaseTemplate):
@@ -183,7 +182,7 @@ class HauntedTemplate(DungeonTemplate):
     
     def alter_dungeon(self, layout):
         self.build_ager('shadowfell').age(layout)
-        self.build_populator(self.get_monster_sets(), populator_method=Taint).populate(layout, tag='shadowfell')
+        self.build_populator(self.get_monster_sets(), populator_method=Taint, wandering=False).populate(layout, tag='shadowfell')
         return layout
 
 class TreeChokedTemplate(DungeonTemplate):
@@ -228,10 +227,13 @@ class InfestedTemplate(NewInhabitantsTemplate):
 
     def alter_dungeon(self, layout):
         monster_sets = self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark', 'rare'])
-        age_effect = self.random_state.choice(['earthquake', 'flood', 'age'])
+        if layout.purpose == 'cave':
+            age_effect = 'cave-age'
+        else:
+            age_effect = self.random_state.choice(['earthquake', 'flood', 'age'])
         self.build_ager(age_effect).age(layout)
         self.make_an_entrace(layout, tag='cave-entrance')
-        self.build_populator(monster_sets, populator_method=UndergroundNatives).populate(layout)
+        self.build_populator(monster_sets, populator_method=UndergroundNatives, wandering=True).populate(layout)
         return layout
 
 class LairTemplate(NewInhabitantsTemplate):
@@ -241,7 +243,7 @@ class LairTemplate(NewInhabitantsTemplate):
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
         monster_sets = self.monster_sets(required_tags=['beast'], none_tags=['underdark'])
-        self.build_populator(monster_sets, populator_method=Lair).populate(layout)
+        self.build_populator(monster_sets, populator_method=Lair, wandering=False).populate(layout)
         return layout
 
 class ExplorerTemplate(NewInhabitantsTemplate):
@@ -287,6 +289,7 @@ some_examples = [
 [AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
 [InUseTempleTemplate],
+[InfestedCaveTemplate, InfestedTemplate],
 [InfestedCaveTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, VolcanicTemplate],
 [InfestedCaveTemplate, TreeChokedTemplate],

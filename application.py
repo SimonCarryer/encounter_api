@@ -7,7 +7,9 @@ from collections import Counter
 from werkzeug.exceptions import BadRequest
 from flask_cors import CORS
 from dungeons.dungeon_api import DungeonSource
+from random import Random
 import random
+import uuid
 
 application = Flask(__name__)
 cors = CORS(application)
@@ -69,8 +71,13 @@ class Encounter(Resource):
 
 @application.route('/dungeon/<level>')
 def dungeon(level):
-    d = DungeonSource(int(level))
-    return render_template('dungeon.html', module=d.get_dungeon())
+    if request.args.get('guid'):
+        guid = request.args['guid']
+    else:
+        guid = str(uuid.uuid4())
+    state = Random(guid)
+    d = DungeonSource(int(level), random_state=state)
+    return render_template('dungeon.html', module=d.get_dungeon(), guid=guid)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0', debug=True)

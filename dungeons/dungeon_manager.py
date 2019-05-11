@@ -1,4 +1,5 @@
 from encounters.encounter_api import EncounterSource
+from encounters.wandering_monsters import WanderingMonsters
 from treasure.treasure_api import RawHoardSource
 from monster_manual.monster_manual import MonsterManual
 from names.name_api import NameGenerator
@@ -89,6 +90,7 @@ class DungeonManager:
             self.random_state = Random()
         else:
             self.random_state = random_state
+        self.level = level
         self.layout = layout
         self.encounter_sources = {}
         self.encounters = {}
@@ -99,19 +101,22 @@ class DungeonManager:
         self.monster_manual = MonsterManual(terrain=terrain)
         self.events = []
         self.name_generator = NameGenerator(random_state=self.random_state)
+        self.wandering_monsters = {}
 
     def add_encounter_source(self, source_name, encounter_source):
         self.encounter_sources[source_name] = encounter_source
         self.encounters[source_name] = 0
         self.signs[source_name] = []
 
-    def add_event(self, source_name, method_name, monster_set):
+    def add_event(self, source_name, method_name, monster_set, wandering=False):
         event = {
             'event': method_name,
             'monster_set': monster_set,
             'source_name': source_name
         }
         self.events.append(event)
+        if wandering:
+            self.wandering_monsters[source_name] = monster_set
 
     def get_encounter(self, source_name, **kwargs):
         encounter = self.encounter_sources[source_name].get_encounter(**kwargs)
@@ -156,6 +161,11 @@ class DungeonManager:
         for source_name in self.encounter_sources:
             if self.encounters[source_name] == 0:
                 self.delete_signs(source_name)
+        wandering = []
+        for source_name, set_name in self.wandering_monsters.items():
+            if self.encounters[source_name] > 0:
+                wandering.append(set_name)
+        self.layout.wandering_monster_table = WanderingMonsters(self.level, wandering, random_state=self.random_state).table
         self.layout.name = self.name_generator.dungeon_name(self.layout.purpose, terrain=self.terrain)
         self.layout.terrain = self.terrain
         self.layout.events = [self.parse_event(event) for event in self.events if event['source_name'] == 'special' or self.encounters[event['source_name']] > 0]

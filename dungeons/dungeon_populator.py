@@ -130,9 +130,8 @@ class UndergroundNatives(DungeonPopulator):
             if node in accessible_rooms:
                 if data.get('encounter') is not None:
                     self.delete_encounter(data['encounter'])
-                if 'cave-entrance' in data['tags'] and self.roll(2):
-                    data['encounter'] = self.get_encounter(style='leader', difficulty='hard')
-                    data['tags'] += ['uninhabitable']
+                if 'cave-entrance' in data['tags']:
+                    data['encounter'] = self.get_encounter()
                 elif self.roll(4):
                     data['encounter'] = self.get_encounter()
                 else:
@@ -199,22 +198,34 @@ class Explorers(DungeonPopulator):
             return None
         return self.random_state.choice(possibles)
 
-    def explore(self, layout, node):
+    def explore(self, layout, node, iterations):
         self.explored_nodes.append(node)
         passages = layout[node]
         new_nodes = []
         for adjacent_node, data in passages.items():
             if self.random_state.randint(1, 3) >= data['weight'] and adjacent_node not in self.explored_nodes and 'uninhabitable' not in layout.node[adjacent_node]['tags'] and 'hazard' not in layout.node[adjacent_node]['tags']:
                 new_nodes.append(adjacent_node)
+        if iterations == 0 and len(new_nodes) == 0:
+            possibles = [node for node, data in passages.items() if 'uninhabitable' not in layout.node[node]['tags']]
+            if len(possibles) > 0:
+                adjacent_node = self.random_state.choice(possibles)
+                self.clear_passage(layout, node, adjacent_node)
+                self.explore(layout, node, 1)
         for node in new_nodes:
-            self.explore(layout, node)
+            self.explore(layout, node, iterations + 1)
+
+    def clear_passage(self, layout, start, end):
+        passage = layout[start][end]
+        passage['weight'] = 1
+        passage['tags'] = [tag for tag in passage['tags'] if tag != 'secret']
+        passage['description'] = 'This passage appears to have been recently cleared of debris.'
 
     def populate(self, layout):
         start_node = self.start_node(layout)
         if start_node is None:
             return layout
         self.explored_nodes = []
-        self.explore(layout, start_node)
+        self.explore(layout, start_node, 0)
         subgraph = layout.subgraph(self.explored_nodes)
         nodes = subgraph.nodes(data=True)
         paths = {a: len(nx.shortest_path(subgraph, start_node, a)) for a, node in nodes}

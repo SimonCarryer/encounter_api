@@ -4,6 +4,7 @@ from collections import Counter
 from treasure.treasure_api import IndividualSource
 import yaml
 import random
+from hashlib import md5
 from utils.library import monster_manual
 
 with open('data/xp_values.yaml') as f:
@@ -61,8 +62,13 @@ class EncounterSource:
             response['monsters'] = [{'name': k, 'number': v} for k, v in dict(Counter([monster['Name'] for monster in encounter['monsters']])).items()]
             response['difficulty'] = encounter['difficulty']
             response['xp_value'] = int(encounter['xp_value'])
+            response['monster_hash'] = self.hash_monsters([m['Name'] for m in encounter['monsters']])
             response['treasure'] = self.get_treasure(encounter['monsters'])
         return response
+
+    def hash_monsters(self, monsters):
+        hashed = md5(''.join(sorted(monsters)).encode())
+        return hashed.hexdigest()
 
     def get_sign(self):
         signs = [sign for sign in monster_manual.get_signs(self.monster_set) if sign not in self.used_signs]

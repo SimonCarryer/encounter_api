@@ -309,3 +309,15 @@ def test_delete_last_treasure():
 def test_statue():
     statue = Statue()
     # print(statue.get_description())
+
+
+def test_manager_creates_wandering_monsters_table():
+    state = Random(0)
+    source = MockEncounterSource()
+    layout = MockDungeonLayout()
+    manager = DungeonManager(1, layout)
+    with DungeonManager(1, layout) as manager:
+        template = InfestedCaveTemplate(4, dungeon_manager=manager)
+        template.alter_dungeon(layout)
+        #manager.encounters[template.name] = 0
+    print(layout.wandering_monsters_table)

@@ -1,5 +1,4 @@
 stronghold:
-  tags:
   rooms:
     - description: A grand entry-hall with a great staircase and double doors.
       tags: [entrance, guarded]
@@ -79,9 +78,18 @@ stronghold:
     - A sconce on the wall is actually the handle of the concealed door to this passage.
     - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
     - A rug on the floor covers the trapdoor entrance to this passage.
+  extra details:
+    - A raised gallery runs around two walls of this room, reached by a flight of stairs.
+    - A fireplace in this room has a narrow chimney-pipe that vents above ground.
+    - There is a large iron grill in the floor of this room - a drain.
+    - The arched ceiling of this room is braced with sturdy wooden rafters.
+    - There are the remains of wooden furnishings scattered throughout this room.
+    - Pillars support the ceiling of this room.
+    - Several ancient wall-hangings remain on the walls.
+    - The room sports several iron-barred openings for ventilation shafts.
+    - This room's domed ceiling is twice as high as the rest of the complex.
+    - This room is unusually large.
 tomb:
-  tags:
-    - undead
   rooms:
     - description: An entry-hall with a great staircase and double doors.
       tags: [entrance]
@@ -120,6 +128,13 @@ tomb:
     - What appears to be a sarcophagus is actually the entrance to this secret passage.
     - This doorway is concealed by thick cobwebs and dust.
     - A statue can be rolled aside to reveal this passageway.
+  extra details:
+    - One wall is covered in elaborate bas-relief carvings.
+    - This room's walls are lined with fine marble.
+    - The floor of this room is tiled in a geometric pattern.
+    - The ceiling of this room is low and cramped.
+    - A plaster frescoe depicts scenes of a purported afterlife.
+    - Thin plaster walls seal off niches in the stonework.
 temple:
   tags:
     - magical
@@ -178,6 +193,15 @@ temple:
     - This doorway is concealed by thick cobwebs and dust.
     - A religious symbol must be correctly aligned to open this passageway.
     - A statue can be rolled aside to reveal this passageway.
+  extra details:
+    - One wall is covered in elaborate bas-relief carvings.
+    - This room's walls are lined with fine marble.
+    - The floor of this room is tiled in a geometric pattern.
+    - The ceiling of this room is low and cramped.
+    - A huge statue in this room depicts a key religious figure.
+    - A cracked plaster mural on one wall shows scenes of religious importance.
+    - A raised gallery surrounds all four walls of this room, reached by a short ladder.
+    - There is a sunken pit in the middle of this room, with a short flight of stairs.
 mine:
   tags:
   rooms:
@@ -194,8 +218,7 @@ mine:
     - description: Kitchen used to feed workers.
     - description: Laboratory used to conduct tests on strange minerals extracted from the mine.
     - description: Lode where metal ore is mined.
-    - description: Lode where metal ore is mined.
-    - description: Lode where metal ore is mined.
+      tags: [dead-end]
     - description: Office used by the mine supervisor.
     - description: Smithy for repairing damaged tools.
     - description: Storage for tools and other equipment.
@@ -212,9 +235,13 @@ mine:
     - Stacked crates cover the entrance to this passage.
     - This passage is boarded up and easily missed, but some of the boards are loose.
     - A heap of rubbish obscures the entrance to this passage.
+  extra details:
+    - There is a still functional and empty mine cart here.
+    - Several picks, shovels, and other tools lean against one wall.
+    - In the room there is a broken-down mine cart.
+    - Wooden bracing beams cris-cross the room.
+    - A heap of wooden beams is stacked against one wall.
 treasure vault:
-  tags:
-    - guardian
   rooms:
     - description: A long, wide passageway, surrounded by murder-holes.
       tags: [entrance]
@@ -258,6 +285,17 @@ treasure vault:
     - A sconce on the wall is actually the handle of the concealed door to this passage.
     - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
     - A rug on the floor covers the trapdoor entrance to this passage.
+  extra details:
+    - A raised gallery runs around two walls of this room, reached by a flight of stairs.
+    - A fireplace in this room has a narrow chimney-pipe that vents above ground.
+    - There is a large iron grill in the floor of this room - a drain.
+    - The arched ceiling of this room is braced with sturdy wooden rafters.
+    - There are the remains of wooden furnishings scattered throughout this room.
+    - Pillars support the ceiling of this room.
+    - Several ancient wall-hangings remain on the walls.
+    - The room sports several iron-barred openings for ventilation shafts.
+    - This room's domed ceiling is twice as high as the rest of the complex.
+    - This room is unusually large.
 cave:
   tags:
     - cave-dweller
@@ -297,3 +335,10 @@ cave:
     - Thick stalagtites obscure the entrance to this passageway.
     - A large, flat boulder can be rolled aside to reveal this passageway.
     - The entrance to this passageway is just below the surface of a pool of water.
+  extra details:
+    - The floor of this room is slick with moisture, and very slippery.
+    - Razor-sharp shards of silica jut from one wall.
+    - Iron rings have been hammered into the stonework, and a rusted iron chain facilitates climbing across the rough ground.
+    - A wooden floor has been layed down in this chamber, covering the more uneven stone below.
+    - Long ago this chamber was worked with tools to level the floor and remove the worst obstacles.
+    - Ancient and indistinct carvings cover the walls.

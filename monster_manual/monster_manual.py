@@ -66,7 +66,7 @@ class MonsterManual():
 
     def monsters(self, monster_set_name):
         monster_set = copy.deepcopy(self.monster_sets[monster_set_name])
-        return monster_set
+        return sorted(monster_set, key=lambda x: x['Name'])
 
     def get_monster_set_by_tags(self, list_of_tags, monster_sets=None, any_or_all=any, exclude=False):
         if list_of_tags is None:

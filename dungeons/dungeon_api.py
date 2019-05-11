@@ -15,10 +15,10 @@ class DungeonSource():
         else:
             self.random_state = random_state
         self.level = level
-        layout = DungeonLayout(n_rooms=self.random_state.randint(5, 8))
+        layout = DungeonLayout(n_rooms=self.random_state.randint(4, 7), random_state=self.random_state)
         templates = self.random_state.choice(some_examples)
         terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'])
-        with DungeonManager(self.level, layout, terrain=terrain) as dungeon_manager:
+        with DungeonManager(self.level, layout, terrain=terrain, random_state=self.random_state) as dungeon_manager:
             for template in templates:
                 template(self.level,
                          dungeon_manager=dungeon_manager,

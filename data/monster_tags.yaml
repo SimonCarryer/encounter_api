@@ -358,3 +358,11 @@ duergar:
   - underdark
   - humanoid
   - dungeon-explorer
+slaadi:
+  - magical
+  - abberation
+urds:
+  - mountains
+  - humanoid
+  - dungeon-explorer
+  - savage

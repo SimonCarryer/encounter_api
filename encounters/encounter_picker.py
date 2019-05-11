@@ -113,7 +113,7 @@ class EncounterPicker:
         else:
             weights['style'] += self.set_modifier
         if len(self.monsters[occurrence]) > 0:
-            preferred_monster = self.random_state.choice(list(self.monsters[occurrence]))
+            preferred_monster = self.random_state.choice(sorted(list(self.monsters[occurrence])))
         else:
             preferred_monster = None
         if len(self.encounters) == 0:

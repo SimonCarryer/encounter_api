@@ -135,10 +135,10 @@ orcs:
     occurrence: common
   - Name: Orc Eye of Gruumsh      
     role: leader
-    occurrence: common
+    occurrence: uncommon
   - Name: Orog      
     role: troops
-    occurrence: common
+    occurrence: uncommon
   - Name: Troll      
     role: pet
     occurrence: uncommon
@@ -1289,12 +1289,10 @@ kenku:
 kobolds:
  - Name: Kobold
    occurrence: common 
- - Name: Kobold
-   occurrence: uncommon
- - Name: Kobold
-   occurrence: rare 
+
+urds:
  - Name: Winged Kobold
-   occurrence: rare
+   occurrence: common
 
 modrons:
  - Name: Monodrone
@@ -1939,12 +1937,12 @@ jungle:
  - Name: Poisonous Snake
    occurrence: common
  - Name: Swarm of Poisonous Snakes
-   occurrence: common
+   occurrence: rare
    role: environmental hazard
  - Name: Stirge
    occurrence: common
  - Name: Swarm of Insects
-   occurrence: uncommon
+   occurrence: rare
    role: environmental hazard
  - Name: Bone Naga
    occurrence: rare
@@ -1990,7 +1988,10 @@ villains:
     role: solo
   - Name: Medusa
     occurrence: common
-    role: solo   
+    role: solo  
+  - Name: Death Tyrant
+    occurrence: rare
+    role: solo 
   - Name: Cambion
     occurrence: common
     role: solo

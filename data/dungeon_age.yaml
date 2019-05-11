@@ -30,6 +30,10 @@ flood:
       weight: 1
     - description: There is a strong smell of mould in this passageway.
       weight: 1
+    - description: Ankle-deep puddles fill sections of this corridor
+      weight: 1
+    - description: Most of this corridor is completely submerged - too far to swim for anyone who cannot breathe underwater.
+      weight: 4
 
 earthquake:
   tags:
@@ -48,6 +52,7 @@ earthquake:
     - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely trecherous.
       tags: [difficult]
     - description: The collapse of the ceiling has turned this once-large room into a network of narrow passages.
+    - description: Fine dust and dirt filters down from the ceiling and covers everything in this room. The dust is stirred up by any hasty movement. The dust clouds obscure the room.
   passages:
     - description: The door-frame is partly collapsed and twisted, jamming the door shut.
       weight: 4
@@ -76,6 +81,8 @@ trees:
       tags: [entrance]
     - description: Tree roots have destroyed the masonry of one wall, exposing a narrow cave beyond.
       tags: [cave-entrance]
+    - description: This room was once an open courtyard. The surrounding trees form an arched ceiling overhead, and their roots crawl over the floor.
+      tags: [entrance]
   passages:
     - description: Tree roots have burst through the ceiling and are crawling along the passageway's walls.
       weight: 1
@@ -136,6 +143,8 @@ fungus:
       weight: 4
     - description: A clump of brown mold covers one end of this passage.
       weight: 4
+    - description: Plate-like mushrooms growing from the walls of this passageway make it a narrow squeeze.
+      weight: 2
 
 age:
   tags:
@@ -158,6 +167,12 @@ age:
     - description: Thick layers of dust have accumulated in the corners of this room.
     - description: A deep well in this room breathes foul-smelling air. Its depths cannot be plumbed.
       tags: [cave-entrance]
+    - description: The iron bars that once guarded a ventilation shaft have rusted to nothing, providing a tunnel to the surface.
+      tags: [entrance]
+    - description: The only traces of ancient furnishings are vague outlines of rust and rot.
+    - description: An iron-grilled drain in the floor of this room has rusted to nothing.
+      tags: [cave-entrance]
+    - description: There is a terrible smell in this room.
   passages:
     - description: The door is jammed shut - swollen with age.
       weight: 4
@@ -173,6 +188,12 @@ age:
       weight: 2
     - description: An iron ladder here has rusted to nothing, leaving an empty shaft.
       weight: 3
+    - description: The doors in this passageway have all rotted to the point that they a flimsy and crumbling.
+      weight: 1
+    - description: From one side this doorway appears to be completely blocked, but from the other the debris can be cleared to free the door.
+      weight: 4
+    - description: Deep drifts of dust and debris make it obvious if anyone has recently passed through this corridor.
+      weight: 1
 
 cave-age:
   tags:

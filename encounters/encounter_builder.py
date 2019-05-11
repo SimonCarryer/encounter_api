@@ -1,7 +1,6 @@
 import bisect
 from collections import defaultdict
 from copy import deepcopy
-from random import Random
 from .xp_calculator import XPCalulator
 
 big_adjustments = {k: v for k, v in [(0, 0.5), (1, 0.5), (2, 1), (3, 1.5), (4, 1.5), (5, 1.5), (6, 1.5), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2.5), (12, 2.5), (13, 2.5), (14, 2.5), (15, 3), (16, 3), (17, 3), (18, 3), (19, 3), (20, 3)]}

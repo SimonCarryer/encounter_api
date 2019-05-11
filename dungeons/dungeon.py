@@ -41,6 +41,7 @@ class Dungeon:
         module['dungeon_type'] = self.layout.purpose
         module['dungeon_terrain'] = self.layout.terrain
         module['history'] = self.layout.events
+        module['wandering_monster_table'] = self.layout.wandering_monster_table
         module['name'] = self.layout.name
         return module
 

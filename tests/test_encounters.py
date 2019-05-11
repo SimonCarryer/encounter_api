@@ -5,9 +5,9 @@ from random import Random
 from encounters.encounter_builder import EncounterBuilder
 from encounters.encounter_picker import EncounterPicker
 from encounters.xp_calculator import XPCalulator
+from encounters.wandering_monsters import WanderingMonsters
 from utils import library
 
-# library.use_mock_monster_manual()
 
 def test_right_role():
     budget = 450
@@ -83,13 +83,13 @@ def test_encounter_source_is_deterministic():
     monsters = []
     random_state = Random(4)
     for _ in range(0, 5):
-        source = EncounterSource(xp_budget=450, random_state=random_state)
+        source = EncounterSource(xp_budget=1000, random_state=random_state)
         encounter = source.get_encounter()
         monsters.append(encounter['monsters'])
     random_state = Random(4)
     monsters2 = []
     for _ in range(0, 5):
-        source = EncounterSource(xp_budget=450, random_state=random_state)
+        source = EncounterSource(xp_budget=1000, random_state=random_state)
         encounter = source.get_encounter()
         monsters2.append(encounter['monsters'])
     assert monsters == monsters2
@@ -134,3 +134,14 @@ def test_encounter_picker():
     monster_lists = builder.monster_lists
     picker = EncounterPicker(monster_lists, budget, random_state=state)
     # print(picker.pick_encounter(difficulty='hard', style='basic', occurrence='common'))
+
+def test_encounter_hash():
+    source = EncounterSource(xp_budget=1)
+    monsters = ['goblin', 'goblin']
+    assert source.hash_monsters(monsters) == '268322f238a159181f06a725714b5106'
+
+def test_wandering_monsters():
+    state = Random(0)
+    level = 1
+    wandering = WanderingMonsters(level, ['bandits', 'forest'], random_state=state)
+    # print(wandering.table)

@@ -5,15 +5,17 @@
 p {
   white-space: pre-wrap;
 }
+
 </style>
 </head>
 <body>
+    <div style="margin: auto; width: 55%; padding: 20px; background: rgb(250, 243, 243); font-family:Garamond, Georgia, serif;">
     <h1>{{module.name}}</h1>
     <h2>A random {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h2>
     <h3>Rumours</h3>
     {% for event in module.history %}
     {{event}}<br>
-    {% endfor %}<br>
+    {% endfor %}<br><br>
     <svg width="400" height="400">
     {% for passage in module.map.passages %}
     <line x1="{{passage.x1}}" 
@@ -59,16 +61,18 @@ p {
     {% if room.sign %}<p><b>Signs: </b>{{room.sign}}</p>{% endif %}
 </div>
 {% if room.encounter %}
+<div  style="margin: auto; padding: 20px; background: white;"">
 <b>Encounter: {{room.encounter.monster_set}}</b><br>
 {% for monster in room.encounter.monsters %}
-  {{monster.name}}: {{monster.number}}<br>
+{{monster.number}} x {{monster.name}}<br>
 {% endfor %}
 {% if room.encounter.treasure %}
 {% if room.encounter.treasure.magic_items %}Magic Items: {{room.encounter.treasure.magic_items}}<br>{% endif %}
 Coins: {{room.encounter.treasure.coins}}<br>
-Objects: {{room.encounter.treasure.objects}}<br><br>
+Objects: {{room.encounter.treasure.objects}}<br>
 {% endif %}
-{% endif %}
+</div>
+{% endif %}<br>
 {% if room.trap %}
 <b>Trap:</b><br>
 {{room.trap}}<br><br>
@@ -81,4 +85,15 @@ Coins: {{room.treasure.coins}}<br>
 Items: {{room.treasure.magic_items}}<br>
 {% endif %}
 {% endfor %}
+{% if module.wandering_monster_table %}
+<br><h3>Wandering Monsters</h3><br>
+{% for row in module.wandering_monster_table %}
+<b>{{row.roll}}:</b> 
+{% for monster in row.monsters %}
+{{monster.number}} x {{monster.name}}
+{% endfor %}<br>
+{% endfor %}
+{% endif %}
+<br><i>GUID for dungeon: {{guid}}</i>
+</div>
 </body>

@@ -172,7 +172,7 @@ class ForbiddingDoor(SpecialRoom):
         return response
 
     def get_trap(self):
-        trap = Trap(self.level)
+        trap = Trap(self.level, random_state=self.random_state)
         template = trap.template
         d = {
             'name': trap.name,
@@ -204,7 +204,7 @@ class ForbiddingDoor(SpecialRoom):
         description = 'Behind the door is a large and richly-appointed treasure room.'
         treasure = Treasure(None)
         level = min([self.level + 5, 20])
-        for item in RawHoardSource(encounter_level=level).get_treasure():
+        for item in RawHoardSource(encounter_level=level, random_state=self.random_state).get_treasure():
             treasure.get_item(*item)
         self.add_room(layout,
             secret=False,
@@ -252,7 +252,7 @@ class UnderdarkExplorers(Explorers):
 
 class UnderdarkEntrance(SpecialRoom):
     def find_best_room(self, layout):
-        free_nodes = [node for node, data in layout.nodes(data=True) if 'entrance' not in data['tags'] and 'uninhabitable' not in data['tags']]
+        free_nodes = [node for node, data in layout.nodes(data=True) if 'entrance' not in data.get('tags') and 'uninhabitable' not in data.get('tags')]
         if len(free_nodes) > 0:
             return self.random_state.choice(free_nodes)
 
