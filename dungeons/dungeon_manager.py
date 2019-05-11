@@ -169,5 +169,6 @@ class DungeonManager:
         self.layout.name = self.name_generator.dungeon_name(self.layout.purpose, terrain=self.terrain)
         self.layout.terrain = self.terrain
         self.layout.events = [self.parse_event(event) for event in self.events if event['source_name'] == 'special' or self.encounters[event['source_name']] > 0]
+        self.layout.level = self.level
 
         

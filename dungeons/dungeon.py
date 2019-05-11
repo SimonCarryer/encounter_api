@@ -43,6 +43,7 @@ class Dungeon:
         module['history'] = self.layout.events
         module['wandering_monster_table'] = self.layout.wandering_monster_table
         module['name'] = self.layout.name
+        module['level'] = self.layout.level
         return module
 
     def make_postions(self, arr, max_dim=300):
