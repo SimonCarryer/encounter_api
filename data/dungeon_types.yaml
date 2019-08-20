@@ -89,6 +89,9 @@ stronghold:
     - The room sports several iron-barred openings for ventilation shafts.
     - This room's domed ceiling is twice as high as the rest of the complex.
     - This room is unusually large.
+    - A crumbling plaster frescoe commemorates an ancient battle.
+    - The walls of the room are braced with iron girders, repairing damage from a long-ago seige.
+    - One wall is covered in iron hooks, perhaps for storing weapons.
 tomb:
   rooms:
     - description: An entry-hall with a great staircase and double doors.
@@ -135,6 +138,7 @@ tomb:
     - The ceiling of this room is low and cramped.
     - A plaster frescoe depicts scenes of a purported afterlife.
     - Thin plaster walls seal off niches in the stonework.
+    - The inside of a door is gouged as if by desperate fingernails.
 temple:
   tags:
     - magical
@@ -202,6 +206,7 @@ temple:
     - A cracked plaster mural on one wall shows scenes of religious importance.
     - A raised gallery surrounds all four walls of this room, reached by a short ladder.
     - There is a sunken pit in the middle of this room, with a short flight of stairs.
+    - The stonework is stained with some vile substance from long-ago.
 mine:
   tags:
   rooms:
@@ -241,6 +246,8 @@ mine:
     - In the room there is a broken-down mine cart.
     - Wooden bracing beams cris-cross the room.
     - A heap of wooden beams is stacked against one wall.
+    - Glittering ore makes the walls sparkle in torchlight.
+    - The room sports several iron-barred openings for ventilation shafts.
 treasure vault:
   rooms:
     - description: A long, wide passageway, surrounded by murder-holes.
@@ -342,3 +349,4 @@ cave:
     - A wooden floor has been layed down in this chamber, covering the more uneven stone below.
     - Long ago this chamber was worked with tools to level the floor and remove the worst obstacles.
     - Ancient and indistinct carvings cover the walls.
+    - The floor of this chamber is steeply sloped.
