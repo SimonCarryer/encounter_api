@@ -92,6 +92,9 @@ stronghold:
     - This room is unusually large.
     - Scaffolding along one wall, unused stone blocks, and unfinished plaster suggest this room was abandoned mid-construction.
     - This room once had several internal walls of wood or plaster, but these are now rotten and crumbling.
+    - A crumbling plaster frescoe commemorates an ancient battle.
+    - The walls of the room are braced with iron girders, repairing damage from a long-ago seige.
+    - One wall is covered in iron hooks, perhaps for storing weapons.
 tomb:
   rooms:
     - description: An entry-hall with a great staircase and double doors.
@@ -141,6 +144,7 @@ tomb:
     - A plaster frescoe depicts scenes of a purported afterlife.
     - Thin plaster walls seal off niches in the stonework.
     - Sombre carvings decorate the buttresses and pillars.
+    - The inside of a door is gouged as if by desperate fingernails.
 temple:
   tags:
     - magical
@@ -209,6 +213,7 @@ temple:
     - A raised gallery surrounds all four walls of this room, reached by a short ladder.
     - There is a sunken pit in the middle of this room, with a short flight of stairs.
     - Traces of brightly-coloured paint cling to the stonework.
+    - The stonework is stained with some vile substance from long-ago.
 mine:
   tags:
   rooms:
@@ -252,6 +257,8 @@ mine:
     - Wooden bracing beams cris-cross the room.
     - A heap of wooden beams is stacked against one wall.
     - The walls are scored with countless pick-marks.
+    - Glittering ore makes the walls sparkle in torchlight.
+    - The room sports several iron-barred openings for ventilation shafts.
 treasure vault:
   rooms:
     - description: A long, wide passageway, surrounded by murder-holes.
@@ -359,3 +366,4 @@ cave:
     - Long ago this chamber was worked with tools to level the floor and remove the worst obstacles.
     - Ancient and indistinct carvings cover the walls.
     - The room is lit by the red glow of fire beetles, gently ambling around the floor and walls.
+    - The floor of this chamber is steeply sloped.
