@@ -302,7 +302,7 @@ forest:
     occurrence: uncommon
 
 wolves:
-  - Name: Wolf      
+  - Name: Wolf
     occurrence: common
     role: troops
   - Name: Worg      
@@ -334,6 +334,9 @@ tomb:
   - Name: Carrion Crawler
     occurrence: rare
     role: environmental hazard
+  - Name: Demilich
+    occurrence: rare
+    role: solo
 
 haunted:
   - Name: Banshee
@@ -348,6 +351,8 @@ haunted:
     occurrence: common
   - Name: Will-o-wisp
     occurrence: rare
+  - Name: Poltergeist
+    occurrence: uncommon
 
 bandits:
   - Name: Bandit/Pirate      
@@ -1472,13 +1477,7 @@ devils:
  - Name: Spined Devil
    occurrence: common
    role: elite
- - Name: Succubus/Incubus
-   occurrence: rare
-   role: environmental hazard
- - Name: Cambion
-   occurrence: rare
-   role: leader
-   
+
 demons:
  - Name: Balor
    occurrence: common
@@ -1518,12 +1517,6 @@ demons:
  - Name: Vrock
    occurrence: common
    role: elite
- - Name: Succubus/Incubus
-   occurrence: rare
-   role: environmental hazard
- - Name: Cambion
-   occurrence: rare
-   role: leader
 
 sahuagin:
  - Name: Sahuagin

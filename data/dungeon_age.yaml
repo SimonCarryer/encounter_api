@@ -19,6 +19,8 @@ flood:
       tags: [cave-entrance]
     - description: This room is filled with knee-deep, muddy water. Parts of the floor have collapsed, and standing in the wrong place can lead to a plunge into the pitch-black depths.
       tags: [cave-entrance, uninhabitable, hazard]
+    - description: A great torrent of water rushes through this room. Crossing the room requires wading through the strong current - an Athletics check (difficulty 12) is required to make any progress.
+      tags: [difficult]
   passages:
     - description: The passage is filled with waist-deep water.
       weight: 3
@@ -81,7 +83,7 @@ trees:
       tags: [entrance]
     - description: Tree roots have destroyed the masonry of one wall, exposing a narrow cave beyond.
       tags: [cave-entrance]
-    - description: This room was once an open courtyard. The surrounding trees form an arched ceiling overhead, and their roots crawl over the floor.
+    - description: This room is open to the sky above. The surrounding trees form an arched ceiling overhead, and their roots crawl over the floor.
       tags: [entrance]
   passages:
     - description: Tree roots have burst through the ceiling and are crawling along the passageway's walls.

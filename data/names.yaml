@@ -15,7 +15,6 @@ templates:
     - The $adjective $belonging
     - The $descriptor $belonging
     - The $descriptor $noun
-    - The $noun at $place
   stronghold:
     - The $noun of $fancy_name
     - The $noun of $simple_name
@@ -37,7 +36,6 @@ templates:
     - $place $noun
     - The $sobriquet's $noun
     - $sobriquet $noun
-    - The $noun at $place
   temple:
     - The $noun of $material
     - The $belonging of $material
@@ -48,7 +46,6 @@ templates:
     - The $noun of the ${symbol}s
     - $fancy_name's $noun
     - The $noun of the $title
-    - The $noun at $place
     - The $belonging of the ${symbol}
   tomb:
     - The $symbol's $noun
@@ -58,7 +55,6 @@ templates:
     - The $noun of the ${symbol}
     - The $noun of $fancy_name
     - $prefix_name's $noun
-    - The $noun at $place
   cave:
     - ${symbol} $noun
     - ${symbol} $belonging
@@ -77,7 +73,6 @@ templates:
     - The $adjective $noun
     - The $adjective ${noun}s
     - $place $noun
-    - The $noun at $place
   treasure vault:
     - The $noun of $fancy_name
     - The $adjective $noun
@@ -521,6 +516,14 @@ personal names:
     - Marmaduke
     - Sampson
     - Retgar
+    - Linc
+    - Rrey
+    - Xack
+    - Lark  
+    - Rysen
+    - Eemen
+    - Treven
+    - Myrek
   female names:
     - Ragenhild
     - Eulalia
@@ -588,6 +591,28 @@ personal names:
     - Elizawen
     - Gwenyth
     - Brythe
+    - Phaelynn
+    - Awryn
+    - Marijane
+  other names:
+    - Hortenfirth
+    - Heliogabalus
+    - Pheensan
+    - Asttie
+    - Sollee
+    - Chee
+    - Sage
+    - Val
+    - Winter
+    - Kai
+    - Gray
+    - Drew
+    - Bay
+    - Afton
+    - Keano
+    - Cinbell
+    - Dachen
+    - Loustin
   male titles:
     - King
     - Earl

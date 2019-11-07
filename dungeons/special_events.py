@@ -7,6 +7,7 @@ from treasure.treasure_api import RawHoardSource
 from string import Template
 from traps.trap import Trap
 import networkx as nx
+import uuid
 import yaml
 
 with open('data/special_events.yaml', 'r') as f:
@@ -139,7 +140,8 @@ class SpecialRoom(SpecialEvent):
                  room_description=None,
                  room_encounter=None,
                  room_tags=None,
-                 room_treasure=None):
+                 room_treasure=None,
+                 room_link=None):
         best_room = self.find_best_room(layout)
         new_room_id = len(layout.nodes())
         layout.add_room(new_room_id)
@@ -147,6 +149,7 @@ class SpecialRoom(SpecialEvent):
         layout.node[new_room_id]['description'] = room_description
         layout.node[new_room_id]['encounter'] = room_encounter
         layout.node[new_room_id]['treasure'] = room_treasure
+        layout.node[new_room_id]['link'] = room_link
         layout.node[new_room_id]['distance'] = layout.node[best_room].get('distance', 9) + 1
         if room_tags is not None:
             layout.node[new_room_id]['tags'] += room_tags
@@ -278,3 +281,34 @@ class UnderdarkEntrance(SpecialRoom):
 
     def event_type(self):
         return 'A gateway for creatures from the underdark'
+
+
+class DungeonEntrance(SpecialEvent):
+    def find_best_room(self, layout):
+        free_nodes = [node for node, data in layout.nodes(data=True) if 'entrance' not in data.get('tags')]
+        if len(free_nodes) > 0:
+            return self.random_state.choice(free_nodes)
+
+    def room_description(self):
+        return ' ' + self.random_state.choice(list(special_events_data['dungeon entrance']['entrances'])) + ' (link below)'
+
+    def dungeon_url(self):
+        guid = str(uuid.UUID(int=self.random_state.getrandbits(128)))
+        level = min([self.level + self.random_state.randint(1, 3), 20])
+        purpose = self.random_state.choice(list(special_events_data['dungeon entrance']['dungeon templates'].keys()))
+        templates = special_events_data['dungeon entrance']['dungeon templates'][purpose]
+        return '%d?guid=%s&templates=%s&terrain=%s' % (level, guid, ','.join(templates), self.dungeon_manager.terrain)
+
+    def alter_dungeon(self, layout):
+        room = self.find_best_room(layout)
+        if room is not None:
+            layout.node[room]['description'] += self.room_description()
+            layout.node[room]['link'] = self.dungeon_url()
+        return layout
+
+class DragonLair(SpecialEvent):
+    def choose_dragon(self):
+        dragons = special_events_data['dragon lair']['dragons']
+        print(dragons)
+        dragon_source = EncounterSource(encounter_level=self.level, monster_sets=dragons)
+        return dragon_source.get_encounter(difficulty='hard')

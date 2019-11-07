@@ -1,0 +1,43 @@
+hazard types:
+  blessed ground: 
+    description: This area is blessed! While in this location $beneficial_magic.
+    challenge: dangerous
+  cursed ground:
+    description: This area is cursed! While in this location $harmful_magic.
+    challenge: dangerous
+  frigid water:
+    description: The water here is ice-cold - anyone in the water must make a DC${save} Constitution save each round, or take a level of exhaustion.
+    challenge: setback
+  whirlpool:
+    description: There is an immensely powerful whirlpool here - anyone attempting to swim must make a DC${save} Athletics check or be sucked below the water. They may repeat the save to avoid drowning.
+    challenge: deadly
+  geysers:
+    description: Intermittent geysers of hot water or lava make this area hazardous. Dex save DC${save} or dake ${damage}d10 fire damage.
+    challenge: deadly
+  earthquakes: 
+    description: Earthquakes regularly stike the area - everyone must make a DC${save} Dex save or fall prone.
+    challenge: setback
+  unstable ground:
+    description: The ground here is unstable and threatens to collapse! Combatants must either take disadvantage on attacks, or else make a DC${save} Dex save. Those who fail will fall, taking ${damage}d10 blugeoning damage. 
+    challenge: dangerous
+  jagged ground: 
+    description: The ground here is covered in razor-sharp shards. Anyone falling prone takes ${damage}d8 slashing damage.
+    challenge: setback
+  dangerous plants:
+    description: The plants here are dangerous - $plants
+    challenge: setback
+  falling debris:
+effects:
+  beneficial_magic:
+    - healing spells always heal the maximum amount
+    - Good creatures have advantage on saving throws
+    - attacks that deal Radiant damage always deal maximum damage
+  harmful_magic:
+    - any magical healing is reduced to zero
+    - all attacks do maximum damage
+    - attacks that deal Necrotic damage always deal maximum damage
+  plants:
+    - they have soporific pollen! Make a DC$save Con save, or fall asleep for one hour.
+    - they have razor-sharp thorns! Entering a square with these vines causes ${damage}d10 slashing damage.
+  
+    

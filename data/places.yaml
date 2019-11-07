@@ -1,0 +1,204 @@
+dark woods:
+    tags:
+        - forest
+    encounters:
+        any:
+            - fey
+            - plant
+            - spiders
+        none:
+            - savage
+    locations:
+        - A twisted pathway through the trees
+        - A huge, twisted tree
+        - A dank pool of brackish water
+        - A pitch-black tunnel through vine-choked woods
+    hazards:
+        - dangerous plants
+        - cursed ground
+        - evil mist
+        - haunted
+        
+crevasse:
+    tags:
+        - mountains
+        - hills
+    encounters:
+        any:
+            - cave-dwellers
+    locations:
+        - A deep pool, with sheer walls on each side
+        - A shallow stream cut deep into the earth
+        - A dark and steep-sided gully
+        - A waterfall cascading into the depths
+        - A jumble of boulders below a cliff
+        - A narrow bridge - a fallen log, jutting stone, or man-made - across a chasm
+    hazards:
+        - unstable ground
+        - flash floods
+        - falling debris
+
+sacred pool:
+    tags:
+        - first men
+        - dragons and giants
+    encounters:
+        any:
+            - water
+            - magical
+            - fey
+    locations:
+        - A path alongside a stream
+        - Ruins on the pool's edge
+        - A deep glade surrounding the pool
+        - An ancient structure deep below the surface
+        - A magical spring - all who drink from it receive a minor blessing
+        - A waterfall, with a secret hollow behind
+    hazards:
+        - blessed ground
+        - cursed ground
+        - frigid water
+        - whirlpool
+        
+undermountain passage:
+    tags:
+        - mountains
+    encounters:
+        any:
+            - earth
+            - cave-dwellers
+    locations:
+        - Vast natural caverns
+        - An endless passageway tunnelled through stone
+        - A spiralling staircase down into darkness
+        - Huge tunnels burrowed by some enormous creature
+        - An underground lake
+        - A sprawling complex of mineshafts
+    hazards:
+        - cursed ground
+        
+        
+volcano:
+    tags:
+        - mountains
+    encounters:
+        any:
+            - fire
+            - beast
+        none:
+            - cave-dweller
+    locations:
+        - A dried crater lake - flat, dusty, and empty
+        - A slope of jagged black stone, vents gushing smoke
+        - A path along the edge of a lava-filled crater
+        - A crater lake, virulently coloured and poisonous
+    hazards:
+        - geysers
+        - earthquakes
+        - unstable ground
+        - jagged ground
+
+abandoned farmstead:
+    tags:
+        - human empires
+    encounters:
+        any:
+            - beast
+            - humanoid
+        none:
+            - cave-dweller
+    locations:
+        - A tumbledown barn
+        - A ramshackle farmhouse
+        - A forgotten well
+        - An open field, choked with weeds
+        - An old mill - water or wind - still creaking and turning
+    hazards:
+        - dangerous plants
+        - unstable ground
+        - falling debris
+
+henge:
+    tags:
+        - first men
+    encounters:
+        any:
+            - undead
+            - fey
+            - beast
+        none:
+            - cave-dweller
+    locations:
+        - A huge mound of earth, grown over with grass
+        - A mighty tree, buried upside-down, roots in the air
+        - A circle of massive stones, with faint tracings of runic inscriptions
+        - Faces carved on trees
+        - A line of obelisks, aligned with the sun's path
+    hazards:
+        - cursed ground
+        - blessed ground
+        
+graveyard:
+    tags:
+        - human empires
+    encounters:
+        any:
+            - undead
+            - beast
+        none:
+            - cave-dweller
+    locations:
+        - An imposing statue
+        - A grove of gnarled trees
+        - An overgrown mausoleum
+        - A collapsed grave
+        - Mounded earth with lush growth
+        - A fallen tree and upturned graves
+        - Rows of gravestones, cracked and broken.
+    hazards:
+        - cursed ground
+        - haunted
+
+bridge:
+    tags:
+        - human empires
+        - giants and dragons
+    encounters:
+        any:
+            - humanoid
+            - giant
+        none:
+            - cave-dweller
+    locations:
+        - Beneath the huge stone arches
+        - Atop the bridge
+        - Huge overgrown statues
+        - Remains of a paved road
+        - A broad river
+    hazards:
+        - falling debris
+        - frigid water
+        - whirlpool
+        - unstable ground
+
+mountain pass:
+    tags:
+        - mountains
+    encounters:
+        any:
+            - beast
+            - giant
+            - humanoid
+        none:
+            - cave-dweller
+    locations:
+        - A winding path up a steep slope
+        - A ledge on the edge of a precipice
+        - A wide and steep-sided valley
+        - A scree-slope
+    hazards:
+        - high winds
+        - ice
+        - unstable ground
+        - avalanche
+

@@ -25,9 +25,9 @@ class Dungeon:
         rooms = []
         for room_idx, data in self.layout.nodes(data=True):
             room = data
-            if room.get('sign', '') == 'None':
-                room['sign'] = None
             room['room_id'] = room_ids[room_idx]
+            if room.get('sign') is not None:
+                room['sign'] = str(room.get('sign'))
             rooms.append(room)
         module['rooms'] = sorted(rooms, key=lambda x: x['room_id'])
         seq = 0

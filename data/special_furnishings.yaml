@@ -7,13 +7,16 @@ fountain:
     - $verb the water has the same effect as a $potion. $disclaimer
     - The "water" is in fact strong acid - touching it causes 1d10 acid damage. Being immersed in it causes 8d10 acid damage every round.
     - The water is just water.
+    - The water is ice cold.
     - $verb the water causes 1d10 psychic damage, but the character gains the effects of a $potion. $disclaimer
+    - Anyone $verb the water must make a difficulty 15 constitution save or be restrained. They may repeat the save at the start of each of their turns. If they fail three saves in a row, they are petrified.
   templates:
     - Water pours from the mouth of a stone $creature into a large pool.
     - A carved $creature holds aloft a bowl, which is filled with water.
     - A niche in the wall bears carvings of ${creature}s, and water bubbles up from within.
     - A natural spring forms part of this room, with rough stone steps descending into the water.
     - A pool in the center of the room has a mosaic of ${creature}s at the bottom.
+    - A rock formation in the center of the room resembles a $creature. Water bubbles from a crack in the stone.
   creatures:
     - lion
     - griffon
@@ -28,6 +31,7 @@ fountain:
     - gargoyle
     - medusa
     - skull
+    - demon
   verbs:
     - Drinking
     - Bathing in
@@ -61,6 +65,8 @@ sarcophagus:
     - marble
     - ivory
     - crystal
+    - obsidian
+    - wood
     - ebony
   adjectives:
     - sombre
@@ -71,9 +77,11 @@ sarcophagus:
     - ghoulish
     - blackened
     - filigreed
+    - large
   motifs:
     - skull
     - human figure
+    - death's head
     - dragon
     - skeleton
     - face
@@ -127,6 +135,7 @@ portal:
     - Augury
     - Contact Other Plane
     - Divination
+    - Teleport
   activations:
     - simply by touching it
     - by speaking a secret command word (requires attunement)

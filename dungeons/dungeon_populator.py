@@ -189,6 +189,7 @@ class Taint(DungeonPopulator):
                 else:
                     difficulty = None
                 layout.node[node]['encounter'] = self.get_encounter(difficulty=difficulty)
+                layout.node[node]['sign'] = self.get_sign()
         return layout
 
 class Explorers(DungeonPopulator):

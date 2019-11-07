@@ -1,0 +1,88 @@
+hermit:
+    alignment:
+        - Lawful Good
+        - Lawful Neutral
+        - Neutral Good
+        - True Neutral
+        - Chaotic Good
+        - Chaotic Neutral
+        - Chaotic Evil
+    race:
+        - Human
+        - Half-Orc
+        - Half-Elf
+        - Tiefling
+        - Dragonborn
+    stats:
+        - Druid
+        - Priest
+        - Cult Fanatic
+        - Acolyte
+        
+hedge wizard:
+    alignment:
+        - Neutral Good
+        - True Neutral
+        - Chaotic Good
+        - Chaotic Neutral
+        - Chaotic Evil
+    race:
+        - Human
+        - Half-Elf
+        - Tiefling
+        - Gnome
+        - Elf
+    stats:
+        - Mage
+        - Druid
+        
+mountain man:
+    alignment:
+        - Chaotic Good
+        - Chaotic Neutral
+        - Chaotic Evil
+    race:
+        - Human
+        - Half-Orc
+        - Half-Elf
+        - Dwarf
+        - Halfling
+    stats:
+        - Scout
+        - Beserker
+        - Tribal Warrior
+        - Veteran
+        
+outcast:
+    alignment:
+        - Lawful Neutral
+        - Lawful Good
+        - True Neutral
+        - Chaotic Neutral
+        - Chaotic Evil
+        - Neutral Evil
+    race:
+        - Human
+        - Half-Orc
+        - Half-Elf
+        - Tiefling
+        - Dwarf
+        - Elf
+        - Giant
+        - Half-Dragon
+    stats:
+        - Scout
+        - Beserker
+        - Tribal Warrior
+        - Veteran
+        - Cultist
+        - Acolyte
+        - Commoner
+        - Knight
+        - Noble
+        - Gladiator
+        - Ghost
+        - Werewolf
+        - Wereboar
+        - Weretiger
+        - Werebear

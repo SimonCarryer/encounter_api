@@ -224,3 +224,11 @@
   tags: [water]
 - sign: An unexpected gust of wind.
   tags: [air]
+- sign: Frost forming on stone surfaces.
+  tags: [cold]
+- sign: Breath fogging in the air.
+  tags: [cold]
+- sign: Bound documents - maps, deeds and titles, or correspondence.
+  tags: [human]
+- sign: Leaf litter or dirt tracked in from outside.
+  tags: [dungeon-explorer]

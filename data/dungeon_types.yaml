@@ -9,13 +9,16 @@ stronghold:
     - description: Audience chamber used by the master of the stronghold to receive visitors.
       tags: [central, entrance]
     - description: Aviary or zoo for keeping exotic creatures.
-      tags: [rare]
     - description: Banquet room for hosting celebrations and guests.
       tags: [central]
     - description: Barracks used by elite guards.
       tags: [guarded]
+    - description: Mess-hall with a long central table
+      tags: [guarded]
+    - description: Wine-cellar with many rows of bottles.
+      tags: [secret]
+    - description: A war-room, with an elaborately carved bas-relief map of the area as it was long-ago.
     - description: Bath outfitted with a marble floor and other luxurious accoutrements.
-      tags: [rare]
     - description: Bedroom for use by the stronghold's master or important guests.
       tags: [important]
     - description: A long and wide hallway, with a high arched ceiling.
@@ -28,7 +31,6 @@ stronghold:
       tags: [guarded]
     - description: Cistern providing drinking water.
     - description: Dining room for intimate gatherings or informal meals.
-      tags: [rare]
     - description: Dressing room featuring a number of wardrobes.
       tags: [dead-end]
     - description: Gallery for the display of expensive works of art and trophies.
@@ -37,7 +39,6 @@ stronghold:
     - description: Guardroom.
       tags: [guarded]
     - description: Kennel where monsters or trained animals that protect the stronghold are kept.
-      tags: [rare]
     - description: Kitchen designed to prepare exotic foods for large numbers of guests.
     - description: Library with an extensive collection of rare books.
       tags: [rare, guarded]
@@ -89,6 +90,8 @@ stronghold:
     - The room sports several iron-barred openings for ventilation shafts.
     - This room's domed ceiling is twice as high as the rest of the complex.
     - This room is unusually large.
+    - Scaffolding along one wall, unused stone blocks, and unfinished plaster suggest this room was abandoned mid-construction.
+    - This room once had several internal walls of wood or plaster, but these are now rotten and crumbling.
 tomb:
   rooms:
     - description: An entry-hall with a great staircase and double doors.
@@ -96,6 +99,8 @@ tomb:
     - description: A grand mausoleum with stained-glass windows, and stairs leading downward.
       tags: [entrance]
     - description: A forbidding room displaying reminders of impending death.
+      tags: [entrance]
+    - description: A chapel with rows of pews for paying respects to the dead.
       tags: [entrance]
     - description: Workshop for embalming the dead.
     - description: An ossuary with elaborate decorations of bone.
@@ -113,7 +118,7 @@ tomb:
     - description: Grand crypt for a noble, high priest, or other important individual.
       tags: [important, guarded, treasure]
     - description: Guardroom, usually guarded by undead, constructs, or other creatures that don't need to eat or sleep.
-      tags: [central, entrance, guarded]
+      tags: [central, guarded]
     - description: Robing room for priests to prepare for burial rituals.
     - description: Storage, stocked with tools for maintaining the tomb and preparing the dead for burial.
     - description: Tomb where the wealthiest and most important folk are interred, protected by secret doors and traps.
@@ -135,6 +140,7 @@ tomb:
     - The ceiling of this room is low and cramped.
     - A plaster frescoe depicts scenes of a purported afterlife.
     - Thin plaster walls seal off niches in the stonework.
+    - Sombre carvings decorate the buttresses and pillars.
 temple:
   tags:
     - magical
@@ -202,6 +208,7 @@ temple:
     - A cracked plaster mural on one wall shows scenes of religious importance.
     - A raised gallery surrounds all four walls of this room, reached by a short ladder.
     - There is a sunken pit in the middle of this room, with a short flight of stairs.
+    - Traces of brightly-coloured paint cling to the stonework.
 mine:
   tags:
   rooms:
@@ -221,9 +228,12 @@ mine:
       tags: [dead-end]
     - description: Office used by the mine supervisor.
     - description: Smithy for repairing damaged tools.
+      tags: [guarded]
     - description: Storage for tools and other equipment.
     - description: Strong room or vault used to store ore for transport to the surface.
       tags: [secret, guarded]
+    - description: A shaft mining a vein of rare minerals.
+      tags: [secret]
     - description: A long passageway with tracks for a mine-cart.
       tags: [entrance, guarded]
     - description: A great bowl-shaped hollow, open to the sky.
@@ -241,6 +251,7 @@ mine:
     - In the room there is a broken-down mine cart.
     - Wooden bracing beams cris-cross the room.
     - A heap of wooden beams is stacked against one wall.
+    - The walls are scored with countless pick-marks.
 treasure vault:
   rooms:
     - description: A long, wide passageway, surrounded by murder-holes.
@@ -278,6 +289,8 @@ treasure vault:
       tags: [secret]
     - description: Trap room for luring unwary trespassers.
       tags: [dead-end, trap]
+    - description: A guard-room, designed as a killzone. A rusted iron portcullis creates a passage through the middle of the room.
+      tags: [central]
   secret passages:
     - This secret passageway is concealed behind an ancient wall-hanging.
     - A framed painting conceals the hidden doorway to this passage.
@@ -291,11 +304,14 @@ treasure vault:
     - There is a large iron grill in the floor of this room - a drain.
     - The arched ceiling of this room is braced with sturdy wooden rafters.
     - There are the remains of wooden furnishings scattered throughout this room.
+    - Half the room is filled with piled junk.
     - Pillars support the ceiling of this room.
     - Several ancient wall-hangings remain on the walls.
     - The room sports several iron-barred openings for ventilation shafts.
     - This room's domed ceiling is twice as high as the rest of the complex.
     - This room is unusually large.
+    - A rusted portcullis divides the room in two, but it is broken by several ragged holes.
+    - There are raised platforms reached by ladders in each corner of the room, with waist-high walls - these were once guard-posts.
 cave:
   tags:
     - cave-dweller
@@ -342,3 +358,4 @@ cave:
     - A wooden floor has been layed down in this chamber, covering the more uneven stone below.
     - Long ago this chamber was worked with tools to level the floor and remove the worst obstacles.
     - Ancient and indistinct carvings cover the walls.
+    - The room is lit by the red glow of fire beetles, gently ambling around the floor and walls.

@@ -144,7 +144,7 @@ class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
     def alter_dungeon(self, layout):
         self.build_furnisher('temple').furnish(layout)
         trap_source = TrapSource(self.level, trap_class='magical')
-        self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
+        self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=True).populate(layout)
         return layout
 
 class InUseTempleTemplate(DungeonBaseTemplate):
@@ -171,6 +171,18 @@ class InfestedCaveTemplate(DungeonBaseTemplate):
         self.build_furnisher('cave').furnish(layout)
         self.build_ager(cause='cave-age').age(layout)
         self.build_populator(self.get_monster_sets(), populator_method=UndergroundNatives).populate(layout)
+        return layout
+
+class DeepCaveTemplate(DungeonBaseTemplate):
+    def event_type(self):
+        return 'Home to cave-dwelling creatures'
+
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['rare'])
+
+    def alter_dungeon(self, layout):
+        self.build_furnisher('cave').furnish(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=OriginalInhabitants).populate(layout)
         return layout
 
 class HauntedTemplate(DungeonTemplate):
@@ -297,3 +309,4 @@ some_examples = [
 [InfestedCaveTemplate, FungalInfectionTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, LairTemplate, LairTemplate]
 ]
+

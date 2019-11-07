@@ -115,3 +115,102 @@ lost item:
     - In a finely-worked chest, locked tight
     - Cunningly hidden behind a secret panel
     - Lying in a corner, forgotten
+dungeon entrance:
+  dungeon templates:
+    underdark cave: [deep_cave, underdark_entrance]
+    volcanic cave: [deep_cave, volcanic]
+    tomb: [haunted_tomb]
+    hidden temple: [temple_remnants]
+  entrances:
+    - The floor has crumbled away here to reveal another chamber beyond - the entrance to another dungeon!
+    - A narrow well in this room breathes foul air. Exploring it reveals it to be an entrance to another dungeon.
+    - A crack in one wall is just wide enough to wriggle through. Beyond is an entirely new dungeon.
+    - There is an imposing and heavily barred door in this room. If it can be opened, it reveals an entrance to a new dungeon.
+
+dragon lair:
+  dragons:
+    - Name: Black Dragon Wyrmling
+      role: solo
+    - Name: Young Black Dragon
+      role: solo
+    - Name: Adult Black Dragon
+      role: solo
+    - Name: Ancient Black Dragon
+      role: solo
+    - Name: White Dragon Wyrmling
+      role: solo
+    - Name: Young White Dragon
+      role: solo
+    - Name: Adult White Dragon
+      role: solo
+    - Name: Ancient White Dragon
+      role: solo
+    - Name: Red Dragon Wyrmling
+      role: solo
+    - Name: Young Red Dragon
+      role: solo
+    - Name: Adult Red Dragon
+      role: solo
+    - Name: Ancient Red Dragon        
+      role: solo
+    - Name: Blue Dragon Wyrmling
+      role: solo
+    - Name: Young Blue Dragon
+      role: solo
+    - Name: Adult Blue Dragon
+      role: solo
+    - Name: Ancient Blue Dragon
+      role: solo
+    - Name: Green Dragon Wyrmling
+      role: solo
+    - Name: Young Green Dragon
+      role: solo
+    - Name: Adult Green Dragon
+      role: solo
+    - Name: Ancient Green Dragon
+      role: solo
+  colours:
+    black:
+      encounter tags:
+        - Name: swamp
+          role: solo
+        - savage
+      terrain: swamp
+      dungeon effects:
+        - flood
+        - poisoned
+    white:
+      encounter tags:
+        - arctic
+      terrain:
+        - arctic
+        - mountains
+      dungeon effects:
+        - frozen
+    red:
+      encounter tags:
+        - mountains
+        - savage
+        - fire
+      terrain:
+        - mountains
+      dungeon effects:
+        - volcanic
+    blue:
+      encounter tags:
+        - desert
+      terrain:
+        - desert
+      dungeon effects:
+        - electric
+    green:
+      encounter tags:
+        - forest
+        - savage
+        - swamp
+      terrain:
+        - forest
+        - hills
+      dungeon effects:
+        - illusion
+        - poisoned

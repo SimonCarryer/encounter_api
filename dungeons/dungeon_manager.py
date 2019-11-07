@@ -4,9 +4,9 @@ from treasure.treasure_api import RawHoardSource
 from monster_manual.monster_manual import MonsterManual
 from names.name_api import NameGenerator
 from random import Random
+from json import JSONEncoder
 
-
-class Sign:
+class Sign():
     def __init__(self, sign):
         self.sign = sign
 
@@ -22,7 +22,6 @@ class Sign:
 class Treasure(dict):
     def __init__(self, manager):
         self.manager = manager
-        self.items = []
         self['coins'] = {}
         self['magic_items'] = []
         self['gemstones'] = []
@@ -30,7 +29,6 @@ class Treasure(dict):
 
 
     def get_item(self, item_type, item_value):
-        self.items.append((item_type, item_value))
         if item_type == 'magic item':
             self['magic_items'].append(item_value)
         elif item_type in ['CP', 'SP', 'EP', 'GP', 'PP']:
@@ -41,7 +39,6 @@ class Treasure(dict):
             self['objects'].append(item_value)
         
     def clear_items(self):
-        self.items = []
         self['coins'] = {}
         self['magic_items'] = []
         self['gemstones'] = []

@@ -10,3 +10,4 @@ class MockDungeonLayout(nx.Graph):
         self.tags = []
         self.purpose = 'temple'
         self.events = []
+        self.wandering_monsters_table = []

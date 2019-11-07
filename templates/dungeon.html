@@ -11,7 +11,7 @@ p {
 <body>
     <div style="margin: auto; width: 55%; padding: 20px; background: rgb(250, 243, 243); font-family:Garamond, Georgia, serif;">
     <h1>{{module.name}}</h1>
-    <h2>A random {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h2>
+    <h2>A level {{module.level}} {{module.dungeon_type}} in the {{module.dungeon_terrain}}</h2>
     <h3>Rumours</h3>
     {% for event in module.history %}
     {{event}}<br>
@@ -84,6 +84,7 @@ Art objects, by GP value: {{room.treasure.objects}}<br>
 Coins: {{room.treasure.coins}}<br>
 Items: {{room.treasure.magic_items}}<br>
 {% endif %}
+{% if room.link %}<a href='/dungeon/{{room.link}}'>Link to sub-dungeon</a>{% endif %}
 {% endfor %}
 {% if module.wandering_monster_table %}
 <br><h3>Wandering Monsters</h3><br>
@@ -95,6 +96,6 @@ Items: {{room.treasure.magic_items}}<br>
 {% endfor %}
 {% endif %}
 <br>
-<i><a href='/dungeon/{{module.level}}?guid={{guid}}'>Permanent(ish) link to this dungeon</a></i>
+<i><a href='/dungeon/{{url}}'>Permanent(ish) link to this dungeon</a></i>
 </div>
 </body>

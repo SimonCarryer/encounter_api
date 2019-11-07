@@ -10,6 +10,7 @@ from dungeons.dungeon_api import DungeonSource
 from random import Random
 import random
 import uuid
+import json
 
 application = Flask(__name__)
 cors = CORS(application)
@@ -30,6 +31,8 @@ tag_parser.add_argument('all_tags', action='split', required=False, help='Requir
 tag_parser.add_argument('any_tags', action='split', required=False, help='Required tags - one must be present')
 tag_parser.add_argument('none_tags', action='split', required=False, help='Excluded tags - none must be present')
 
+dungeon_parser = reqparse.RequestParser()
+dungeon_parser.add_argument('level', type=int, required=True, help='Average level of party')
 
 @api.route('/monster-sets')
 class MonsterSets(Resource):
@@ -69,15 +72,52 @@ class Encounter(Resource):
         encounter = source.get_encounter(difficulty=difficulty)
         return encounter
 
-@application.route('/dungeon/<level>')
-def dungeon(level):
+@api.route('/dungeon')
+class Dungeon(Resource):
+    @api.doc(parser=dungeon_parser)
+    def get(self):
+        args = dungeon_parser.parse_args()
+        level = args['level']
+        if args.get('guid'):
+            guid = args['guid']
+        else:
+            guid = str(uuid.uuid4())
+        url = str(level) + '?guid=%s' % guid
+        if request.args.get('templates'):
+            templates = request.args['templates'].split(',')
+            url += '&templates=%s' % request.args['templates']
+        else:
+            templates = None
+        if request.args.get('terrain'):
+            terrain = request.args['terrain']
+            url += '&terrain=%s' % terrain
+        else:
+            terrain = None
+        state = Random(guid)
+        d = DungeonSource(level, random_state=state, templates=templates, terrain=terrain)
+        module = d.get_dungeon()
+        return jsonify({'dungeon': module, 'url': url})
+
+@application.route('/dungeon-html/<level>')
+def dungeon_html(level):
     if request.args.get('guid'):
         guid = request.args['guid']
     else:
         guid = str(uuid.uuid4())
+    url = level + '?guid=%s' % guid
+    if request.args.get('templates'):
+        templates = request.args['templates'].split(',')
+        url += '&templates=%s' % request.args['templates']
+    else:
+        templates = None
+    if request.args.get('terrain'):
+        terrain = request.args['terrain']
+        url += '&terrain=%s' % terrain
+    else:
+        terrain = None
     state = Random(guid)
-    d = DungeonSource(int(level), random_state=state)
-    return render_template('dungeon.html', module=d.get_dungeon(), guid=guid)
+    d = DungeonSource(int(level), random_state=state, templates=templates, terrain=terrain)
+    return render_template('dungeon.html', module=d.get_dungeon(), url=url)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0', debug=True)
