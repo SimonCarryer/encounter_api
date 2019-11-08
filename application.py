@@ -33,6 +33,8 @@ tag_parser.add_argument('none_tags', action='split', required=False, help='Exclu
 
 dungeon_parser = reqparse.RequestParser()
 dungeon_parser.add_argument('level', type=int, required=True, help='Average level of party')
+dungeon_parser.add_argument('terrain', type=str, required=False, help='Terrain type for dungeon setting.')
+
 
 @api.route('/monster-sets')
 class MonsterSets(Resource):
@@ -74,8 +76,10 @@ class Encounter(Resource):
 
 @api.route('/dungeon')
 class Dungeon(Resource):
+
     @api.doc(parser=dungeon_parser)
     def get(self):
+        '''Returns JSON representation of a random dungeon'''
         args = dungeon_parser.parse_args()
         level = args['level']
         if args.get('guid'):

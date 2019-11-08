@@ -51,7 +51,7 @@ class SpecialEvent(DungeonTemplate):
 
 
 class VillainHideout(SpecialEvent):
-    def get_villain(self):
+    def get_encounter(self):
         encounter_source = EncounterSource(encounter_level=self.level+1,
                                             monster_sets=['villains'],
                                             random_state=self.random_state)
@@ -86,7 +86,7 @@ class VillainHideout(SpecialEvent):
         layout.node[node]['sign'] = None
 
     def populate_room(self, node, layout):
-        layout.node[node]['encounter'] = self.get_villain()
+        layout.node[node]['encounter'] = self.get_encounter()
         layout.node[node]['treasure'] = self.get_treasure(shares=3)
 
     def event_type(self):
@@ -305,6 +305,27 @@ class DungeonEntrance(SpecialEvent):
             layout.node[room]['description'] += self.room_description()
             layout.node[room]['link'] = self.dungeon_url()
         return layout
+
+class WeirdEncounter(VillainHideout):
+    def get_encounter(self):
+        encounter_source = EncounterSource(encounter_level=self.level+1,
+                                            monster_sets=None,
+                                            random_state=self.random_state)
+        encounter_source.monster_set += ' - Here due to a strange alliance, a curse, or magic item.'
+        self.encounter_name = encounter_source.monster_set
+        self.dungeon_manager.add_encounter_source(self.name, encounter_source)
+        encounter = self.dungeon_manager.get_encounter(self.name, style='elite', difficulty='hard')
+        return encounter
+
+    def event_type(self):
+        return 'The site of a weird encounter'
+
+    def alter_dungeon(self, layout):
+        best_room = self.find_best_room(layout)
+        if best_room is not None:
+            self.clear_room(best_room, layout)
+            self.populate_room(best_room, layout)
+            self.dungeon_manager.add_event(self.name, self.event_type(), self.encounter_name)
 
 class DragonLair(SpecialEvent):
     def choose_dragon(self):
