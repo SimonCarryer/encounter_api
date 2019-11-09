@@ -6,6 +6,7 @@ from dungeons.dungeon import Dungeon
 from dungeons.dungeon_manager import DungeonManager, TreasureManager
 from dungeons.dungeon_templates import *
 from dungeons.dungeon_api import DungeonSource
+from dungeons.dungeon_template_picker import *
 from random import Random
 from mocks.mock_dungeon_layout import MockDungeonLayout
 from mocks.mock_encounter_source import MockEncounterSource

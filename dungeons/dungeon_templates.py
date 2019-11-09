@@ -262,15 +262,12 @@ class ExplorerTemplate(NewInhabitantsTemplate):
     def event_type(self):
         return 'A lair for marauders and savages'
 
-    def get_monster_sets(self, layout):
-        none_tags = ['evil', 'underdark']
-        if layout.purpose == 'temple':
-            none_tags = ['underdark']
-        return self.monster_sets(required_tags=['dungeon-explorer'], none_tags=none_tags)
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['dungeon-explorer'], none_tags=['underdark'])
 
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
-        self.build_populator(self.get_monster_sets(layout), populator_method=Explorers).populate(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=Explorers).populate(layout)
         return layout
 
 class PassingAgesTemplate(DungeonTemplate):

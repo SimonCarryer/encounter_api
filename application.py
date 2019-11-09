@@ -34,6 +34,7 @@ tag_parser.add_argument('none_tags', action='split', required=False, help='Exclu
 dungeon_parser = reqparse.RequestParser()
 dungeon_parser.add_argument('level', type=int, required=True, help='Average level of party')
 dungeon_parser.add_argument('terrain', type=str, required=False, help='Terrain type for dungeon setting.')
+dungeon_parser.add_argument('dungeon type', type=str, required=False, help='Base type of dungeon.')
 
 
 @api.route('/monster-sets')
@@ -87,20 +88,31 @@ class Dungeon(Resource):
         else:
             guid = str(uuid.uuid4())
         url = str(level) + '?guid=%s' % guid
-        if request.args.get('templates'):
-            templates = request.args['templates'].split(',')
-            url += '&templates=%s' % request.args['templates']
+        if args.get('templates'):
+            templates = args['templates'].split(',')
+            url += '&templates=%s' % args['templates']
         else:
             templates = None
-        if request.args.get('terrain'):
-            terrain = request.args['terrain']
+        if args.get('terrain'):
+            terrain = args['terrain']
             url += '&terrain=%s' % terrain
         else:
             terrain = None
+        base_type = args.get('dungeon type')
         state = Random(guid)
-        d = DungeonSource(level, random_state=state, templates=templates, terrain=terrain)
+        d = DungeonSource(level, random_state=state, base_type=base_type, templates=templates, terrain=terrain)
         module = d.get_dungeon()
         return jsonify({'dungeon': module, 'url': url})
+
+@api.route('/dungeon-tags')
+class DungeonTags(Resource):
+    def get(self):
+        '''JSON blob of valid dungeon parameters'''
+        valid_params = {
+            'terrain': ['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'],
+            'dungeon type': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault']
+        }
+        return jsonify(valid_params)
 
 @application.route('/dungeon-html/<level>')
 def dungeon_html(level):

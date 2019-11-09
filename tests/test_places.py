@@ -8,4 +8,4 @@ def test_area():
 
 def test_hazard():
     hazard = Hazard(15, 'dangerous plants')
-    print(hazard)
+    #print(hazard)
