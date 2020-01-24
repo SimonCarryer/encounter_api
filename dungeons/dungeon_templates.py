@@ -46,6 +46,9 @@ class DungeonTemplate:
         else:
             return [self.monster_set]
 
+    def get_monster_sets(self):
+        return []
+
     def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None, wandering=True):
         if monster_sets is None:
             encounter_source = NoEncountersSource()
@@ -106,6 +109,19 @@ class HauntedTombTemplate(DungeonBaseTemplate):
         self.build_furnisher('tomb').furnish(layout)
         trap_source = TrapSource(self.level)
         self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
+        return layout
+
+class EmptyTombTemplate(DungeonBaseTemplate):
+    def event_type(self):
+        return 'Long forgotten'
+
+    def get_monster_sets(self):
+        return []
+
+    def alter_dungeon(self, layout):
+        self.build_furnisher('tomb').furnish(layout)
+        trap_source = TrapSource(self.level)
+        self.build_populator(None, trap_source=trap_source, wandering=False).populate(layout)
         return layout
 
 class AbandonedStrongholdTemplate(DungeonBaseTemplate):

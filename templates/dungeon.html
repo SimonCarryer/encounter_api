@@ -61,7 +61,7 @@ p {
     {% if room.sign %}<p><b>Signs: </b>{{room.sign}}</p>{% endif %}
 </div>
 {% if room.encounter %}
-<div  style="margin: auto; padding: 20px; background: white;"">
+<div  style="margin: auto; padding: 20px; background: white;">
 <b>Encounter: {{room.encounter.monster_set}}</b><br>
 {% for monster in room.encounter.monsters %}
 {{monster.number}} x {{monster.name}}<br>
@@ -73,6 +73,21 @@ Objects: {{room.encounter.treasure.objects}}<br>
 {% endif %}
 </div>
 {% endif %}<br>
+
+{% if room.npc %}
+<div  style="margin: auto; padding: 20px; background: white;">
+<b>{{room.npc.name}}</b><br>
+Stats: {{room.npc.traits.stats}}<br>
+Race: {{room.npc.traits.race}}<br>
+Sex: {{room.npc.sex}}<br>
+Alignment: {{room.npc.traits.alignment}}<br>
+{% for trait in room.npc.traits.personality %}
+{{trait.type}}: {{trait.text}}<br>
+{% endfor %}
+</div><br>
+{% endif %}
+
+
 {% if room.trap %}
 <b>Trap:</b><br>
 {{room.trap}}<br><br>

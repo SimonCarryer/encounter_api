@@ -127,6 +127,29 @@ dungeon entrance:
     - A crack in one wall is just wide enough to wriggle through. Beyond is an entirely new dungeon.
     - There is an imposing and heavily barred door in this room. If it can be opened, it reveals an entrance to a new dungeon.
 
+npc home:
+  template:
+    - This room has been converted to be the permanent dwelling of an eccentric $role. $pronoun might allow the party to pass through $pronouns home, if they can successfully negotiate. The room is decorated with $decoration and furnished with $furnishing.
+    - A local $role has made a temporary dwelling here. $pronoun might allow the party to pass through $pronouns home, if they can successfully negotiate. The room is decorated with ${decoration}.
+    - A local $role is hiding here from persecution in the outside world. $pronoun will be terrified of intruders.
+    - An eccentric $role is resting here, recoving from an illness. The room contains ${furnishing}.
+    - A desperate $role is hiding here from someone (or something) that is hunting them.
+    - An eccentric $role has decorated this room with $decoration. $pronoun will hide from intruders. 
+    - The $role who makes $pronouns home in this room sits by $furnishing. $pronoun will be eager to talk to newcomers.
+  decoration:
+    - hand-painted figures
+    - assorted bric-a-brac
+    - a collection of interesting rocks
+    - wildflowers
+    - hunting trophies
+    - pages torn from books
+  furnishing:
+    - a simple bed  
+    - a luxurious bed
+    - a hammock
+    - a sleeping roll beside the remains of a fire
+    - a makeshift fireplace
+
 dragon lair:
   dragons:
     - Name: Black Dragon Wyrmling

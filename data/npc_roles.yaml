@@ -36,7 +36,7 @@ hedge wizard:
         - Mage
         - Druid
         
-mountain man:
+hunter:
     alignment:
         - Chaotic Good
         - Chaotic Neutral
@@ -68,13 +68,14 @@ outcast:
         - Tiefling
         - Dwarf
         - Elf
-        - Giant
+        - Half-Ogre
         - Half-Dragon
     stats:
         - Scout
         - Beserker
         - Tribal Warrior
         - Veteran
+        - Revenant
         - Cultist
         - Acolyte
         - Commoner

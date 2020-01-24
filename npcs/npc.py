@@ -16,12 +16,13 @@ class NPC:
         else:
             self.random_state = random_state
         self.role = self.random_state.choice(list(roles.keys()))
-        self.sex = self.random_state.choice(['male', 'female', 'male', 'female', 'other'])
+        self.sex = self.random_state.choice(['male', 'male', 'female', 'female', 'male', 'female', 'other'])
         self.traits = {}
         for trait in roles[self.role].keys():
             self.traits[trait] = self.random_state.choice(roles[self.role][trait])
+        self.traits['personality'] = []
         for trait in self.random_state.sample(traits.keys(), 3):
-            self.traits[trait] = self.random_state.choice(traits[trait])
+            self.traits['personality'].append({'type': trait, 'text': self.random_state.choice(traits[trait])})
         self.name = NameGenerator(random_state=self.random_state).simple_person_name(sex=self.sex)
         if self.random_state.randint(1, 6) >= 5:
             self.traits['item'] = NPC_item(level=5, random_state=self.random_state).item

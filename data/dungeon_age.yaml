@@ -104,6 +104,7 @@ shadowfell:
     - description: This room is unnaturally cold, and torchlight seems to dim and flicker.
     - description: Black shadows fill this room, seeming to flee the light reluctantly, and creep back when unobserved.
     - description: Barely-perceptable voices whisper in a long-dead language.
+    - description: A ghostly voice whispers right on the edge of hearing.
     - description: Mournful faces peer from dark corners, vanishing in the light.
     - description: The oppressive atmosphere of this room leeches the life-force from intruders - Make a constitution save each round (Difficulty 11) or take 1d4 necrotic damage.
       tags: [uninhabitable, hazard]
@@ -154,6 +155,8 @@ age:
     - description: Stalagmites and stalagtites have formed on the floors and ceilings.
     - description: One wall is covered in a thick carpet of white mushrooms.
     - description: Cobwebs crowd the ceiling and coat the walls in sheets.
+    - description: Shiny black beetles carpet the floor.
+    - description: Long-legged insects scuttle across the walls.
     - description: Tunnelling creatures have burst through the wall of this room.
       tags: [cave-entrance]
     - description: The room is filled with patches of Yellow Mold.
@@ -202,6 +205,8 @@ cave-age:
   rooms:
     - description: Stalagmites and stalagtites have formed on the floors and ceilings.
     - description: One wall is covered in a thick carpet of white mushrooms.
+    - description: Shiny black beetles carpet the floor.
+    - description: Long-legged insects scuttle across the walls.
     - description: Cobwebs crowd the ceiling and coat the walls in sheets.
     - description: Tunnelling creatures have burst through the wall of this room.
       tags: [cave-entrance]

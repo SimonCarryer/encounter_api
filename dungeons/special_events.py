@@ -1,8 +1,9 @@
 from .dungeon_templates import DungeonTemplate
-from .dungeon_populator import Explorers
+from .dungeon_populator import Explorers, Lair
 from .dungeon_manager import Treasure
 from encounters.encounter_api import EncounterSource
 from treasure.npc_items import NPC_item
+from npcs.npc import NPC
 from treasure.treasure_api import RawHoardSource
 from string import Template
 from traps.trap import Trap
@@ -223,7 +224,7 @@ class ForbiddingDoor(SpecialRoom):
             self.prison(layout)
         elif purpose == 'treasure vault':
             self.treasure(layout)
-        self.dungeon_manager.add_event('special', self.event_type(purpose), None)
+        self.dungeon_manager.add_event('special', self.event_type(purpose), 'See below')
         
     def event_type(self, purpose):
         return special_events_data['forbidding door'][purpose]['event']
@@ -326,6 +327,54 @@ class WeirdEncounter(VillainHideout):
             self.clear_room(best_room, layout)
             self.populate_room(best_room, layout)
             self.dungeon_manager.add_event(self.name, self.event_type(), self.encounter_name)
+
+class NPCHome(SpecialRoom):
+    def find_best_room(self, layout):
+        possibles = [node for node, data in layout.nodes(data=True) if 'entrance' in data['tags'] and 'uninhabitable' not in data['tags'] and data.get('encounter') is None]
+        if len(possibles) == 0:
+            possibles = [node for node, data in layout.nodes(data=True) if 'uninhabitable' not in data['tags'] and data.get('encounter') is None and data.get('sign') is None]
+            if len(possibles) > 0:
+                room = self.random_state.choice(possibles)
+                layout.node[room]['description'] += ' A concealed door here leads to the surface.'
+                layout.node[room]['tags'].append('entrance')
+                return room
+            else:
+                return None
+        else:
+            return self.random_state.choice(possibles)
+
+    def event_type(self):
+        return 'The home of an eccentric ' + self.npc['role']
+
+    def description(self):
+        template = Template(self.random_state.choice(special_events_data['npc home']['template']))
+        decoration = self.random_state.choice(special_events_data['npc home']['decoration'])
+        furnishing = self.random_state.choice(special_events_data['npc home']['furnishing'])
+        role = self.npc['role']
+        pronoun_lookup = {
+            'male': ('He', 'his'),
+            'female': ('She', 'her'),
+            'other': ('They', 'their')
+        }
+        pronoun, pronouns = pronoun_lookup[self.npc['sex']]
+        d = {
+            'decoration': decoration,
+            'furnishing': furnishing,
+            'role': role,
+            'pronoun': pronoun,
+            'pronouns': pronouns
+        }
+        return ' ' + template.substitute(d)
+
+    def alter_dungeon(self, layout):
+        room = self.find_best_room(layout)
+        self.npc = NPC(random_state=self.random_state).details()
+        if room is not None:
+            layout.node[room]['npc'] = self.npc
+            layout.node[room]['description'] += self.description()
+            if self.random_state.randint(1, 6) >= 5:
+                layout.node[room]['treasure'] = self.get_treasure(shares=1)
+            self.dungeon_manager.add_event('special', self.event_type(), self.npc['name'])
 
 class DragonLair(SpecialEvent):
     def choose_dragon(self):

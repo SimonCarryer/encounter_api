@@ -317,3 +317,7 @@ def test_translate_templates():
 def test_appropriate_rooms():
     furnisher = DungeonFurnisher('tomb')
     # print(furnisher.suitable_rooms(['dead-end']))
+
+def test_template_from_monster_set():
+    picker = TemplatePicker('treasure vault', supplied_monster_set='cult of jubilex')
+    # print(picker.pick_set())

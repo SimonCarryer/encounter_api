@@ -7,14 +7,14 @@ from .dungeon_template_picker import TemplatePicker
 from random import Random
 
 class DungeonSource():
-    def __init__(self, level, terrain=None, base_type=None, templates=None, random_state=None):
+    def __init__(self, level, terrain=None, base_type=None, templates=None, main_antagonist=None, random_state=None):
         if random_state is None:
             self.random_state = Random()
         else:
             self.random_state = random_state
         self.level = level
         layout = DungeonLayout(n_rooms=self.random_state.randint(4, 7), random_state=self.random_state)
-        templates = TemplatePicker(base_type, templates, self.random_state).pick_set()
+        templates = TemplatePicker(base_type, supplied_templates=templates, supplied_monster_set=main_antagonist, random_state=self.random_state).pick_set()
         if terrain is None:
             terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'])
         with DungeonManager(self.level, layout, terrain=terrain, random_state=self.random_state) as dungeon_manager:

@@ -34,7 +34,8 @@ tag_parser.add_argument('none_tags', action='split', required=False, help='Exclu
 dungeon_parser = reqparse.RequestParser()
 dungeon_parser.add_argument('level', type=int, required=True, help='Average level of party')
 dungeon_parser.add_argument('terrain', type=str, required=False, help='Terrain type for dungeon setting.')
-dungeon_parser.add_argument('dungeon type', type=str, required=False, help='Base type of dungeon.')
+dungeon_parser.add_argument('dungeon_type', type=str, required=False, help='Base type of dungeon.')
+dungeon_parser.add_argument('main_antagonist', type=str, required=False, help='Monster set of main dungeon antagonist.')
 
 
 @api.route('/monster-sets')
@@ -98,9 +99,14 @@ class Dungeon(Resource):
             url += '&terrain=%s' % terrain
         else:
             terrain = None
+        if request.args.get('main_antagonist'):
+            main_antagonist = request.args['main_antagonist']
+            url += '&main_antagonist=%s' % main_antagonist
+        else:
+            main_antagonist = None
         base_type = args.get('dungeon type')
         state = Random(guid)
-        d = DungeonSource(level, random_state=state, base_type=base_type, templates=templates, terrain=terrain)
+        d = DungeonSource(level, random_state=state, base_type=base_type, main_antagonist=main_antagonist, templates=templates, terrain=terrain)
         module = d.get_dungeon()
         return jsonify({'dungeon': module, 'url': url})
 
@@ -131,8 +137,18 @@ def dungeon_html(level):
         url += '&terrain=%s' % terrain
     else:
         terrain = None
+    if request.args.get('dungeon_type'):
+        base_type = request.args['dungeon_type']
+        url += '&dungeon_type=%s' % base_type
+    else:
+        base_type = None
+    if request.args.get('main_antagonist'):
+        main_antagonist = request.args['main_antagonist']
+        url += '&main_antagonist=%s' % main_antagonist
+    else:
+        main_antagonist = None
     state = Random(guid)
-    d = DungeonSource(int(level), random_state=state, templates=templates, terrain=terrain)
+    d = DungeonSource(int(level), random_state=state, templates=templates, main_antagonist=main_antagonist, base_type=base_type, terrain=terrain)
     return render_template('dungeon.html', module=d.get_dungeon(), url=url)
 
 if __name__ == '__main__':
