@@ -1,7 +1,7 @@
 from .dungeon_templates import *
 from .dungeon_manager import DungeonManager
 from monster_manual.monster_manual import MonsterManual
-from .special_events import VillainHideout, LostItem, ForbiddingDoor, UnderdarkEntrance, DungeonEntrance, WeirdEncounter, NPCHome
+from .special_events import VillainHideout, LostItem, ForbiddingDoor, UnderdarkEntrance, NPCHome, TrapRoom
 
 from random import Random
 
@@ -21,26 +21,39 @@ template_bunches = {
 [AbandonedStrongholdTemplate, FungalInfectionTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, VolcanicTemplate],
 [AbandonedStrongholdTemplate, HauntedTemplate, PassingAgesTemplate]],
-    'treasure vault': [[GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
+    'treasure_vault': [[GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, LairTemplate],
+[GuardedTreasureVaultTemplate, PassingAgesTemplate],
 [GuardedTreasureVaultTemplate, InfestedTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, HauntedTemplate]],
     'mine': [[AbandonedMineTemplate, InfestedTemplate, ExplorerTemplate],
-[AbandonedMineTemplate, VolcanicTemplate, ExplorerTemplate],
+[AbandonedMineTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AbandonedMineTemplate, InfestedTemplate, LairTemplate],
 [AbandonedMineTemplate, PassingAgesTemplate, FungalInfectionTemplate, LairTemplate],
-[AbandonedMineTemplate, HauntedTemplate]],
+[AbandonedMineTemplate, HauntedTemplate],
+[AbandonedMineTemplate, PassingAgesTemplate, InfestedTemplate],
+[AbandonedMineTemplate, PassingAgesTemplate, InfestedTemplate, LairTemplate],
+[AbandonedMineTemplate, VolcanicTemplate],
+[AbandonedMineTemplate, FeywildTemplate]
+],
     'temple': [[AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
 [InUseTempleTemplate],
-[AncientRemnantsTempleTemplate, HauntedTemplate]],
+[AncientRemnantsTempleTemplate, PassingAgesTemplate],
+[AncientRemnantsTempleTemplate, HauntedTemplate],
+[AncientRemnantsTempleTemplate, FeywildTemplate]
+],
     'cave': [[InfestedCaveTemplate, InfestedTemplate],
 [InfestedCaveTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, VolcanicTemplate],
 [InfestedCaveTemplate, TreeChokedTemplate],
 [InfestedCaveTemplate, LairTemplate, ExplorerTemplate],
 [InfestedCaveTemplate, FungalInfectionTemplate, ExplorerTemplate],
-[InfestedCaveTemplate, LairTemplate, LairTemplate]]
+[InfestedCaveTemplate, LairTemplate, LairTemplate],
+[InfestedCaveTemplate, UnderdarkEntrance],
+[InfestedCaveTemplate, FeywildTemplate],
+[InfestedCaveTemplate, PassingAgesTemplate, LairTemplate],
+[InfestedCaveTemplate, PassingAgesTemplate]]
 }
 
 template_lookup = {
@@ -81,10 +94,11 @@ class TemplatePicker:
         if self.supplied_templates is not None:
             templates = self.translate_templates(self.supplied_templates)
         elif self.supplied_monster_set is not None:
-            template_set = self.template_from_monster_set(self.supplied_monster_set)
-            templates = [(template, None) for template in template_set[:-1]]
-            templates += [(template_set[-1], self.supplied_monster_set)]
+            template_set, index = self.template_from_monster_set(self.supplied_monster_set)
+            templates = [(template, None) for template in template_set]
+            templates[-index] = (templates[-index][0], self.supplied_monster_set)
             templates += self.special_events()
+            print(templates)
         else:
             templates = [(template, None) for template in self.random_state.choice(template_bunches[self.base_type])] + self.special_events()
         return templates
@@ -103,9 +117,16 @@ class TemplatePicker:
     def special_events(self):
         special_events = []
         if self.random_state.randint(1, 6) >= 5:
-            n_events = self.random_state.choice([1, 1, 1, 2])
-            events = self.random_state.sample([NPCHome, WeirdEncounter, UnderdarkEntrance, VillainHideout, LostItem, ForbiddingDoor, DungeonEntrance],n_events)
+            n_events = 1
+            events = self.random_state.sample([NPCHome, VillainHideout, LostItem],n_events)
             special_events += events
+        if self.base_type in ['cave', 'mine'] and self.random_state.randint(1, 6) >= 6:
+            special_events.append(UnderdarkEntrance)
+        if self.base_type == 'treasure_vault':
+            if self.random_state.randint(1, 6) >= 2:
+                special_events.append(TrapRoom)
+            if self.random_state.randint(1, 6) >= 6:
+                special_events.append(ForbiddingDoor)
         return [(i, None) for i in special_events]
 
     def template_from_monster_set(self, monster_set):
@@ -116,16 +137,16 @@ class TemplatePicker:
             i = 1
             while len(sets) == 0 and i <= len(bunch):
                 template = bunch[-i]
-                i += 1
                 sets = template(None, dummy_manager, random_state=self.random_state).get_monster_sets()
                 if monster_set in sets:
-                    potentials.append(bunch)
+                    potentials.append((bunch, i))
+                i += 1
         if len(potentials) > 0:
             return self.random_state.choice(potentials)
         else:
             sets = self.random_state.choice(template_bunches[self.base_type])
             if sets[-1] == ExplorerTemplate:
-                return sets
+                return (sets, 1)
             else:
-                return sets + [ExplorerTemplate]
+                return (sets + [ExplorerTemplate], 1)
 

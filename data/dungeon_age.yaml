@@ -193,7 +193,7 @@ age:
       weight: 2
     - description: An iron ladder here has rusted to nothing, leaving an empty shaft.
       weight: 3
-    - description: The doors in this passageway have all rotted to the point that they a flimsy and crumbling.
+    - description: The doors in this passageway have all rotted to the point that they are flimsy and crumbling.
       weight: 1
     - description: From one side this doorway appears to be completely blocked, but from the other the debris can be cleared to free the door.
       weight: 4
@@ -275,3 +275,56 @@ volcano:
       weight: 2
     - description: There's a rumbling sound in this passageway.
       weight: 1
+
+cold:
+  tags:
+    - cold
+  rooms:
+    - description: Ice has crept down the walls of this room, turning it into a glittering marvel.
+    - description: Slippery ice covers the floor of this room, making it treacherous to navigate.
+      tags: [difficult]
+    - description: The roof of this room has collapsed, and great drifts of snow and ice have flooded in, filling half the room.
+      tags: [entrance]
+    - description: One wall of this room is made entirely of solid ice.
+    - description: A narrow shaft to the surface blows flurries of snow into this room.
+    - description: The shifting of a glacier has opened a huge crevasse in the floor of this room, its icy depths untouched by torchlight.
+      tags: [cave entrance]
+    - description: Icicles hang like stalagtites from the ceiling.
+  passages:
+    - description: A solid plug of ice blocks this passageway. It could take hours to chip it away.
+      weight: 4
+    - description: Slippery ice on a steep section turns this passageway into a potentially deadly trap. Make an athletics check or take 2d6 blugeoning damage.
+      weight: 3
+    - description: Ice-cold wind blows from this passageway.
+      weight: 1
+    - description: The walls of this passageway are coated with ice.
+      weight: 1
+    - description: Drifts of snow have nearly blocked this passageway.
+      weight: 2
+
+illusion:
+  tags:
+    - illusion
+  rooms:
+    - description: Flowering fruit-trees fill this room and scent the air with their pollen. Petals drift on a gentle breeze. It is an elaborate illusion.
+    - description: Lavishly-dressed illusory figures dance throughout this room, to the music of pipes and fiddles.
+    - description: The walls seem to writhe and shift, one moment near, the next far away.
+    - description: The floor seeths with venomous snakes, but they are nothing more than convincing illusions.
+    - description: Cackling laughter rings in your ears. The source is unclear.
+    - description: Roll a random encounter for this room. The attackers are illusory.
+    - description: The floor of this room is covered with the illusion of a lush meadow, with flowers and buzzing insects.
+    - description: A cruel illusion in this room makes living creatures appear as rotting corpses.
+    - description: A magic effect in this room causes all speech to sound like unintelligible babbling.
+    - description: A cunning illusion in this room causes explorers to lose their way. When you leave this room, roll randomly to determine which exit is taken.
+    - description: As soon as you enter this room, water begins to pour from the ceiling, and it rapidly fills. The water is merely an illusion.
+  passages:
+    - description: This passage seems to loop back on itself, the product of a cunning illusion. Roll randomly which exit you arrive at.
+      weight: 2
+    - description: Anyone entering this passage sees an illusory copy of themselves coming in the opposite direction.
+      weight: 2
+    - description: A voice in this passage calls out "Turn back! You're going the wrong way"
+      weight: 1
+    - description: The entrance to this passageway appears to be a huge mouth set in the wall.
+      weight: 2
+    - description: The entrance to this passage is covered by the illusion of a plain wall.
+      weight: 3

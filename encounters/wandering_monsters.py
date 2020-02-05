@@ -44,7 +44,7 @@ class WanderingMonsters:
             else:
                 monster_hash = list(counts.keys())[0]
                 encounter = [encounter for encounter in encounters if encounter['monster_hash'] == monster_hash][0]
-                table = [{'roll': 'Enounter', 'monsters': encounter['monsters']}]
+                table = [{'roll': 'Encounter', 'monsters': encounter['monsters']}]
         else:
             table = None
         return table

@@ -150,6 +150,159 @@ npc home:
     - a sleeping roll beside the remains of a fire
     - a makeshift fireplace
 
+trap room:
+  liquids:
+    - biting insects
+    - perfume
+    - fine liquor
+    - acid
+    - flammable oil
+    - flesh-eating slime
+    - blood
+    - boiling oil
+    - hot tar
+    - water
+    - spoiled milk
+  objects:
+    - rusted swords
+    - assorted coins worth 100gp
+    - a dozen dead cats
+    - swarms of hungry rats
+    - hundreds of tiny blades
+    - bones
+    - gelatinous cubes
+    - jagged rocks
+    - venomous snakes
+    - spinning blades
+    - blood-stained scythes
+  gasses:
+    - poisonous gas
+    - fire
+    - a terrible stink
+    - a delicious aroma
+    - music
+    - flammable gas
+    - suffocating gas
+    - swarms of flying insects
+  floor:
+    - tiles shaped like a ${motif}
+    - an inlaid mosaic of a hideous ${motif}
+    - colourful tiles
+    - an inlaid rune
+  ceiling:
+    - an inscribed $motif
+    - a hanging jewelled $motif
+  walls:
+    - an inlaid mosaic of a hideous ${motif}
+    - a painted ${motif}
+  motifs:
+    - fish
+    - face
+    - skull
+    - goat
+    - snake
+    - mouth
+    - crow
+    - snail
+    - dragon
+    - mask
+    - egg
+    - man
+    - hand
+    - eye
+    - sun
+  materials:
+    - polished stone
+    - tiles
+    - iron grating
+    - brass plates
+    - ivory and amber
+    - enamel
+    - wood panels
+    - marble
+    - clay
+  triggers:
+    - When a pressure plate in the floor is triggered
+    - When a tripwire is pulled
+    - There is a finely-made throne against one wall. If anyone sits in the throne
+    - When one of the room's doors is opened
+    - There is a giant lever in the middle of the room. Should any character throw the lever
+    - When anyone stands on ${floor} on the floor
+    - As soon as someone passes beneath ${ceiling} on the ceiling
+    - If anyone touches ${wall} on the wall
+    - In one corner there are several dust-covered ${furnishing}. If they are disturbed
+    - If a loud noise is made in the room
+    - There is a small button concealed within the furnishings. Should a character find and press the button
+    - When a beam of light from an overhead grating is occluded
+    - When a carved ${motif} in the wall sees anyone enter
+    - When anyone touches one of the room's ${furnishing}
+    - A booming voice poses a riddle or asks for a pass phrase. If the correct answer is not given
+  adjectives:
+    - threatening
+    - laughing
+    - hideous
+    - blood-red
+    - jet black
+    - burning
+    - stylised
+    - deformed
+  furnishings:
+    - pillars
+    - braziers
+    - mirrors
+    - marble basins
+    - lifelike statues
+    - bizarre wooden contraptions
+    - stone benches
+    - inscrutable steel spheres
+    - iron-bound chests
+    - chandeliers
+  imprecations:
+    - delivers an ominous message
+    - laughs maniacally
+    - tells a ridiculous joke
+    - casts the Bestow Curse spell on one target (distadvantage on Dexterity checks and saving throws - 8 hours duration)
+    - casts the Bestow Curse spell on one target (traps and monsters in this dungeon deal an extra 1d8 necrotic damage - 8 hours duration)
+    - engages in philosophical debate
+    - poses a difficult riddle. If the riddle is not solved, the room is filled with ${liquid_or_gas} from hidden vents
+  hazards:
+    - The floor of the room is a narrow walkway over a pit filled with ${liquid_or_object}.
+    - Traces of ${liquid} remain in this room, as if it was once flooded as part of a bizarre trap.
+    - On the floor is a pile of ${object}. They appear to have fallen from a trapdoor in the ceiling, as part of a now-defunct trap.
+    - The room is filled with ${gas}, coming from an unseen source.
+    - ${trigger}, a greased 80' chute drops a character - unharmed - into a small chamber containing nothing except ${object}.
+    - ${trigger}, a trap-door in the ceiling drops $liquid_or_object onto anyone below.
+    - ${trigger}, a mechanical grinding can be heard, and the room shakes gently, but nothing happens.
+    - ${trigger}, vents in the walls fill the room with $liquid_or_gas.
+    - ${trigger}, the walls of the room begin to slowly close in, eventually crushing anyone who remains within.
+    - Streams of $liquid run down the walls and into grates in the floor.
+    - In the middle of the room is a deep pit, filled with ${liquid_or_object}.
+    - There are two large vats in the room. One contains ${liquid} and the other contains ${liquid_or_object}.
+    - ${trigger}, a panel slides back to reveal a tiny ${motif}.
+    - ${trigger}, a trapdoor opens, dropping anyone standing on it into a pit filled with ${liquid_or_object}.
+    - ${trigger}, ${object} shoot from the walls.
+    - ${trigger}, the image of a ${adjective} ${motif} appears and ${imprecation}.
+    - A fountain in the middle of the room gushes ${liquid}.
+    - ${trigger}, a secret passage opens, connecting to a randomly-chosen room in the dungeon.
+    - ${trigger}, a hidden cache is revealed, containing a small treasure.
+    - An assortment of stoppered bottles lie around the room. Most are empty, but one or two contain ${liquid}, and the largest, if opened, releases ${gas}.
+    - The floor of the room is covered with ${object}.
+    - An unseen voice ${imprecation}.
+    - ${trigger}, the ceiling slowly descends, eventually crushing anyone beneath it.
+    - Around the walls are ${furnishing}. The room's contents are an illusion. ${trigger}, the illusion is dispelled.
+  descriptions:
+    - This room is a long wide corridor, its floor decorated with ${floor}. ${hazard}
+    - This elaborate room has a floor of ${material} and is furnished with ${furnishing}. ${hazard}
+    - An enormous sculpture of a ${adjective} ${motif} dominates this room. ${hazard}
+    - This bare stone room is a perfect cube shape. ${hazard}
+    - This room is a huge iron cage hanging on chains. ${trigger}, the whole room is lowered into an enormous vat of ${liquid}.
+    - This room was once a lushly-appointed pleasure-hall, now ruined by age. ${hazard} 
+    - This room contains a confusion of bizarre machinery. ${hazard}
+    - Shelves line the walls of this room, bearing dozens of urns. Each bears the image of a ${adjective} ${motif}. The urns are filled with ${liquid}. ${hazard}
+    - This room appears to have once been a richly-furnished waiting room. ${hazard}
+    - The purpose of this room is unclear, except that it contains several ${furnishing}. ${hazard}
+    - The floor, walls, and ceiling of this room are entirely of ${material} inlaid with hundreds of images of a ${adjective} ${motif}. ${hazard}
+
 dragon lair:
   dragons:
     - Name: Black Dragon Wyrmling
@@ -237,3 +390,4 @@ dragon lair:
       dungeon effects:
         - illusion
         - poisoned
+

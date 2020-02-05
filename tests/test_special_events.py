@@ -1,4 +1,4 @@
-from dungeons.special_events import VillainHideout, DungeonEntrance, DragonLair
+from dungeons.special_events import VillainHideout, DungeonEntrance, DragonLair, TrapRoom
 from mocks.mock_dungeon_layout import MockDungeonLayout
 from mocks.mock_encounter_source import MockDungeonManager
 from dungeons.dungeon_manager import DungeonManager
@@ -28,6 +28,13 @@ def test_dungeon_entrance_get_url():
     manager = MockDungeonManager()
     entrance = DungeonEntrance(1, manager)
     # print(entrance.dungeon_url(layout))
+
+def test_trap_room_description():
+    layout = MockDungeonLayout()
+    layout.terrain = 'hills'
+    manager = MockDungeonManager()
+    room = TrapRoom(1, manager)
+    # print(room.room_description())
 
 # def test_lair_chooses_dragon():
 #     layout = MockDungeonLayout()

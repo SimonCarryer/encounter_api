@@ -32,7 +32,7 @@ class DungeonFurnisher:
         self.purpose = purpose
         self.room_type_list = dungeon_rooms[purpose]
         self.used_room_types = []
-        self.special_furnishings = [f(random_state=self.random_state) for f in [Fountain, Sarcophagus, Portal, Statue, MagicCrystal]]
+        self.special_furnishings = [f(random_state=self.random_state) for f in [Fountain, Sarcophagus, Portal, Statue, MagicCrystal, Bones]]
 
     def furnish(self, layout):
         for n, room in layout.nodes(data=True):
@@ -171,3 +171,22 @@ class MagicCrystal(SpecialFurnishing):
         for word in ['noun', 'colour', 'verb', 'spell']:
             d[word] = self.random_state.choice(special_furnishings_data['magic crystal'][word+'s'])
         return ' ' + Template(' '.join([template, effect, admonishment])).substitute(d)
+
+class Bones(SpecialFurnishing):
+    def appropriate(self, layout):
+        return layout.purpose in ['mine', 'cave']
+
+    def get_description(self):
+        template = self.random_state.choice(special_furnishings_data['bones']['template'])
+        condition = self.random_state.choice(special_furnishings_data['bones']['condition'])
+        effect = self.random_state.choice(special_furnishings_data['bones']['effect'])
+        trigger = self.random_state.choice(special_furnishings_data['bones']['trigger'])
+        choices = [
+            [template, condition, trigger, effect],
+            [template, condition],
+            [template, trigger, effect]
+        ]
+        parts = ' '.join(self.random_state.choice(choices))
+        template = Template(parts)
+        d = {i: self.random_state.choice(special_furnishings_data['bones'][i]) for i in ['creature', 'material']}
+        return ' '+template.substitute(d)

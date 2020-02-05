@@ -266,3 +266,38 @@ magic crystal:
     - Touching the $noun turns the character's skin and hair bright $colour until the end of their next long rest.
     - A Wizard of sufficient level carrying a piece of the $noun on their person can prepare $spell, even if it's not in their spellbook.
     - The $noun is completely immovable and unbreakable.
+bones:
+  template:
+    - Embedded in the walls, floor, and ceiling of this room are the bones of an enormous $creature.
+    - The room is filled with the colossal skeletal remains of a long-dead $creature.
+    - The room appears to be formed from the hollowed-out skull of a huge $creature.
+    - The center of the room is dominated by a collosal $creature skull, exacavated from the stone.
+  creature:
+    - dragon
+    - giant
+    - demon
+    - and unidentifiable creature
+  condition:
+    - The bones have fossilised - turned to stone.
+    - The bones crumble to dust when touched.
+    - The bones are rock-hard and polished smooth.
+    - The bones appear to be made of solid $material.
+  material:
+    - iron
+    - marble
+    - steel
+    - glass
+  trigger:
+    - Characters who stare into the eyes of the skull
+    - The eye-sockets contain two glittering crystals (worth 100gp each). Characters who touch the gemstones 
+    - Those who touch the bones
+    - Characters who stay in the room for more than ten minutes
+  effect:
+    - are the target of the Crown of Madness spell (Save DC 13).
+    - feel a sense of incredible age.
+    - cause the whole skeleton to collapse! Everyone in the room must make a Dexterity save (DC 13) or take 3d6 bludgeoning damage.
+    - feel a chill of ancient evil.
+    - receive psychic premonitions of doom.
+    - are psychically contacted by the long-dead being, revealing ancient secrets.
+    - realise that any magic in the bones has departed long ago.
+    - are the target of the Bestow Curse spell (Save DC 13) - while cursed they have disadvantage on Wisdom rolls.

@@ -319,6 +319,9 @@ treasure vault:
     - This room is unusually large.
     - A rusted portcullis divides the room in two, but it is broken by several ragged holes.
     - There are raised platforms reached by ladders in each corner of the room, with waist-high walls - these were once guard-posts.
+    - The floor of this room is tiled with a chequerboard pattern.
+    - Elaborate friezes run around the walls.
+    - A rich mosaic on the floor appears to have been vandalised, with valuable materials prised out.
 cave:
   tags:
     - cave-dweller
@@ -367,3 +370,6 @@ cave:
     - Ancient and indistinct carvings cover the walls.
     - The room is lit by the red glow of fire beetles, gently ambling around the floor and walls.
     - The floor of this chamber is steeply sloped.
+    - Glowing worms hang on threads from the ceiling.
+    - A mound of ancient animal bones covers the floor of this room.
+    - The skeleton of a long-dead explorer is wedged into a crevice.

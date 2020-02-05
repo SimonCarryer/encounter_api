@@ -14,7 +14,8 @@ with open('data/dungeon_age.yaml', 'r') as f:
     effects = []
     for cause in dungeon_age.keys():
         for idx, room_effect in enumerate(dungeon_age[cause]['rooms']):
-            effects.append(room_effect)
+            if cause in ['earthquake', 'cave-age']:
+                effects.append(room_effect)
 
 class NoEncountersSource:
     def __init__(self):
@@ -152,7 +153,7 @@ class AbandonedMineTemplate(DungeonBaseTemplate):
 
 class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
     def event_type(self):
-        return 'Echoes of the former worship still remain'
+        return 'Still inhabited by traces of ancient worship'
 
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['immortal'], any_tags=['evil', 'magical'], none_tags=['underdark'])
@@ -213,6 +214,18 @@ class HauntedTemplate(DungeonTemplate):
         self.build_populator(self.get_monster_sets(), populator_method=Taint, wandering=False).populate(layout, tag='shadowfell')
         return layout
 
+class FeywildTemplate(DungeonTemplate):
+    def event_type(self):
+        return 'A crossing-point to the Feywild'
+
+    def get_monster_sets(self):
+        return monster_manual.get_monster_sets(all_tags=['fey'])
+    
+    def alter_dungeon(self, layout):
+        self.build_ager('illusion').age(layout)
+        self.build_populator(monster_sets=self.get_monster_sets(), populator_method=OriginalInhabitants, wandering=True).populate(layout)
+        return layout
+
 class TreeChokedTemplate(DungeonTemplate):
     def event_type(self):
         return 'Overgrown by evil-tainted forest'
@@ -253,12 +266,15 @@ class InfestedTemplate(NewInhabitantsTemplate):
     def event_type(self):
         return 'Infested with subterranean fauna'
 
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark', 'rare'])
+
     def alter_dungeon(self, layout):
-        monster_sets = self.monster_sets(required_tags=['cave-dweller'], none_tags=['underdark', 'rare'])
+        monster_sets = self.get_monster_sets()
         if layout.purpose == 'cave':
             age_effect = 'cave-age'
         else:
-            age_effect = self.random_state.choice(['earthquake', 'flood', 'age'])
+            age_effect = self.random_state.choice(['earthquake', 'age'])
         self.build_ager(age_effect).age(layout)
         self.make_an_entrace(layout, tag='cave-entrance')
         self.build_populator(monster_sets, populator_method=UndergroundNatives, wandering=True).populate(layout)
@@ -268,9 +284,12 @@ class LairTemplate(NewInhabitantsTemplate):
     def event_type(self):
         return 'Inhabited by beasts from the surrounding area'
 
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['beast'], none_tags=['underdark'])
+
     def alter_dungeon(self, layout):
         self.make_an_entrace(layout)
-        monster_sets = self.monster_sets(required_tags=['beast'], none_tags=['underdark'])
+        monster_sets = self.get_monster_sets()
         self.build_populator(monster_sets, populator_method=Lair, wandering=False).populate(layout)
         return layout
 
@@ -288,8 +307,25 @@ class ExplorerTemplate(NewInhabitantsTemplate):
 
 class PassingAgesTemplate(DungeonTemplate):
 
+    def get_monster_sets(self):
+        return []
+
     def alter_dungeon(self, layout):
-        age_effect = self.random_state.choice(['earthquake', 'flood', 'age', 'fungus', 'trees'])
+        effects = ['earthquake']
+        if self.dungeon_manager.terrain != 'desert':
+            effects.append('flood')
+        if self.dungeon_manager.terrain in ['arctic', 'mountains']:
+            effects.append('cold')
+        elif self.dungeon_manager.terrain in ['forest', 'jungle']:
+            effects.append('trees')
+            effects.append('fungus')
+        elif self.dungeon_manager.terrain == 'swamp':
+            effects.append('fungus')
+        if layout.purpose == 'cave':
+            effects.append('cave-age')
+        else: 
+            effects.append('age')
+        age_effect = self.random_state.choice(effects)
         self.build_ager(cause=age_effect).age(layout)
 
 some_examples = [

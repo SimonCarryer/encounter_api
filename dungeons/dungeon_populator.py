@@ -98,7 +98,7 @@ class OriginalInhabitants(DungeonPopulator):
             trap = self.get_trap(challenge='deadly')
         elif 'trap' in data['tags']:
             trap = self.get_trap()
-        elif 'important' in data['tags'] and 'guarded' in data['tags']:
+        elif 'important' in data['tags']:
             encounter = self.get_encounter(style='leader', difficulty='hard')
             treasure = self.get_treasure(shares=2)
         elif 'entrance' in data['tags'] and self.roll(4):
@@ -106,6 +106,8 @@ class OriginalInhabitants(DungeonPopulator):
         elif 'secret' in data['tags'] and self.roll(2):
             encounter = self.get_encounter(style='exotic')
         elif 'guarded' in data['tags'] and self.roll(2):
+            encounter = self.get_encounter(difficulty='medium')
+        elif self.roll(5):
             encounter = self.get_encounter(difficulty='medium')
         if 'treasure' in data['tags'] and treasure is None:
             treasure = self.get_treasure()

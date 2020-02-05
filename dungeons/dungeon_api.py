@@ -13,7 +13,7 @@ class DungeonSource():
         else:
             self.random_state = random_state
         self.level = level
-        layout = DungeonLayout(n_rooms=self.random_state.randint(4, 7), random_state=self.random_state)
+        layout = DungeonLayout(n_rooms=self.random_state.randint(4, 6), random_state=self.random_state)
         templates = TemplatePicker(base_type, supplied_templates=templates, supplied_monster_set=main_antagonist, random_state=self.random_state).pick_set()
         if terrain is None:
             terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'])
@@ -23,7 +23,7 @@ class DungeonSource():
                          dungeon_manager=dungeon_manager,
                          monster_set=monster_set,
                          random_state=self.random_state).alter_dungeon(layout)
-        self.dungeon = Dungeon(layout)
+        self.dungeon = Dungeon(layout, random_state=self.random_state)
 
     def get_dungeon(self):
         return self.dungeon.module()

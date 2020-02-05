@@ -32,8 +32,8 @@ class DungeonLayout(nx.Graph):
     def add_room(self, room_idx):
         self.add_node(room_idx, tags=[], features=[])
 
-    def connect_rooms(self, room, connecting_room):
-        if self.random_state.randint(1, 10) >= self.secret_chance:
+    def connect_rooms(self, room, connecting_room, secret=True):
+        if self.random_state.randint(1, 10) >= self.secret_chance and secret:
             weight = 3
             tags = ['secret']
             description = ''

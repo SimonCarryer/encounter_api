@@ -182,6 +182,7 @@ hills:
 devils:
   - evil
   - immortal
+  - magical
   - fiend
   - any terrain
 gnolls:
@@ -202,6 +203,7 @@ cult of jubilex:
 demons:
   - evil
   - fiend
+  - magical
   - immortal
   - any terrain
 civilised folk:
@@ -316,6 +318,7 @@ yugoloths:
 angels:
   - celestial
   - immortal
+  - good
   - magical
   - fiend
   - any terrain
@@ -366,3 +369,10 @@ urds:
   - humanoid
   - dungeon-explorer
   - savage
+hags:
+  - fey
+  - magical
+  - forest
+  - swamp
+  - hills
+  - evil

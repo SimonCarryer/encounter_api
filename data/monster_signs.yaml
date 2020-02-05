@@ -150,6 +150,8 @@
   tags: [undead]
 - sign: The feeling of being watched.
   tags: [guardian]
+- sign: Burnt sticks of inscense.
+  tags: [guardian]
 - sign: Rats feasting on the remains of a meal.
   tags: [humanoid]
 - sign: Rooms arranged according to cosmic concordances.
@@ -232,3 +234,11 @@
   tags: [human]
 - sign: Leaf litter or dirt tracked in from outside.
   tags: [dungeon-explorer]
+- sign: Several dead bodies lying in a heap, blood seeping from savage wounds.
+  tags: [savage]
+- sign: A severed limb, and garish blood-stains.
+  tags: [savage]
+- sign: A body laid out for burial.
+  tags: [humanoid]
+- sign: A scattered line of salt on the floor.
+  tags: [guardian]

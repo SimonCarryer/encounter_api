@@ -146,7 +146,7 @@ class SpecialRoom(SpecialEvent):
         best_room = self.find_best_room(layout)
         new_room_id = len(layout.nodes())
         layout.add_room(new_room_id)
-        layout.connect_rooms(best_room, new_room_id)
+        layout.connect_rooms(best_room, new_room_id, secret=False)
         layout.node[new_room_id]['description'] = room_description
         layout.node[new_room_id]['encounter'] = room_encounter
         layout.node[new_room_id]['treasure'] = room_treasure
@@ -249,7 +249,7 @@ class ForbiddingDoor(SpecialRoom):
         
 class UnderdarkExplorers(Explorers):
     def start_node(self, layout):
-        possibles = [node for node, data in layout.nodes(data=True) if 'underdark-entrance' in data['tags'] and 'uninhabitable' not in data['tags']]
+        possibles = [node for node, data in layout.nodes(data=True) if 'underdark-entrance' in data.get('tags') and 'uninhabitable' not in data.get('tags')]
         if len(possibles) == 0:
             return None
         return self.random_state.choice(possibles)
@@ -269,6 +269,12 @@ class UnderdarkEntrance(SpecialRoom):
         else:
             return self.random_state.choice(special_events_data['underdark entrance']['passages'])
 
+    def get_monster_sets(self):
+        if self.monster_set is None:
+            return self.monster_sets(required_tags=['underdark', 'dungeon-explorer']) + ['underdark']
+        else:
+            return [self.monster_set]
+
     def alter_dungeon(self, layout):
         self.add_room(layout,
                         secret=False,
@@ -276,7 +282,7 @@ class UnderdarkEntrance(SpecialRoom):
                         room_description=self.room_description(layout),
                         room_encounter=None,
                         room_tags=['underdark-entrance'])
-        monster_sets = self.monster_sets(required_tags=['underdark', 'dungeon-explorer']) + ['underdark']
+        monster_sets = self.get_monster_sets()
         self.build_populator(monster_sets=monster_sets, populator_method=UnderdarkExplorers).populate(layout)
         return layout
 
@@ -382,3 +388,60 @@ class DragonLair(SpecialEvent):
         print(dragons)
         dragon_source = EncounterSource(encounter_level=self.level, monster_sets=dragons)
         return dragon_source.get_encounter(difficulty='hard')
+
+class TrapRoom(SpecialRoom):
+    def make_d(self):
+        d = {
+            'imprecation': self.random_state.choice(special_events_data['trap room']['imprecations']),
+            'material': self.random_state.choice(special_events_data['trap room']['materials']),
+            'adjective': self.random_state.choice(special_events_data['trap room']['adjectives']),
+            'furnishing': self.random_state.choice(special_events_data['trap room']['furnishings']),
+            'motif': self.random_state.choice(special_events_data['trap room']['motifs']),
+            'wall': self.random_state.choice(special_events_data['trap room']['walls']),
+            'floor': self.random_state.choice(special_events_data['trap room']['floor']),
+            'ceiling': self.random_state.choice(special_events_data['trap room']['ceiling']),
+            'liquid_or_object': self.random_state.choice(special_events_data['trap room']['liquids'] + special_events_data['trap room']['objects']),
+            'liquid_or_gas': self.random_state.choice(special_events_data['trap room']['liquids'] + special_events_data['trap room']['gasses']),
+            'liquid': self.random_state.choice(special_events_data['trap room']['liquids']),
+            'gas': self.random_state.choice(special_events_data['trap room']['gasses']),
+            'object': self.random_state.choice(special_events_data['trap room']['objects']),
+            'trigger': self.random_state.choice(special_events_data['trap room']['triggers']),
+            'hazard': self.random_state.choice(special_events_data['trap room']['hazards'])
+        }
+        return d
+
+    def room_description(self):
+        template = Template(self.random_state.choice(special_events_data['trap room']['descriptions']))
+        description = template.substitute(self.make_d())
+        while '$' in description:
+            description = Template(description).substitute(self.make_d())
+        return description
+
+    def add_room(self,
+                 layout,
+                 secret=False,
+                 passage_description=None,
+                 room_description=None,
+                 room_encounter=None,
+                 room_tags=None,
+                 room_treasure=None,
+                 room_link=None):
+        best_room = self.find_best_room(layout)
+        other_room = self.random_state.choice([i for i in range(len(layout.nodes())) if i != best_room and i != 0])
+        new_room_id = len(layout.nodes())
+        layout.add_room(new_room_id)
+        layout.connect_rooms(best_room, new_room_id, secret=False)
+        layout.connect_rooms(other_room, new_room_id, secret=False)
+        layout.node[new_room_id]['description'] = room_description
+        layout.node[new_room_id]['encounter'] = room_encounter
+        layout.node[new_room_id]['treasure'] = room_treasure
+        layout.node[new_room_id]['link'] = room_link
+        layout.node[new_room_id]['distance'] = layout.node[best_room].get('distance', 9) + 1
+
+    def alter_dungeon(self, layout):
+        self.add_room(layout,
+                        secret=False,
+                        passage_description=None,
+                        room_description=self.room_description(),
+                        room_encounter=None,
+                        room_tags=[])

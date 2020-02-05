@@ -36,6 +36,8 @@ dungeon_parser.add_argument('level', type=int, required=True, help='Average leve
 dungeon_parser.add_argument('terrain', type=str, required=False, help='Terrain type for dungeon setting.')
 dungeon_parser.add_argument('dungeon_type', type=str, required=False, help='Base type of dungeon.')
 dungeon_parser.add_argument('main_antagonist', type=str, required=False, help='Monster set of main dungeon antagonist.')
+dungeon_parser.add_argument('guid', type=str, required=False, help='GUID to intialise random state')
+
 
 
 @api.route('/monster-sets')
@@ -88,7 +90,7 @@ class Dungeon(Resource):
             guid = args['guid']
         else:
             guid = str(uuid.uuid4())
-        url = str(level) + '?guid=%s' % guid
+        url = str(level) + '&guid=%s' % guid
         if args.get('templates'):
             templates = args['templates'].split(',')
             url += '&templates=%s' % args['templates']
@@ -99,12 +101,12 @@ class Dungeon(Resource):
             url += '&terrain=%s' % terrain
         else:
             terrain = None
-        if request.args.get('main_antagonist'):
-            main_antagonist = request.args['main_antagonist']
+        if args.get('main_antagonist'):
+            main_antagonist = args['main_antagonist']
             url += '&main_antagonist=%s' % main_antagonist
         else:
             main_antagonist = None
-        base_type = args.get('dungeon type')
+        base_type = args.get('dungeon_type')
         state = Random(guid)
         d = DungeonSource(level, random_state=state, base_type=base_type, main_antagonist=main_antagonist, templates=templates, terrain=terrain)
         module = d.get_dungeon()
@@ -116,7 +118,8 @@ class DungeonTags(Resource):
         '''JSON blob of valid dungeon parameters'''
         valid_params = {
             'terrain': ['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'],
-            'dungeon type': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault']
+            'dungeontype': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault'],
+            'antagonists': monster_manual.get_monster_sets()
         }
         return jsonify(valid_params)
 

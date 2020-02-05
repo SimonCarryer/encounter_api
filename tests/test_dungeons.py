@@ -1,5 +1,5 @@
 from dungeons.dungeon_layout import DungeonLayout
-from dungeons.dungeon_furnisher import DungeonFurnisher, Statue, Portal, MagicCrystal
+from dungeons.dungeon_furnisher import DungeonFurnisher, Statue, Portal, MagicCrystal, Bones
 from dungeons.dungeon_populator import OriginalInhabitants, UndergroundNatives, Lair, Explorers
 from dungeons.dungeon_ager import DungeonAger
 from dungeons.dungeon import Dungeon
@@ -321,3 +321,13 @@ def test_appropriate_rooms():
 def test_template_from_monster_set():
     picker = TemplatePicker('treasure vault', supplied_monster_set='cult of jubilex')
     # print(picker.pick_set())
+
+def test_bones():
+    bones = Bones()
+    #print(bones.get_description())
+
+def test_feywild():
+    layout = MockDungeonLayout()
+    manager = DungeonManager(2, layout)
+    feywild = FeywildTemplate(2, manager)
+    # print(feywild.get_monster_sets())

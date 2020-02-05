@@ -683,9 +683,10 @@ fey:
    occurrence: common
  - Name: Green Hag
    occurrence: rare
+   role: leader
  - Name: Night Hag
    occurrence: rare
-   role: solo
+   role: leader
  - Name: Satyr
    occurrence: common
  - Name: Sprite
@@ -693,7 +694,7 @@ fey:
  - Name: Blink Dog
    occurrence: common
  - Name: Giant Owl
-   occurrence: uncommon
+   occurrence: rare
    role: environmental hazard
  - Name: Young Faerie Dragon
    occurrence: rare
@@ -2123,11 +2124,49 @@ villains:
   - Name: Doppelganger
     occurrence: common
     role: solo
-
 fomorians:
  - Name: Fomorian
    occurrence: common
-
 duergar:
  - Name: Duergar
+   occurrence: uncommon
+hags:
+ - Name: Green Hag
+   role: leader
+   occurrence: common
+ - Name: Giant Spider
+   occurrence: common
+   role: troops
+ - Name: Scarecrow
+   role: troops
+   occurrence: common
+ - Name: Giant Owl
+   role: environmental hazard
+   occurrence: rare
+ - Name: Night Hag
+   role: leader
+   occurrence: uncommon
+ - Name: Ogre
+   role: elite
+   occurrence: uncommon
+ - Name: Will-o-wisp
+   role: pet
+   occurrence: uncommon
+ - Name: Oni
+   role: solo
+   occurrence: rare
+ - Name: Nightmare
+   role: pet
+   occurrence: rare
+ - Name: Death Dog
+   role: pet
+   occurrence: uncommon
+ - Name: Zombie
+   role: troops
+   occurrence: uncommon
+ - Name: Hell Hound
+   role: pet
+   occurrence: rare
+ - Name: Owlbear
+   role: pet
    occurrence: uncommon
