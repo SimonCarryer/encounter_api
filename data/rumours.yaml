@@ -8,7 +8,7 @@ explorers:
   - description: Populated by strange creatures
     tags: ['magical']
   - description: An outpost for an invading tribe
-    tags: ['humanoid']
+    tags: ['humanoid', 'savage']
   - description: The last refuge of a desperate band
     tags: ['humanoid']
   - description: A gathering-place for a gang of giants
