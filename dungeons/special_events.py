@@ -90,7 +90,7 @@ class VillainHideout(SpecialEvent):
         layout.node[node]['encounter'] = self.get_encounter()
         layout.node[node]['treasure'] = self.get_treasure(shares=3)
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'The hideout for a well-known villain'
 
     def villain_name(self):
@@ -123,7 +123,7 @@ class LostItem(SpecialEvent):
         else:
             return None
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'The last known location of a powerful magic item'
 
     def alter_dungeon(self, layout):
@@ -286,7 +286,7 @@ class UnderdarkEntrance(SpecialRoom):
         self.build_populator(monster_sets=monster_sets, populator_method=UnderdarkExplorers).populate(layout)
         return layout
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'A gateway for creatures from the underdark'
 
 
@@ -324,7 +324,7 @@ class WeirdEncounter(VillainHideout):
         encounter = self.dungeon_manager.get_encounter(self.name, style='elite', difficulty='hard')
         return encounter
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'The site of a weird encounter'
 
     def alter_dungeon(self, layout):
@@ -349,7 +349,7 @@ class NPCHome(SpecialRoom):
         else:
             return self.random_state.choice(possibles)
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'The home of an eccentric ' + self.npc['role']
 
     def description(self):

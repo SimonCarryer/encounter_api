@@ -183,7 +183,7 @@ class Lair(DungeonPopulator):
 class Taint(DungeonPopulator):
     def populate(self, layout, tag=None):
         for node, data in layout.nodes(data=True):
-            if tag in data['tags']:
+            if tag in data['tags'] and node !=0:
                 if data.get('encounter') is not None:
                     self.delete_encounter(data['encounter'])
                 if 'treasure' in data['tags']: 
@@ -191,7 +191,16 @@ class Taint(DungeonPopulator):
                 else:
                     difficulty = None
                 layout.node[node]['encounter'] = self.get_encounter(difficulty=difficulty)
-                layout.node[node]['sign'] = self.get_sign()
+                layout.node[node]['sign'] = ''
+            elif 'important' in data['tags'] and node !=0:
+                if data.get('encounter') is not None:
+                    self.delete_encounter(data['encounter'])
+                if 'treasure' in data['tags']: 
+                    difficulty = 'hard'
+                else:
+                    difficulty = 'medium'  
+                layout.node[node]['encounter'] = self.get_encounter(difficulty=None)
+                layout.node[node]['sign'] = self.get_sign()           
         return layout
 
 class Explorers(DungeonPopulator):

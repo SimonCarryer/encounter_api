@@ -10,6 +10,7 @@ from dungeons.dungeon_api import DungeonSource
 from random import Random
 import random
 import uuid
+import urllib
 import json
 
 application = Flask(__name__)
@@ -38,7 +39,8 @@ dungeon_parser.add_argument('dungeon_type', type=str, required=False, help='Base
 dungeon_parser.add_argument('main_antagonist', type=str, required=False, help='Monster set of main dungeon antagonist.')
 dungeon_parser.add_argument('guid', type=str, required=False, help='GUID to intialise random state')
 
-
+dungeon_tags_parser = reqparse.RequestParser()
+dungeon_tags_parser.add_argument('level', type=int, required=False, help='Average level of party')
 
 @api.route('/monster-sets')
 class MonsterSets(Resource):
@@ -97,13 +99,13 @@ class Dungeon(Resource):
         else:
             templates = None
         if args.get('terrain'):
-            terrain = args['terrain']
-            url += '&terrain=%s' % terrain
+            terrain = urllib.parse.unquote(args['terrain'])
+            url += '&terrain=%s' % args['terrain']
         else:
             terrain = None
         if args.get('main_antagonist'):
-            main_antagonist = args['main_antagonist']
-            url += '&main_antagonist=%s' % main_antagonist
+            main_antagonist = urllib.parse.unquote(args['main_antagonist'])
+            url += '&main_antagonist=%s' % args['main_antagonist']
         else:
             main_antagonist = None
         base_type = args.get('dungeon_type')
@@ -114,12 +116,22 @@ class Dungeon(Resource):
 
 @api.route('/dungeon-tags')
 class DungeonTags(Resource):
+
+    @api.doc(parser=dungeon_tags_parser)
     def get(self):
+        args = dungeon_tags_parser.parse_args()
+        if args.get('level'):
+            level = args['level']
+        else:
+            level = None
         '''JSON blob of valid dungeon parameters'''
+        any_tags = ['dungeon-explorer', 'undead', 'beast', 'evil', 'cave-dweller', 'guardian', 'aberration']
+        none_tags = ['rare']
         valid_params = {
             'terrain': ['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'],
             'dungeontype': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault'],
-            'antagonists': monster_manual.get_monster_sets()
+            'antagonists': monster_manual.get_monster_sets(any_tags=any_tags, none_tags=none_tags),
+            'in_level_antagonists': monster_manual.get_monster_sets(level=level)
         }
         return jsonify(valid_params)
 

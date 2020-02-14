@@ -19,6 +19,9 @@ with open('data/monster_signs.yaml') as f:
         sign_data['sign'] = sign_data.get('sign', '')
         monster_signs.append(sign_data)
 
+with open('data/rumours.yaml', 'r') as f:
+    monster_rumours = yaml.load(f)
+
 def load_monster_manual():
     monster_dict = {}
     with open('data/monsters.csv', 'r') as csvfile:
@@ -112,6 +115,15 @@ class MonsterManual():
         signs = []
         for sign in copy.deepcopy(monster_signs):
             if all([tag in tags for tag in sign['tags']]):
-                sign = sign['sign'] + ' (%s)' % monster_set
+                sign = sign['sign']
                 signs.append(sign)
         return signs
+
+    def get_rumours(self, monster_set, populator_type):
+        tags = monster_tags[monster_set]
+        rumours = []
+        for rumour in copy.deepcopy(monster_rumours[populator_type]):
+            if all([tag in tags for tag in rumour['tags']]):
+                rumour = rumour['description']
+                rumours.append(rumour)
+        return rumours

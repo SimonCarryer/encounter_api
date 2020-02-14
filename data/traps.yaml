@@ -148,7 +148,7 @@ magical:
       - name: Eyebeams
         effect: The beams make an attack roll at +${attack}, causing ${damage}d10 radiant or necrotic damage.
       - name: Sleep spell
-        effect: Everyone in the room must make a DC${save} Wis save or fall unconsicous. The effect ends after an hour, or if the target is woken.
+        effect: Everyone in the room must make a DC${save} Wis save or fall unconscious. The effect ends after an hour, or if the target is woken.
       - name: Summon Monsters
         effect: The trap summons the following monsters, which immediately attack. ${monsters}
     10:

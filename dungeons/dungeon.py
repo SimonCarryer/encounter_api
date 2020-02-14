@@ -17,8 +17,26 @@ class Dungeon:
 
     def get_room_ids(self):
         '''get the name of the room by distance from the entrance, so the module is easy to read.'''
+        # This could use a little explanation
+        # Figure out the fathest node
         distances = [(data['distance'], idx) for idx, (node, data) in enumerate(self.layout.nodes(data=True))]
-        return {room_idx: room_id+1 for room_id, (distance, room_idx) in enumerate(sorted(distances, key=lambda x: x[0]))}
+        sorted_by_distance = [i[1] for i in sorted(distances, key=lambda x: x[0])]
+        farthest_node = sorted_by_distance[-1]
+
+        # Find the longest non-repeating path from the entrance to that node
+        all_paths = nx.all_simple_paths(self.layout, 0, farthest_node)
+        path = sorted(all_paths, key=lambda x: len(x))[-1]
+
+        # Number the nodes along that path sequentially
+        ids = {room_idx: room_id + 1 for room_id, room_idx in enumerate(path)}
+
+        # Number all the other nodes not on that path, according to their distance from the entrance
+        i = 1
+        for room_idx in sorted_by_distance:
+            if room_idx not in path:
+                ids[room_idx] = len(path) + i
+                i += 1
+        return ids
 
     def get_room_passages(self, room_idx):
         passages = self.layout.edges(room_idx, data=True)

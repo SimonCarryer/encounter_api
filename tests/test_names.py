@@ -1,5 +1,7 @@
 from names.name_api import NameGenerator
+import yaml
 
 def test_names():
     namer = NameGenerator()
-    # print(namer.dungeon_name('tomb'))
+    # for _ in range(10):
+    #     print(namer.settlement(terrain='jungle'))

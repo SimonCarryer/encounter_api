@@ -5,7 +5,7 @@ def test_get_monster_set_by_tags():
     mm = MonsterManual()
     tags = ['savage', 'dungeon-explorer']
     sets = mm.get_monster_set_by_tags(tags, any_or_all=all)
-    desired = ['bugbears', 'hobgoblins', 'orcs', 'goblins', 'gnolls', 'kobolds']
+    desired = ['bugbears', 'orcs', 'goblins', 'gnolls', 'kobolds']
     assert all(set_ in sets for set_ in desired)
 
 def test_exclude_monster_set_by_tags():
@@ -24,7 +24,7 @@ def test_get_monster_sets():
     sets = mm.get_monster_sets(any_tags=['evil', 'forest'], all_tags=['humanoid'], none_tags=['human'])
     desired = ['forest goblins', 'yuan-ti', 'gnolls', 'drow']
     undesired = ['bandits', 'cult of obox-ob', 'blights', 'bullywugs']
-    assert all(set_ in sets for set_ in desired)
+    assert all([set_ in sets for set_ in desired])
     assert not any(set_ in sets for set_ in undesired)
 
 def test_get_monster_set_level():
@@ -45,6 +45,9 @@ def test_get_tags():
     mm = MonsterManual()
     # print(mm.get_tags())
 
-
+def test_appropriate_level():
+    mm = MonsterManual()
+    # for level in range(1, 21):
+    #     print(level, mm.appropriate_challenge('drow', level))
 
 

@@ -10,6 +10,8 @@ template_bunches = {
 [HauntedTombTemplate, PassingAgesTemplate, LairTemplate, ExplorerTemplate],
 [HauntedTombTemplate, FungalInfectionTemplate, LairTemplate, ExplorerTemplate],
 [HauntedTombTemplate, PassingAgesTemplate],
+[EmptyTombTemplate, PassingAgesTemplate, InfestedTemplate],
+[EmptyTombTemplate, CursedTemplate, PassingAgesTemplate],
 [EmptyTombTemplate, HauntedTemplate, PassingAgesTemplate],
 [EmptyTombTemplate, PassingAgesTemplate, ExplorerTemplate],
 [EmptyTombTemplate, PassingAgesTemplate, LairTemplate, ExplorerTemplate]],
@@ -20,11 +22,19 @@ template_bunches = {
 [AbandonedStrongholdTemplate, InfestedTemplate, LairTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, FungalInfectionTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, VolcanicTemplate],
+[AbandonedStrongholdTemplate, CursedTemplate],
+[AbandonedStrongholdTemplate, InfestedTemplate],
+[AbandonedStrongholdTemplate, FarRealmsTemplate],
+[DefendedStrongholdTemplate],
+[AbandonedStrongholdTemplate, CursedTemplate, ExplorerTemplate],
+[AbandonedStrongholdTemplate, InfestedTemplate, LairTemplate],
 [AbandonedStrongholdTemplate, HauntedTemplate, PassingAgesTemplate]],
     'treasure_vault': [[GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, LairTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate],
+[GuardedTreasureVaultTemplate, FarRealmsTemplate],
 [GuardedTreasureVaultTemplate, InfestedTemplate],
+[GuardedTreasureVaultTemplate, InfestedTemplate, LairTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, HauntedTemplate]],
     'mine': [[AbandonedMineTemplate, InfestedTemplate, ExplorerTemplate],
 [AbandonedMineTemplate, PassingAgesTemplate, ExplorerTemplate],
@@ -34,14 +44,17 @@ template_bunches = {
 [AbandonedMineTemplate, PassingAgesTemplate, InfestedTemplate],
 [AbandonedMineTemplate, PassingAgesTemplate, InfestedTemplate, LairTemplate],
 [AbandonedMineTemplate, VolcanicTemplate],
-[AbandonedMineTemplate, FeywildTemplate]
+[AbandonedMineTemplate, FeywildTemplate],
+[AbandonedMineTemplate, FarRealmsTemplate]
 ],
     'temple': [[AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
+[AncientRemnantsTempleTemplate, InfestedTemplate],
 [InUseTempleTemplate],
 [AncientRemnantsTempleTemplate, PassingAgesTemplate],
 [AncientRemnantsTempleTemplate, HauntedTemplate],
-[AncientRemnantsTempleTemplate, FeywildTemplate]
+[AncientRemnantsTempleTemplate, FeywildTemplate],
+[AncientRemnantsTempleTemplate, FarRealmsTemplate]
 ],
     'cave': [[InfestedCaveTemplate, InfestedTemplate],
 [InfestedCaveTemplate, ExplorerTemplate],
@@ -52,8 +65,11 @@ template_bunches = {
 [InfestedCaveTemplate, LairTemplate, LairTemplate],
 [InfestedCaveTemplate, UnderdarkEntrance],
 [InfestedCaveTemplate, FeywildTemplate],
+[InfestedCaveTemplate, CursedTemplate],
 [InfestedCaveTemplate, PassingAgesTemplate, LairTemplate],
-[InfestedCaveTemplate, PassingAgesTemplate]]
+[InfestedCaveTemplate, PassingAgesTemplate],
+[InfestedCaveTemplate, FarRealmsTemplate]
+]
 }
 
 template_lookup = {
@@ -98,7 +114,6 @@ class TemplatePicker:
             templates = [(template, None) for template in template_set]
             templates[-index] = (templates[-index][0], self.supplied_monster_set)
             templates += self.special_events()
-            print(templates)
         else:
             templates = [(template, None) for template in self.random_state.choice(template_bunches[self.base_type])] + self.special_events()
         return templates

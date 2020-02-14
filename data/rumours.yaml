@@ -1,0 +1,47 @@
+explorers:
+  - description: A temporary home for a band of savage marauders
+    tags: ['savage', 'humanoid']
+  - description: The lair of an evil cult
+    tags: ['evil', 'human']
+  - description: The base of operations for a band of outlaws
+    tags: ['human']
+  - description: Populated by strange creatures
+    tags: ['magical']
+  - description: An outpost for an invading tribe
+    tags: ['humanoid']
+  - description: The last refuge of a desperate band
+    tags: ['humanoid']
+  - description: A gathering-place for a gang of giants
+    tags: ['giant']
+  - description: Overrun with terrifying beasts
+    tags: ['beast']
+  - description: The lair of a pack of deadly and cunning wolves
+    tags: ['wolves']
+  - description: The throne of a powerful warlord
+    tags: ['humanoid']
+  - description: The source of a plague of huge spiders
+    tags: ['spiders']
+
+guarded:
+  - description: Protected by ancient constructs
+    tags: ['construct']
+  - description: The site of weird magical experiments
+    tags: ['wizard']
+  - description: Protected by a powerful edict of Law
+    tags: ['lawful']
+  - description: A holy site protected from evil
+    tags: ['good']
+  - description: Warded by powerful magics
+    tags: ['magical']
+
+lair:
+  - description: A lair for beasts from the surrounding area
+    tags: ['beast']
+  - description: The den of a pack of deadly and cunning wolves
+    tags: ['wolves']
+  - description: The lair of a powerful creature that has terrorised the countryside
+    tags: ['solo']
+  - description: A refuge for a hunted beast
+    tags: ['solo']
+  - description: Haunted by spiders
+    tags: ['spiders']

@@ -50,6 +50,13 @@ class DungeonTemplate:
     def get_monster_sets(self):
         return []
 
+    def get_rumour(self, monster_set, populator_type):
+        rumours = self.dungeon_manager.monster_manual.get_rumours(monster_set, populator_type)
+        if len(rumours) > 0:
+            return self.random_state.choice(rumours)
+        else:
+            return None
+
     def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None, wandering=True):
         if monster_sets is None:
             encounter_source = NoEncountersSource()
@@ -62,24 +69,24 @@ class DungeonTemplate:
                                      dungeon_manager=self.dungeon_manager,
                                      trap_source=trap_source,
                                      random_state=self.random_state)
-        self.dungeon_manager.add_event(self.name, self.event_type(), encounter_source.monster_set, wandering=wandering)
+        self.dungeon_manager.add_event(self.name, self.event_type(monster_set=encounter_source.monster_set), encounter_source.monster_set, wandering=wandering)
         return populator
     
     def build_ager(self, cause):
         return DungeonAger(cause=cause, random_state=self.random_state)
 
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Home to some scary monsters'
 
 class DungeonBaseTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Guarded by remnants of the original inhabitants'
 
     def build_furnisher(self, dungeon_type):
         return DungeonFurnisher(dungeon_type, random_state=self.random_state)
 
 class NewInhabitantsTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Now home to new creatures'
 
     def free_rooms(self, layout):
@@ -100,7 +107,7 @@ class NewInhabitantsTemplate(DungeonTemplate):
                 layout.node[new_entrance]['description'] = ' '.join([current_description, effect['description']])
 
 class HauntedTombTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Haunted by the unquiet dead'
 
     def get_monster_sets(self):
@@ -113,7 +120,7 @@ class HauntedTombTemplate(DungeonBaseTemplate):
         return layout
 
 class EmptyTombTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Long forgotten'
 
     def get_monster_sets(self):
@@ -133,9 +140,27 @@ class AbandonedStrongholdTemplate(DungeonBaseTemplate):
         populator.populate(layout)
         return layout
 
+class DefendedStrongholdTemplate(DungeonBaseTemplate):
+    def event_type(self, monster_set=None):
+        return 'Guarded by fierce defenders'
+
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['humanoid'], none_tags=['savage', 'disorganised', 'rare', 'underdark'])
+
+    def alter_dungeon(self, layout):
+        self.build_furnisher('stronghold').furnish(layout)
+        trap_source = TrapSource(self.level, trap_class='mechanical', random_state=self.random_state)
+        populator = self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=True)
+        populator.populate(layout)
+        return layout
+
 class GuardedTreasureVaultTemplate(DungeonBaseTemplate):
-    def event_type(self):
-        return 'Still guarded by ancient wards'
+    def event_type(self, monster_set=None):
+        if monster_set is not None:
+            rumour = self.get_rumour(monster_set, 'guarded')
+        if rumour is None or monster_set is None:
+            rumour = 'Guarded by ancient wards'
+        return rumour
 
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['immortal', 'guardian'], none_tags=['undead'])
@@ -152,7 +177,7 @@ class AbandonedMineTemplate(DungeonBaseTemplate):
         return layout
 
 class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Still inhabited by traces of ancient worship'
 
     def get_monster_sets(self):
@@ -165,7 +190,7 @@ class AncientRemnantsTempleTemplate(DungeonBaseTemplate):
         return layout
 
 class InUseTempleTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Protected by fanatical worshipers'
 
     def get_monster_sets(self):
@@ -178,7 +203,7 @@ class InUseTempleTemplate(DungeonBaseTemplate):
         return layout
 
 class InfestedCaveTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Home to cave-dwelling creatures'
 
     def get_monster_sets(self):
@@ -191,7 +216,7 @@ class InfestedCaveTemplate(DungeonBaseTemplate):
         return layout
 
 class DeepCaveTemplate(DungeonBaseTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Home to cave-dwelling creatures'
 
     def get_monster_sets(self):
@@ -203,7 +228,7 @@ class DeepCaveTemplate(DungeonBaseTemplate):
         return layout
 
 class HauntedTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Haunted by ghosts of the past'
 
     def get_monster_sets(self):
@@ -214,8 +239,34 @@ class HauntedTemplate(DungeonTemplate):
         self.build_populator(self.get_monster_sets(), populator_method=Taint, wandering=False).populate(layout, tag='shadowfell')
         return layout
 
+class CursedTemplate(DungeonTemplate):
+    def event_type(self, monster_set=None):
+        return 'Cursed by an evil presence'
+
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['evil', 'magical'])
+    
+    def alter_dungeon(self, layout):
+        cause = self.random_state.choice(['illusion', 'shadowfell'])
+        self.build_ager(cause).age(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=Taint, wandering=True).populate(layout, tag=cause)
+        return layout
+
+
+class FarRealmsTemplate(DungeonTemplate):
+    def event_type(self, monster_set=None):
+        return 'Tainted by contact from the Far Realms'
+
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['aberration'])
+    
+    def alter_dungeon(self, layout):
+        self.build_ager('far realms').age(layout)
+        self.build_populator(self.get_monster_sets(), populator_method=Taint, wandering=True).populate(layout, tag='aberration')
+        return layout
+
 class FeywildTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'A crossing-point to the Feywild'
 
     def get_monster_sets(self):
@@ -227,7 +278,7 @@ class FeywildTemplate(DungeonTemplate):
         return layout
 
 class TreeChokedTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Overgrown by evil-tainted forest'
 
     def get_monster_sets(self):
@@ -239,7 +290,7 @@ class TreeChokedTemplate(DungeonTemplate):
         return layout
 
 class FungalInfectionTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Overgrown with weird fungi'
 
     def get_monster_sets(self):
@@ -251,7 +302,7 @@ class FungalInfectionTemplate(DungeonTemplate):
         return layout
 
 class VolcanicTemplate(DungeonTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Near-destroyed by volcanic activity'
 
     def get_monster_sets(self):
@@ -263,7 +314,7 @@ class VolcanicTemplate(DungeonTemplate):
         return layout
 
 class InfestedTemplate(NewInhabitantsTemplate):
-    def event_type(self):
+    def event_type(self, monster_set=None):
         return 'Infested with subterranean fauna'
 
     def get_monster_sets(self):
@@ -281,8 +332,13 @@ class InfestedTemplate(NewInhabitantsTemplate):
         return layout
 
 class LairTemplate(NewInhabitantsTemplate):
-    def event_type(self):
-        return 'Inhabited by beasts from the surrounding area'
+    def event_type(self, monster_set=None):
+        if monster_set is not None:
+            rumour = self.get_rumour(monster_set, 'lair')
+        if rumour is None or monster_set is None:
+            rumour = 'A lair for beasts from the surrounding area'
+        return rumour
+
 
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['beast'], none_tags=['underdark'])
@@ -294,8 +350,12 @@ class LairTemplate(NewInhabitantsTemplate):
         return layout
 
 class ExplorerTemplate(NewInhabitantsTemplate):
-    def event_type(self):
-        return 'A lair for marauders and savages'
+    def event_type(self, monster_set=None):
+        if monster_set is not None:
+            rumour = self.get_rumour(monster_set, 'explorers')
+        if rumour is None or monster_set is None:
+            rumour = 'A lair for marauders and savages'
+        return rumour
 
     def get_monster_sets(self):
         return self.monster_sets(required_tags=['dungeon-explorer'], none_tags=['underdark'])

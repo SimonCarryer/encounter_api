@@ -30,7 +30,7 @@
   tags: [savage]
 - sign: The smell of cheap tobacco.
   tags: [humanoid]
-- sign: A lingering smell of woodsmoke from a cooking fire..
+- sign: A lingering smell of wood smoke from a cooking fire..
   tags: [humanoid]
 - sign: Indistinct shouting voices.
   tags: [humanoid]
@@ -150,7 +150,7 @@
   tags: [undead]
 - sign: The feeling of being watched.
   tags: [guardian]
-- sign: Burnt sticks of inscense.
+- sign: Burnt sticks of incense.
   tags: [guardian]
 - sign: Rats feasting on the remains of a meal.
   tags: [humanoid]

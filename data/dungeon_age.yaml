@@ -36,6 +36,8 @@ flood:
       weight: 1
     - description: Most of this corridor is completely submerged - too far to swim for anyone who cannot breathe underwater.
       weight: 4
+    - description: What appears to be a small puddle in this corridor is actually a deep hole, filled with cloudy water.
+      weight: 2
 
 earthquake:
   tags:
@@ -51,7 +53,7 @@ earthquake:
       tags: [hazard]
     - description: A great crack runs across the floor, and emits a chilly breeze.
       tags: [cave-entrance]
-    - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely trecherous.
+    - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely treacherous.
       tags: [difficult]
     - description: The collapse of the ceiling has turned this once-large room into a network of narrow passages.
     - description: Fine dust and dirt filters down from the ceiling and covers everything in this room. The dust is stirred up by any hasty movement. The dust clouds obscure the room.
@@ -79,7 +81,7 @@ trees:
   rooms:
     - description: The roots of a giant tree turn half of the room into a maze of gnarled branches.
     - description: Tree roots swarm from the ceiling and crawl down the walls.
-    - description: The whole ceiling of this room has collapsed long ago. In the dirt from the collapse, trees have grown, turning the room into a minature forest, stretching to the sky far above.
+    - description: The whole ceiling of this room has collapsed long ago. In the dirt from the collapse, trees have grown, turning the room into a miniature forest, stretching to the sky far above.
       tags: [entrance]
     - description: Tree roots have destroyed the masonry of one wall, exposing a narrow cave beyond.
       tags: [cave-entrance]
@@ -103,7 +105,7 @@ shadowfell:
   rooms:
     - description: This room is unnaturally cold, and torchlight seems to dim and flicker.
     - description: Black shadows fill this room, seeming to flee the light reluctantly, and creep back when unobserved.
-    - description: Barely-perceptable voices whisper in a long-dead language.
+    - description: Barely-perceptible voices whisper in a long-dead language.
     - description: A ghostly voice whispers right on the edge of hearing.
     - description: Mournful faces peer from dark corners, vanishing in the light.
     - description: The oppressive atmosphere of this room leeches the life-force from intruders - Make a constitution save each round (Difficulty 11) or take 1d4 necrotic damage.
@@ -127,7 +129,7 @@ fungus:
   tags:
     - fungus
   rooms:
-    - description: White mycelieum crawls across the walls and floor of this room. It is spongy underfoot.
+    - description: White mycelium crawls across the walls and floor of this room. It is spongy underfoot.
     - description: Huge colourful mushrooms sprout from the walls and floor. Among the mushrooms are 1d6 Shriekers.
       tags: [uninhabitable]
     - description: Glowing yellow-green fungus grows like great platters from one wall, creating dim lighting throughout the room.
@@ -152,7 +154,7 @@ fungus:
 age:
   tags:
   rooms:
-    - description: Stalagmites and stalagtites have formed on the floors and ceilings.
+    - description: Stalagmites and stalactites have formed on the floors and ceilings.
     - description: One wall is covered in a thick carpet of white mushrooms.
     - description: Cobwebs crowd the ceiling and coat the walls in sheets.
     - description: Shiny black beetles carpet the floor.
@@ -203,7 +205,7 @@ age:
 cave-age:
   tags:
   rooms:
-    - description: Stalagmites and stalagtites have formed on the floors and ceilings.
+    - description: Stalagmites and stalactites have formed on the floors and ceilings.
     - description: One wall is covered in a thick carpet of white mushrooms.
     - description: Shiny black beetles carpet the floor.
     - description: Long-legged insects scuttle across the walls.
@@ -230,7 +232,7 @@ cave-age:
       tags: [hazard]
     - description: A great crack runs across the floor, and emits a chilly breeze.
       tags: [cave-entrance]
-    - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely trecherous.
+    - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely treacherous.
       tags: [difficult]
   passages:
     - description: The passageway is twisting and narrow, the ceiling low.
@@ -289,11 +291,11 @@ cold:
     - description: A narrow shaft to the surface blows flurries of snow into this room.
     - description: The shifting of a glacier has opened a huge crevasse in the floor of this room, its icy depths untouched by torchlight.
       tags: [cave entrance]
-    - description: Icicles hang like stalagtites from the ceiling.
+    - description: Icicles hang like stalactites from the ceiling.
   passages:
     - description: A solid plug of ice blocks this passageway. It could take hours to chip it away.
       weight: 4
-    - description: Slippery ice on a steep section turns this passageway into a potentially deadly trap. Make an athletics check or take 2d6 blugeoning damage.
+    - description: Slippery ice on a steep section turns this passageway into a potentially deadly trap. Make an athletics check or take 2d6 bludgeoning damage.
       weight: 3
     - description: Ice-cold wind blows from this passageway.
       weight: 1
@@ -309,7 +311,7 @@ illusion:
     - description: Flowering fruit-trees fill this room and scent the air with their pollen. Petals drift on a gentle breeze. It is an elaborate illusion.
     - description: Lavishly-dressed illusory figures dance throughout this room, to the music of pipes and fiddles.
     - description: The walls seem to writhe and shift, one moment near, the next far away.
-    - description: The floor seeths with venomous snakes, but they are nothing more than convincing illusions.
+    - description: The floor seethes with venomous snakes, but they are nothing more than convincing illusions.
     - description: Cackling laughter rings in your ears. The source is unclear.
     - description: Roll a random encounter for this room. The attackers are illusory.
     - description: The floor of this room is covered with the illusion of a lush meadow, with flowers and buzzing insects.
@@ -328,3 +330,26 @@ illusion:
       weight: 2
     - description: The entrance to this passage is covered by the illusion of a plain wall.
       weight: 3
+
+far realms:
+  tags:
+    - aberration
+  rooms:
+    - description: Nausea-inducing angles to the walls and floors make this room awful to inhabit.
+    - description: Chitinous secretions coat the walls and floor, giving it a horrid organic appearance.
+    - description: Perspective seems to shift in this room, making nearby objects appear distant, and vice versa. Ranged attacks have disadvantage.
+    - description: Thick slime coats everything in this room, and it seems to crawl towards living things.
+    - description: Eyeballs sprout from the walls of this room, and follow any movement.
+    - description: This room is uncomfortably humid.
+    - description: Disgusting pustules have formed on the walls of this room.
+  passages:
+    - description: This passage is wet and soft, like an enormous throat.
+      weight: 2
+    - description: This passageway is blocked by thin fleshy membranes.
+      weight: 4
+    - description: Air rushes into and out of this passageway, as if it is breathing.
+      weight: 1
+    - description: The door to this passageway is locked tight. If forced, it shrieks horribly, and it bleeds if cut.
+      weight: 1
+    - description: This passageway is ribbed with chitinous extrusions.
+      weight: 1

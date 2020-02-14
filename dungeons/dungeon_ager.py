@@ -1,9 +1,10 @@
 from random import Random
+import random
 import yaml
 
 with open('data/dungeon_age.yaml', 'r') as f:
     dungeon_age = yaml.load(f)
-    for cause in dungeon_age.keys():
+    for cause in dungeon_age.keys(): 
         for idx, room_effect in enumerate(dungeon_age[cause]['rooms']):
             room_effect['id'] = idx
             room_effect['tags'] = room_effect.get('tags', [])
@@ -34,6 +35,8 @@ class DungeonAger:
         n_effects = min([self.random_state.randint(effects_min, effects_max), len(self.room_effects)])
         affected_rooms = self.random_state.sample(rooms, n_effects)
         effects = self.random_state.sample(self.room_effects, n_effects)
+        if self.cause == 'far realms':
+            random.shuffle(effects)
         for effect, room in zip(effects, affected_rooms):
             layout.node[room]['tags'] += effect['tags']
             if self.tags is not None:

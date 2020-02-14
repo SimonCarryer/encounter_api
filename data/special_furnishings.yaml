@@ -90,7 +90,7 @@ sarcophagus:
     - Anyone lying or placed in the $noun is the target of the $spell spell.
     - The $motif will speak of the deeds of the bodies the $noun has contained.
     - Inside the $noun is inscribed the text of the $spell spell.
-    - There is a dessicated human corpse interred here.
+    - There is a desiccated human corpse interred here.
     - It is empty.
   spells:
     - the "Slumber" version of the Imprisonment
@@ -240,7 +240,7 @@ magic crystal:
     - teal
     - cyan
     - chartreuse
-    - multicolour
+    - multi-colour
     - ultraviolet
     - crimson
   spells:
@@ -271,7 +271,7 @@ bones:
     - Embedded in the walls, floor, and ceiling of this room are the bones of an enormous $creature.
     - The room is filled with the colossal skeletal remains of a long-dead $creature.
     - The room appears to be formed from the hollowed-out skull of a huge $creature.
-    - The center of the room is dominated by a collosal $creature skull, exacavated from the stone.
+    - The center of the room is dominated by a colossal $creature skull, excavated from the stone.
   creature:
     - dragon
     - giant

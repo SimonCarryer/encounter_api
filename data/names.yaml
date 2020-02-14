@@ -1,6 +1,7 @@
 templates:
   mine:
     - The $adjective $noun
+    - $settlement $noun
     - $simple_name's $noun
     - ${prefix_name}'s $noun
     - $simple_name's $adjective $noun
@@ -16,6 +17,9 @@ templates:
     - The $descriptor $belonging
     - The $descriptor $noun
   stronghold:
+    - The $noun of $settlement
+    - $settlement $noun
+    - The Ruins of $settlement
     - The $noun of $fancy_name
     - The $noun of $simple_name
     - $simple_name's $adjective $noun
@@ -296,6 +300,7 @@ other words:
     - Iron
     - Steel
     - Bone
+    - Glass
     - Wood
     - Flesh
     - Blood
@@ -375,6 +380,7 @@ places:
           - Marsh
           - Bog
           - Pond
+          - Mire
           - Fen
           - Bridge
           - Moor
@@ -394,6 +400,7 @@ places:
   adjectives:
     - Shuddering
     - Goblin
+    - Thunder
     - Witch
     - Windy
     - Dry
@@ -428,6 +435,154 @@ places:
     - Howling
     - Hollering
     - Battle
+
+settlement:
+  arctic:
+   first:
+     - Shiver
+     - Winter
+     - White
+     - Grey
+     - Ice
+     - Cold
+   last:
+     - waste
+  mountains:
+    first:
+      - Winter
+      - Ice
+      - Cold
+      - White
+      - Grey
+      - Storm
+      - High
+      - Heather
+      - Eagle
+      - Wind
+      - Crow
+    last:
+      - peak
+      - pass
+      - mount
+      - fang
+      - spire
+      - rock
+  plains:
+    first:
+      - Lion
+      - Pride
+    last:
+      - flats
+      - rock
+  hills:
+    first:
+      - Storm
+      - Wind
+      - Silver
+      - Crow
+      - Coal
+      - Bleak
+    last:
+      - pass
+      - glen
+      - rock
+      - hill
+      - ridge
+      - vale
+  forest:
+    first:
+      - Green
+      - Sweet
+      - Willow
+      - Birch
+      - Ash
+      - Oak
+    last: 
+      - wood
+      - grove
+      - glade
+  swamp:
+    first:
+      - Green
+      - Dank
+      - Salt
+      - Reed
+      - Moss
+    last:
+      - marsh
+      - mouth
+      - mire
+      - water
+  desert:
+    first:
+      - Summer
+      - Sand
+      - Salt
+      - Dust
+      - Sun
+      - Dry
+    last:
+      - post
+  jungle:
+    first:
+      - Summer
+      - Sweet
+      - Vine
+      - Honey
+      - Jade
+      - Green
+      - Petal
+      - Golden
+      - Lotus
+      - Flower
+      - Spice
+    last:
+      - glade
+      - spire
+      - water
+  first:
+    - East
+    - West
+    - South
+    - North
+    - Black
+    - New
+    - Old
+    - Red
+    - Sour
+    - Long
+    - Bitter
+    - Rose
+    - Sword
+    - Night
+    - Harrow
+    - Ox
+  last:
+    - burg
+    - town
+    - heath
+    - moot
+    - grave
+    - castle
+    - hook
+    - gate
+    - yard
+    - reach
+    - point
+    - hold
+    - watch
+    - home
+    - rod
+    - wall
+    - run
+    - march
+    - court
+    - side
+    - bridge
+    - field
+    - stone
+    - pool
+    - guard
 personal names:
   fancy templates:
     - $name
@@ -452,6 +607,7 @@ personal names:
     - Pontelroy
     - Mischip
     - Quarbart
+    - Eric
     - Frob
     - Cuthbert
     - Drood
@@ -541,7 +697,26 @@ personal names:
     - Lowrence
     - Knut
     - Snorri
+    - Humbert
+    - Rudolf
+    - Ludwig
+    - Landrich
+    - Adelhard
+    - Sieger
+    - Manfred
+    - Erhard
+    - Eckhard
   female names:
+    - Klothilde
+    - Burghild
+    - Bernharde
+    - Burglinde
+    - Gerwine
+    - Berta
+    - Thusnelda
+    - Ludwina
+    - Gunda
+    - Gerlinde
     - Ragenhild
     - Yrsa
     - Binnie
@@ -555,7 +730,9 @@ personal names:
     - Fridswith
     - Agata
     - Klara
+    - Sweetie
     - Eulalia
+    - Weyneth
     - Isolde
     - Crystobell
     - Ursula
@@ -606,6 +783,7 @@ personal names:
     - Angelore
     - Valena
     - Betty
+    - Birdie
     - Ruthelette
     - Charmonde
     - Lucinda
@@ -627,6 +805,8 @@ personal names:
     - Hortenfirth
     - Gold
     - Sam
+    - Ash
+    - Connor
     - Jorj
     - Nemeth
     - Heliogabalus
@@ -669,6 +849,7 @@ personal names:
   male prefixes:
     - Sir
     - Father
+    - Prester
     - Master
     - Brother
     - Lord
@@ -749,6 +930,7 @@ personal names:
     - Crow
     - Warrior
     - Wolf
+    - Snake
     - Bard
     - Sorcerer
     - Witch
@@ -790,6 +972,7 @@ weapons:
         - Foe
         - Orc
         - Man
+        - Troll
         - Vermin
         - Rat
         - Grey
@@ -818,6 +1001,7 @@ weapons:
         - send
         - spear
         - knife
+        - knife
         - foe
         - fell
         - biter
@@ -835,6 +1019,7 @@ shields:
     - The $shield of the $sobriquet
   items:
     - Shield
+    - Guard
     - Protector
     - Defender
 armour:
@@ -843,3 +1028,6 @@ armour:
     - The $armour of the $sobriquet
   items:
     - Armour
+    - Aegis
+    - Girding
+    - Mantle

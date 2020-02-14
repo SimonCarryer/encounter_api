@@ -1,7 +1,7 @@
 import yaml
 from string import Template
 from random import Random
-
+from copy import deepcopy
 with open('data/names.yaml') as f:
     names_data = yaml.load(f)
 
@@ -115,6 +115,11 @@ class NameGenerator:
         'sobriquet': self.random_state.choice(names_data['personal names']['sobriquets'])
         }
         return template.substitute(d)
+
+    def settlement(self, terrain=None):
+        first = self.random_state.choice(names_data['settlement']['first'] + names_data['settlement'].get(terrain, {}).get('first', []))
+        last = self.random_state.choice(names_data['settlement']['last'] + names_data['settlement'].get(terrain, {}).get('last', []))
+        return first + last
     
     def dungeon_name(self, dungeon_type, terrain=None):
         template = Template(self.random_state.choice(names_data['templates'][dungeon_type]))
@@ -122,6 +127,7 @@ class NameGenerator:
              'title': self.title(),
              'prefix_name': self.prefix_name(),
              'fancy_name': self.fancy_name(),
+             'settlement': self.settlement(terrain=terrain),
             'place': self.place(terrain),
              'noun': self.random_state.choice(names_data['dungeon types'][dungeon_type]['nouns']),
              'material': self.random_state.choice(names_data['other words']['materials']),

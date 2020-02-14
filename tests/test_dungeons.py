@@ -146,7 +146,6 @@ def test_dungeon_templates():
     # for node, data in layout.nodes(data=True):
     #   print(data, '\n')
 
-
 def test_populator_uses_treasure_source():
     layout = MockDungeonLayout()
     layout.purpose = 'temple'
@@ -162,7 +161,7 @@ def test_module_orders_rooms_correctly():
     layout = DungeonLayout(5, random_state=state)
     layout.purpose = 'temple'
     dungeon = Dungeon(layout)
-    assert dungeon.get_room_ids() == {0: 1, 3: 2, 2: 3, 4: 4, 1: 5}
+    assert dungeon.get_room_ids() == {0: 1, 3: 2, 2: 3, 1: 4, 4: 5}
 
 def test_integration_from_encounter_manager_to_populator():
     layout = MockDungeonLayout()

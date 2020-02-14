@@ -17,6 +17,10 @@ stronghold:
       tags: [guarded]
     - description: Wine-cellar with many rows of bottles.
       tags: [secret]
+    - description: A laboratory for manufacturing magical defenses.
+      tags: [treasure]
+    - description: A laboratory for forbidden experiments.
+      tags: [treasure, secret]
     - description: A war-room, with an elaborately carved bas-relief map of the area as it was long-ago.
     - description: Bath outfitted with a marble floor and other luxurious accoutrements.
     - description: Bedroom for use by the stronghold's master or important guests.
@@ -72,6 +76,7 @@ stronghold:
     - description: War-room with frescoed or carved maps.
     - description: Secure quarters for a shameful or secret prisoner.
       tags: [secret]
+    - description: A dormitory for servants.
   secret passages:
     - This secret passageway is concealed behind an ancient wall-hanging.
     - A framed painting conceals the hidden doorway to this passage.
@@ -79,6 +84,7 @@ stronghold:
     - A sconce on the wall is actually the handle of the concealed door to this passage.
     - This passageway is accessed by a trapdoor hidden beneath a heap of detritus.
     - A rug on the floor covers the trapdoor entrance to this passage.
+    - The stonework is cunningly devised to hide this doorway.
   extra details:
     - A raised gallery runs around two walls of this room, reached by a flight of stairs.
     - A fireplace in this room has a narrow chimney-pipe that vents above ground.
@@ -86,13 +92,14 @@ stronghold:
     - The arched ceiling of this room is braced with sturdy wooden rafters.
     - There are the remains of wooden furnishings scattered throughout this room.
     - Pillars support the ceiling of this room.
+    - Rubbish is piled up against one wall.
     - Several ancient wall-hangings remain on the walls.
     - The room sports several iron-barred openings for ventilation shafts.
     - This room's domed ceiling is twice as high as the rest of the complex.
     - This room is unusually large.
     - Scaffolding along one wall, unused stone blocks, and unfinished plaster suggest this room was abandoned mid-construction.
     - This room once had several internal walls of wood or plaster, but these are now rotten and crumbling.
-    - A crumbling plaster frescoe commemorates an ancient battle.
+    - A crumbling plaster fresco commemorates an ancient battle.
     - The walls of the room are braced with iron girders, repairing damage from a long-ago seige.
     - One wall is covered in iron hooks, perhaps for storing weapons.
 tomb:
@@ -136,12 +143,15 @@ tomb:
     - What appears to be a sarcophagus is actually the entrance to this secret passage.
     - This doorway is concealed by thick cobwebs and dust.
     - A statue can be rolled aside to reveal this passageway.
+    - A panel at the back of a stone niche slides aside to reveal this passage.
   extra details:
     - One wall is covered in elaborate bas-relief carvings.
     - This room's walls are lined with fine marble.
+    - A dozen large pottery urns are stacked in a corner. Several are shattered.
     - The floor of this room is tiled in a geometric pattern.
     - The ceiling of this room is low and cramped.
-    - A plaster frescoe depicts scenes of a purported afterlife.
+    - Cracked bones litter the floor of this room.
+    - A plaster fresco depicts scenes of a purported afterlife.
     - Thin plaster walls seal off niches in the stonework.
     - Sombre carvings decorate the buttresses and pillars.
     - The inside of a door is gouged as if by desperate fingernails.
@@ -152,11 +162,11 @@ temple:
   rooms:
     - description: An entry-hall with a great staircase and double doors.
       tags: [entrance, guarded]
-    - description: An open-air ampitheatre surrounded by pillars and statues.
+    - description: An open-air amphitheatre surrounded by pillars and statues.
       tags: [entrance]
     - description: A stone building with arched windows and many braziers.
       tags: [entrance, guarded]
-    - description: Armory filled with weapons and armor, battlebanners, and pennants.
+    - description: Armory filled with weapons and armor, battle banners, and pennants.
     - description: Audience chamber where priests of the temple receive commoners and low-ranking visitors.
     - description: Banquet room used for celebrations and holy days.
     - description: Barracks for the temple's military arm or its hired guards.
@@ -168,7 +178,7 @@ temple:
     - description: Chapel dedicated to a lesser deity associated with the temple's major deity.
       tags: [dead-end]
     - description: Classroom used to train initiates and priests.
-    - description: Conjuring room , specially sanctified and used to summon extraplanar creatures.
+    - description: Conjuring room, specially sanctified and used to summon extra-planar creatures.
       tags: [important, guarded]
     - description: Crypt for a high priest or similar figure, hidden and heavily guarded by creatures and traps.
       tags: [secret, dead-end, trap]
@@ -203,6 +213,7 @@ temple:
     - This doorway is concealed by thick cobwebs and dust.
     - A religious symbol must be correctly aligned to open this passageway.
     - A statue can be rolled aside to reveal this passageway.
+    - An ancient illusion spell conceals the entrance to this passage.
   extra details:
     - One wall is covered in elaborate bas-relief carvings.
     - This room's walls are lined with fine marble.
@@ -250,11 +261,13 @@ mine:
     - Stacked crates cover the entrance to this passage.
     - This passage is boarded up and easily missed, but some of the boards are loose.
     - A heap of rubbish obscures the entrance to this passage.
+    - Someone has taken care to conceal this passage behind some hanging sack-cloth.
   extra details:
     - There is a still functional and empty mine cart here.
     - Several picks, shovels, and other tools lean against one wall.
     - In the room there is a broken-down mine cart.
-    - Wooden bracing beams cris-cross the room.
+    - A human skeleton is half-buried beneath a pile of rubble.
+    - Wooden bracing beams criss-cross the room.
     - A heap of wooden beams is stacked against one wall.
     - The walls are scored with countless pick-marks.
     - Glittering ore makes the walls sparkle in torchlight.
@@ -276,6 +289,8 @@ treasure vault:
       tags: [dead-end]
     - description: Guardroom to defend against intruders.
       tags: [guarded]
+    - description: A pleasure-hall, with marble benches and long-dry fountains.
+      tags: [guarded]
     - description: Kennel for trained beasts used to guard the treasure vault.
     - description: Kitchen for feeding guards.
     - description: Display room for showing off treasures.
@@ -288,17 +303,22 @@ treasure vault:
       tags: [dead-end, important, trap, treasure]
     - description: Strong room or vault, for guarding the treasure hidden in the dungeon, accessible only by locked or secret door.
       tags: [secret, important, trap, treasure]
-    - description: False chamber intended to decieve intruders.
+    - description: False chamber intended to deceive intruders.
       tags: [dead-end, trap]
     - description: A prison for holding a powerful mage or dangerous creature.
       tags: [important, trap]
     - description: Torture chamber for extracting information from captured intruders.
       tags: [secret]
+    - description: A laboratory filled with bizarre equipment.
+      tags: [guarded, treasure]
+    - description: A laboratory for forbidden experiments on live subjects.
+      tags: [guarded, treasure, secret]
     - description: Trap room for luring unwary trespassers.
       tags: [dead-end, trap]
-    - description: A guard-room, designed as a killzone. A rusted iron portcullis creates a passage through the middle of the room.
+    - description: A guard-room, designed as a kill-zone. A rusted iron portcullis creates a passage through the middle of the room.
       tags: [central]
   secret passages:
+    - The stonework is cunningly devised to hide this doorway.
     - This secret passageway is concealed behind an ancient wall-hanging.
     - A framed painting conceals the hidden doorway to this passage.
     - The door to this passageway is concealed behind stacks of crates or piles of old furnishings.
@@ -312,6 +332,7 @@ treasure vault:
     - The arched ceiling of this room is braced with sturdy wooden rafters.
     - There are the remains of wooden furnishings scattered throughout this room.
     - Half the room is filled with piled junk.
+    - There are several iron-bound chests in this room. Several have been smashed open long ago.
     - Pillars support the ceiling of this room.
     - Several ancient wall-hangings remain on the walls.
     - The room sports several iron-barred openings for ventilation shafts.
@@ -333,11 +354,11 @@ cave:
     - description: A domed cavern, with a floor of deep rubble.
     - description: A long, narrow crevasse, with multiple ledges.
       tags: [central, hub]
-    - description: A confusion of stalagtites and stalagmites.
+    - description: A confusion of stalactites and stalagmites.
     - description: A huge open space, with a floor of fine sand.
     - description: A collapsed crevasse, the floor a tangle of boulders (difficult terrain).
       tags: [difficult]
-    - description: An ungerground stream has created several terraced pools.
+    - description: An underground stream has created several terraced pools.
     - description: A deep shaft with sheer sides, the entrances many feet above the floor.
     - description: An open shaft, plants growing in the sunlight from far above.
       tags: [entrance]
@@ -347,18 +368,18 @@ cave:
       tags: [important]
     - description: Enormous crystals cover the walls and shatter torchlight into millions of shards.
       tags: [important]
-    - description: A fallen stalagtite forms a narrow bridge across a deep crevasse.
+    - description: A fallen stalactite forms a narrow bridge across a deep crevasse.
       tags: [central]
     - description: A marvelous room of dripping water, dazzling crystals, and glittering silica.
     - description: A keyhole-shaped passage, with ledges either side of a deep crevasse.
       tags: [central]
-    - description: A low, flat room with small stalagtites and stalagmites all over.
+    - description: A low, flat room with small stalactites and stalagmites all over.
   secret passages:
     - A cascade of water covers the entrance to this passage.
     - A trick of the light makes this passageway impossible to see unless it's right in front of you.
     - A heap of rubble conceals the entrance to this passage.
     - From a distance, this passage appears too narrow to enter.
-    - Thick stalagtites obscure the entrance to this passageway.
+    - Thick stalactites obscure the entrance to this passageway.
     - A large, flat boulder can be rolled aside to reveal this passageway.
     - The entrance to this passageway is just below the surface of a pool of water.
   extra details:
@@ -367,9 +388,10 @@ cave:
     - Iron rings have been hammered into the stonework, and a rusted iron chain facilitates climbing across the rough ground.
     - A wooden floor has been layed down in this chamber, covering the more uneven stone below.
     - Long ago this chamber was worked with tools to level the floor and remove the worst obstacles.
-    - Ancient and indistinct carvings cover the walls.
+    - Ancient and indistinct painted figures cover the walls.
     - The room is lit by the red glow of fire beetles, gently ambling around the floor and walls.
     - The floor of this chamber is steeply sloped.
     - Glowing worms hang on threads from the ceiling.
     - A mound of ancient animal bones covers the floor of this room.
     - The skeleton of a long-dead explorer is wedged into a crevice.
+    - Bioluminescent mold sheds a faint greenish light in this room.

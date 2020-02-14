@@ -12,10 +12,10 @@ hazard types:
     description: There is an immensely powerful whirlpool here - anyone attempting to swim must make a DC${save} Athletics check or be sucked below the water. They may repeat the save to avoid drowning.
     challenge: deadly
   geysers:
-    description: Intermittent geysers of hot water or lava make this area hazardous. Dex save DC${save} or dake ${damage}d10 fire damage.
+    description: Intermittent geysers of hot water or lava make this area hazardous. Dex save DC${save} or take ${damage}d10 fire damage.
     challenge: deadly
   earthquakes: 
-    description: Earthquakes regularly stike the area - everyone must make a DC${save} Dex save or fall prone.
+    description: Earthquakes regularly strike the area - everyone must make a DC${save} Dex save or fall prone.
     challenge: setback
   unstable ground:
     description: The ground here is unstable and threatens to collapse! Combatants must either take disadvantage on attacks, or else make a DC${save} Dex save. Those who fail will fall, taking ${damage}d10 blugeoning damage. 

@@ -96,6 +96,7 @@ bullywugs:
   - Name: Bullywug    
     role: troops
     occurrence: common
+    core: true
   - Name: Giant Frog    
     role: pet
     occurrence: uncommon
@@ -110,6 +111,7 @@ spiders:
   - Name: Giant Spider      
     role: troops
     occurrence: common
+    core: true
   - Name: Giant Wolf Spider      
     role: troops
     occurrence: common
@@ -130,9 +132,11 @@ orcs:
   - Name: Orc      
     role: troops
     occurrence: common
+    core: true
   - Name: Orc War Chief      
     role: leader
     occurrence: common
+    core: true
   - Name: Orc Eye of Gruumsh      
     role: leader
     occurrence: uncommon
@@ -437,7 +441,7 @@ drow:
    role: troops
    occurrence: uncommon
  - Name: Drow Elite Warrior
-   role: elite
+   role: troops
    occurrence: common
  - Name: Drow Mage
    role: elite
@@ -1402,8 +1406,6 @@ efreet:
    role: pet
 
 elemental plane of air:
- - Name: Aarakocra
-   occurrence: common
  - Name: Air Elemental
    occurrence: common
  - Name: Ice Mephit
@@ -2170,3 +2172,15 @@ hags:
  - Name: Owlbear
    role: pet
    occurrence: uncommon
+
+far realms:
+ - Name: Grell
+   occurrence: common
+ - Name: Gibbering Mouther
+   occurrence: common
+ - Name: Cloaker
+   occurrence: common
+ - Name: Chuul
+   occurrence: common
+ - Name: Beholder
+   occurrence: rare

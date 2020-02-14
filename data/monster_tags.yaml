@@ -1,6 +1,7 @@
 bullywugs:
   - humanoid
   - swamp
+  - disorganised
   - dungeon-explorer
 efreet:
   - magical
@@ -39,12 +40,14 @@ githyanki:
 wolves:
   - wolves
   - beast
+  - dungeon-explorer
   - forest
   - arctic
   - hills
 elemental plane of water:
   - magical
   - water
+  - guardian
   - immortal
   - elemental
   - any terrain
@@ -52,6 +55,7 @@ bandits:
   - humanoid
   - dungeon-explorer
   - human
+  - disorganised
   - any terrain
 drow:
   - humanoid
@@ -61,7 +65,7 @@ drow:
   - dungeon-explorer
 apex predators:
   - beast
-  - forest
+  - solo
   - any terrain
 jungle:
   - jungle
@@ -84,6 +88,7 @@ cult of baphomet:
   - any terrain
 northmen:
   - humanoid
+  - dungeon-explorer
   - human
   - arctic
 forest goblins:
@@ -96,6 +101,7 @@ elemental plane of fire:
   - fire
   - immortal
   - elemental
+  - guardian
   - magical
   - any terrain
 frost giants:
@@ -174,6 +180,7 @@ spiders:
   - forest
   - swamp
   - desert
+  - beast
   - jungle
 hills:
   - beast
@@ -196,6 +203,7 @@ caves:
   - any terrain
 cult of jubilex:
   - evil
+  - dungeon-explorer
   - humanoid
   - fungus
   - human
@@ -213,7 +221,7 @@ civilised folk:
 elemental plane of air:
   - magical
   - elemental
-  - bird
+  - guardian
   - air
   - any terrain
 yuan-ti:
@@ -227,17 +235,20 @@ cloud giants:
   - mountains
 modrons:
   - magical
+  - guardian
   - immortal
+  - lawful
   - any terrain
 mind flayers:
   - underdark
   - cave-dweller
   - dungeon-explorer
-  - abberation
+  - aberration
   - psychic
 wizards tower:
   - guardian
   - magical
+  - wizard
   - immortal
   - any terrain
 constructs:
@@ -261,6 +272,7 @@ kuo-toa:
 sewers:
   - urban
   - sewers
+  - beast
 kobolds:
   - humanoid
   - savage
@@ -271,6 +283,7 @@ elemental plane of earth:
   - immortal
   - magical
   - elemental
+  - guardian
   - earth
   - any terrain
 myconids:
@@ -295,7 +308,6 @@ arctic:
   - beast
 hobgoblins:
   - humanoid
-  - savage
   - dungeon-explorer
   - any terrain
 urban:
@@ -318,9 +330,9 @@ yugoloths:
 angels:
   - celestial
   - immortal
+  - guardian
+  - solo
   - good
-  - magical
-  - fiend
   - any terrain
 troglodytes:
   - cave-dweller
@@ -331,6 +343,7 @@ slaadi:
   - magical
   - immortal
   - any terrain
+  - aberration
 low giants:
   - giant
   - beast
@@ -342,9 +355,11 @@ villains:
   - rare
   - any terrain
   - humanoid
+  - solo
   - human
 azers:
   - magical
+  - rare
   - fire
   - earth
   - any terrain
@@ -361,9 +376,6 @@ duergar:
   - underdark
   - humanoid
   - dungeon-explorer
-slaadi:
-  - magical
-  - abberation
 urds:
   - mountains
   - humanoid
@@ -376,3 +388,7 @@ hags:
   - swamp
   - hills
   - evil
+far realms:
+  - any terrain
+  - aberration
+  - far realms
