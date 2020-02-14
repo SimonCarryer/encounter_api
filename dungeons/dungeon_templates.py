@@ -145,7 +145,7 @@ class DefendedStrongholdTemplate(DungeonBaseTemplate):
         return 'Guarded by fierce defenders'
 
     def get_monster_sets(self):
-        return self.monster_sets(any=['humanoid', 'giant'], none_tags=['savage', 'disorganised', 'rare', 'underdark'])
+        return self.monster_sets(any_tags=['humanoid', 'giant'], none_tags=['savage', 'disorganised', 'rare', 'underdark'])
 
     def alter_dungeon(self, layout):
         self.build_furnisher('stronghold').furnish(layout)
