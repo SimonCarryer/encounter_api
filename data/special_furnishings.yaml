@@ -8,8 +8,9 @@ fountain:
     - The "water" is in fact strong acid - touching it causes 1d10 acid damage. Being immersed in it causes 8d10 acid damage every round.
     - The water is just water.
     - The water is ice cold.
+    - The water is piping hot.
     - $verb the water causes 1d10 psychic damage, but the character gains the effects of a $potion. $disclaimer
-    - Anyone $verb the water must make a difficulty 15 constitution save or be restrained. They may repeat the save at the start of each of their turns. If they fail three saves in a row, they are petrified.
+    - $verb the water causes a character to make a difficulty 15 constitution save or be restrained. They may repeat the save at the start of each of their turns. If they fail three saves in a row, they are petrified.
   templates:
     - Water pours from the mouth of a stone $creature into a large pool.
     - A carved $creature holds aloft a bowl, which is filled with water.

@@ -37,7 +37,7 @@ class NPC_item:
             item = self.random_state.choice(possible_items)
         return item
 
-    def get_properties(self, n_properties=2):
+    def get_properties(self, n_properties=1):
         tables = self.random_state.sample(item_properties.keys(), n_properties)
         properties = []
         for table in tables:

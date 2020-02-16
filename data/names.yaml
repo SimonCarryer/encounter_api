@@ -20,11 +20,10 @@ templates:
     - The $noun of $settlement
     - $settlement $noun
     - The Ruins of $settlement
-    - The $noun of $fancy_name
+    - $settlement Castle
     - The $noun of $simple_name
     - $simple_name's $adjective $noun
     - The $adjective $noun
-    - $fancy_name's $belonging
     - $fancy_name's $noun
     - The $symbol's $noun
     - $symbol $noun
@@ -90,7 +89,27 @@ templates:
     - $fancy_name's $belonging
     - The ${sobriquet}'s $belonging
     - The $noun at $place
+  sewer:
+    - ${settlement} $belonging
+    - Beneath ${settlement}
+    - The ${noun}
+    - The ${settlement} ${noun}
+    - The $adjective $belonging
 dungeon types:
+  sewer:
+      nouns:
+        - Gurgles
+        - Sewers
+        - Swallows
+        - Stinks
+        - Tangles
+        - Underneath
+        - Undertown
+      belongings:
+        - Pipes
+        - Drains
+        - Gutters
+        - Sewers
   mine:
       nouns:
         - Delve
@@ -239,6 +258,8 @@ other words:
     - Ashen
     - Wormy
     - Tangled
+    - Bleak
+    - Shunned
   symbols:
     - Leviathan
     - Fool
@@ -429,6 +450,7 @@ places:
     - Copper
     - Oak
     - Cedar
+    - Pine
     - Ash
     - Porkchop
     - Sugar
@@ -447,6 +469,7 @@ settlement:
      - Cold
    last:
      - waste
+     - scrape
   mountains:
     first:
       - Winter
@@ -471,15 +494,25 @@ settlement:
     first:
       - Lion
       - Pride
+      - Barley
+      - Spring
+      - Harvest
+      - Plow
+      - Ox
     last:
       - flats
-      - rock
+      - farm
+      - field
+      - yard
   hills:
     first:
       - Storm
       - Wind
       - Silver
       - Crow
+      - Pine
+      - Hammer
+      - Hollow
       - Coal
       - Bleak
     last:
@@ -494,6 +527,7 @@ settlement:
       - Green
       - Sweet
       - Willow
+      - Pine
       - Birch
       - Ash
       - Oak
@@ -540,6 +574,7 @@ settlement:
       - glade
       - spire
       - water
+      - " Pavilion"
   first:
     - East
     - West
@@ -556,7 +591,6 @@ settlement:
     - Sword
     - Night
     - Harrow
-    - Ox
   last:
     - burg
     - town
@@ -566,10 +600,10 @@ settlement:
     - castle
     - hook
     - gate
-    - yard
     - reach
     - point
     - hold
+    - way
     - watch
     - home
     - rod
@@ -579,13 +613,11 @@ settlement:
     - court
     - side
     - bridge
-    - field
     - stone
     - pool
     - guard
 personal names:
   fancy templates:
-    - $name
     - $title $name
     - The $title
     - The $adjective $title
@@ -673,7 +705,8 @@ personal names:
     - Gilbert
     - Gismondo
     - Marmaduke
-    - Sampson
+    - Samson
+    - Niklaus
     - Retgar
     - Linc
     - Rrey
@@ -699,6 +732,7 @@ personal names:
     - Snorri
     - Humbert
     - Rudolf
+    - Dolf
     - Ludwig
     - Landrich
     - Adelhard
@@ -706,7 +740,12 @@ personal names:
     - Manfred
     - Erhard
     - Eckhard
+    - Petruchio
+    - Leonine
+    - Apemantus
   female names:
+    - Desdemona
+    - Nerissa
     - Klothilde
     - Burghild
     - Bernharde
@@ -801,6 +840,18 @@ personal names:
     - Phaelynn
     - Awryn
     - Marijane
+    - Metheven
+    - Morgana
+    - Onwen
+    - Loveday
+    - Hedra
+    - Ewella
+    - Mya
+    - Bonnie
+    - Glismoda
+    - Rasha
+    - Lorelei
+    - Oonagh
   other names:
     - Hortenfirth
     - Gold

@@ -13,7 +13,12 @@ class DungeonSource():
         else:
             self.random_state = random_state
         self.level = level
-        layout = DungeonLayout(n_rooms=self.random_state.randint(4, 6), random_state=self.random_state)
+        if base_type is None:
+            base_type = self.random_state.choice(['mine', 'stronghold', 'sewer', 'treasure_vault', 'tomb', 'cave', 'temple'])
+        n_rooms=self.random_state.randint(5, 7)
+        if base_type == 'treasure vault':
+            n_rooms -= 1
+        layout = DungeonLayout(n_rooms=n_rooms, random_state=self.random_state)
         templates = TemplatePicker(base_type, supplied_templates=templates, supplied_monster_set=main_antagonist, random_state=self.random_state).pick_set()
         if terrain is None:
             terrain = self.random_state.choice(['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'])

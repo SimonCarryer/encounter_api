@@ -48,6 +48,7 @@ class DungeonFurnisher:
         layout.purpose = self.purpose
         if self.random_state.randint(1, 6) >= 5:
             self.get_special_furnishings(layout)
+        Library().add_special_furnishing(layout)
         return layout
 
     def get_special_furnishings(self, layout):
@@ -190,3 +191,29 @@ class Bones(SpecialFurnishing):
         template = Template(parts)
         d = {i: self.random_state.choice(special_furnishings_data['bones'][i]) for i in ['creature', 'material']}
         return ' '+template.substitute(d)
+
+class Library(SpecialFurnishing):
+    def add_special_furnishing(self, layout):
+        rooms = [data for node, data in layout.nodes(data=True) if 'library' in data['tags'] or 'study' in data['tags']]
+        for room in rooms:
+            self.add_books(room, layout.purpose)
+
+    def add_books(self, room, dungeon_purpose):
+        namer = NameGenerator()
+        if purpose == 'stronghold':
+            topics = self.random_state.sample(['history', 'nature', 'arcana'], 2)
+        elif purpose == 'temple':
+            topics = ['religion', 'arcana']
+        else:
+            topics = self.random_state.sample(['history', 'nature', 'arcana', 'religion'], 2)
+        if 'study' in room['tags']:
+            n_books = 1
+        else:
+            n_books = self.random_state.randint(1, 6)
+        library = []
+        for _ in range(n_books):
+            book = namer.book(self.random_state.choice(topics))
+            library.append({'title': book['title'], 'contents': book['contents'] + ' ' + book.get('extra', '')})
+        room['library'] = library
+
+

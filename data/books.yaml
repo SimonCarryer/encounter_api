@@ -1,0 +1,342 @@
+word:
+  - Treatise
+  - Warning
+  - Dictum
+  - Edict
+  - Notes
+  - Precept
+  - Rubric
+  - Manual
+  - Homily
+  - Book
+  - Lore
+  - Dialogues
+  - Judgement
+  - Tale
+  - Sayings
+  - Words
+  - Wisdom
+  - Lesson
+  - Song
+  - Witticisms
+person:
+  - Life
+  - Reign
+  - Wisdom
+  - Descendants
+  - Trials
+  - Deeds
+  - Travels
+  - Coronation
+  - Rule
+  - Journey
+  - Birth
+  - Accomplishments
+  - Folly
+  - Wit
+  - Death
+  - Ruin
+  - Age
+environment:
+  - East
+  - West
+  - South
+  - North
+  - Ice
+  - Mountains
+  - Sea
+  - River
+  - Swamp
+  - Jungle
+  - Forest
+  - Earth
+  - Desert
+  - Steppe
+  - Tundra
+  - Plains
+  - Planes
+  - Woods
+place:
+  - Fall
+  - End
+  - Founding
+  - Ages
+  - Secrets
+  - Siege
+  - Laws
+  - Sights
+  - Impressions
+  - History
+  - Works
+creature:
+  - Dragons
+  - Owlbears
+  - First Men
+  - Beasts
+  - Beholders
+  - Orcs
+  - Elementals
+  - Ancients
+  - Demons
+  - Devils
+  - Nymphs
+  - Elves
+  - Gnomes
+  - Ghosts
+  - Dragonborn
+  - Dwarves
+  - Giants
+  - Halflings
+  - Others
+  - Outsiders
+  - Creatures
+  - Wild Things
+  - Women
+  - Gods
+subject:
+  - Lies
+  - Crimes
+  - Princes
+  - Priests
+  - Ladies
+  - Villains
+  - Evil
+  - Jokes
+  - Medicine
+  - Enemies
+  - Kings
+  - Wars
+  - Shadows
+  - Queens
+  - Lords
+template:
+  arcana:
+      title:
+          - ${word} on ${fancy_term}
+          - ${name}'s ${fancy_term}
+          - ${name}'s ${word}
+          - ${name}'s ${adjective} ${word}
+          - ${word} of the ${creature}
+          - ${adjective} ${word}
+          - ${adjective} ${fancy_term}
+      adjective:
+          - Insubstantial
+          - Ectoplasmic
+          - Prismatic
+          - Wondrous
+          - Potent
+          - Pungent
+          - Ecstatic
+          - Total
+          - Brilliant
+          - Mystic
+          - Peerless
+          - Mighty
+          - Incontrovertible
+      content:
+          common:
+              - This book is filled with nonsense.
+              - This book is full of baffling profundities.
+              - The author, ${name}, was clearly insane. 
+              - This book is written in an indecipherable code.
+              - This book is simply incomprehensible.
+              - This book seems to be an elaborate hoax.
+              - There's nothing of interest in this book.
+              - This book is puzzling but enjoyable.
+              - This book might be worth something to ${fancy_name}.
+          rare:
+              - If you have proficiency in Arcana, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on an Arcana roll.
+              - If you have proficiency in Arcana, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on an Arcana roll.
+              - If you have proficiency in Medicine, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on a Medicine roll.
+              - This book functions as a Wizard spell scroll (DM's choice of level and spell).
+              - This is a spellbook! It contains 1d6 spells of the DM's choice.
+              - The author of this book, ${name}, left hidden instructions for finding their demesne. These can be deciphered with a successful Investigation roll (DC15).
+              - This book is dangerously misleading! After reading the book, the next time this character casts a spell, roll on the Wild Magic Surge table.
+  history:
+      title:
+          - ${place} of ${settlement}
+          - ${person} of ${fancy_name}
+          - The ${person} of the ${creature}
+          - ${name}'s ${word} on ${creature}
+          - ${subject} of the ${creature}
+          - ${name}'s ${word} on ${subject}
+          - ${subject} of ${settlement}
+      content:
+          common:
+              - This book contains little useful information.
+              - This book has some scandalous information about ${fancy_name}.
+              - This book is filled with nothing but empty boasting.
+              - This book is extremely tedious.
+              - This book is extremely offensive to ${creature}.
+              - A collector in ${settlement} would pay a lot for this book.
+          rare:
+              - By spending a week studying this book, a character can gain proficiency in History.
+              - If you have proficiency in History, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on a History roll.
+              - This book contains a detailed map of ${settlement}.
+              - After spending an hour studying this book, a character can cast the Legend Lore spell. After this, the book crumbles to dust.
+              - This book contains a map of a dungeon (this dungeon or another one).
+              - This book contains clues as to the location of a treasure or item once possessed by ${fancy_name}.
+  nature:
+      title:
+          - On ${creature}
+          - ${word} on ${creature}
+          - ${creature} of the ${environment}
+          - ${word} on the ${environment}
+          - ${adjective} ${person}
+      adjective:
+          - Natural
+          - Common
+          - Worldly
+          - Physical
+          - Earthly
+          - Nature's
+          - Animal
+          - Simple
+          - Everyday
+      content:
+          common:
+              - This book contains little useful information.
+              - This book is filled with dangerous falsehoods.
+              - This book has insights about life in the ${environment}.
+              - This book is full of outdated opinions.
+              - This is a collection of detailed drawings of the ${environment}.
+              - This book contains a few useful facts about ${creature}.
+          rare:
+              - This book contains several detailed maps.
+              - By spending a week studying this book, a character can gain proficiency in Nature.
+              - This book has detailed anatomical drawings. The first time you read this book, gain advantage on your next attack roll.
+              - If you have proficiency in Nature, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on a Nature roll.
+              - This book functions as a Ranger spell scroll (DM's choice of level and spell).
+              - If you have proficiency in Survival, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on a Survival roll.
+  religion:
+      title:
+          - ${name}'s ${word} 
+          - ${word} of the ${environment}
+          - ${word} of ${subject}
+          - The ${person} of ${subject}
+          - ${fancy_name}'s ${word}
+          - ${adjective} ${subject}
+          - ${adjective} ${person}
+          - ${adjective} ${word}
+      adjective:
+          - High
+          - Lordly
+          - Virtuous
+          - Immortal
+          - Prophetic
+          - Redolent
+          - Imminent
+          - Solemn
+          - Celestial
+          - Infernal
+          - Godly
+          - Unholy
+          - Holy
+          - Sacred
+      content:
+          common:
+              - This book contains nothing but sanctimonious prattling.
+              - This book is filled with sacrilegious lies.
+              - The contents of this book have been scratched out.
+              - This book is inspiring and enlightening.
+              - This book is very disturbing to those not of ${alignment} alignment.
+              - The author of this book, ${name}, was excommunicated for their heresy.
+              - This book is too boring to finish.
+              - Followers of ${fancy_name} will pay a great deal for this book.
+          rare:
+              - By spending a week studying this book, a character can gain proficiency in Religion.
+              - ${alignment} characters who read this book gain 1 Inspiration (if used in your game).
+              - Creatures of ${alignment} alignment are actively repelled by this book, as if turned by a level 3 Cleric.
+              - If you have proficiency in Religion, you can attune to this book by spending one hour reading it. The book has 1d4 charges. While attuned, you can expend a charge to gain advantage on a Religion roll.
+              - This book functions as a Cleric spell scroll (DM's choice of level and spell).
+              - This densely-written book contains weirdly specific prophecies. The book has 1d4 charges. While attuned to the book, you can expend a charge to cast the Augury spell. You can regain a charge by spending eight hours studying the book.
+features:
+  language:
+    - The book is written in Celestial.
+    - The book is written in Abyssal.
+    - The book is written in Draconic.
+    - The book is written in Infernal.
+    - The book is written in Primordial.
+    - The book is written in Gnomish.
+    - The book is written in a difficult cypher, and requires a DC15 Investigation check to decode. 
+  physical:
+    - The book is too fragile to move.
+    - The book is huge and thick, and weighs 10lbs.
+    - The book is inscribed on heavy clay tablets weighing 40lbs.
+    - The book is written on a huge scroll with an elaborate wooden winder.
+    - The book is covered with poisonous mold! Anyone who opens the book must make a Constitution save (DC13) or be Poisoned for two hours. 
+    - The book is infested with deadly mold! Anyone who opens the book must make a Constitution save (DC15) or take 2d6 poison damage.
+  other:
+    - The book has handwritten notes in the margins, giving some useful local information.
+    - A small stash of coins has been hidden in the binding of this book.
+    - A note on the inside cover of this book indicates a surprising previous owner.
+    - The book is infected with Cackle Fever, and will infect anyone who spends time reading it.
+    - The book is written in Elven.
+    - The book is written in Dwarven.
+    - The book has several colourful illustrations.
+    - Folded up in the back of this book is a Wizard spell scroll (DM's choice of spell and level).
+fancy terms:
+    first:
+      - Necro
+      - Pyro
+      - Crypto
+      - Mono
+      - Ortho
+      - Mega
+      - Nympho
+      - Ecto
+      - Haemo
+      - Meta
+      - Hetero
+      - Chrono
+      - Mollusco
+      - Cephalo
+      - Trans
+      - Bi
+      - Tri
+      - Poly
+      - Multi
+      - Ultra
+      - Haru
+      - Anthro
+      - Cryo
+      - Dis
+    middle:
+      - nomo
+      - logo
+      - meta
+      - valvo
+      - hepta
+      - "-a-"
+      - tropo
+      - techno
+      - i
+      - "-"
+      - spexa
+      - hexa
+    last:
+      - con
+      - mathic
+      - tron
+      - dex
+      - doxy
+      - machy
+      - vore
+      - plasm
+      - philia
+      - phoria
+      - spex
+      - pod
+      - mortis
+      - mancy
+      - gamy
+      - mania
+      - lingus
+      - mantica
+      - topia
+      - librum
+      - logica
+      - logy
+    template:
+      - ${first}${middle}${last}
+      - ${first}${last}

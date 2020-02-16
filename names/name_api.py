@@ -2,8 +2,12 @@ import yaml
 from string import Template
 from random import Random
 from copy import deepcopy
+
 with open('data/names.yaml') as f:
     names_data = yaml.load(f)
+
+with open('data/books.yaml') as f:
+    books_data = yaml.load(f)
 
 class NameGenerator:
     def __init__(self, random_state=None):
@@ -117,9 +121,61 @@ class NameGenerator:
         return template.substitute(d)
 
     def settlement(self, terrain=None):
+        if terrain is None:
+            terrain = self.random_state.choice(['arctic', 'mountains', 'plains', 'forest', 'swamp', 'desert'])
         first = self.random_state.choice(names_data['settlement']['first'] + names_data['settlement'].get(terrain, {}).get('first', []))
         last = self.random_state.choice(names_data['settlement']['last'] + names_data['settlement'].get(terrain, {}).get('last', []))
         return first + last
+
+    def alignment(self):
+        alignment = self.random_state.choice(['Lawful', 'Neutral', 'Chaotic']) + ' ' + self.random_state.choice(['Evil', 'Neutral', 'Good'])
+        if alignment == 'Neutral Neutral':
+            alignment = 'True Neutral'
+        return alignment
+
+    def fancy_term(self):
+        template = Template(self.random_state.choice(books_data['fancy terms']['template']))
+        d = {
+            'first': self.random_state.choice(books_data['fancy terms']['first']),
+            'middle': self.random_state.choice(books_data['fancy terms']['middle']),
+            'last': self.random_state.choice(books_data['fancy terms']['last'])
+        }
+        return template.substitute(d)
+
+    def book(self, book_type=None):
+        if book_type is None:
+            book_type = self.random_state.choice(['arcana', 'history', 'nature', 'religion'])
+        title_template = Template(self.random_state.choice(books_data['template'][book_type]['title']))
+        d = {
+            'name': self.simple_person_name(),
+            'adjective': self.random_state.choice(books_data['template'][book_type].get('adjective', ['', ''])),
+            'word': self.random_state.choice(books_data['word']),
+            'person': self.random_state.choice(books_data['person']),
+            'place': self.random_state.choice(books_data['place']),
+            'subject': self.random_state.choice(books_data['subject']),
+            'environment': self.random_state.choice(books_data['environment']),
+            'fancy_name': self.fancy_name(),
+            'settlement': self.settlement(),
+            'fancy_term': self.fancy_term(),
+            'alignment': self.alignment(),
+            'creature': self.random_state.choice(books_data['creature'])
+        }
+        title = title_template.substitute(d)
+        if self.random_state.randint(1, 6) >= 5:
+            content_template = Template(self.random_state.choice(books_data['template'][book_type]['content']['rare']))
+        else:
+            content_template = Template(self.random_state.choice(books_data['template'][book_type]['content']['common']))
+        content = content_template.substitute(d)
+        if self.random_state.randint(1, 6) >= 5:
+            types = ['physical', 'other']
+            if book_type in ['religion', 'arcana']:
+                types.append('language')
+            feature_type = self.random_state.choice(types)
+            extra = self.random_state.choice(books_data['features'][feature_type])
+        else:
+            extra = ''
+        return {'title': title, 'contents': content, 'extra': extra}
+
     
     def dungeon_name(self, dungeon_type, terrain=None):
         template = Template(self.random_state.choice(names_data['templates'][dungeon_type]))

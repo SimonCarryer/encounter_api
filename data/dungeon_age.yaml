@@ -21,6 +21,7 @@ flood:
       tags: [cave-entrance, uninhabitable, hazard]
     - description: A great torrent of water rushes through this room. Crossing the room requires wading through the strong current - an Athletics check (difficulty 12) is required to make any progress.
       tags: [difficult]
+    - description: Stairs descend from this room into a black pool of water - the lower levels of this dungeon are completely submerged.
   passages:
     - description: The passage is filled with waist-deep water.
       weight: 3
@@ -51,12 +52,14 @@ earthquake:
       tags: [entrance, difficult]
     - description: The floor of this room has unstable patches, which might give way at any moment. Below is a natural cavern, 30' deep.
       tags: [hazard]
+    - description: A heap of boulders has tumbled through an archway in one wall, from a passage which collapsed long ago.
     - description: A great crack runs across the floor, and emits a chilly breeze.
       tags: [cave-entrance]
     - description: Huge blocks of stone have tumbled from the ceiling, making the floor of this room extremely treacherous.
       tags: [difficult]
     - description: The collapse of the ceiling has turned this once-large room into a network of narrow passages.
     - description: Fine dust and dirt filters down from the ceiling and covers everything in this room. The dust is stirred up by any hasty movement. The dust clouds obscure the room.
+    - description: Several passages lead off from this room, but they have completely collapsed. No amount of digging will clear them.
   passages:
     - description: The door-frame is partly collapsed and twisted, jamming the door shut.
       weight: 4
@@ -87,6 +90,7 @@ trees:
       tags: [cave-entrance]
     - description: This room is open to the sky above. The surrounding trees form an arched ceiling overhead, and their roots crawl over the floor.
       tags: [entrance]
+    - description: The roots of trees completely block access to several passages that adjoin to this room. Part of the dungeon is cut off.
   passages:
     - description: Tree roots have burst through the ceiling and are crawling along the passageway's walls.
       weight: 1

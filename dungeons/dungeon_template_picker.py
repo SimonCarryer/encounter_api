@@ -23,17 +23,17 @@ template_bunches = {
 [AbandonedStrongholdTemplate, FungalInfectionTemplate, ExplorerTemplate],
 [AbandonedStrongholdTemplate, VolcanicTemplate],
 [AbandonedStrongholdTemplate, CursedTemplate],
-[AbandonedStrongholdTemplate, InfestedTemplate],
+[AbandonedStrongholdTemplate, PassingAgesTemplate, InfestedTemplate],
 [AbandonedStrongholdTemplate, FarRealmsTemplate],
 [DefendedStrongholdTemplate],
 [AbandonedStrongholdTemplate, CursedTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, InfestedTemplate, LairTemplate],
+[AbandonedStrongholdTemplate, PassingAgesTemplate, InfestedTemplate, LairTemplate],
 [AbandonedStrongholdTemplate, HauntedTemplate, PassingAgesTemplate]],
     'treasure_vault': [[GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, LairTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate],
 [GuardedTreasureVaultTemplate, FarRealmsTemplate],
-[GuardedTreasureVaultTemplate, InfestedTemplate],
+[GuardedTreasureVaultTemplate, PassingAgesTemplate, InfestedTemplate],
 [GuardedTreasureVaultTemplate, InfestedTemplate, LairTemplate],
 [GuardedTreasureVaultTemplate, PassingAgesTemplate, HauntedTemplate]],
     'mine': [[AbandonedMineTemplate, InfestedTemplate, ExplorerTemplate],
@@ -69,6 +69,12 @@ template_bunches = {
 [InfestedCaveTemplate, PassingAgesTemplate, LairTemplate],
 [InfestedCaveTemplate, PassingAgesTemplate],
 [InfestedCaveTemplate, FarRealmsTemplate]
+],
+'sewer': [
+    [InfestedSewerTemplate],
+    [InfestedSewerTemplate, SewerExplorerTemplate],
+    [InfestedSewerTemplate, SewerLairTemplate],
+    [InfestedSewerTemplate, SewerLairTemplate, SewerExplorerTemplate]
 ]
 }
 

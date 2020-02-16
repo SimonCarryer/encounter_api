@@ -1,5 +1,5 @@
 from dungeons.dungeon_layout import DungeonLayout
-from dungeons.dungeon_furnisher import DungeonFurnisher, Statue, Portal, MagicCrystal, Bones
+from dungeons.dungeon_furnisher import DungeonFurnisher, Statue, Portal, MagicCrystal, Bones, Library
 from dungeons.dungeon_populator import OriginalInhabitants, UndergroundNatives, Lair, Explorers
 from dungeons.dungeon_ager import DungeonAger
 from dungeons.dungeon import Dungeon
@@ -53,6 +53,15 @@ def test_dungeon_furnisher_suitable_rooms():
     state = Random(0)
     furnisher = DungeonFurnisher('stronghold', random_state=state)
     # print(furnisher.suitable_rooms(['secret', 'something else']))
+
+def test_libraries():
+    layout = MockDungeonLayout()
+    state = Random(0)
+    layout.node[0]['tags'].append('library')
+    library = Library()
+    library.add_special_furnishing(layout)
+    # print(layout.node[0]['library'])
+
 
 def test_dungeon_populator_adds_encounters():
     layout = MockDungeonLayout()
@@ -145,6 +154,15 @@ def test_dungeon_templates():
     # print(template.get_monster_sets())
     # for node, data in layout.nodes(data=True):
     #   print(data, '\n')
+
+def test_sewer():
+    layout = MockDungeonLayout()
+    layout.purpose = 'temple'
+    manager = MockDungeonManager()
+    state = Random()
+    template =  InfestedSewerTemplate(1, dungeon_manager=manager)
+    template.alter_dungeon(layout)
+    
 
 def test_populator_uses_treasure_source():
     layout = MockDungeonLayout()

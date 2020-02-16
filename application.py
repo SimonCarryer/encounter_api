@@ -129,7 +129,7 @@ class DungeonTags(Resource):
         none_tags = ['rare']
         valid_params = {
             'terrain': ['forest', 'desert', 'mountains', 'arctic', 'plains', 'hills', 'jungle', 'swamp'],
-            'dungeontype': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault'],
+            'dungeontype': ['mine', 'temple', 'stronghold', 'tomb', 'cave', 'treasure vault', 'sewer'],
             'antagonists': monster_manual.get_monster_sets(any_tags=any_tags, none_tags=none_tags),
             'in_level_antagonists': monster_manual.get_monster_sets(level=level)
         }

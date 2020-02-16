@@ -111,7 +111,7 @@ class LostItem(SpecialEvent):
 
     def description(self, item):
         found = self.random_state.choice(special_events_data['lost item']['found'])
-        base = ' ' + found + ' is "%s", a "%s" with the following special properties:\n\n' % (item.name, item.item)
+        base = ' ' + found + ' is "%s", a "%s" with the following special property:\n\n' % (item.name, item.item)
         return base + '\n'.join(item.properties) + '\n'
 
     def find_best_room(self, layout):

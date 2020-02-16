@@ -242,3 +242,13 @@
   tags: [humanoid]
 - sign: A scattered line of salt on the floor.
   tags: [guardian]
+- sign: Scorch marks.
+  tags: [fire]
+- sign: A coating of soot.
+  tags: [fire]
+- sign: The room is enormous, the doorways wide enough for a wagon.
+  tags: [giant]
+- sign: Preserved meats hang on hooks from the ceiling.
+  tags: [humanoid]
+- sign: Bottles of liquor lie empty on the floor.
+  tags: [humanoid]

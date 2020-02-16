@@ -18,9 +18,11 @@ explorers:
   - description: The lair of a pack of deadly and cunning wolves
     tags: ['wolves']
   - description: The throne of a powerful warlord
-    tags: ['humanoid']
+    tags: ['humanoid', 'warlike']
   - description: The source of a plague of huge spiders
     tags: ['spiders']
+  - description: The headquarters for a sinister gang
+    tags: ['urban', 'humanoid']
 
 guarded:
   - description: Protected by ancient constructs

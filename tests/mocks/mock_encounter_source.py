@@ -9,9 +9,14 @@ class MockEncounterSource:
     def get_sign(self):
         return 'a sign of some scary monsters'
 
+class MockMonsterManual:
+    def get_rumours(self, monster_set, populator_type):
+        return ['A test rumour']
+
 class MockDungeonManager:
     def __init__(self):
         self.encounter_source = MockEncounterSource()
+        self.monster_manual = MockMonsterManual()
 
     def get_encounter(self, name, **kwargs):
         encounter = self.encounter_source.get_encounter(**kwargs)

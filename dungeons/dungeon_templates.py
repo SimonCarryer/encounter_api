@@ -58,7 +58,7 @@ class DungeonTemplate:
             return None
 
     def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None, wandering=True):
-        if monster_sets is None:
+        if monster_sets is None or monster_sets == []:
             encounter_source = NoEncountersSource()
         else:
             encounter_source = EncounterSource(encounter_level=self.level,
@@ -117,6 +117,19 @@ class HauntedTombTemplate(DungeonBaseTemplate):
         self.build_furnisher('tomb').furnish(layout)
         trap_source = TrapSource(self.level)
         self.build_populator(self.get_monster_sets(), trap_source=trap_source, wandering=False).populate(layout)
+        return layout
+
+class InfestedSewerTemplate(DungeonBaseTemplate):
+    def event_type(self, monster_set=None):
+        return 'Infested by unsettling creatures'
+
+    def get_monster_sets(self):
+        return ['sewers'] #self.monster_sets(required_tags=['urban', 'beast'])
+
+    def alter_dungeon(self, layout):
+        self.build_furnisher('sewer').furnish(layout)
+        self.build_ager(cause='flood').age(layout)
+        self.build_populator(self.get_monster_sets(), wandering=False).populate(layout)
         return layout
 
 class EmptyTombTemplate(DungeonBaseTemplate):
@@ -349,6 +362,14 @@ class LairTemplate(NewInhabitantsTemplate):
         self.build_populator(monster_sets, populator_method=Lair, wandering=False).populate(layout)
         return layout
 
+class SewerLairTemplate(LairTemplate):
+    def get_monster_sets(self):
+        return ['urban']
+    
+    def event_type(self, monster_set=None):
+        return 'Used as a hideout or lair'
+
+
 class ExplorerTemplate(NewInhabitantsTemplate):
     def event_type(self, monster_set=None):
         if monster_set is not None:
@@ -365,8 +386,11 @@ class ExplorerTemplate(NewInhabitantsTemplate):
         self.build_populator(self.get_monster_sets(), populator_method=Explorers).populate(layout)
         return layout
 
-class PassingAgesTemplate(DungeonTemplate):
+class SewerExplorerTemplate(ExplorerTemplate):
+    def get_monster_sets(self):
+        return self.monster_sets(required_tags=['dungeon-explorer', 'urban'], none_tags=['underdark']) 
 
+class PassingAgesTemplate(DungeonTemplate):
     def get_monster_sets(self):
         return []
 
@@ -387,35 +411,3 @@ class PassingAgesTemplate(DungeonTemplate):
             effects.append('age')
         age_effect = self.random_state.choice(effects)
         self.build_ager(cause=age_effect).age(layout)
-
-some_examples = [
-[HauntedTombTemplate, PassingAgesTemplate, ExplorerTemplate],
-[HauntedTombTemplate, PassingAgesTemplate, LairTemplate, ExplorerTemplate],
-[HauntedTombTemplate, FungalInfectionTemplate, LairTemplate, ExplorerTemplate],
-[HauntedTombTemplate, PassingAgesTemplate],
-[AbandonedStrongholdTemplate, HauntedTemplate, LairTemplate],
-[AbandonedStrongholdTemplate, HauntedTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, InfestedTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, TreeChokedTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, InfestedTemplate, LairTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, FungalInfectionTemplate, ExplorerTemplate],
-[AbandonedStrongholdTemplate, VolcanicTemplate],
-[GuardedTreasureVaultTemplate, PassingAgesTemplate, ExplorerTemplate],
-[GuardedTreasureVaultTemplate, PassingAgesTemplate, LairTemplate],
-[GuardedTreasureVaultTemplate, InfestedTemplate],
-[AbandonedMineTemplate, InfestedTemplate, ExplorerTemplate],
-[AbandonedMineTemplate, VolcanicTemplate, ExplorerTemplate],
-[AbandonedMineTemplate, InfestedTemplate, LairTemplate],
-[AbandonedMineTemplate, PassingAgesTemplate, FungalInfectionTemplate, LairTemplate],
-[AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
-[AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
-[InUseTempleTemplate],
-[InfestedCaveTemplate, InfestedTemplate],
-[InfestedCaveTemplate, ExplorerTemplate],
-[InfestedCaveTemplate, VolcanicTemplate],
-[InfestedCaveTemplate, TreeChokedTemplate],
-[InfestedCaveTemplate, LairTemplate, ExplorerTemplate],
-[InfestedCaveTemplate, FungalInfectionTemplate, ExplorerTemplate],
-[InfestedCaveTemplate, LairTemplate, LairTemplate]
-]
-

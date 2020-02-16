@@ -11,8 +11,7 @@ efreet:
 kenku:
   - humanoid
   - bird
-  - forest
-  - desert
+  - any terrain
   - dungeon-explorer
   - urban
 haunted:
@@ -28,6 +27,7 @@ bugbears:
   - savage
   - humanoid
   - dungeon-explorer
+  - warlike
   - any terrain
 underwater:
   - water
@@ -55,6 +55,7 @@ bandits:
   - humanoid
   - dungeon-explorer
   - human
+  - urban
   - disorganised
   - any terrain
 drow:
@@ -83,6 +84,7 @@ plains:
 cult of baphomet:
   - evil
   - humanoid
+  - urban
   - dungeon-explorer
   - human
   - any terrain
@@ -109,6 +111,7 @@ frost giants:
   - giant
   - arctic
   - mountains
+  - warlike
   - dungeon-explorer
 necropolis:
   - undead
@@ -127,6 +130,7 @@ lost world:
 cult of orcus:
   - evil
   - humanoid
+  - urban
   - dungeon-explorer
   - human
   - any terrain
@@ -138,6 +142,7 @@ goblins:
 cult of obox-ob:
   - evil
   - humanoid
+  - urban
   - dungeon-explorer
   - human
   - any terrain
@@ -166,6 +171,7 @@ orcs:
   - savage
   - humanoid
   - dungeon-explorer
+  - warlike
   - any terrain
 swamp:
   - beast
@@ -205,6 +211,7 @@ cult of jubilex:
   - evil
   - dungeon-explorer
   - humanoid
+  - urban
   - fungus
   - human
   - any terrain
@@ -216,6 +223,7 @@ demons:
   - any terrain
 civilised folk:
   - humanoid
+  - warlike
   - human
   - urban
 elemental plane of air:
@@ -261,6 +269,7 @@ fire giants:
   - giant
   - desert
   - mountains
+  - warlike
   - plains
   - hills
   - dungeon-explorer
@@ -308,6 +317,7 @@ arctic:
   - beast
 hobgoblins:
   - humanoid
+  - warlike
   - dungeon-explorer
   - any terrain
 urban:

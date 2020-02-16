@@ -372,7 +372,7 @@ bandits:
     role: environmental hazard
     occurrence: uncommon
   - Name: Half-ogre (Ogrillon)
-    occurrence: uncommon
+    occurrence: rare
     role: elite
   - Name: Half-Red Dragon Veteran
     occurrence: rare
@@ -533,7 +533,7 @@ sewers:
    occurrence: uncommon
    role: solo
  - Name: Swarm of Rats
-   occurrence: common
+   occurrence: rare
    role: environmental hazard
  - Name: Giant Rat
    occurrence: common
@@ -544,13 +544,13 @@ sewers:
  - Name: Ghoul
    occurrence: rare
  - Name: Black Pudding
-   occurrence: uncommon
+   occurrence: rare
    role: environmental hazard
  - Name: Gray Ooze
    occurrence: rare
    role: environmental hazard
  - Name: Ochre Jelly
-   occurrence: common
+   occurrence: rare
    role: environmental hazard
  - Name: Gelatinous Cube
    occurrence: uncommon
@@ -558,6 +558,8 @@ sewers:
  - Name: Water Weird
    occurrence: rare
    role: solo
+ - Name: Ochre Jelly
+   occurrence: common
 
 swamp:
  - Name: Young Black Dragon
@@ -1231,6 +1233,9 @@ desert:
 urban:
  - Name: Gargoyle
    occurrence: rare
+ - Name: Doppelganger
+   occurrence: rare
+   role: solo
  - Name: Ghoul
    occurrence: uncommon
  - Name: Kenku
