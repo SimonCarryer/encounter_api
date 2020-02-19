@@ -103,6 +103,11 @@ class Dungeon(Resource):
             url += '&terrain=%s' % args['terrain']
         else:
             terrain = None
+        if request.args.get('dungeon_type'):
+            base_type = request.args['dungeon_type']
+            url += '&dungeon_type=%s' % base_type
+        else:
+            base_type = None
         if args.get('main_antagonist'):
             main_antagonist = urllib.parse.unquote(args['main_antagonist'])
             url += '&main_antagonist=%s' % args['main_antagonist']
@@ -134,37 +139,6 @@ class DungeonTags(Resource):
             'in_level_antagonists': monster_manual.get_monster_sets(level=level)
         }
         return jsonify(valid_params)
-
-@application.route('/dungeon-html/<level>')
-def dungeon_html(level):
-    if request.args.get('guid'):
-        guid = request.args['guid']
-    else:
-        guid = str(uuid.uuid4())
-    url = level + '?guid=%s' % guid
-    if request.args.get('templates'):
-        templates = request.args['templates'].split(',')
-        url += '&templates=%s' % request.args['templates']
-    else:
-        templates = None
-    if request.args.get('terrain'):
-        terrain = request.args['terrain']
-        url += '&terrain=%s' % terrain
-    else:
-        terrain = None
-    if request.args.get('dungeon_type'):
-        base_type = request.args['dungeon_type']
-        url += '&dungeon_type=%s' % base_type
-    else:
-        base_type = None
-    if request.args.get('main_antagonist'):
-        main_antagonist = request.args['main_antagonist']
-        url += '&main_antagonist=%s' % main_antagonist
-    else:
-        main_antagonist = None
-    state = Random(guid)
-    d = DungeonSource(int(level), random_state=state, templates=templates, main_antagonist=main_antagonist, base_type=base_type, terrain=terrain)
-    return render_template('dungeon.html', module=d.get_dungeon(), url=url)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0', debug=True)
