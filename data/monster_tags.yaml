@@ -403,3 +403,7 @@ far realms:
   - any terrain
   - aberration
   - far realms
+lamia:
+  - evil
+  - magical
+  - desert

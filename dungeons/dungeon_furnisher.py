@@ -48,7 +48,7 @@ class DungeonFurnisher:
         layout.purpose = self.purpose
         if self.random_state.randint(1, 6) >= 5:
             self.get_special_furnishings(layout)
-        Library().add_special_furnishing(layout)
+        Library(random_state=self.random_state).add_special_furnishing(layout)
         return layout
 
     def get_special_furnishings(self, layout):
@@ -199,7 +199,7 @@ class Library(SpecialFurnishing):
             self.add_books(room, layout.purpose)
 
     def add_books(self, room, dungeon_purpose):
-        namer = NameGenerator()
+        namer = NameGenerator(random_state=self.random_state)
         if purpose == 'stronghold':
             topics = self.random_state.sample(['history', 'nature', 'arcana'], 2)
         elif purpose == 'temple':

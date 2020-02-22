@@ -1,4 +1,5 @@
 from encounters import EncounterSource
+from encounters.special_encounters import SpecialEncounter
 from mocks.mock_encounter_source import MockEncounterSource
 from tests.mocks.mock_monster_list import mock_monster_list, mock_monster_list_2, MockMonsterManual
 from random import Random
@@ -50,7 +51,7 @@ def test_encounter_does_not_exceed_xp_budget():
     minimum = budget * 0.5
     source = EncounterBuilder(xp_budget=budget, monster_source=mock_monster_list)
     for monster_list in source.monster_lists:
-        xp_values.append(source.xp_calulator.adjusted_xp_sum(monster_list))
+        xp_values.append(source.xp_calculator.adjusted_xp_sum(monster_list))
     assert all([xp <= maximum for xp in xp_values])
     assert all([xp >= minimum for xp in xp_values])
 
@@ -116,7 +117,7 @@ def test_encounter_source_fails_nicely():
 def test_look_at_some_encounters():
     source = EncounterSource(xp_budget=200, monster_sets=['apex predators'])
     encounter = source.get_encounter(difficulty=None, style=None, occurrence=None)
-    # print(encounter['monsters'])
+    #print(encounter)
 
 def test_encounter_builder():
     budget = 450
@@ -145,3 +146,9 @@ def test_wandering_monsters():
     level = 1
     wandering = WanderingMonsters(level, ['bandits', 'forest'], random_state=state)
     # print(wandering.table)
+
+def test_special_encounters():
+    source = SpecialEncounter(encounter_level=10, monster_sets=['goblins'])
+    encounter = source.get_encounter(difficulty=None, style='basic', occurrence=None)
+    # print(encounter['monsters'])
+    # print(source.assign_special_trait(encounter))

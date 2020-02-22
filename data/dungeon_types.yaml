@@ -88,7 +88,7 @@ stronghold:
   extra details:
     - A raised gallery runs around two walls of this room, reached by a flight of stairs.
     - A fireplace in this room has a narrow chimney-pipe that vents above ground.
-    - There is a large iron grill in the floor of this room - a drain.
+    - There is a large iron grille in the floor of this room - a drain.
     - The arched ceiling of this room is braced with sturdy wooden rafters.
     - There are the remains of wooden furnishings scattered throughout this room.
     - Pillars support the ceiling of this room.
@@ -97,6 +97,10 @@ stronghold:
     - The room sports several iron-barred openings for ventilation shafts.
     - This room's domed ceiling is twice as high as the rest of the complex.
     - This room is unusually large.
+    - Hideous carved faces adorn the buttresses and key stones.
+    - One wall of this room is natural un-carved stone - this room was formed from a pre-existing cave.
+    - Wooden panelling covers the stone walls in this room.
+    - A raised gallery overlooks this room, 10 feet off the ground. The stairway has crumbled long ago.
     - Scaffolding along one wall, unused stone blocks, and unfinished plaster suggest this room was abandoned mid-construction.
     - This room once had several internal walls of wood or plaster, but these are now rotten and crumbling.
     - A crumbling plaster fresco commemorates an ancient battle.
@@ -155,6 +159,7 @@ tomb:
     - Thin plaster walls seal off niches in the stonework.
     - Sombre carvings decorate the buttresses and pillars.
     - The inside of a door is gouged as if by desperate fingernails.
+    - Votive offerings of dried flowers, incense, and painted trinkets are mounded before a doorway.
 temple:
   tags:
     - magical
@@ -274,10 +279,14 @@ mine:
     - Several picks, shovels, and other tools lean against one wall.
     - In the room there is a broken-down mine cart.
     - A human skeleton is half-buried beneath a pile of rubble.
+    - Keepsakes and trinkets decorate a wall, reminders to miners of their families above.
     - Wooden bracing beams criss-cross the room.
+    - A collection of miners' names are carved into a bracing beam.
     - A heap of wooden beams is stacked against one wall.
     - The walls are scored with countless pick-marks.
     - Glittering ore makes the walls sparkle in torchlight.
+    - A stack of candles lies in a corner.
+    - A huge wooden apparatus in this room is connected to a tin pipe - it is a pump for clearing water from the mine.
     - The room sports several iron-barred openings for ventilation shafts.
 treasure vault:
   rooms:
@@ -335,7 +344,7 @@ treasure vault:
   extra details:
     - A raised gallery runs around two walls of this room, reached by a flight of stairs.
     - A fireplace in this room has a narrow chimney-pipe that vents above ground.
-    - There is a large iron grill in the floor of this room - a drain.
+    - There is a large iron grille in the floor of this room - a drain.
     - The arched ceiling of this room is braced with sturdy wooden rafters.
     - There are the remains of wooden furnishings scattered throughout this room.
     - Half the room is filled with piled junk.

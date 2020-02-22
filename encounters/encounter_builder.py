@@ -15,7 +15,7 @@ class EncounterBuilder:
                  lower_bound=0.5,
                  upper_bound=1.5,
                  n_characters=4):
-        self.xp_calulator = XPCalulator(n_characters=n_characters)
+        self.xp_calculator = XPCalulator(n_characters=n_characters)
         self.lower_bound = lower_bound
         self.upper_bound = upper_bound
         self.xp_budget = xp_budget
@@ -31,14 +31,6 @@ class EncounterBuilder:
             self.lower_bound -= 0.1
             self.upper_bound += 0.1
             self.pick_monsters([])
-
-    def right_challenge_monsters(self, existing_monster_list):
-        if len(existing_monster_list) > 0:
-            current_average = sum([m['XP'] for m in existing_monster_list])/len(existing_monster_list)
-        else:
-            current_average = 0
-        threshold = current_average * 0.1
-        return [monster for monster in self.monster_source if monster['role'] == 'troops' or monster['XP'] >= threshold]
 
     def right_role(self, existing_monster_list):
         possible_monsters = self.monster_source
@@ -76,12 +68,11 @@ class EncounterBuilder:
 
     def possible_monsters(self, existing_monster_list):
         right_index = self.right_index_monsters(existing_monster_list)
-        # right_challenge = self.right_challenge_monsters(existing_monster_list)
         right_roles = self.right_role(existing_monster_list)
         return [monster for monster in right_index if monster in right_roles]
         
     def pick_monsters(self, monsters):
-        current_total = self.xp_calulator.adjusted_xp_sum(monsters)
+        current_total = self.xp_calculator.adjusted_xp_sum(monsters)
         if len(monsters) > 18:
             return None
         if current_total > self.xp_budget * self.upper_bound:

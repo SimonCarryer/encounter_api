@@ -50,6 +50,7 @@ template_bunches = {
     'temple': [[AncientRemnantsTempleTemplate, PassingAgesTemplate, ExplorerTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate, LairTemplate],
 [AncientRemnantsTempleTemplate, InfestedTemplate],
+[AncientRemnantsTempleTemplate, CursedTemplate],
 [InUseTempleTemplate],
 [AncientRemnantsTempleTemplate, PassingAgesTemplate],
 [AncientRemnantsTempleTemplate, HauntedTemplate],

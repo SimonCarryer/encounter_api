@@ -1,0 +1,60 @@
+- name: Elite
+  description: Extra training gives this creature +2 to hit.
+  tags: [warlike, humanoid]
+- name: Frenzied
+  description: This creature flies into a frenzy when it fights. It has advantage on attack rolls, but attacks against it also have advantage.
+  tags: [savage]
+- name: Well-armoured
+  description: This creature is better-equipped than others of its kind. Its AC is increased by 1 point.
+  tags: [humanoid, warlike]
+- name: Well-armed
+  description: This creature is better-armed than others of its kind. The damage of its weapon attacks is increased by one die type (d6 to d8, for example).
+  tags: [humanoid, warlike]
+- name: Giant
+  description: This creature is an extremely large example of its kind. It is one size category larger than normal, it has advantage on Strength checks and Strength saving throws, it has 2 extra hit points per hit die, and its attacks do an extra 1d4 damage.
+  tags: [beast]
+- name: Veteran
+  description: This creature is an experienced fighter. When it takes the attack action, it may make one extra weapon attack.
+  tags: [warlike]
+- name: Ambusher
+  tags: [beast]
+  description: This creature has advantage on attack rolls against any creature it surprises.
+- name: Possessed
+  description: This creature is possessed by evil spirits or demons. Is has resistance to slashing, piercing, and bludgeoning damage from non-magical weapons.
+  tags: [evil, humanoid]
+- name: Blood Lust
+  description: This creature fights with preternatural rage and blood lust. Its attacks deal an extra 1d6 damage.
+  tags: [savage]
+- name: Blood Frenzy
+  description: This creature is enraged by the smell of blood. It has advantage on attacks against creatures that don't have all their hit points.
+  tags: [savage]
+- name: Demon Blood
+  description: This creature has demonic heritage, and may have horns, red skin, or other demonic features. It has immunity to fire damage and advantage on saving throws against spells and magical effects.
+  tags: [humanoid]
+- name: Swarming
+  description: This creature is part of an endless swarm. When this creature reaches zero hit points, roll a d6. On a 4+, another creature of the same type enters the battle from a nearby location.
+  tags: [cave-dweller]
+- name: Chameleon
+  description: This creature can alter its skin tone to blend with its surroundings. It has advantage on stealth checks.
+  tags: [cave-dweller]
+- name: Necrotic Aura
+  description: This creature has an aura of life-draining necrotic energy. Any living creature that begins its turn within 5 feet of this creature takes 1d6 necrotic damage.
+  tags: [undead]
+- name: Relentless
+  description: This creature refuses to give up fighting. The first time this creature is reduced to zero hit points, they instead return to 1 hit point.
+  tags: [beast]
+- name: Diseased
+  description: This creature is carrying a terrible disease. Anyone damaged by its natural weapon attacks must make a constitution save (DC11) or contract Sewer Plague.
+  tags: [beast]
+- name: Shadowy Aura
+  description: This creature is protected by swirling dark magic. Ranged attacks against it have disadvantage.
+  tags: [evil]
+- name: Cowardly
+  description: This creature is experienced at avoiding confrontation. If a melee attack misses it, it can use its reaction to move up to 30 feet away.
+  tags: [humanoid]
+- name: Skirmisher
+  description: This creature is adept at hit-and-run tactics. It can take the disengage action as a bonus action on its turn. If it does so, it may move an extra 10 feet.
+  tags: [humanoid]
+- name: Tough
+  description: This creature is tougher than others of its kind. It has two extra hit points per hit die, and advantage on Constitution saves.
+  tags: []

@@ -26,9 +26,11 @@ class Treasure(dict):
         self['magic_items'] = []
         self['gemstones'] = []
         self['objects'] = []
+        self['empty'] = True
 
 
     def get_item(self, item_type, item_value):
+        self['empty'] = False
         if item_type == 'magic item':
             self['magic_items'].append(item_value)
         elif item_type in ['CP', 'SP', 'EP', 'GP', 'PP']:
@@ -39,6 +41,7 @@ class Treasure(dict):
             self['objects'].append(item_value)
         
     def clear_items(self):
+        self['empty'] = True
         self['coins'] = {}
         self['magic_items'] = []
         self['gemstones'] = []

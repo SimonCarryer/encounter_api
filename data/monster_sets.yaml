@@ -2189,3 +2189,26 @@ far realms:
    occurrence: common
  - Name: Beholder
    occurrence: rare
+
+lamia:
+  - Name: Lamia
+    occurrence: common
+    role: leader
+  - Name: Manticore
+    occurrence: uncommon
+    role: pet
+  - Name: Chimera
+    occurrence: rare
+    role: pet
+  - Name: Jackalwere
+    occurrence: common
+    role: elite
+  - Name: Commoner
+    occurrence: common
+    role: troops
+  - Name: Guard
+    occurrence: common
+    role: troops
+  - Name: Veteran
+    occurrence: rare
+    role: elite

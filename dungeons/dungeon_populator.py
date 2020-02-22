@@ -182,6 +182,7 @@ class Lair(DungeonPopulator):
 
 class Taint(DungeonPopulator):
     def populate(self, layout, tag=None):
+        self.used_leader = False
         for node, data in layout.nodes(data=True):
             if tag in data['tags'] and node !=0:
                 if data.get('encounter') is not None:
@@ -190,7 +191,8 @@ class Taint(DungeonPopulator):
                     difficulty = 'hard'
                 else:
                     difficulty = None
-                layout.node[node]['encounter'] = self.get_encounter(difficulty=difficulty)
+                style = self.random_state.choice(['basic', 'elite'])
+                layout.node[node]['encounter'] = self.get_encounter(difficulty=difficulty, style=style)
                 layout.node[node]['sign'] = ''
             elif 'important' in data['tags'] and node !=0:
                 if data.get('encounter') is not None:
@@ -199,7 +201,12 @@ class Taint(DungeonPopulator):
                     difficulty = 'hard'
                 else:
                     difficulty = 'medium'  
-                layout.node[node]['encounter'] = self.get_encounter(difficulty=None)
+                if self.used_leader:
+                    style = 'elite'
+                else:
+                    style = 'leader'
+                    self.used_leader = True
+                layout.node[node]['encounter'] = self.get_encounter(difficulty=None, style='leader')
                 layout.node[node]['sign'] = self.get_sign()           
         return layout
 
