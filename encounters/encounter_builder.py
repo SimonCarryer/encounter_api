@@ -20,6 +20,7 @@ class EncounterBuilder:
         self.upper_bound = upper_bound
         self.xp_budget = xp_budget
         self.monster_source = monster_source
+        self.max_n_monsters = 10
         for idx, monster in enumerate(self.monster_source):
             monster['idx'] = idx
         self.monster_lookup = {monster['Name']: monster for monster in monster_source}
@@ -73,7 +74,7 @@ class EncounterBuilder:
         
     def pick_monsters(self, monsters):
         current_total = self.xp_calculator.adjusted_xp_sum(monsters)
-        if len(monsters) > 18:
+        if len(monsters) >= self.max_n_monsters:
             return None
         if current_total > self.xp_budget * self.upper_bound:
             return None

@@ -46,15 +46,15 @@ class EncounterPicker:
         xp_value = self.xp_calculator.adjusted_xp_sum(monster_set)
         relative_difficulty = xp_value / self.xp_budget
         if relative_difficulty <= 0.5:
-            difficulty = 'trivial'
+            difficulty = 'Trivial'
         elif relative_difficulty <= 0.8:
-            difficulty = 'easy'
+            difficulty = 'Easy'
         elif relative_difficulty <= 1.2:
-            difficulty = 'medium'
+            difficulty = 'Medium'
         elif relative_difficulty <= 1.5:
-            difficulty = 'hard'
+            difficulty = 'Hard'
         else:
-            difficulty = 'deadly'
+            difficulty = 'Deadly'
         return difficulty
 
     def encounter_style(self, monster_set):

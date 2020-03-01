@@ -5,7 +5,7 @@ from treasure.treasure_api import IndividualSource
 import yaml
 import random
 from hashlib import md5
-from utils.library import monster_manual
+from utils.library import monster_manual as monster_manual
 
 with open('data/xp_values.yaml') as f:
     xp_values = yaml.load(f.read())

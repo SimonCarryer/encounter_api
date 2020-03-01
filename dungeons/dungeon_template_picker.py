@@ -10,6 +10,7 @@ template_bunches = {
 [HauntedTombTemplate, PassingAgesTemplate, LairTemplate, ExplorerTemplate],
 [HauntedTombTemplate, FungalInfectionTemplate, LairTemplate, ExplorerTemplate],
 [HauntedTombTemplate, PassingAgesTemplate],
+[HauntedTombTemplate, PassingAgesTemplate, LairTemplate],
 [EmptyTombTemplate, PassingAgesTemplate, InfestedTemplate],
 [EmptyTombTemplate, CursedTemplate, PassingAgesTemplate],
 [EmptyTombTemplate, HauntedTemplate, PassingAgesTemplate],

@@ -170,7 +170,7 @@ class ForbiddingDoor(SpecialRoom):
         response['success'] = True
         response['monster_set'] = prisoner
         response['monsters'] = [{'name': prisoner, 'number': 1}]
-        response['difficulty'] = None
+        response['difficulty'] = 'Special'
         response['xp_value'] = None
         response['treasure'] = None
         return response
@@ -385,7 +385,6 @@ class NPCHome(SpecialRoom):
 class DragonLair(SpecialEvent):
     def choose_dragon(self):
         dragons = special_events_data['dragon lair']['dragons']
-        print(dragons)
         dragon_source = EncounterSource(encounter_level=self.level, monster_sets=dragons)
         return dragon_source.get_encounter(difficulty='hard')
 

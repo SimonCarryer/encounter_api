@@ -62,6 +62,7 @@ class MonsterManual():
         self.monster_sets = monster_sets
         self.monster_set_names = [key for key in self.monster_sets.keys()]
         self.monster_tags = copy.deepcopy(monster_tags)
+        self.terrain = terrain
         if terrain is not None:
             self.monster_sets = {key: monster_sets[key] for key in self.get_monster_sets(any_tags=[terrain, 'any terrain', 'underdark'])}
             self.monster_set_names = [key for key in self.monster_sets.keys()]
@@ -105,9 +106,9 @@ class MonsterManual():
 
     def appropriate_challenge(self, monster_set, level):
         mob_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['natural hazard', 'troops'] and monster['occurrence'] != 'rare']
-        good_challenge_mobs = [monster_level for monster_level in mob_monster_levels if monster_level < level-0.5 and monster_level >= (level/12)-0.5]
+        good_challenge_mobs = [monster_level for monster_level in mob_monster_levels if monster_level < level-0.5 and monster_level >= (level/10)-0.5]
         boss_monster_levels = [level_lookup[monster['XP']] for monster in self.monster_sets[monster_set] if monster['role'] in ['leader', 'solo'] and monster['occurrence'] != 'rare']
-        good_challenge_bosses = [monster_level for monster_level in boss_monster_levels if monster_level <= level and monster_level >= level-10]
+        good_challenge_bosses = [monster_level for monster_level in boss_monster_levels if monster_level <= level and monster_level >= level-8]
         return (len(mob_monster_levels) == 0 or len(good_challenge_mobs) > 0) and (len(boss_monster_levels) == 0 or len(good_challenge_bosses) > 0)
 
     def get_signs(self, monster_set):

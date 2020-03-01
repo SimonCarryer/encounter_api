@@ -1,0 +1,48 @@
+first_name:
+  steve:
+    sex: [male]
+    race: [human]
+  gimli:
+    sex: [male]
+    race: [dwarf]
+  linda:
+    sex: [female]
+    race: [human]
+  gloina:
+    sex: [female]
+    race: [dwarf]
+  friga:
+    sex: [female]
+    race: [dwarf]
+whole_last_name:
+  robertson:
+    race: [human]
+  axelover:
+    race: [dwarf]
+name_from_parts:
+  - ${First_part}${last_part}
+  - ${First_part}${middle_part}${last_part}
+first_part:
+  - gir
+  - vor
+  - ron
+  - gar
+middle_part:
+  - l
+  - lo
+  - og
+last_part:
+  - in
+  - son
+  - nar
+full_name:
+  ${First_name} ${Whole_last_name}:
+    race: [human, dwarf]
+  ${First_name} ${Name_from_parts}:
+    race: [dwarf]
+  ${First_name} ${First_name}daughter:
+    race: [dwarf]
+    sex: [female] 
+  ${First_name} ${First_name}son:
+    race: [dwarf, human]
+    sex: [man] 

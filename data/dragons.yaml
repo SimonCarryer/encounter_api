@@ -1,0 +1,177 @@
+swamp:
+  - Name: Black Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Black Dragon
+    role: solo
+    occurrence: common
+hills:
+  - Name: Green Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Red Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Red Dragon        
+    role: solo
+    occurrence: common
+arctic:
+  - Name: White Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young White Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult White Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient White Dragon
+    role: solo
+    occurrence: common
+mountains:
+  - Name: White Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young White Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult White Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient White Dragon
+    role: solo
+    occurrence: common
+  - Name: Red Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Red Dragon        
+    role: solo
+    occurrence: common
+jungle:
+  - Name: Green Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Black Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Black Dragon
+    role: solo
+    occurrence: common
+plains:
+  - Name: Blue Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Blue Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Blue Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Blue Dragon
+    role: solo
+    occurrence: common 
+  - Name: Red Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Red Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Red Dragon        
+    role: solo
+    occurrence: common
+desert:
+  - Name: Blue Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Blue Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Blue Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Blue Dragon
+    role: solo
+    occurrence: common
+forest:
+  - Name: Green Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Green Dragon
+    role: solo
+    occurrence: common
+  - Name: Black Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Black Dragon
+    role: solo
+    occurrence: common
+underdark:
+  - Name: Black Dragon Wyrmling
+    role: solo
+    occurrence: common
+  - Name: Young Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Adult Black Dragon
+    role: solo
+    occurrence: common
+  - Name: Ancient Black Dragon
+    role: solo
+    occurrence: common

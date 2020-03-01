@@ -789,21 +789,6 @@ apex predators:
  - Name: Displacer Beast
    occurrence: common
    role: solo
- - Name: Young Red Dragon
-   occurrence: rare
-   role: solo
- - Name: Young Green Dragon
-   occurrence: rare
-   role: solo
- - Name: Young Blue Dragon
-   occurrence: rare
-   role: solo
- - Name: Young Black Dragon
-   occurrence: rare
-   role: solo
- - Name: Young White Dragon
-   occurrence: rare
-   role: solo
  - Name: Hill Giant
    occurrence: common
    role: solo

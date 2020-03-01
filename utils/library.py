@@ -10,3 +10,7 @@ def use_mock_monster_manual():
 def use_real_monster_manual():
     global monster_manual
     monster_manual = MonsterManual()
+
+def new_monster_manual(terrain):
+    global monster_manual
+    monster_manual = MonsterManual(terrain)

@@ -5,6 +5,7 @@ from monster_manual.monster_manual import MonsterManual
 from names.name_api import NameGenerator
 from random import Random
 from json import JSONEncoder
+from utils.library import monster_manual
 
 class Sign():
     def __init__(self, sign):
