@@ -14,6 +14,20 @@ first_name:
   friga:
     sex: [female]
     race: [dwarf]
+adjective:
+  - big
+  - small
+  - ugly
+  - smelly
+noun:
+  - face
+  - egg
+  - pig
+thing:
+  - $A $adjective $noun
+  - $A $noun
+  - $A $noun called $First_name
+  - $A $adjective $noun called $Full_name
 whole_last_name:
   robertson:
     race: [human]
