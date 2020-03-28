@@ -6,6 +6,9 @@ from names.name_api import NameGenerator
 from random import Random
 from json import JSONEncoder
 from utils.library import monster_manual
+import logging
+
+logger = logging.getLogger(__name__)
 
 class Sign():
     def __init__(self, sign):
@@ -104,14 +107,27 @@ class DungeonManager:
         self.name_generator = NameGenerator(random_state=self.random_state)
         self.wandering_monsters = {}
 
-    def add_encounter_source(self, source_name, encounter_source):
+    def add_encounter_source(self, source_name, monster_set, event_description, wandering=False):
+        logger.debug('Adding encounter source %s (%s)' % (source_name, monster_set))
+        encounter_source = EncounterSource(encounter_level=self.level,
+                                    monster_sets=[monster_set],
+                                    supplied_monster_manual=MonsterManual(terrain=self.terrain),
+                                    random_state=self.random_state)
         self.encounter_sources[source_name] = encounter_source
         self.encounters[source_name] = 0
         self.signs[source_name] = []
+        self.add_event(source_name, event_description, monster_set, wandering=wandering)
 
-    def add_event(self, source_name, method_name, monster_set, wandering=False):
+    def add_special_encounter_source(self, source_name, encounter_source):
+        logger.debug('Adding special encounter source %s' % (source_name))
+        self.encounter_sources[source_name] = encounter_source
+        self.encounters[source_name] = 0
+        self.signs[source_name] = []        
+
+    def add_event(self, source_name, description, monster_set, wandering=False):
+        logger.debug('Adding event for source %s (%s)' % (source_name, monster_set))
         event = {
-            'event': method_name,
+            'event': description,
             'monster_set': monster_set,
             'source_name': source_name
         }
@@ -120,6 +136,7 @@ class DungeonManager:
             self.wandering_monsters[source_name] = monster_set
 
     def get_encounter(self, source_name, **kwargs):
+        logger.debug('Getting encouter from encounter source %s' % (source_name))
         encounter = self.encounter_sources[source_name].get_encounter(**kwargs)
         if encounter.get('success'):
             self.encounters[source_name] += 1
@@ -129,15 +146,18 @@ class DungeonManager:
             return None
 
     def delete_encounter(self, encounter):
+        logger.debug('Deleting encouter from encounter source %s' % (encounter.get('source name')))
         source_name = encounter.get('source name')
         self.encounters[source_name] -= 1
 
     def get_sign(self, source_name):
+        logger.debug('Getting sign from encounter source %s' % (source_name))
         sign = Sign(self.encounter_sources[source_name].get_sign())
         self.signs[source_name].append(sign)
         return sign
 
     def delete_signs(self, source_name):
+        logger.debug('Deleting sign from encounter source %s' % (source_name))
         for sign in self.signs[source_name]:
             sign.delete()
 
@@ -159,6 +179,7 @@ class DungeonManager:
         return f'{text}: ({monster_set})'
 
     def __exit__(self, eType, eValue, eTrace):
+        logger.debug('Exiting dungeon manager')
         for source_name in self.encounter_sources:
             if self.encounters[source_name] == 0:
                 self.delete_signs(source_name)

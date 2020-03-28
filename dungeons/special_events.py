@@ -57,11 +57,12 @@ class VillainHideout(SpecialEvent):
                                             monster_sets=['villains'],
                                             random_state=self.random_state)
         encounter_source.monster_set = self.villain_name()
-        self.dungeon_manager.add_encounter_source(self.name, encounter_source)
+        self.dungeon_manager.add_special_encounter_source(self.name, encounter_source)
         encounter = self.dungeon_manager.get_encounter(self.name, style='leader', difficulty='medium')
         if encounter['difficulty'] in ['easy', 'medium'] and self.random_state.randint(1, 6) >= 3:
             item = NPC_item(self.level, random_state=self.random_state)
             encounter['treasure']['magic_items'] = item.item
+        encounter['difficulty'] = 'Special'
         return encounter
 
     def find_best_room(self, layout):
@@ -320,7 +321,7 @@ class WeirdEncounter(VillainHideout):
                                             random_state=self.random_state)
         encounter_source.monster_set += ' - Here due to a strange alliance, a curse, or magic item.'
         self.encounter_name = encounter_source.monster_set
-        self.dungeon_manager.add_encounter_source(self.name, encounter_source)
+        self.dungeon_manager.add_special_encounter_source(self.name, encounter_source)
         encounter = self.dungeon_manager.get_encounter(self.name, style='elite', difficulty='hard')
         return encounter
 

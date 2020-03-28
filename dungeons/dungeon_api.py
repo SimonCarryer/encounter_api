@@ -4,10 +4,11 @@ from .dungeon_templates import *
 from .dungeon_manager import DungeonManager
 from treasure.treasure_api import RawHoardSource
 from .dungeon_template_picker import TemplatePicker
-from random import Random
+from utils.library import monster_manual, MonsterManual
 
 class DungeonSource():
     def __init__(self, level, terrain=None, base_type=None, templates=None, main_antagonist=None, random_state=None):
+        global monster_manual
         if random_state is None:
             self.random_state = Random()
         else:

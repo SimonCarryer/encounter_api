@@ -906,6 +906,9 @@ cult of orcus:
  - Name: Zombie
    occurrence: common
    role: elite
+ - Name: Ogre Zombie
+   occurrence: rare
+   role: elite
  - Name: Ghoul
    occurrence: uncommon
    role: elite
@@ -2126,6 +2129,9 @@ hags:
  - Name: Green Hag
    role: leader
    occurrence: common
+ - Name: Ogre Zombie
+   role: elite
+   occurrence: rare
  - Name: Giant Spider
    occurrence: common
    role: troops

@@ -23,7 +23,7 @@ class MockDungeonManager:
         encounter['source'] = name
         return encounter
 
-    def add_encounter_source(self, name, something_else):
+    def add_encounter_source(self, name, set, event_description, wandering=False):
         pass
 
     def get_sign(self, name):

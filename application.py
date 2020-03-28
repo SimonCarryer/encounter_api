@@ -1,13 +1,34 @@
+from logging.config import dictConfig
+
+dictConfig({
+    'version': 1,
+    'formatters': {'default': {
+        'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+    }},
+    'handlers': {'wsgi': {
+        'class': 'logging.StreamHandler',
+        'stream': 'ext://flask.logging.wsgi_errors_stream',
+        'formatter': 'default'
+    }},
+    'root': {
+        'level': 'INFO',
+        'handlers': ['wsgi']
+    }
+})
+
+
 import sys
 from flask import Flask, jsonify, redirect, url_for, request, render_template
 from flask_restplus import Resource, Api, reqparse
 from encounters.encounter_api import EncounterSource
 from utils.library import monster_manual
+from flask.logging import default_handler
 from collections import Counter
 from werkzeug.exceptions import BadRequest
 from flask_cors import CORS
 from dungeons.dungeon_api import DungeonSource
 from random import Random
+import logging
 import random
 import uuid
 import urllib
@@ -115,6 +136,7 @@ class Dungeon(Resource):
             main_antagonist = None
         base_type = args.get('dungeon_type')
         state = Random(guid)
+        application.logger.debug('Making a dungeon %s %s %s %s' % (level, base_type, main_antagonist, terrain))
         d = DungeonSource(level, random_state=state, base_type=base_type, main_antagonist=main_antagonist, templates=templates, terrain=terrain)
         module = d.get_dungeon()
         return jsonify({'dungeon': module, 'url': url})

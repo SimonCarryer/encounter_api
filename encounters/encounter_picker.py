@@ -1,5 +1,8 @@
 from .xp_calculator import XPCalulator
 from random import Random
+from hashlib import md5
+from collections import defaultdict
+
 
 occurrence_dict = {'common': 1, 'uncommon': 2, 'rare': 3}
 reverse_occurrence_dict = {v: k for k, v in occurrence_dict.items()}
@@ -26,7 +29,8 @@ class EncounterPicker:
                 'occurrence': self.encounter_occurrence(monster_list),
                 'style': self.encounter_style(monster_list),
                 'monsters': monster_list,
-                'xp_value': self.xp_calculator.adjusted_xp_sum(monster_list)
+                'xp_value': self.xp_calculator.adjusted_xp_sum(monster_list),
+                'monster_hash': self.hash_monsters([m['Name'] for m in monster_list])
             }
             for monster in monster_list:
                 if monster['role'] not in ['environmental hazard', 'pet']:
@@ -37,6 +41,12 @@ class EncounterPicker:
         self.occurrence_weight = 2
         self.preferred_monster_weight = 1
         self.set_modifier = 16
+        self.used_monster_weight = 2
+        self.used_encounters = defaultdict(int)
+
+    def hash_monsters(self, monsters):
+        hashed = md5(''.join(sorted(tuple(set(monsters)))).encode())
+        return hashed.hexdigest()
 
     def encounter_occurrence(self, monster_set):
         max_occurrence = max([occurrence_dict[monster['occurrence']] for monster in monster_set])
@@ -77,6 +87,7 @@ class EncounterPicker:
             score += weights['style']
         if preferred_monster in [m['Name'] for m in encounter['monsters']]:
             score += weights['preferred_monster']
+        score -= self.used_encounters[encounter['monster_hash']] * self.used_monster_weight
         return score
 
     def top_encounters(self, difficulty, occurrence, style, preferred_monster, weights):
@@ -122,6 +133,7 @@ class EncounterPicker:
             top_encounters = self.top_encounters(difficulty, occurrence, style, preferred_monster, weights)
             pick = self.random_state.choice(top_encounters)
             roles = set([monster['role'] for monster in pick['monsters']])
+            self.used_encounters[pick['monster_hash']] += 1
             return pick
             
         

@@ -6,7 +6,8 @@ from .dungeon_furnisher import DungeonFurnisher
 from random import Random
 import yaml
 import uuid
-from utils.library import monster_manual, use_real_monster_manual
+import logging
+from utils.library import monster_manual, use_real_monster_manual, MonsterManual
 from traps.trap_api import TrapSource
 
 with open('data/dungeon_age.yaml', 'r') as f:
@@ -16,6 +17,8 @@ with open('data/dungeon_age.yaml', 'r') as f:
         for idx, room_effect in enumerate(dungeon_age[cause]['rooms']):
             if cause in ['earthquake', 'cave-age']:
                 effects.append(room_effect)
+
+logger = logging.getLogger(__name__)
 
 class NoEncountersSource:
     def __init__(self):
@@ -60,16 +63,15 @@ class DungeonTemplate:
     def build_populator(self, monster_sets=None, populator_method=OriginalInhabitants, trap_source=None, wandering=True):
         if monster_sets is None or monster_sets == []:
             encounter_source = NoEncountersSource()
+            logger.debug('Making a NoEncounterSource')
+            self.dungeon_manager.add_special_encounter_source(self.name, encounter_source)
         else:
-            encounter_source = EncounterSource(encounter_level=self.level,
-                                                monster_sets=monster_sets,
-                                                random_state=self.random_state)
-        self.dungeon_manager.add_encounter_source(self.name, encounter_source)
+            monster_set = self.random_state.choice(monster_sets)
+            self.dungeon_manager.add_encounter_source(self.name, monster_set, self.event_type(monster_set), wandering=wandering)
         populator = populator_method(name=self.name,
                                      dungeon_manager=self.dungeon_manager,
                                      trap_source=trap_source,
                                      random_state=self.random_state)
-        self.dungeon_manager.add_event(self.name, self.event_type(monster_set=encounter_source.monster_set), encounter_source.monster_set, wandering=wandering)
         return populator
     
     def build_ager(self, cause):

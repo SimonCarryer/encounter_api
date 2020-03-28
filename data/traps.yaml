@@ -26,6 +26,16 @@ damage:
     dangerous: 18
     deadly: 24
 
+jerry-rigged:
+  telltales:
+    - concealed ropes
+    - rearranged furnishings
+    - suspicious footprints
+    - a peep-hole
+  trigger:
+    - a hidden observer
+    - a tripwire
+
 mechanical:
   telltales:
     - visible wires

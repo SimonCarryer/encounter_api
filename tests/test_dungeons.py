@@ -194,7 +194,7 @@ def test_manager_adds_encounters():
     source = MockEncounterSource()
     layout = MockDungeonLayout()
     manager = DungeonManager(1, layout)
-    manager.add_encounter_source('test', source)
+    manager.add_special_encounter_source('test', source)
     encounter = manager.get_encounter('test', style='test style')
     assert encounter['source name'] == 'test'
     assert encounter['style'] == 'test style'
@@ -205,7 +205,7 @@ def test_manager_deletes_encounters():
     source = MockEncounterSource()
     layout = MockDungeonLayout()
     manager = DungeonManager(1, layout)
-    manager.add_encounter_source('test', source)
+    manager.add_special_encounter_source('test', source)
     encounter = manager.get_encounter('test', style='test style')
     assert manager.encounters['test'] == 1
     manager.delete_encounter(encounter)
@@ -237,7 +237,7 @@ def test_manager_gets_signs():
     source = MockEncounterSource()
     layout = MockDungeonLayout()
     manager = DungeonManager(1, layout)
-    manager.add_encounter_source('test', source)
+    manager.add_special_encounter_source('test', source)
     sign = manager.get_sign('test')
     assert str(sign) == 'a sign of some scary monsters'
 
@@ -246,7 +246,7 @@ def test_manager_deletes_signs():
     source = MockEncounterSource()
     layout = MockDungeonLayout()
     manager = DungeonManager(1, layout)
-    manager.add_encounter_source('test', source)
+    manager.add_special_encounter_source('test', source)
     sign = manager.get_sign('test')
     manager.delete_signs('test')
     assert str(manager.signs['test'][0]) == ''
@@ -256,7 +256,7 @@ def test_deleting_encounters_deletes_signs():
     source = MockEncounterSource()
     layout = MockDungeonLayout()
     with DungeonManager(1, layout) as manager:
-        manager.add_encounter_source('test', source)
+        manager.add_special_encounter_source('test', source)
         encounter = manager.get_encounter('test')
         sign = manager.get_sign('test')
         # print(sign)
@@ -268,8 +268,8 @@ def test_deleting_different_encounters_deletes_signs():
     layout = MockDungeonLayout()
     source = MockEncounterSource()
     with DungeonManager(1, layout) as manager:
-        manager.add_encounter_source('test', source)
-        manager.add_encounter_source('test_2', source)
+        manager.add_special_encounter_source('test', source)
+        manager.add_special_encounter_source('test_2', source)
         encounter = manager.get_encounter('test')
         encounter_2 = manager.get_encounter('test_2')
         sign = manager.get_sign('test')

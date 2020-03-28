@@ -104,11 +104,13 @@ class OriginalInhabitants(DungeonPopulator):
         elif 'entrance' in data['tags'] and self.roll(4):
             encounter = self.get_encounter(style='basic')
         elif 'secret' in data['tags'] and self.roll(2):
-            encounter = self.get_encounter(style='exotic')
+            encounter = self.get_encounter(style='elite', occurrence='rare')
         elif 'guarded' in data['tags'] and self.roll(2):
-            encounter = self.get_encounter(difficulty='medium')
+            style = self.random_state.choice(['basic', 'elite'])
+            encounter = self.get_encounter(difficulty='medium', style=style)
         elif self.roll(5):
-            encounter = self.get_encounter(difficulty='medium')
+            style = self.random_state.choice(['basic', 'elite'])
+            encounter = self.get_encounter(difficulty='medium', style=style)
         if 'treasure' in data['tags'] and treasure is None:
             treasure = self.get_treasure()
         return trap, encounter, treasure, sign
@@ -264,10 +266,11 @@ class Explorers(DungeonPopulator):
                 else:
                     data['treasure'] = self.get_treasure(shares=1)
             elif node == start_node:
-                data['encounter'] = self.get_encounter(style='basic')
+                data['encounter'] = self.get_encounter(style='basic', difficulty='easy')
                 data['treasure'] = None
             elif self.roll(4):
-                data['encounter'] = self.get_encounter()
+                style = self.random_state.choice(['basic', 'elite'])
+                data['encounter'] = self.get_encounter(style=style)
                 data['treasure'] = None
             else:
                 data['encounter'] = None

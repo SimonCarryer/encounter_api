@@ -139,12 +139,12 @@ def test_encounter_picker():
 def test_encounter_hash():
     source = EncounterSource(xp_budget=1)
     monsters = ['goblin', 'goblin']
-    assert source.hash_monsters(monsters) == '268322f238a159181f06a725714b5106'
+    assert source.encounter_picker.hash_monsters(monsters) == '62b39a8bd03262744613b0bde3e51efa'
 
 def test_wandering_monsters():
-    state = Random(0)
-    level = 1
-    wandering = WanderingMonsters(level, ['bandits', 'forest'], random_state=state)
+    state = Random()
+    level = 3
+    wandering = WanderingMonsters(level, ['caves'], random_state=state)
     # print(wandering.table)
 
 def test_special_encounters():
@@ -152,3 +152,8 @@ def test_special_encounters():
     encounter = source.get_encounter(difficulty=None, style='basic', occurrence=None)
     # print(encounter['monsters'])
     # print(source.assign_special_trait(encounter))
+
+def test_reduce_repeat_encounters():
+    source = EncounterSource(xp_budget=700, random_state=Random(0), monster_sets=['apex predators'])
+    # for _ in range(3):
+    #     print(source.get_encounter()['monsters'])

@@ -38,7 +38,7 @@ def test_get_sings():
     #     print(sign)
 
 def test_specify_terrain():
-    mm = MonsterManual(terrain='underdark')
+    mm = MonsterManual(terrain='forest')
     # print(mm.monster_set_names)
 
 def test_get_tags():
