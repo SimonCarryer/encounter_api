@@ -1,38 +1,52 @@
 import yaml
-from random import Random
-from monster_manual.monster_manual import MonsterManual
-from encounters.wandering_monsters import WanderingMonsters
-from encounters.encounter_api import EncounterSource
+import random
+from .hexmap import HexMap
+from .terrain import Terrain
+from .river import River, Road
+from .overlay import *
+from .populator import Creatures
 
-with open('data/places.yaml') as f:
-    places = yaml.load(f)
+
+class PlaceSource():
+    def __init__(self):
+        pass
+
+    def get_place(self):
+        place_type = random.choice([RiverValley, ForestHills])
+        n_regions = random.randint(15, 19)
+        return place_type(n_regions).layout()
+
 
 class Place:
-    def __init__(self, place_type, level, monster_manual, random_state=None):
-        self.place_type = place_type
-        self.monster_manual = monster_manual
-        self.level = level
-        if random_state is None:
-            self.random_state = Random()
-        else:
-            self.random_state = random_state
-        self.locations = []
-        n = self.random_state.randint(2, 3)
-        for location in self.random_state.sample(places[self.place_type]['locations'], n):
-            self.locations.append(location)
+    def __init__(self, n_regions):
+        self.hexmap = HexMap(n_regions)
+        self.hexes = self.hexmap.G
+        self.apply()
 
-    def encounters(self):
-        tags = places[self.place_type]['encounters']
-        monster_sets = self.monster_manual.get_monster_sets(any_tags=tags.get('any'), none_tags=tags.get('none'))
-        monster_set = self.random_state.choice(monster_sets)
-        return {
-            'random encounters': WanderingMonsters(self.level, [monster_set], random_state=self.random_state).build_table(),
-            'boss': EncounterSource(encounter_level=self.level, monster_sets=[monster_set], random_state=self.random_state).get_encounter(difficulty='hard', style='leader')
-        }
+    def layout(self):
+        return self.hexmap.layout()
 
-    def details(self):
-        return {
-            'type': self.place_type,
-            'locations': self.locations,
-            'encounters': self.encounters()
-        }
+
+class RiverValley(Place):
+    def apply(self):
+        river = River()
+        river.apply(self.hexes)
+        terrain = Terrain("forest")
+        terrain.apply(self.hexes)
+        encounters = Creatures(
+            terrain="forest", monster_set="forest", level=1)
+        encounters.apply(self.hexes)
+
+
+class ForestHills(Place):
+    def apply(self):
+        overlay = TwoHigh("height", 3, 1)
+        overlay.apply(self.hexes)
+        if random.randint(1, 6) >= 5:
+            road = Road()
+            road.apply(self.hexes)
+        terrain = Terrain("forest")
+        terrain.apply(self.hexes)
+        encounters = Creatures(
+            terrain="forest", monster_set="forest", level=1)
+        encounters.apply(self.hexes)

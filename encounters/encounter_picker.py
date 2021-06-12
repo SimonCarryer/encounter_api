@@ -7,6 +7,7 @@ from collections import defaultdict
 occurrence_dict = {'common': 1, 'uncommon': 2, 'rare': 3}
 reverse_occurrence_dict = {v: k for k, v in occurrence_dict.items()}
 
+
 class EncounterPicker:
     def __init__(self,
                  encounters,
@@ -21,8 +22,8 @@ class EncounterPicker:
         self.xp_budget = xp_budget
         self.encounters = []
         self.monsters = {'rare': set(),
-                          'uncommon': set(),
-                          'common': set()}
+                         'uncommon': set(),
+                         'common': set()}
         for monster_list in encounters:
             encounter = {
                 'difficulty': self.encounter_difficulty(monster_list),
@@ -49,7 +50,8 @@ class EncounterPicker:
         return hashed.hexdigest()
 
     def encounter_occurrence(self, monster_set):
-        max_occurrence = max([occurrence_dict[monster['occurrence']] for monster in monster_set])
+        max_occurrence = max([occurrence_dict[monster['occurrence']]
+                              for monster in monster_set])
         return reverse_occurrence_dict[max_occurrence]
 
     def encounter_difficulty(self, monster_set):
@@ -87,13 +89,16 @@ class EncounterPicker:
             score += weights['style']
         if preferred_monster in [m['Name'] for m in encounter['monsters']]:
             score += weights['preferred_monster']
-        score -= self.used_encounters[encounter['monster_hash']] * self.used_monster_weight
+        score -= self.used_encounters[encounter['monster_hash']
+                                      ] * self.used_monster_weight
         return score
 
     def top_encounters(self, difficulty, occurrence, style, preferred_monster, weights):
-        encounter_scores = [(self.score_encounter(difficulty, occurrence, style, preferred_monster, encounter, weights), encounter) for encounter in self.encounters]
+        encounter_scores = [(self.score_encounter(difficulty, occurrence, style,
+                                                  preferred_monster, encounter, weights), encounter) for encounter in self.encounters]
         max_score = max([score for score, encounter in encounter_scores])
-        top_encounters = [encounter for score, encounter in encounter_scores if score == max_score]
+        top_encounters = [encounter for score,
+                          encounter in encounter_scores if score == max_score]
         return top_encounters
 
     def pick_encounter(self, difficulty=None, occurrence=None, style=None):
@@ -115,7 +120,7 @@ class EncounterPicker:
             weights['occurrence'] += self.set_modifier
         if style is None:
             roll = self.random_state.randint(1, 6)
-            if roll <= 3:
+            if roll <= 4:
                 style = 'basic'
             elif roll <= 5:
                 style = 'exotic'
@@ -124,20 +129,16 @@ class EncounterPicker:
         else:
             weights['style'] += self.set_modifier
         if len(self.monsters[occurrence]) > 0:
-            preferred_monster = self.random_state.choice(sorted(list(self.monsters[occurrence])))
+            preferred_monster = self.random_state.choice(
+                sorted(list(self.monsters[occurrence])))
         else:
             preferred_monster = None
         if len(self.encounters) == 0:
             return {'monsters': []}
         else:
-            top_encounters = self.top_encounters(difficulty, occurrence, style, preferred_monster, weights)
+            top_encounters = self.top_encounters(
+                difficulty, occurrence, style, preferred_monster, weights)
             pick = self.random_state.choice(top_encounters)
             roles = set([monster['role'] for monster in pick['monsters']])
             self.used_encounters[pick['monster_hash']] += 1
             return pick
-            
-        
-
-    
-
-        

@@ -202,3 +202,21 @@ mountain pass:
         - unstable ground
         - avalanche
 
+place templates:
+    - haunted
+    - graveyard
+    - battlefield
+    - hideout
+    - ruin
+    - abandoned structure
+        - bridge
+        - farmstead
+    - apex predator
+    - sacred pool
+    - sacred grove
+    - henge
+    - road
+    - river
+        - waterfall
+        - canyon
+    - volcano

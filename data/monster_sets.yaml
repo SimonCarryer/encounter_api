@@ -298,7 +298,7 @@ forest:
     occurrence: uncommon
     role: solo
   - Name: Swarm of Ravens
-    occurrence: uncommon
+    occurrence: rare
     role: environmental hazard
   - Name: Wolf
     occurrence: common

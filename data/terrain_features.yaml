@@ -1,21 +1,87 @@
 forest:
-    - Foliage or bark is an unusual colour - black, white, red
-    - The trees are huge and towering
-    - Forest grows close together in deep thickets
-    - Undergrowth is sparse - there are many open clearings
-    - Trees are conifers - with needle-like leaves
-    - Vines tangle everywhere, making journeys difficult
-    - Undergrowth is unusual - roses, mushrooms, a food crop
-    - Murmuring voices can be heard - maybe it's just the wind
-    - The trees are twisted and gnarled
-    - Everything is blanketed with moss
-    - Bird-life is strangely absent
-    - Glowing insects emerge at dusk
-    - Many clear pools are scattered through the woods
-    - The trees are alive! This forest is guarded by one or more Treants
-    - The wildlife is bizarre - huge, tiny, unusually intelligent, or alien
-    - Many streams run through the woods
-    - Abundant berries grow from thorny vines
+    extra:
+        - description: Butterflies flit among the bushes
+          density: 1
+        - description: Wildflowers bloom in the open areas
+          density: 1
+        - description: Wind whistles through the branches
+          height: 3
+        - description: There are pools of open water among the trees
+          height: 1
+        - description: Several streams run between the trees
+          height: 2
+        - description: Birdcalls ring in the treetops
+        - description: Rocky outcroppings are covered in moss
+          height: 2
+        - description: Between the trees there is a commanding view over other parts of the forest
+          height: 3
+    density:
+        - description: Brambles grow here, their thorns are cruel
+          density: 3
+        - description: Tracks of many animals criss-cross through the undergrowth
+          density: 1
+        - description: Treacherous cliffs are hidden by underbrush
+          height: 3
+          density: 3
+        - description: Berries grow on vines among the undergrowth
+          density: 3
+        - description: Hilltops clear of undergrowth allow for easy travel
+          density: 1
+          height: 3
+        - description: Paths have been cleared through the forest
+          density: 1
+        - description: Open meadows allow easy travel
+          density: 1
+          height: 1
+    descriptions:
+        - description: Sparse trees with light undergrowth of ferns
+          height: 2
+          density: 1
+        - description: Huge old trees widely spaced, their thick canopy allowing little light to the forest floor
+          height: 2
+          density: 2
+        - description: Low windswept scrub
+          height: 3
+        - description: Gnarled trees clinging to an exposed hillside
+          height: 3
+        - description: Thickly-growing trees tangled with vines
+          height: 2
+          density: 3
+        - description: Dense undergrowth chokes this part of the forest
+          height: 2
+          density: 3
+        - description: A boggy area, twisted trees with gnarled roots
+          height: 1
+        - description: A deep gully, with the canopy far overhead
+          height: 1
+          density: 3
+        - description: Huge trees and a thick canopy overhead
+          height: 2
+        - description: A gently sloping area, thick with trees
+          height: 2
+        - description: A wide gully, where the trees grow tall and the undergrowth is lush
+          height: 2
+        - description: A flat river-plain, where fertile soil leads to lush growth
+          height: 1
+          density: 1
+        - description: An area of flat ground and deep, rich soil where the trees grow tall and straight
+          height: 1
+        - description: A lushly-growing valley
+          height: 1
+        - description: A boggy meadow
+          height: 1
+          density: 1
+        - description: Low-growing forest
+          height: 3
+        - description: A swampy patch of ground with pools of open water between closely-growing trees
+          height: 1
+          density: 2
+        - description: Thickly-grown bushes and smaller trees grown intertwined.
+          height: 3
+          density: 3
+        
+           
+        
 
 swamp:
     - Tall trees emerge from the swamp
