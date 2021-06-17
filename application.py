@@ -12,6 +12,7 @@ from collections import Counter
 from flask.logging import default_handler
 from utils.library import monster_manual
 from encounters.encounter_api import EncounterSource
+from encounters.encounter_set import EncounterSetSource
 from flask_restplus import Resource, Api, reqparse
 from flask import Flask, jsonify, redirect, url_for, request, render_template
 import sys
@@ -77,7 +78,7 @@ encounter_set_parser.add_argument(
     help="Comma-separated list of character levels.",
 )
 encounter_set_parser.add_argument(
-    "monster_set", required=True, help="Monster set.")
+    "monster_set", required=False, help="Monster set.")
 
 tag_parser = reqparse.RequestParser()
 tag_parser.add_argument(
@@ -278,25 +279,19 @@ class EncounterSet(Resource):
         """Returns a random encounter meeting the supplied specifications."""
         args = encounter_set_parser.parse_args()
         character_level_dict = Counter(args["character_levels"])
-        monster_set = args["monster_set"]
-        if monster_set not in monster_manual.monster_sets:
+        monster_set = args.get("monster_set")
+        if monster_set is not None and monster_set not in monster_manual.monster_sets:
             raise BadRequest("One or more invalid monster sets in request")
+        if monster_set is None:
+            monster_set = random.choice(
+                list(monster_manual.monster_sets.keys()))
         if not all([level <= 20 for level in character_level_dict.keys()]):
             raise BadRequest("Maximum character level is 20")
-        source = EncounterSource(
+        source = EncounterSetSource(
             character_level_dict=character_level_dict, monster_sets=[
                 monster_set]
         )
-        encounters = {}
-        encounters["basic"] = []
-        encounters["exotic"] = []
-        encounters["leader"] = []
-        for difficulty in ["easy", "medium", "medium", "hard"]:
-            for style in ["basic", "exotic", "leader"]:
-                encounter = source.get_encounter(
-                    difficulty=difficulty, style=style)
-                encounters[style].append(encounter)
-        return encounters
+        return source.get_encounters()
 
 
 if __name__ == "__main__":
